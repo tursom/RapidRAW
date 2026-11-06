@@ -1,0 +1,6 @@
+{
+  "exitCode": 0,
+  "command": "cargo build --locked --offline --release, TAURI_CONFIG=tauri.html5.conf.json",
+  "finished": "2026-11-06T21:43:28.6209184+08:00",
+  "sessionId": 1
+}

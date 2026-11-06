@@ -1,0 +1,7 @@
+{
+  "userInteractive": true,
+  "started": "2026-11-06T21:28:49.4610246+08:00",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "command": "cargo build --locked --offline --release --no-default-features --example clipboard",
+  "sessionId": 1
+}

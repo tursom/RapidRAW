@@ -1,0 +1,23 @@
+cargo.exe :    Compiling typenum v1.20.1
+所在位置 E:\projects\tbt\rapidraw-intake-spike\review-build.ps1:12 字符: 1
++ & $rust test --locked --offline --no-default-features --lib *> (Join- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (   Compiling typenum v1.20.1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   Compiling generic-array v0.14.7
+   Compiling cpufeatures v0.2.17
+   Compiling rapidraw-intake-spike v0.1.0 (E:\projects\tbt\rapidraw-intake-spike\spike\intake\src-tauri)
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.53s
+     Running unittests src\lib.rs (target\debug\deps\rapidraw_intake_spike-625f997235d6b7bc.exe)
+
+running 3 tests
+test tests::truncated_or_mislabeled_png_is_rejected ... ok
+test tests::raw_png_is_decoded_and_fingerprinted_without_changing_bytes ... ok
+test tests::decode_reencode_preserves_normalized_pixels ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

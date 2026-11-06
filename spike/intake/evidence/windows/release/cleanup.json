@@ -1,0 +1,42 @@
+﻿{
+  "tasksBeforeCleanup": [
+    {
+      "state": "Ready",
+      "name": "RapidRAW-Spike-Review-Clipboard"
+    },
+    {
+      "state": "Ready",
+      "name": "RapidRAW-Spike-Review-UI"
+    }
+  ],
+  "finished": "2026-11-06T22:15:00.0335219+08:00",
+  "remainingOwnedProcesses": 0,
+  "remainingTasks": 0,
+  "artifacts": [
+    {
+      "Name": "intake-native.exe",
+      "Length": 14681088,
+      "LastWriteTime": "\/Date(1793953358474)\/"
+    },
+    {
+      "Name": "intake-html5.exe",
+      "Length": 14681088,
+      "LastWriteTime": "\/Date(1793953362353)\/"
+    },
+    {
+      "Name": "clipboard.exe",
+      "Length": 2553856,
+      "LastWriteTime": "\/Date(1793953363504)\/"
+    },
+    {
+      "Name": "clipboard-release.exe",
+      "Length": 952832,
+      "LastWriteTime": "\/Date(1793971748950)\/"
+    },
+    {
+      "Name": "intake-html5-release.exe",
+      "Length": 9550336,
+      "LastWriteTime": "\/Date(1793972608423)\/"
+    }
+  ]
+}

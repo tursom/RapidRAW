@@ -18,12 +18,24 @@
     </div>
     <div class="buttons">
       <button id="clipboard" disabled>读取系统剪贴板</button>
+      <label
+        >图片读取模式
+        <select id="clipboard-mode">
+          <option value="compare">对照：原始 PNG 与解码重编码</option>
+          <option value="prefer-png">优先原始 PNG，失败时回退</option>
+          <option value="reencode">仅解码重编码</option>
+        </select>
+      </label>
       <button id="observation">记录当前用例/观察</button>
       <button id="export">导出 JSON</button>
       <button id="clear">清空记录</button>
       <label><input type="checkbox" id="additional" /> Windows：发送 AdditionalObjects 探针</label>
     </div>
     <p>Windows 勾选后安装原生接收器，单独记录 AdditionalObjects 返回的路径或错误；发送成功不代表路径可用。</p>
+    <p>
+      对照模式会依次执行两条路径，总耗时不代表原始 PNG 优先的耗时；请分别运行各模式比较。原始 PNG
+      仍会完整解码校验并计算哈希，不会重新编码。
+    </p>
     <div id="drop" tabindex="0">
       从本地或浏览器拖放到这里<br />或聚焦此区域后按 Ctrl/Cmd+V（只记录 HTML paste，系统读取用上方按钮）
     </div>

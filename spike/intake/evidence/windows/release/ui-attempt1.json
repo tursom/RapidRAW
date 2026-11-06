@@ -1,0 +1,8 @@
+{
+  "method": "Actual release Tauri HTML5 window and clipboard button; physical Chrome copy menu; local fixtures, no formal import pipeline.",
+  "tests": [],
+  "started": "2026-11-06T21:50:21+0800",
+  "executableSha256": "f1ef269d17b7e59cc6fb1f8b31f71f4b404daa5bb61eda13cd33a24f28a7bfda",
+  "fatalError": "Traceback (most recent call last):\n  File \"E:\\projects\\tbt\\rapidraw-intake-spike\\spike\\intake\\scripts\\windows-clipboard-release-ui.py\", line 115, in <module>\n    main()\n  File \"E:\\projects\\tbt\\rapidraw-intake-spike\\spike\\intake\\scripts\\windows-clipboard-release-ui.py\", line 35, in main\n    while not app.js(\"!document.getElementById('clipboard').disabled\"):\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\projects\\tbt\\rapidraw-intake-spike\\spike\\intake\\scripts\\windows-clipboard-release.py\", line 85, in js\n    raise RuntimeError(value['exceptionDetails'])\nRuntimeError: {'exceptionId': 1, 'text': 'Uncaught', 'lineNumber': 0, 'columnNumber': 37, 'scriptId': '4', 'exception': {'type': 'object', 'subtype': 'error', 'className': 'TypeError', 'description': \"TypeError: Cannot read properties of null (reading 'disabled')\\n    at <anonymous>:1:38\", 'objectId': '7753224353392244370.1.2'}}\n",
+  "passed": false
+}

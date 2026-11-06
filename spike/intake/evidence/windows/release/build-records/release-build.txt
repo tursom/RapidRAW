@@ -1,0 +1,56 @@
+cargo.exe :    Compiling proc-macro2 v1.0.107
+所在位置 E:\projects\tbt\rapidraw-intake-spike\review-build.ps1:9 字符: 1
++ & $rust build --locked --offline --release --no-default-features --ex ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (   Compiling proc-macro2 v1.0.107:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.47
+   Compiling version_check v0.9.5
+   Compiling autocfg v1.5.1
+   Compiling simd-adler32 v0.3.10
+   Compiling crc32fast v1.5.0
+   Compiling cfg-if v1.0.4
+   Compiling windows_x86_64_msvc v0.53.1
+   Compiling windows-link v0.1.3
+   Compiling adler2 v2.0.1
+   Compiling typenum v1.20.1
+   Compiling pxfm v0.1.30
+   Compiling bitflags v2.13.1
+   Compiling error-code v3.4.0
+   Compiling zune-core v0.5.3
+   Compiling windows-result v0.3.4
+   Compiling windows-strings v0.3.1
+   Compiling zmij v1.0.23
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling serde_core v1.0.229
+   Compiling generic-array v0.14.7
+   Compiling zune-jpeg v0.5.15
+   Compiling windows-win v3.0.0
+   Compiling num-traits v0.2.19
+   Compiling byteorder-lite v0.1.0
+   Compiling bytemuck v1.25.2
+   Compiling serde_json v1.0.151
+   Compiling windows-targets v0.53.5
+   Compiling clipboard-win v5.4.3
+   Compiling itoa v1.0.18
+   Compiling cpufeatures v0.2.17
+   Compiling flate2 v1.1.9
+   Compiling rapidraw-intake-spike v0.1.0 (E:\projects\tbt\rapidraw-intake-spike\spike\intake\src-tauri)
+   Compiling memchr v2.8.3
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling png v0.18.1
+   Compiling digest v0.10.7
+   Compiling syn v2.0.119
+   Compiling sha2 v0.10.9
+   Compiling moxcms v0.8.1
+   Compiling windows-interface v0.59.3
+   Compiling windows-implement v0.59.0
+   Compiling windows-core v0.59.0
+   Compiling windows v0.59.0
+   Compiling image v0.25.10
+   Compiling clipboard-rs v0.3.5
+    Finished `release` profile [optimized] target(s) in 19.36s

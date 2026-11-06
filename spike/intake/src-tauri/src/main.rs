@@ -28,14 +28,19 @@ fn environment(app: tauri::AppHandle) -> Value {
         "nativeDragDrop": app.config().app.windows[0].drag_drop_enabled,
         "clipboardLibrary": "clipboard-rs 0.3.5",
         "debug": cfg!(debug_assertions),
+        "build": rapidraw_intake_spike::build_metadata(),
     })
 }
 
 #[tauri::command]
-async fn read_system_clipboard() -> Result<Value, String> {
-    tauri::async_runtime::spawn_blocking(rapidraw_intake_spike::read_clipboard)
-        .await
-        .map_err(|error| error.to_string())
+async fn read_system_clipboard(image_mode: Option<String>) -> Result<Value, String> {
+    let mode =
+        rapidraw_intake_spike::ImageReadMode::try_from(image_mode.as_deref().unwrap_or("compare"))?;
+    tauri::async_runtime::spawn_blocking(move || {
+        rapidraw_intake_spike::read_clipboard_with_mode(mode)
+    })
+    .await
+    .map_err(|error| error.to_string())
 }
 
 #[tauri::command]

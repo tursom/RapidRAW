@@ -1,0 +1,81 @@
+﻿{
+  "encodedRustflags": null,
+  "recorded": "2026-11-06T22:14:55.4609041+08:00",
+  "cpu": {
+    "Name": "AMD Ryzen 7 5800X3D 8-Core Processor           ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "artifacts": [
+    {
+      "Path": "E:\\projects\\tbt\\rapidraw-intake-spike\\artifacts\\clipboard-release.exe",
+      "Hash": "BFAD5CCBCECE9ED8BF30C9A9A1138F355251F21539A5CCD63D4F7F1194696731"
+    },
+    {
+      "Path": "E:\\projects\\tbt\\rapidraw-intake-spike\\artifacts\\intake-html5-release.exe",
+      "Hash": "F1EF269D17B7E59CC6FB1F8B31F71F4B404DAA5BB61EDA13CD33A24F28A7BFDA"
+    }
+  ],
+  "os": {
+    "Caption": "Microsoft Windows 10 专业版",
+    "Version": "10.0.19045",
+    "BuildNumber": "19045",
+    "OSArchitecture": "64-bit"
+  },
+  "rustflags": null,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "memoryBytes": 51446321152,
+  "powerPlan": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)",
+  "sourceBase": "a50e3dc6 plus PNG-probe working tree",
+  "sourceHashes": [
+    {
+      "sha256": "55A652B286B58DE746F81058AAA6792B4E7DEACC20154976A384BCA0C7D9B6C1",
+      "path": "spike\\intake\\src-tauri\\Cargo.toml"
+    },
+    {
+      "sha256": "C2780F7466375D2D5A60BB4172F62908A140C2691BFC67B37802BF97823FC12D",
+      "path": "spike\\intake\\src-tauri\\Cargo.lock"
+    },
+    {
+      "sha256": "D1C0D72A614B4DF14846C0B5F53483EDE0D357BEA6B0C6C444B9170214749C78",
+      "path": "spike\\intake\\src-tauri\\build.rs"
+    },
+    {
+      "sha256": "6EFC01082AA8B64485EFAB77AD96A8E4D8609761B8F586EC47410427A6F9498D",
+      "path": "spike\\intake\\src-tauri\\src\\lib.rs"
+    },
+    {
+      "sha256": "C337CFD166A15D0E7691039BB2FB0AFBDD88A4009D3F0709B63925C51C3978FC",
+      "path": "spike\\intake\\src-tauri\\src\\main.rs"
+    },
+    {
+      "sha256": "2FB88951A04188F55C476277B6DC3C3183A1594ADF1871BE7B32CC2105BD7528",
+      "path": "spike\\intake\\src-tauri\\examples\\clipboard.rs"
+    },
+    {
+      "sha256": "C66673655F8B122D04391E7DCE20155A5783761E3A38CFB598F9EA02AC3F96F8",
+      "path": "spike\\intake\\src-tauri\\tauri.conf.json"
+    },
+    {
+      "sha256": "0C7B0CAE857C69BFCD22FB004A87BCA4FF028BD4B89E62EAFF0B9C10817E300E",
+      "path": "spike\\intake\\src-tauri\\tauri.html5.conf.json"
+    },
+    {
+      "sha256": "D3E9289DAD40ED35DE052CF766E2C611CF5B4A4C2B629723D6C58BCF9262A427",
+      "path": "spike\\intake\\web\\index.html"
+    },
+    {
+      "sha256": "79C33452639D3C187004DD38C4754797765BB0737B713DBF6289611D36BDF922",
+      "path": "spike\\intake\\web\\probe.js"
+    },
+    {
+      "sha256": "7D842B6AD345ED03E7627189F03A2863B62637CA20FB0E7D7DCFBC9B6A60E537",
+      "path": "spike\\intake\\scripts\\windows-clipboard-release.py"
+    },
+    {
+      "sha256": "58D6D395685F63A4185A5C95C2D6E716902451565CA1227B0016E7DE7A924466",
+      "path": "spike\\intake\\scripts\\windows-clipboard-release-ui.py"
+    }
+  ]
+}

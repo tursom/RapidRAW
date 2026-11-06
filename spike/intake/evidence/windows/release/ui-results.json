@@ -1,0 +1,3104 @@
+{
+  "method": "Actual release Tauri HTML5 window and clipboard button; physical Chrome copy menu; local fixtures, no formal import pipeline.",
+  "tests": [
+    {
+      "case": "Chrome-small.jpg-1-prefer-png",
+      "fixture": "small.jpg",
+      "repeat": 1,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1858,
+        "sequenceAfter": 1867
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1867,
+      "record": {
+        "at": "2026-11-06T14:12:34.296Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-1-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0428,
+          "files": {
+            "elapsedMs": 0.2778,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0488,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 3.7294,
+            "ok": true,
+            "value": {
+              "byteHashMs": 0.013699999999999999,
+              "bytes": 26327,
+              "decodeMs": 0.8821,
+              "height": 768,
+              "pixelHashMs": 2.6982,
+              "readMs": 0.050899999999999994,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+              "width": 1024
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 26327,
+            "method": "raw-png",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+          },
+          "text": {
+            "elapsedMs": 0.0885,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 4.2063999999999995,
+          "roundTripMs": 6.2999999998137355
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1867, 1867, 1867]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-small.jpg-1-reencode",
+      "fixture": "small.jpg",
+      "repeat": 1,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1867,
+        "sequenceAfter": 1876
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1876,
+      "record": {
+        "at": "2026-11-06T14:12:35.847Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-1-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0102,
+          "files": {
+            "elapsedMs": 0.0974,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.047599999999999996,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 4.638,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "pixelHashMs": 2.3592,
+              "png": {
+                "elapsedMs": 1.2844,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 0.0133,
+                  "bytes": 25859,
+                  "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+                }
+              },
+              "readMs": 0.8542,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "width": 1024
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 25859,
+            "method": "decoded-reencoded",
+            "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+          },
+          "text": {
+            "elapsedMs": 0.0854,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 4.8959,
+          "roundTripMs": 6.5
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1876, 1876, 1876]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-small.jpg-2-reencode",
+      "fixture": "small.jpg",
+      "repeat": 2,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1876,
+        "sequenceAfter": 1885
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1885,
+      "record": {
+        "at": "2026-11-06T14:12:37.399Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-2-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.008199999999999999,
+          "files": {
+            "elapsedMs": 0.0919,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.045200000000000004,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 5.071199999999999,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "pixelHashMs": 2.5701,
+              "png": {
+                "elapsedMs": 1.5188000000000001,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 0.0134,
+                  "bytes": 25859,
+                  "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+                }
+              },
+              "readMs": 0.8556,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "width": 1024
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 25859,
+            "method": "decoded-reencoded",
+            "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+          },
+          "text": {
+            "elapsedMs": 0.09119999999999999,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 5.3244,
+          "roundTripMs": 7.1000000005587935
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1885, 1885, 1885]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-small.jpg-2-prefer-png",
+      "fixture": "small.jpg",
+      "repeat": 2,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1885,
+        "sequenceAfter": 1894
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1894,
+      "record": {
+        "at": "2026-11-06T14:12:38.949Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-2-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0101,
+          "files": {
+            "elapsedMs": 0.1145,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0538,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 3.1814,
+            "ok": true,
+            "value": {
+              "byteHashMs": 0.0174,
+              "bytes": 26327,
+              "decodeMs": 0.776,
+              "height": 768,
+              "pixelHashMs": 2.2542999999999997,
+              "readMs": 0.0317,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+              "width": 1024
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 26327,
+            "method": "raw-png",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+          },
+          "text": {
+            "elapsedMs": 0.08670000000000001,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 3.4631000000000003,
+          "roundTripMs": 5.2999999998137355
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1894, 1894, 1894]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-small.jpg-3-prefer-png",
+      "fixture": "small.jpg",
+      "repeat": 3,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1894,
+        "sequenceAfter": 1903
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1903,
+      "record": {
+        "at": "2026-11-06T14:12:40.501Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-3-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0086,
+          "files": {
+            "elapsedMs": 0.0882,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0438,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 3.9639999999999995,
+            "ok": true,
+            "value": {
+              "byteHashMs": 0.013699999999999999,
+              "bytes": 26327,
+              "decodeMs": 0.8427,
+              "height": 768,
+              "pixelHashMs": 2.9294,
+              "readMs": 0.0342,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+              "width": 1024
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 26327,
+            "method": "raw-png",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+          },
+          "text": {
+            "elapsedMs": 0.1193,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 4.2467,
+          "roundTripMs": 6.7000000001862645
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1903, 1903, 1903]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-small.jpg-3-reencode",
+      "fixture": "small.jpg",
+      "repeat": 3,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1903,
+        "sequenceAfter": 1912
+      },
+      "sourcePixels": {
+        "size": [1024, 768],
+        "url": "http://127.0.0.1:8767/small.jpg",
+        "rgba8Sha256": "a216bb75a8ce3706e8be80148600e033c224af563bf166b45d1f1ba5f8537a98",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "fileSha256": "7c67cae0009e4636d4fc659898c553482b87c23a0915be8daa276e0f2c40bb25"
+      },
+      "sequenceAfterProbe": 1912,
+      "record": {
+        "at": "2026-11-06T14:12:42.052Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-small.jpg-3-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0092,
+          "files": {
+            "elapsedMs": 0.0942,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0466,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 4.6868,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "pixelHashMs": 2.3064,
+              "png": {
+                "elapsedMs": 1.4824,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 0.0133,
+                  "bytes": 25859,
+                  "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+                }
+              },
+              "readMs": 0.8247,
+              "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+              "width": 1024
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 25859,
+            "method": "decoded-reencoded",
+            "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+          },
+          "text": {
+            "elapsedMs": 0.0854,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 4.9376999999999995,
+          "roundTripMs": 6.599999999627471
+        }
+      },
+      "reference": {
+        "bytes": 26327,
+        "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+        "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+        "size": [1024, 768],
+        "threeReadsByteEqual": true,
+        "sequences": [1912, 1912, 1912]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-1-prefer-png",
+      "fixture": "large.jpg",
+      "repeat": 1,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1912,
+        "sequenceAfter": 1913
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1921,
+      "record": {
+        "at": "2026-11-06T14:12:45.540Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-1-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0102,
+          "files": {
+            "elapsedMs": 155.6491,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 147.3615,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 419.549,
+            "ok": true,
+            "value": {
+              "byteHashMs": 33.3017,
+              "bytes": 72171482,
+              "decodeMs": 183.4048,
+              "height": 4000,
+              "pixelHashMs": 75.7893,
+              "readMs": 117.655,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 72171482,
+            "method": "raw-png",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+          },
+          "text": {
+            "elapsedMs": 34.5691,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 757.1761,
+          "roundTripMs": 759.2999999998137
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1921, 1921, 1921]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-1-reencode",
+      "fixture": "large.jpg",
+      "repeat": 1,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1921,
+        "sequenceAfter": 1922
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1930,
+      "record": {
+        "at": "2026-11-06T14:12:48.487Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-1-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0096,
+          "files": {
+            "elapsedMs": 92.22840000000001,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 159.8682,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 662.024,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 76.3774,
+              "png": {
+                "elapsedMs": 336.4464,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 44.479400000000005,
+                  "bytes": 96011388,
+                  "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+                }
+              },
+              "readMs": 197.1544,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 96011388,
+            "method": "decoded-reencoded",
+            "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+          },
+          "text": {
+            "elapsedMs": 3.8451,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 918.0015999999999,
+          "roundTripMs": 920.3999999994412
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1930, 1930, 1930]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-2-reencode",
+      "fixture": "large.jpg",
+      "repeat": 2,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1930,
+        "sequenceAfter": 1931
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1939,
+      "record": {
+        "at": "2026-11-06T14:12:51.476Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-2-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0103,
+          "files": {
+            "elapsedMs": 72.7067,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 156.2781,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 688.5805,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 83.03190000000001,
+              "png": {
+                "elapsedMs": 333.1926,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 44.3981,
+                  "bytes": 96011388,
+                  "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+                }
+              },
+              "readMs": 220.9017,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 96011388,
+            "method": "decoded-reencoded",
+            "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+          },
+          "text": {
+            "elapsedMs": 3.7528,
+            "error": "Get text error, code = OSError(1418): 线程没有打开的剪贴板。",
+            "ok": false
+          },
+          "totalMs": 921.3539,
+          "roundTripMs": 923.4000000003725
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1939, 1939, 1939]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-2-prefer-png",
+      "fixture": "large.jpg",
+      "repeat": 2,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1939,
+        "sequenceAfter": 1940
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1948,
+      "record": {
+        "at": "2026-11-06T14:12:54.129Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-2-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0107,
+          "files": {
+            "elapsedMs": 46.0867,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 171.69490000000002,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 322.28479999999996,
+            "ok": true,
+            "value": {
+              "byteHashMs": 34.1373,
+              "bytes": 72171482,
+              "decodeMs": 178.4957,
+              "height": 4000,
+              "pixelHashMs": 79.19080000000001,
+              "readMs": 21.1467,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 72171482,
+            "method": "raw-png",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+          },
+          "text": {
+            "elapsedMs": 47.084399999999995,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 587.1925,
+          "roundTripMs": 590.0999999996275
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1948, 1948, 1948]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-3-prefer-png",
+      "fixture": "large.jpg",
+      "repeat": 3,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1948,
+        "sequenceAfter": 1949
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1957,
+      "record": {
+        "at": "2026-11-06T14:12:56.768Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-3-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0097,
+          "files": {
+            "elapsedMs": 107.1735,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 146.102,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 341.3939,
+            "ok": true,
+            "value": {
+              "byteHashMs": 33.62070000000001,
+              "bytes": 72171482,
+              "decodeMs": 176.1045,
+              "height": 4000,
+              "pixelHashMs": 90.0836,
+              "readMs": 29.854,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 72171482,
+            "method": "raw-png",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+          },
+          "text": {
+            "elapsedMs": 47.9769,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 642.6872,
+          "roundTripMs": 644.7999999998137
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1957, 1957, 1957]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-large.jpg-3-reencode",
+      "fixture": "large.jpg",
+      "repeat": 3,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1957,
+        "sequenceAfter": 1958
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/large.jpg",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "fileSha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5"
+      },
+      "sequenceAfterProbe": 1966,
+      "record": {
+        "at": "2026-11-06T14:12:59.726Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-large.jpg-3-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0086,
+          "files": {
+            "elapsedMs": 63.459199999999996,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 159.9795,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 686.8095,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 76.473,
+              "png": {
+                "elapsedMs": 347.83180000000004,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 44.4141,
+                  "bytes": 96011388,
+                  "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+                }
+              },
+              "readMs": 210.22959999999998,
+              "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 96011388,
+            "method": "decoded-reencoded",
+            "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+          },
+          "text": {
+            "elapsedMs": 3.8171,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 914.096,
+          "roundTripMs": 916.5
+        }
+      },
+      "reference": {
+        "bytes": 72171482,
+        "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+        "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1966, 1966, 1966]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-1-prefer-png",
+      "fixture": "photo-control.jpg",
+      "repeat": 1,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1966,
+        "sequenceAfter": 1967
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 1975,
+      "record": {
+        "at": "2026-11-06T14:13:03.324Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-1-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0097,
+          "files": {
+            "elapsedMs": 124.1786,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 155.7906,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 323.6565,
+            "ok": true,
+            "value": {
+              "byteHashMs": 15.9401,
+              "bytes": 32632178,
+              "decodeMs": 213.7427,
+              "height": 4000,
+              "pixelHashMs": 77.418,
+              "readMs": 10.2088,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 32632178,
+            "method": "raw-png",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+          },
+          "text": {
+            "elapsedMs": 35.153499999999994,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 638.8145,
+          "roundTripMs": 641.0999999996275
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1975, 1975, 1975]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-1-reencode",
+      "fixture": "photo-control.jpg",
+      "repeat": 1,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1975,
+        "sequenceAfter": 1976
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 1984,
+      "record": {
+        "at": "2026-11-06T14:13:06.097Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-1-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0098,
+          "files": {
+            "elapsedMs": 63.0826,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 158.1661,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 557.7753,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 77.16820000000001,
+              "png": {
+                "elapsedMs": 245.31449999999998,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 18.198900000000002,
+                  "bytes": 39329898,
+                  "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+                }
+              },
+              "readMs": 211.98239999999998,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 39329898,
+            "method": "decoded-reencoded",
+            "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+          },
+          "text": {
+            "elapsedMs": 1.797,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 780.8542000000001,
+          "roundTripMs": 783.5
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1984, 1984, 1984]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-2-reencode",
+      "fixture": "photo-control.jpg",
+      "repeat": 2,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1984,
+        "sequenceAfter": 1985
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 1993,
+      "record": {
+        "at": "2026-11-06T14:13:08.769Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-2-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.01,
+          "files": {
+            "elapsedMs": 73.6458,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 151.6535,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 556.1679,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 73.9013,
+              "png": {
+                "elapsedMs": 243.0297,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 18.2796,
+                  "bytes": 39329898,
+                  "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+                }
+              },
+              "readMs": 215.4563,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 39329898,
+            "method": "decoded-reencoded",
+            "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+          },
+          "text": {
+            "elapsedMs": 1.8782,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 783.3796,
+          "roundTripMs": 785.3999999994412
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [1993, 1993, 1993]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-2-prefer-png",
+      "fixture": "photo-control.jpg",
+      "repeat": 2,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 1993,
+        "sequenceAfter": 1994
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 2002,
+      "record": {
+        "at": "2026-11-06T14:13:11.274Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-2-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0099,
+          "files": {
+            "elapsedMs": 60.4779,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 151.2572,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 315.2097,
+            "ok": true,
+            "value": {
+              "byteHashMs": 14.9912,
+              "bytes": 32632178,
+              "decodeMs": 208.6351,
+              "height": 4000,
+              "pixelHashMs": 75.63690000000001,
+              "readMs": 8.9926,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 32632178,
+            "method": "raw-png",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+          },
+          "text": {
+            "elapsedMs": 42.5952,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 569.5781,
+          "roundTripMs": 572.3000000007451
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [2002, 2002, 2002]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-3-prefer-png",
+      "fixture": "photo-control.jpg",
+      "repeat": 3,
+      "mode": "prefer-png",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 2002,
+        "sequenceAfter": 2003
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 2011,
+      "record": {
+        "at": "2026-11-06T14:13:13.796Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-3-prefer-png",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0115,
+          "files": {
+            "elapsedMs": 77.72959999999999,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 153.3493,
+            "ok": true,
+            "value": []
+          },
+          "image": null,
+          "imageMode": "prefer-png",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": {
+            "elapsedMs": 320.09549999999996,
+            "ok": true,
+            "value": {
+              "byteHashMs": 15.180900000000001,
+              "bytes": 32632178,
+              "decodeMs": 205.48739999999998,
+              "height": 4000,
+              "pixelHashMs": 80.2169,
+              "readMs": 10.3409,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+              "width": 6000
+            }
+          },
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 32632178,
+            "method": "raw-png",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+          },
+          "text": {
+            "elapsedMs": 37.6009,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 588.8211,
+          "roundTripMs": 591.2000000001863
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [2011, 2011, 2011]
+      },
+      "verified": true
+    },
+    {
+      "case": "Chrome-photo-control.jpg-3-reencode",
+      "fixture": "photo-control.jpg",
+      "repeat": 3,
+      "mode": "reencode",
+      "menu": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 2011,
+        "sequenceAfter": 2012
+      },
+      "sourcePixels": {
+        "size": [6000, 4000],
+        "url": "http://127.0.0.1:8767/photo-control.jpg",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "method": "source browser canvas rendered RGBA8, before clipboard copy",
+        "fileRgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "fileSha256": "b9cce4b57a560ea7dd5bf9dc50286d7e340889ac49f7165ee33a7940350e1d22"
+      },
+      "sequenceAfterProbe": 2020,
+      "record": {
+        "at": "2026-11-06T14:13:16.520Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome release",
+        "case": "Chrome-photo-control.jpg-3-reencode",
+        "data": {
+          "build": {
+            "arch": "x86_64",
+            "debugAssertions": false,
+            "optLevel": "3",
+            "os": "windows",
+            "profile": "release"
+          },
+          "contextMs": 0.0111,
+          "files": {
+            "elapsedMs": 61.6626,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 158.9534,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 555.2477,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "pixelHashMs": 79.0125,
+              "png": {
+                "elapsedMs": 242.4963,
+                "ok": true,
+                "value": {
+                  "byteHashMs": 18.2202,
+                  "bytes": 39329898,
+                  "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+                }
+              },
+              "readMs": 210.4138,
+              "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+              "width": 6000
+            }
+          },
+          "imageMode": "reencode",
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+          "rawPng": null,
+          "rawPngFormat": "PNG",
+          "sameRgba8": null,
+          "schema": 2,
+          "selected": {
+            "bytes": 39329898,
+            "method": "decoded-reencoded",
+            "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+          },
+          "text": {
+            "elapsedMs": 1.7459,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 777.6454,
+          "roundTripMs": 780.2000000001863
+        }
+      },
+      "reference": {
+        "bytes": 32632178,
+        "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+        "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+        "size": [6000, 4000],
+        "threeReadsByteEqual": true,
+        "sequences": [2020, 2020, 2020]
+      },
+      "verified": true
+    }
+  ],
+  "started": "2026-11-06T22:12:30+0800",
+  "executableSha256": "f1ef269d17b7e59cc6fb1f8b31f71f4b404daa5bb61eda13cd33a24f28a7bfda",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+    "href": "http://tauri.localhost/",
+    "origin": "http://tauri.localhost",
+    "arch": "x86_64",
+    "build": {
+      "arch": "x86_64",
+      "debugAssertions": false,
+      "optLevel": "3",
+      "os": "windows",
+      "profile": "release"
+    },
+    "clipboardLibrary": "clipboard-rs 0.3.5",
+    "debug": false,
+    "nativeDragDrop": false,
+    "os": "windows"
+  },
+  "webview": {
+    "Browser": "Edg/156.0.4314.58",
+    "File-Path-Style": "windows",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+    "V8-Version": "15.6.12.10",
+    "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9346/devtools/browser/d284e788-bdd3-4b09-b6ad-4bead6f02fb7"
+  },
+  "browser": {
+    "Browser": "Chrome/157.0.8103.38",
+    "File-Path-Style": "windows",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+    "V8-Version": "15.7.112.23",
+    "WebKit-Version": "537.36 (@a733b5afbb3ba618844ff8876b89ad1a774b2f18)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9353/devtools/browser/47f16b49-60d0-4da8-9c4f-afb7a2e6a3d7"
+  },
+  "records": [
+    {
+      "at": "2026-11-06T14:12:31.397Z",
+      "type": "environment",
+      "versions": "",
+      "source": "",
+      "case": "",
+      "data": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "href": "http://tauri.localhost/",
+        "origin": "http://tauri.localhost",
+        "arch": "x86_64",
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": false,
+        "nativeDragDrop": false,
+        "os": "windows"
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:34.289Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-1-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:34.296Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-1-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0428,
+        "files": {
+          "elapsedMs": 0.2778,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.0488,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 3.7294,
+          "ok": true,
+          "value": {
+            "byteHashMs": 0.013699999999999999,
+            "bytes": 26327,
+            "decodeMs": 0.8821,
+            "height": 768,
+            "pixelHashMs": 2.6982,
+            "readMs": 0.050899999999999994,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+            "width": 1024
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 26327,
+          "method": "raw-png",
+          "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+        },
+        "text": {
+          "elapsedMs": 0.0885,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 4.2063999999999995,
+        "roundTripMs": 6.2999999998137355
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:35.840Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-1-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:35.847Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-1-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0102,
+        "files": {
+          "elapsedMs": 0.0974,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.047599999999999996,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": {
+          "elapsedMs": 4.638,
+          "ok": true,
+          "value": {
+            "height": 768,
+            "pixelHashMs": 2.3592,
+            "png": {
+              "elapsedMs": 1.2844,
+              "ok": true,
+              "value": {
+                "byteHashMs": 0.0133,
+                "bytes": 25859,
+                "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+              }
+            },
+            "readMs": 0.8542,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "width": 1024
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 25859,
+          "method": "decoded-reencoded",
+          "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+        },
+        "text": {
+          "elapsedMs": 0.0854,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 4.8959,
+        "roundTripMs": 6.5
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:37.391Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-2-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:37.399Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-2-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.008199999999999999,
+        "files": {
+          "elapsedMs": 0.0919,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.045200000000000004,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": {
+          "elapsedMs": 5.071199999999999,
+          "ok": true,
+          "value": {
+            "height": 768,
+            "pixelHashMs": 2.5701,
+            "png": {
+              "elapsedMs": 1.5188000000000001,
+              "ok": true,
+              "value": {
+                "byteHashMs": 0.0134,
+                "bytes": 25859,
+                "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+              }
+            },
+            "readMs": 0.8556,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "width": 1024
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 25859,
+          "method": "decoded-reencoded",
+          "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+        },
+        "text": {
+          "elapsedMs": 0.09119999999999999,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 5.3244,
+        "roundTripMs": 7.1000000005587935
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:38.943Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-2-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:38.949Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-2-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0101,
+        "files": {
+          "elapsedMs": 0.1145,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.0538,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 3.1814,
+          "ok": true,
+          "value": {
+            "byteHashMs": 0.0174,
+            "bytes": 26327,
+            "decodeMs": 0.776,
+            "height": 768,
+            "pixelHashMs": 2.2542999999999997,
+            "readMs": 0.0317,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+            "width": 1024
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 26327,
+          "method": "raw-png",
+          "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+        },
+        "text": {
+          "elapsedMs": 0.08670000000000001,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 3.4631000000000003,
+        "roundTripMs": 5.2999999998137355
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:40.495Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-3-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:40.501Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-3-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0086,
+        "files": {
+          "elapsedMs": 0.0882,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.0438,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 3.9639999999999995,
+          "ok": true,
+          "value": {
+            "byteHashMs": 0.013699999999999999,
+            "bytes": 26327,
+            "decodeMs": 0.8427,
+            "height": 768,
+            "pixelHashMs": 2.9294,
+            "readMs": 0.0342,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d",
+            "width": 1024
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 26327,
+          "method": "raw-png",
+          "sha256": "bc18a17a252c29d47bbf18cd6240cc169c45c24cc2d59c22a4a2bebbd926da1d"
+        },
+        "text": {
+          "elapsedMs": 0.1193,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 4.2467,
+        "roundTripMs": 6.7000000001862645
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:42.045Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-3-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:42.052Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-small.jpg-3-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0092,
+        "files": {
+          "elapsedMs": 0.0942,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.0466,
+          "ok": true,
+          "value": [
+            "PNG",
+            "CF_DIBV5",
+            "HTML Format",
+            "UniformResourceLocatorW",
+            "Chromium internal source RFH token",
+            "Chromium internal source URL",
+            "CF_BITMAP",
+            "CF_DIB"
+          ]
+        },
+        "image": {
+          "elapsedMs": 4.6868,
+          "ok": true,
+          "value": {
+            "height": 768,
+            "pixelHashMs": 2.3064,
+            "png": {
+              "elapsedMs": 1.4824,
+              "ok": true,
+              "value": {
+                "byteHashMs": 0.0133,
+                "bytes": 25859,
+                "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+              }
+            },
+            "readMs": 0.8247,
+            "rgba8Sha256": "fb9cc22a1719caecc57c7243118e3741ffc33f3bc4b8545b594ff31270322af4",
+            "width": 1024
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 25859,
+          "method": "decoded-reencoded",
+          "sha256": "af4ec0d00499c79cff6a496c6461c7e1067671c44002e652bcf29892bf2d9a95"
+        },
+        "text": {
+          "elapsedMs": 0.0854,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 4.9376999999999995,
+        "roundTripMs": 6.599999999627471
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:44.780Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-1-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:45.540Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-1-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0102,
+        "files": {
+          "elapsedMs": 155.6491,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 147.3615,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 419.549,
+          "ok": true,
+          "value": {
+            "byteHashMs": 33.3017,
+            "bytes": 72171482,
+            "decodeMs": 183.4048,
+            "height": 4000,
+            "pixelHashMs": 75.7893,
+            "readMs": 117.655,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 72171482,
+          "method": "raw-png",
+          "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+        },
+        "text": {
+          "elapsedMs": 34.5691,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 757.1761,
+        "roundTripMs": 759.2999999998137
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:47.566Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-1-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:48.487Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-1-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0096,
+        "files": {
+          "elapsedMs": 92.22840000000001,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 159.8682,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 662.024,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 76.3774,
+            "png": {
+              "elapsedMs": 336.4464,
+              "ok": true,
+              "value": {
+                "byteHashMs": 44.479400000000005,
+                "bytes": 96011388,
+                "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+              }
+            },
+            "readMs": 197.1544,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 96011388,
+          "method": "decoded-reencoded",
+          "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+        },
+        "text": {
+          "elapsedMs": 3.8451,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 918.0015999999999,
+        "roundTripMs": 920.3999999994412
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:50.553Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-2-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:51.476Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-2-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0103,
+        "files": {
+          "elapsedMs": 72.7067,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 156.2781,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 688.5805,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 83.03190000000001,
+            "png": {
+              "elapsedMs": 333.1926,
+              "ok": true,
+              "value": {
+                "byteHashMs": 44.3981,
+                "bytes": 96011388,
+                "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+              }
+            },
+            "readMs": 220.9017,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 96011388,
+          "method": "decoded-reencoded",
+          "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+        },
+        "text": {
+          "elapsedMs": 3.7528,
+          "error": "Get text error, code = OSError(1418): 线程没有打开的剪贴板。",
+          "ok": false
+        },
+        "totalMs": 921.3539,
+        "roundTripMs": 923.4000000003725
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:53.539Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-2-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:54.129Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-2-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0107,
+        "files": {
+          "elapsedMs": 46.0867,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 171.69490000000002,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 322.28479999999996,
+          "ok": true,
+          "value": {
+            "byteHashMs": 34.1373,
+            "bytes": 72171482,
+            "decodeMs": 178.4957,
+            "height": 4000,
+            "pixelHashMs": 79.19080000000001,
+            "readMs": 21.1467,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 72171482,
+          "method": "raw-png",
+          "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+        },
+        "text": {
+          "elapsedMs": 47.084399999999995,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 587.1925,
+        "roundTripMs": 590.0999999996275
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:56.123Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-3-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:56.768Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-3-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0097,
+        "files": {
+          "elapsedMs": 107.1735,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 146.102,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 341.3939,
+          "ok": true,
+          "value": {
+            "byteHashMs": 33.62070000000001,
+            "bytes": 72171482,
+            "decodeMs": 176.1045,
+            "height": 4000,
+            "pixelHashMs": 90.0836,
+            "readMs": 29.854,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 72171482,
+          "method": "raw-png",
+          "sha256": "f1b1965bcf94953cc7f7cb3fed5ac608f3c78ca75cc40f0a9b91e525e5bffed5"
+        },
+        "text": {
+          "elapsedMs": 47.9769,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 642.6872,
+        "roundTripMs": 644.7999999998137
+      }
+    },
+    {
+      "at": "2026-11-06T14:12:58.810Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-3-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:12:59.726Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-large.jpg-3-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0086,
+        "files": {
+          "elapsedMs": 63.459199999999996,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 159.9795,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 686.8095,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 76.473,
+            "png": {
+              "elapsedMs": 347.83180000000004,
+              "ok": true,
+              "value": {
+                "byteHashMs": 44.4141,
+                "bytes": 96011388,
+                "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+              }
+            },
+            "readMs": 210.22959999999998,
+            "rgba8Sha256": "3e75beaaf9c8e9e291d9461d5487fe4b16951483820e8a516a31b61cd8494dd7",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 96011388,
+          "method": "decoded-reencoded",
+          "sha256": "45b061b02ca43f56e5e8bc70cb92df461dac37f15bff78191a07f2b51f09e720"
+        },
+        "text": {
+          "elapsedMs": 3.8171,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 914.096,
+        "roundTripMs": 916.5
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:02.682Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-1-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:03.324Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-1-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0097,
+        "files": {
+          "elapsedMs": 124.1786,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 155.7906,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 323.6565,
+          "ok": true,
+          "value": {
+            "byteHashMs": 15.9401,
+            "bytes": 32632178,
+            "decodeMs": 213.7427,
+            "height": 4000,
+            "pixelHashMs": 77.418,
+            "readMs": 10.2088,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 32632178,
+          "method": "raw-png",
+          "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+        },
+        "text": {
+          "elapsedMs": 35.153499999999994,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 638.8145,
+        "roundTripMs": 641.0999999996275
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:05.314Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-1-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:06.097Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-1-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0098,
+        "files": {
+          "elapsedMs": 63.0826,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 158.1661,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 557.7753,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 77.16820000000001,
+            "png": {
+              "elapsedMs": 245.31449999999998,
+              "ok": true,
+              "value": {
+                "byteHashMs": 18.198900000000002,
+                "bytes": 39329898,
+                "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+              }
+            },
+            "readMs": 211.98239999999998,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 39329898,
+          "method": "decoded-reencoded",
+          "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+        },
+        "text": {
+          "elapsedMs": 1.797,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 780.8542000000001,
+        "roundTripMs": 783.5
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:07.983Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-2-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:08.769Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-2-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.01,
+        "files": {
+          "elapsedMs": 73.6458,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 151.6535,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 556.1679,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 73.9013,
+            "png": {
+              "elapsedMs": 243.0297,
+              "ok": true,
+              "value": {
+                "byteHashMs": 18.2796,
+                "bytes": 39329898,
+                "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+              }
+            },
+            "readMs": 215.4563,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 39329898,
+          "method": "decoded-reencoded",
+          "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+        },
+        "text": {
+          "elapsedMs": 1.8782,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 783.3796,
+        "roundTripMs": 785.3999999994412
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:10.701Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-2-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:11.274Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-2-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0099,
+        "files": {
+          "elapsedMs": 60.4779,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 151.2572,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 315.2097,
+          "ok": true,
+          "value": {
+            "byteHashMs": 14.9912,
+            "bytes": 32632178,
+            "decodeMs": 208.6351,
+            "height": 4000,
+            "pixelHashMs": 75.63690000000001,
+            "readMs": 8.9926,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 32632178,
+          "method": "raw-png",
+          "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+        },
+        "text": {
+          "elapsedMs": 42.5952,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 569.5781,
+        "roundTripMs": 572.3000000007451
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:13.205Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-3-prefer-png",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:13.796Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-3-prefer-png",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0115,
+        "files": {
+          "elapsedMs": 77.72959999999999,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 153.3493,
+          "ok": true,
+          "value": []
+        },
+        "image": null,
+        "imageMode": "prefer-png",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": {
+          "elapsedMs": 320.09549999999996,
+          "ok": true,
+          "value": {
+            "byteHashMs": 15.180900000000001,
+            "bytes": 32632178,
+            "decodeMs": 205.48739999999998,
+            "height": 4000,
+            "pixelHashMs": 80.2169,
+            "readMs": 10.3409,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480",
+            "width": 6000
+          }
+        },
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 32632178,
+          "method": "raw-png",
+          "sha256": "8d875b2a459ea3bc5d1bde7fd242b9b7786d951e1d87f56b154e101b0f591480"
+        },
+        "text": {
+          "elapsedMs": 37.6009,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 588.8211,
+        "roundTripMs": 591.2000000001863
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:15.740Z",
+      "type": "clipboard-start",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-3-reencode",
+      "data": {}
+    },
+    {
+      "at": "2026-11-06T14:13:16.520Z",
+      "type": "system-clipboard",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-3-reencode",
+      "data": {
+        "build": {
+          "arch": "x86_64",
+          "debugAssertions": false,
+          "optLevel": "3",
+          "os": "windows",
+          "profile": "release"
+        },
+        "contextMs": 0.0111,
+        "files": {
+          "elapsedMs": 61.6626,
+          "error": "Get files error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 158.9534,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 555.2477,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "pixelHashMs": 79.0125,
+            "png": {
+              "elapsedMs": 242.4963,
+              "ok": true,
+              "value": {
+                "byteHashMs": 18.2202,
+                "bytes": 39329898,
+                "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+              }
+            },
+            "readMs": 210.4138,
+            "rgba8Sha256": "7f4f8135c836295f79ddbd4d8f2ebf3ee8f30525056e5fc18256eebe8297c781",
+            "width": 6000
+          }
+        },
+        "imageMode": "reencode",
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
+        "rawPng": null,
+        "rawPngFormat": "PNG",
+        "sameRgba8": null,
+        "schema": 2,
+        "selected": {
+          "bytes": 39329898,
+          "method": "decoded-reencoded",
+          "sha256": "9e7cadcad7586f3604c71384ebfd5fd17d89c60931f589a5589a00a147015656"
+        },
+        "text": {
+          "elapsedMs": 1.7459,
+          "error": "Get text error, code = OSError(5): 拒绝访问。",
+          "ok": false
+        },
+        "totalMs": 777.6454,
+        "roundTripMs": 780.2000000001863
+      }
+    },
+    {
+      "at": "2026-11-06T14:13:17.009Z",
+      "type": "report-saved",
+      "versions": "",
+      "source": "Chrome release",
+      "case": "Chrome-photo-control.jpg-3-reencode",
+      "data": {
+        "path": "C:\\Users\\tursom\\AppData\\Roaming\\io.github.tursom.rapidraw.intake-spike\\results\\intake-spike-1793974397008854200.json"
+      }
+    }
+  ],
+  "passed": true,
+  "finished": "2026-11-06T22:13:17+0800"
+}

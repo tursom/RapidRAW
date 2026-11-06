@@ -121,7 +121,9 @@ $('clipboard').addEventListener('click', async () => {
   $('clipboard').disabled = true;
   record('clipboard-start', {}, context);
   try {
-    const result = await window.__TAURI__.core.invoke('read_system_clipboard');
+    const result = await window.__TAURI__.core.invoke('read_system_clipboard', {
+      imageMode: $('clipboard-mode').value,
+    });
     record('system-clipboard', { ...result, roundTripMs: performance.now() - started }, context);
   } catch (error) {
     record('clipboard-error', { error: errorText(error), roundTripMs: performance.now() - started }, context);

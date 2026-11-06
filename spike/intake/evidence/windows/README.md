@@ -18,6 +18,12 @@
 
 原始序列同时保留空格式、读取错误和驱动异常，没有将不支持的格式强行改成成功。`windows-final.json` 的 Explorer 行仍有失败结果；资源管理器的直接 UI 操作、系统截图、图片地址复制和 macOS 仍在待测范围。
 
+Chrome 大图原始序列第 1、3 次（共 3 次）枚举成功但格式列表为空，三次均能读取图片。格式枚举不能作为取图的前置条件。现有 Shell 用例没有真实 RAW，也没有纯多图，必须补在实际资源管理器操作中。
+
+人工补测使用现有 `artifacts\intake-native.exe`、`intake-html5.exe`：两种模式分别拖入资源管理器单图、纯多图、真实 RAW、目录和混合选择，核对完整路径；另测资源管理器 Ctrl+C、系统截图、复制图片地址、网页 PNG/WebP 和真实网站图片。每项导出原始 JSON，记录素材信息；不能将 JPEG 加目录的混合结果充当纯多图结果。
+
 这些是未优化 debug 探针的记录。大图为 6000×4000 高熵生成 JPEG；探针只回传数据摘要，未测正式导入写盘或完整像素的 IPC 传输，不能据此判断正式编辑器性能。
+
+后续 [release 补测](release/README.md) 已另行记录 54 个 Chrome/Edge 真实复制样本、7 个生成格式用例和 18 个实际 release Tauri 按钮/IPC 样本。包含原始 PNG 直取、尺寸/像素/字节核对、独立模式的三次耗时、本地 PNG/WebP 来源及失败尝试。新增 `clipboard-release.exe`、`intake-html5-release.exe`；这些补测没有覆盖资源管理器、真实 RAW 或远程网站拖放，也不改变阶段 1 暂不通过的结论。
 
 Windows 上保留了完整工作目录 `E:\projects\tbt\rapidraw-intake-spike`，包含 `build.ps1`、各个 `windows-*.py` 驱动、独立 venv、原始日志及所有失败尝试。这里选择与结论直接相关的 JSON 入库。驱动没有包含远程连接凭据。可手动运行 `artifacts\intake-native.exe` 或 `artifacts\intake-html5.exe`，按 `SPIKE.md` 复测并通过工具导出新记录。

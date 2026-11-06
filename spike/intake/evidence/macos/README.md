@@ -38,8 +38,8 @@ npm run html5
 
 每次操作前填写页面的来源、浏览器版本、用例和素材信息。使用本地图片和网页 JPEG/PNG，至少含小图及一张 6000×4000 或更大的图片；记录实际尺寸和来源 URL。
 
-1. 从访达拖入单图、多图、文件夹、文件与文件夹混合选择，另测中日文及含空格的文件名。记录完整路径、文件列表和目录标记。RAW 素材可用于路径观察，此工具不解码 RAW。
-2. 分别从 Safari、Chrome 拖入网页 JPEG 和 PNG。核对收到的是原生路径、可解码 File、仅 URL/HTML，还是无事件。两个启动模式都要测；收到事件不等于取得图片字节或本地路径。
+1. 从访达拖入单图、纯多图、文件夹、文件与文件夹混合选择，另测中日文及含空格的文件名。必须增加一个真实相机 RAW（记录相机型号、扩展名、字节数；不能用改名的占位文件）。记录完整路径、文件列表和目录标记；此工具不解码 RAW，RAW 验收看路径是否完整可用。
+2. 分别从 Safari、Chrome 拖入网页 JPEG、PNG、WebP，至少增加一张真实网站的 WebP，记录页面和图片 URL、实际 MIME 和尺寸。核对收到的是原生路径、可解码 File、仅 URL/HTML，还是无事件。两个启动模式都要测；收到事件不等于取得图片字节或本地路径。
 3. 分别在 Safari、Chrome 中使用“复制图像”，再点工具里的“读取系统剪贴板”。每个浏览器的小图和大图各重复 3 次，保存格式列表、尺寸、读取和 PNG 编码耗时。
 4. 从访达复制文件、复制网页图像地址、复制系统截图，分别读取。再从文本编辑器复制普通文本及精确字符串 `RapidRAW:adjustments`，核对文件/图片/文本结果及标记匹配。空剪贴板用例也要记录。
 5. 在输入框内按 Cmd+V，确认普通粘贴正常；在虚线区域粘贴，观察 HTML paste 记录。系统剪贴板结论以 Rust 按钮结果为准。
@@ -47,6 +47,8 @@ npm run html5
 7. 每个启动模式分别导出 JSON。导出后的 `report-saved.path` 指向实际文件，默认在 `~/Library/Application Support/io.github.tursom.rapidraw.intake-spike/results/`。将原始报告放入本目录并回填下表。
 
 读取剪贴板过程中保持内容不变。计时分别记录 `image.value.readMs`、`image.value.png.elapsedMs`、`image.value.png.value.bytes`、`totalMs`、`roundTripMs`；`image.elapsedMs` 包含 PNG 编码。注明 debug/release 以及是否为干净进程首次读取，避免把预热后的首次序列当作冷启动。
+
+新增的图片模式可选择 `compare`、`prefer-png`、`reencode`。Mac 原始 PNG 使用 `get_buffer("public.png")`，当前仅经过源码核对，必须在 Mac 实测。比较时记录 `rawPng.value.readMs/decodeMs/bytes/sha256/rgba8Sha256` 和 `sameRgba8`；`compare.totalMs` 包含两条路径，不能当作 PNG 优先的实际耗时。优先用 release 重测性能，可在 `src-tauri/` 运行 `cargo run --locked --release --no-default-features --example clipboard -- prefer-png` 和 `-- reencode`；CLI 没有页面往返数据。若 PNG 缺失，补测系统 TIFF 后备来源；损坏 PNG 可能让库直接报错而不继续走 TIFF，须原样记录。
 
 ## 待填记录
 
@@ -57,10 +59,12 @@ macOS / 架构 / Rust / Node / Safari / Chrome 版本：待填。
 | 来源/用例                         | 原生模式结果 | HTML5 模式结果 | JSON 文件及备注 |
 | --------------------------------- | ------------ | -------------- | --------------- |
 | 访达单图、多图                    | 未测         | 未测           | 待填            |
+| 访达真实 RAW                      | 未测         | 未测           | 待填            |
 | 访达目录、混合选择                | 未测         | 未测           | 待填            |
 | 中日文、空格文件名                | 未测         | 未测           | 待填            |
 | Safari 网页 JPEG/PNG、小图/大图   | 未测         | 未测           | 待填            |
 | Chrome 网页 JPEG/PNG、小图/大图   | 未测         | 未测           | 待填            |
+| Safari/Chrome 真实网站 WebP       | 未测         | 未测           | 待填            |
 | Safari 复制图像，小图/大图各 3 次 | 未测         | 未测           | 待填            |
 | Chrome 复制图像，小图/大图各 3 次 | 未测         | 未测           | 待填            |
 | 访达复制文件                      | 未测         | 未测           | 待填            |
