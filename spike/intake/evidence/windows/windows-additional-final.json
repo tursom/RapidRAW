@@ -1,0 +1,656 @@
+{
+  "platform": "Windows",
+  "method": "Real WebView2 native COM receiver. Local files supplied through CDP file input (not Explorer drag); browser images supplied by physical cross-window dragging.",
+  "started": "2026-11-06T16:24:12+0800",
+  "tests": [
+    {
+      "case": "native-receiver-registration",
+      "status": "observed",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "href": "http://tauri.localhost/",
+        "origin": "http://tauri.localhost",
+        "arch": "x86_64",
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": true,
+        "nativeDragDrop": false,
+        "os": "windows"
+      },
+      "records": [
+        {
+          "at": "2026-11-06T08:24:15.282Z",
+          "type": "environment",
+          "versions": "",
+          "source": "",
+          "case": "",
+          "data": {
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+            "href": "http://tauri.localhost/",
+            "origin": "http://tauri.localhost",
+            "arch": "x86_64",
+            "clipboardLibrary": "clipboard-rs 0.3.5",
+            "debug": true,
+            "nativeDragDrop": false,
+            "os": "windows"
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:15.444Z",
+          "type": "additional-paths",
+          "versions": "",
+          "source": "",
+          "case": "",
+          "data": {
+            "ok": true,
+            "phase": "register"
+          }
+        }
+      ]
+    },
+    {
+      "case": "local-file-input-AdditionalObjects",
+      "status": "observed",
+      "expectedPaths": [
+        "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\small.jpg",
+        "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\日本語 中文 濁音.jpg"
+      ],
+      "records": [
+        {
+          "at": "2026-11-06T08:24:15.654Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "CDP backed local file input",
+          "case": "local-paths-AdditionalObjects",
+          "data": {
+            "types": ["Files"],
+            "items": [
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "small.jpg",
+                "type": "image/jpeg",
+                "bytes": 14735,
+                "path": null,
+                "relativePath": ""
+              },
+              {
+                "name": "日本語 中文 濁音.jpg",
+                "type": "image/jpeg",
+                "bytes": 14735,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 0,
+                "preview": ""
+              },
+              "text/html": {
+                "length": 0,
+                "preview": ""
+              },
+              "text/plain": {
+                "length": 0,
+                "preview": ""
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:15.655Z",
+          "type": "additional-objects-sent",
+          "versions": "",
+          "source": "CDP backed local file input",
+          "case": "local-paths-AdditionalObjects",
+          "data": {
+            "files": 2,
+            "nativeReceiverInstalled": true
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:15.656Z",
+          "type": "additional-paths",
+          "case": "local-paths-AdditionalObjects",
+          "source": "CDP backed local file input",
+          "versions": "",
+          "data": {
+            "context": {
+              "case": "local-paths-AdditionalObjects",
+              "source": "CDP backed local file input",
+              "versions": ""
+            },
+            "count": 2,
+            "ok": true,
+            "paths": [
+              "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\small.jpg",
+              "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\日本語 中文 濁音.jpg"
+            ],
+            "phase": "receive",
+            "source": "http://tauri.localhost/"
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:15.657Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "CDP backed local file input",
+          "case": "local-paths-AdditionalObjects",
+          "data": {
+            "name": "small.jpg",
+            "width": 1024,
+            "height": 768,
+            "bytes": 14735,
+            "elapsedMs": 2.700000047683716
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:15.657Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "CDP backed local file input",
+          "case": "local-paths-AdditionalObjects",
+          "data": {
+            "name": "日本語 中文 濁音.jpg",
+            "width": 1024,
+            "height": 768,
+            "bytes": 14735,
+            "elapsedMs": 2.6000001430511475
+          }
+        }
+      ]
+    },
+    {
+      "case": "Chrome-small-AdditionalObjects",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T08:24:19.086Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:19.361Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "small.jpg",
+                "type": "image/jpeg",
+                "bytes": 14735,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"small\" src=\"http://127.0.0.1:8765/small.jpg\" width=\"260\" draggable=\"true\" alt=\"small fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:19.361Z",
+          "type": "additional-objects-error",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects small",
+          "data": {
+            "error": "Failed to execute 'postMessageWithAdditionalObjects' on 'EmbeddedBrowserWebView': Failed to post a message: additional File object is not a file on the disk."
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:19.369Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects small",
+          "data": {
+            "name": "small.jpg",
+            "width": 1024,
+            "height": 768,
+            "bytes": 14735,
+            "elapsedMs": 7.8999998569488525
+          }
+        }
+      ],
+      "sourceDragEvents": [
+        {
+          "type": "dragstart",
+          "isTrusted": true
+        },
+        {
+          "type": "dragend",
+          "isTrusted": true,
+          "dropEffect": "copy"
+        }
+      ],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9347/devtools/browser/b3af0741-d9bf-4949-b5e6-36f2f7abac68"
+      }
+    },
+    {
+      "case": "Chrome-large-AdditionalObjects",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T08:24:21.526Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:21.876Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "large.jpg",
+                "type": "image/jpeg",
+                "bytes": 23288788,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"large\" src=\"http://127.0.0.1:8765/large.jpg\" width=\"260\" draggable=\"true\" alt=\"large fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:21.876Z",
+          "type": "additional-objects-error",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects large",
+          "data": {
+            "error": "Failed to execute 'postMessageWithAdditionalObjects' on 'EmbeddedBrowserWebView': Failed to post a message: additional File object is not a file on the disk."
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:21.911Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Chrome",
+          "case": "AdditionalObjects large",
+          "data": {
+            "name": "large.jpg",
+            "width": 6000,
+            "height": 4000,
+            "bytes": 23288788,
+            "elapsedMs": 35
+          }
+        }
+      ],
+      "sourceDragEvents": [
+        {
+          "type": "dragstart",
+          "isTrusted": true
+        },
+        {
+          "type": "dragend",
+          "isTrusted": true,
+          "dropEffect": "copy"
+        }
+      ],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9347/devtools/browser/b3af0741-d9bf-4949-b5e6-36f2f7abac68"
+      }
+    },
+    {
+      "case": "Edge-small-AdditionalObjects",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T08:24:25.284Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:25.557Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "small.jpg",
+                "type": "image/jpeg",
+                "bytes": 14735,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"small\" src=\"http://127.0.0.1:8765/small.jpg\" width=\"260\" draggable=\"true\" alt=\"small fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:25.557Z",
+          "type": "additional-objects-error",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects small",
+          "data": {
+            "error": "Failed to execute 'postMessageWithAdditionalObjects' on 'EmbeddedBrowserWebView': Failed to post a message: additional File object is not a file on the disk."
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:25.558Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects small",
+          "data": {
+            "name": "small.jpg",
+            "width": 1024,
+            "height": 768,
+            "bytes": 14735,
+            "elapsedMs": 0.7000000476837158
+          }
+        }
+      ],
+      "sourceDragEvents": [
+        {
+          "type": "dragstart",
+          "isTrusted": true
+        },
+        {
+          "type": "dragend",
+          "isTrusted": true,
+          "dropEffect": "copy"
+        }
+      ],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9349/devtools/browser/d6276a2b-ba3b-42ed-81b0-d7b4dcc1a169"
+      }
+    },
+    {
+      "case": "Edge-large-AdditionalObjects",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T08:24:27.726Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:28.064Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "large.jpg",
+                "type": "image/jpeg",
+                "bytes": 23288788,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"large\" src=\"http://127.0.0.1:8765/large.jpg\" width=\"260\" draggable=\"true\" alt=\"large fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:28.065Z",
+          "type": "additional-objects-error",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects large",
+          "data": {
+            "error": "Failed to execute 'postMessageWithAdditionalObjects' on 'EmbeddedBrowserWebView': Failed to post a message: additional File object is not a file on the disk."
+          }
+        },
+        {
+          "at": "2026-11-06T08:24:28.103Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Edge",
+          "case": "AdditionalObjects large",
+          "data": {
+            "name": "large.jpg",
+            "width": 6000,
+            "height": 4000,
+            "bytes": 23288788,
+            "elapsedMs": 38.200000047683716
+          }
+        }
+      ],
+      "sourceDragEvents": [
+        {
+          "type": "dragstart",
+          "isTrusted": true
+        },
+        {
+          "type": "dragend",
+          "isTrusted": true,
+          "dropEffect": "copy"
+        }
+      ],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9349/devtools/browser/d6276a2b-ba3b-42ed-81b0-d7b4dcc1a169"
+      }
+    },
+    {
+      "case": "IPC-after-additional-objects",
+      "status": "observed",
+      "environment": {
+        "arch": "x86_64",
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": true,
+        "nativeDragDrop": false,
+        "os": "windows"
+      },
+      "exportRecord": {
+        "at": "2026-11-06T08:24:29.584Z",
+        "type": "report-saved",
+        "versions": "",
+        "source": "Edge",
+        "case": "AdditionalObjects large",
+        "data": {
+          "path": "C:\\Users\\tursom\\AppData\\Roaming\\io.github.tursom.rapidraw.intake-spike\\results\\intake-spike-1793953469582694800.json"
+        }
+      }
+    }
+  ],
+  "finished": "2026-11-06T16:24:30+0800"
+}

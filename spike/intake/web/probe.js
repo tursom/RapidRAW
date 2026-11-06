@@ -2,8 +2,10 @@
 
 const $ = (id) => document.getElementById(id);
 const records = [];
-let environment = { userAgent: navigator.userAgent };
+let environment = { userAgent: navigator.userAgent, href: location.href, origin: location.origin };
 let previewUrl;
+let additionalReceiverInstalled = false;
+let additionalReceiverRequested = false;
 
 function record(type, data, context = currentContext()) {
   records.push({ at: new Date().toISOString(), type, ...context, data });
@@ -83,8 +85,13 @@ function inspectTransfer(transfer, type) {
       if (typeof bridge?.postMessageWithAdditionalObjects !== 'function') {
         throw new Error('postMessageWithAdditionalObjects unavailable');
       }
-      bridge.postMessageWithAdditionalObjects({ type: 'intake-spike', context }, files);
-      record('additional-objects-sent', { files: files.length, nativeReceiverInstalled: false }, context);
+      // Wry's existing IPC handler expects a string; object messages stop later COM subscribers.
+      bridge.postMessageWithAdditionalObjects(JSON.stringify({ type: 'intake-spike', context }), files);
+      record(
+        'additional-objects-sent',
+        { files: files.length, nativeReceiverInstalled: additionalReceiverInstalled },
+        context,
+      );
     } catch (error) {
       record('additional-objects-error', { error: errorText(error) }, context);
     }
@@ -167,6 +174,21 @@ async function initialize() {
       record(`native-${event.payload.type}`, event.payload);
       $('drop').classList.toggle('over', ['enter', 'over'].includes(event.payload.type));
     });
+    if (environment.os === 'windows') {
+      await api.event.listen('spike-additional-paths', ({ payload }) => {
+        if (payload.phase === 'register') additionalReceiverInstalled = payload.ok;
+        record('additional-paths', payload, payload.context ?? currentContext());
+      });
+      $('additional').addEventListener('change', async () => {
+        if (!$('additional').checked || additionalReceiverRequested) return;
+        additionalReceiverRequested = true;
+        try {
+          await api.core.invoke('install_additional_receiver');
+        } catch (error) {
+          record('additional-receiver-error', { error: errorText(error) });
+        }
+      });
+    }
     $('clipboard').disabled = false;
   } catch (error) {
     record('initialization-error', { error: errorText(error) });

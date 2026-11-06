@@ -1,0 +1,771 @@
+{
+  "currentContext": {
+    "case": "native Xdnd enter then leave without dropping",
+    "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+    "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+  },
+  "environment": {
+    "arch": "x86_64",
+    "clipboardLibrary": "clipboard-rs 0.3.5",
+    "debug": true,
+    "nativeDragDrop": true,
+    "os": "linux",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/60.5 Safari/605.1.15"
+  },
+  "exportedAt": "2026-11-06T06:42:39.581Z",
+  "records": [
+    {
+      "at": "2026-11-06T06:40:29.817Z",
+      "case": "plain-text",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:29.920Z",
+      "case": "plain-text",
+      "data": {
+        "contextMs": 0.739023,
+        "files": {
+          "elapsedMs": 50.303875,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.187892,
+          "ok": true,
+          "value": ["UTF8_STRING"]
+        },
+        "image": {
+          "elapsedMs": 0.204708,
+          "error": "No image data found",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 103,
+        "text": {
+          "elapsedMs": 0.062526,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 32,
+            "preview": "Linux clipboard 日本語 中文"
+          }
+        },
+        "totalMs": 101.550223
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:30.228Z",
+      "case": "adjustments-marker",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:30.431Z",
+      "case": "adjustments-marker",
+      "data": {
+        "contextMs": 0.539543,
+        "files": {
+          "elapsedMs": 50.154866,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.225842,
+          "ok": true,
+          "value": ["UTF8_STRING"]
+        },
+        "image": {
+          "elapsedMs": 50.305248,
+          "error": "No image data found",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 202,
+        "text": {
+          "elapsedMs": 50.198254,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": true,
+            "bytes": 20,
+            "preview": "RapidRAW:adjustments"
+          }
+        },
+        "totalMs": 201.469929
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:30.681Z",
+      "case": "adjustments-marker",
+      "data": {
+        "files": [],
+        "items": [],
+        "strings": {
+          "text/html": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/plain": {
+            "length": 23,
+            "preview": "ordinary keyboard paste"
+          },
+          "text/uri-list": {
+            "length": 23,
+            "preview": "ordinary keyboard paste"
+          }
+        },
+        "types": []
+      },
+      "source": "ordinary keyboard paste",
+      "type": "html-paste",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:30.921Z",
+      "case": "file URI with Unicode and space",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.123Z",
+      "case": "file URI with Unicode and space",
+      "data": {
+        "contextMs": 0.438125,
+        "files": {
+          "elapsedMs": 50.246334,
+          "ok": true,
+          "value": ["file:///tmp/tbt-spike-linux-artifacts/%E4%B8%AD%E6%96%87%20image.png"]
+        },
+        "formats": {
+          "elapsedMs": 50.293973,
+          "ok": true,
+          "value": ["text/uri-list"]
+        },
+        "image": {
+          "elapsedMs": 50.188358,
+          "error": "No image data found",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 202,
+        "text": {
+          "elapsedMs": 50.152534,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 201.373142
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.335Z",
+      "case": "xclip generated PNG 32x32 read 1",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.538Z",
+      "case": "xclip generated PNG 32x32 read 1",
+      "data": {
+        "contextMs": 0.459089,
+        "files": {
+          "elapsedMs": 50.171969,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.225094,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 50.578794,
+          "ok": true,
+          "value": {
+            "height": 32,
+            "png": {
+              "elapsedMs": 0.189984,
+              "ok": true,
+              "value": {
+                "bytes": 221
+              }
+            },
+            "readMs": 50.374945999999994,
+            "width": 32
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 203,
+        "text": {
+          "elapsedMs": 50.186249,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 201.658261
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.545Z",
+      "case": "xclip generated PNG 32x32 read 2",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.748Z",
+      "case": "xclip generated PNG 32x32 read 2",
+      "data": {
+        "contextMs": 0.620323,
+        "files": {
+          "elapsedMs": 50.17333,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.250113,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 50.721596,
+          "ok": true,
+          "value": {
+            "height": 32,
+            "png": {
+              "elapsedMs": 0.257981,
+              "ok": true,
+              "value": {
+                "bytes": 221
+              }
+            },
+            "readMs": 50.446358,
+            "width": 32
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 203,
+        "text": {
+          "elapsedMs": 50.204616,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 202.014765
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:31.855Z",
+      "case": "xclip generated PNG 32x32 read 3",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:32.009Z",
+      "case": "xclip generated PNG 32x32 read 3",
+      "data": {
+        "contextMs": 0.451211,
+        "files": {
+          "elapsedMs": 0.1459,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.571805,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 51.771631,
+          "ok": true,
+          "value": {
+            "height": 32,
+            "png": {
+              "elapsedMs": 0.189177,
+              "ok": true,
+              "value": {
+                "bytes": 221
+              }
+            },
+            "readMs": 51.568381,
+            "width": 32
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 154,
+        "text": {
+          "elapsedMs": 50.291058,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 153.269186
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:32.649Z",
+      "case": "xclip generated PNG 6000x4000 read 1",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:36.160Z",
+      "case": "xclip generated PNG 6000x4000 read 1",
+      "data": {
+        "contextMs": 0.568131,
+        "files": {
+          "elapsedMs": 50.183456,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.215428,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 3358.675929,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "png": {
+              "elapsedMs": 2779.724663,
+              "ok": true,
+              "value": {
+                "bytes": 473244
+              }
+            },
+            "readMs": 574.979744,
+            "width": 6000
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 3512,
+        "text": {
+          "elapsedMs": 50.320281,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 3510.012708
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:36.182Z",
+      "case": "xclip generated PNG 6000x4000 read 2",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:39.676Z",
+      "case": "xclip generated PNG 6000x4000 read 2",
+      "data": {
+        "contextMs": 0.42958,
+        "files": {
+          "elapsedMs": 50.146821,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.125446999999994,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 3341.40962,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "png": {
+              "elapsedMs": 2752.899511,
+              "ok": true,
+              "value": {
+                "bytes": 473244
+              }
+            },
+            "readMs": 586.029406,
+            "width": 6000
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 3493,
+        "text": {
+          "elapsedMs": 50.386082,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 3492.540149
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:39.718Z",
+      "case": "xclip generated PNG 6000x4000 read 3",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.243Z",
+      "case": "xclip generated PNG 6000x4000 read 3",
+      "data": {
+        "contextMs": 0.427617,
+        "files": {
+          "elapsedMs": 50.307449,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.208909000000006,
+          "ok": true,
+          "value": ["image/png"]
+        },
+        "image": {
+          "elapsedMs": 3372.70271,
+          "ok": true,
+          "value": {
+            "height": 4000,
+            "png": {
+              "elapsedMs": 2774.402419,
+              "ok": true,
+              "value": {
+                "bytes": 473244
+              }
+            },
+            "readMs": 594.297011,
+            "width": 6000
+          }
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 3525,
+        "text": {
+          "elapsedMs": 50.276822,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 3523.971414
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.353Z",
+      "case": "empty X11 clipboard: no owner",
+      "data": {},
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.356Z",
+      "case": "empty X11 clipboard: no owner",
+      "data": {
+        "contextMs": 0.434682,
+        "files": {
+          "elapsedMs": 0.024045,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 0.043574,
+          "error": "X11 error X11Error { error_kind: Atom, error_code: 5, sequence: 27, bad_value: 0, minor_opcode: 0, major_opcode: 20, extension_name: None, request_name: Some(\"GetProperty\") }",
+          "ok": false
+        },
+        "image": {
+          "elapsedMs": 0.02192,
+          "error": "No image data found",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 3,
+        "text": {
+          "elapsedMs": 0.023316,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 0,
+            "preview": ""
+          }
+        },
+        "totalMs": 0.57089
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.463Z",
+      "case": "synthetic HTML5 PNG File and URL in real WebKitGTK",
+      "data": {
+        "files": [
+          {
+            "bytes": 102,
+            "name": "中文 image.png",
+            "path": null,
+            "relativePath": "",
+            "type": "image/png"
+          }
+        ],
+        "items": [
+          {
+            "isDirectory": false,
+            "kind": "file",
+            "type": "image/png"
+          },
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/uri-list"
+          },
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/html"
+          }
+        ],
+        "strings": {
+          "text/html": {
+            "length": 42,
+            "preview": "<img src=\"https://example.test/image.png\">"
+          },
+          "text/plain": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/uri-list": {
+            "length": 30,
+            "preview": "https://example.test/image.png"
+          }
+        },
+        "types": ["Files", "text/uri-list", "text/html"]
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "html-drop",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.465Z",
+      "case": "synthetic HTML5 PNG File and URL in real WebKitGTK",
+      "data": {
+        "bytes": 102,
+        "elapsedMs": 2,
+        "height": 32,
+        "name": "中文 image.png",
+        "width": 32
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "html-image-decoded",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:40:43.571Z",
+      "case": "synthetic HTML5 PNG File and URL in real WebKitGTK",
+      "data": {
+        "path": "/tmp/tbt-spike-linux-data/io.github.tursom.rapidraw.intake-spike/results/intake-spike-1793947243570820324.json"
+      },
+      "source": "xclip X11 selection; generated fixtures, no source browser",
+      "type": "report-saved",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:46.523Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "paths": [
+          "/tmp/tbt-spike-linux-artifacts/generated-32x32.png",
+          "/tmp/tbt-spike-linux-artifacts/中文 image.png",
+          "/tmp/tbt-spike-linux-artifacts/folder",
+          "/tmp/tbt-spike-linux-artifacts/sample.RAW"
+        ],
+        "position": {
+          "x": 970,
+          "y": 250
+        },
+        "type": "enter"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-enter",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:46.728Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "position": {
+          "x": 820,
+          "y": 310
+        },
+        "type": "over"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-over",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:46.937Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "types": ["text/uri-list", "text/html"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-enter",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:46.945Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "position": {
+          "x": 600,
+          "y": 380
+        },
+        "type": "over"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-over",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:47.143Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "position": {
+          "x": 500,
+          "y": 390
+        },
+        "type": "over"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-over",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:41:47.348Z",
+      "case": "native Xdnd mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "paths": [
+          "/tmp/tbt-spike-linux-artifacts/generated-32x32.png",
+          "/tmp/tbt-spike-linux-artifacts/中文 image.png",
+          "/tmp/tbt-spike-linux-artifacts/folder",
+          "/tmp/tbt-spike-linux-artifacts/sample.RAW"
+        ],
+        "position": {
+          "x": 500,
+          "y": 390
+        },
+        "type": "drop"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-drop",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:42:38.466Z",
+      "case": "native Xdnd enter then leave without dropping",
+      "data": {
+        "paths": [
+          "/tmp/tbt-spike-linux-artifacts/generated-32x32.png",
+          "/tmp/tbt-spike-linux-artifacts/中文 image.png",
+          "/tmp/tbt-spike-linux-artifacts/folder",
+          "/tmp/tbt-spike-linux-artifacts/sample.RAW"
+        ],
+        "position": {
+          "x": 970,
+          "y": 250
+        },
+        "type": "enter"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-enter",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:42:38.669Z",
+      "case": "native Xdnd enter then leave without dropping",
+      "data": {
+        "position": {
+          "x": 750,
+          "y": 300
+        },
+        "type": "over"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-over",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:42:38.872Z",
+      "case": "native Xdnd enter then leave without dropping",
+      "data": {
+        "type": "leave"
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "native-leave",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    }
+  ],
+  "schema": 1
+}

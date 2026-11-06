@@ -1,0 +1,681 @@
+{
+  "platform": "Windows",
+  "method": "Interactive desktop, physical Win32 mouse input between real browser and Tauri; CDP only controls labels and reads results.",
+  "started": "2026-11-06T15:48:00+0800",
+  "tests": [
+    {
+      "case": "native-environment",
+      "status": "ready",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "arch": "x86_64",
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": true,
+        "nativeDragDrop": true,
+        "os": "windows"
+      },
+      "webview": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9334/devtools/browser/8064d5e8-eb06-46dc-bcda-478c6c2156a5"
+      }
+    },
+    {
+      "case": "Chrome-native-drag-small",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [218, 500],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/08e79f8b-9069-4302-affb-b6d471d85281"
+      }
+    },
+    {
+      "case": "Chrome-native-drag-large",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [218, 866],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/08e79f8b-9069-4302-affb-b6d471d85281"
+      }
+    },
+    {
+      "case": "Chrome-copy-image-small-1",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:48:15.445Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-small-1",
+        "data": {
+          "contextMs": 0.1625,
+          "files": {
+            "elapsedMs": 0.3778,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.11230000000000001,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 144.8209,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "png": {
+                "elapsedMs": 124.85000000000001,
+                "ok": true,
+                "value": {
+                  "bytes": 25859
+                }
+              },
+              "readMs": 19.8296,
+              "width": 1024
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 0.11689999999999999,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 145.63750000000002,
+          "roundTripMs": 148.29999995231628
+        }
+      }
+    },
+    {
+      "case": "Chrome-copy-image-small-2",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:48:17.028Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-small-2",
+        "data": {
+          "contextMs": 0.0184,
+          "files": {
+            "elapsedMs": 0.0961,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0597,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 145.4391,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "png": {
+                "elapsedMs": 125.7347,
+                "ok": true,
+                "value": {
+                  "bytes": 25859
+                }
+              },
+              "readMs": 19.5708,
+              "width": 1024
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 0.10969999999999999,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 145.7545,
+          "roundTripMs": 147.79999995231628
+        }
+      }
+    },
+    {
+      "case": "Chrome-copy-image-small-3",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:48:18.619Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-small-3",
+        "data": {
+          "contextMs": 0.018199999999999997,
+          "files": {
+            "elapsedMs": 0.096,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 0.0602,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 146.1285,
+            "ok": true,
+            "value": {
+              "height": 768,
+              "png": {
+                "elapsedMs": 125.9115,
+                "ok": true,
+                "value": {
+                  "bytes": 25859
+                }
+              },
+              "readMs": 20.0764,
+              "width": 1024
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 0.10830000000000001,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 146.4419,
+          "roundTripMs": 148.5
+        }
+      }
+    },
+    {
+      "case": "Chrome-copy-image-large-1",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:48:38.170Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-large-1",
+        "data": {
+          "contextMs": 0.018099999999999998,
+          "files": {
+            "elapsedMs": 62.0683,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 168.2555,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 17872.523699999998,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "png": {
+                "elapsedMs": 16203.6151,
+                "ok": true,
+                "value": {
+                  "bytes": 96011388
+                }
+              },
+              "readMs": 1664.8623,
+              "width": 6000
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 4.4066,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 18107.325800000002,
+          "roundTripMs": 18109.599999904633
+        }
+      }
+    },
+    {
+      "case": "Chrome-copy-image-large-2",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:48:57.875Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-large-2",
+        "data": {
+          "contextMs": 0.0195,
+          "files": {
+            "elapsedMs": 0.41859999999999997,
+            "error": "Get files error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 189.1686,
+            "ok": true,
+            "value": [
+              "PNG",
+              "CF_DIBV5",
+              "HTML Format",
+              "UniformResourceLocatorW",
+              "Chromium internal source RFH token",
+              "Chromium internal source URL",
+              "CF_BITMAP",
+              "CF_DIB"
+            ]
+          },
+          "image": {
+            "elapsedMs": 17956.2837,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "png": {
+                "elapsedMs": 16285.2558,
+                "ok": true,
+                "value": {
+                  "bytes": 96011388
+                }
+              },
+              "readMs": 1666.8286,
+              "width": 6000
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 4.2132000000000005,
+            "error": "Get text error, code = OSError(0): 操作成功完成。",
+            "ok": false
+          },
+          "totalMs": 18150.146,
+          "roundTripMs": 18153.200000047684
+        }
+      }
+    },
+    {
+      "case": "Chrome-copy-image-large-3",
+      "status": "observed",
+      "menu": "复制图片(Y)",
+      "result": {
+        "at": "2026-11-06T07:49:17.526Z",
+        "type": "system-clipboard",
+        "versions": "",
+        "source": "Chrome",
+        "case": "Chrome-copy-image-large-3",
+        "data": {
+          "contextMs": 0.0195,
+          "files": {
+            "elapsedMs": 62.5627,
+            "error": "Get files error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "formats": {
+            "elapsedMs": 166.57250000000002,
+            "ok": true,
+            "value": []
+          },
+          "image": {
+            "elapsedMs": 17900.9939,
+            "ok": true,
+            "value": {
+              "height": 4000,
+              "png": {
+                "elapsedMs": 16223.383399999999,
+                "ok": true,
+                "value": {
+                  "bytes": 96011388
+                }
+              },
+              "readMs": 1673.3726,
+              "width": 6000
+            }
+          },
+          "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+          "text": {
+            "elapsedMs": 4.1067,
+            "error": "Get text error, code = OSError(5): 拒绝访问。",
+            "ok": false
+          },
+          "totalMs": 18134.3098,
+          "roundTripMs": 18137.299999952316
+        }
+      }
+    },
+    {
+      "case": "Edge-native-drag-small",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [224, 490],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9335/devtools/browser/b5b7f010-98ff-407f-9d4b-30673a7c7dd3"
+      }
+    },
+    {
+      "case": "Edge-native-drag-large",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [224, 856],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9335/devtools/browser/b5b7f010-98ff-407f-9d4b-30673a7c7dd3"
+      }
+    },
+    {
+      "case": "Edge-copy-image-small-1",
+      "status": "error",
+      "error": "Copy-image menu item not found: []"
+    },
+    {
+      "case": "Edge-copy-image-large-1",
+      "status": "error",
+      "error": "Copy-image menu item not found: []"
+    },
+    {
+      "case": "html5-environment",
+      "status": "ready",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "arch": "x86_64",
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": true,
+        "nativeDragDrop": false,
+        "os": "windows"
+      },
+      "webview": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9336/devtools/browser/cad7fb2a-8d8d-4844-a9ee-98e6306bd280"
+      }
+    },
+    {
+      "case": "Chrome-html5-drag-small",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [218, 502],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/6069a6aa-c490-4582-92e6-7ec4b8cc0440"
+      }
+    },
+    {
+      "case": "Chrome-html5-drag-large",
+      "status": "observed",
+      "records": [],
+      "sourcePoint": [218, 868],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Chrome/156.0.8078.74",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "V8-Version": "15.6.75.25",
+        "WebKit-Version": "537.36 (@d331de35ca8ab1358c7a17e4bd41627d55eaef51)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9333/devtools/browser/6069a6aa-c490-4582-92e6-7ec4b8cc0440"
+      }
+    },
+    {
+      "case": "Edge-html5-drag-small",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T07:49:40.452Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T07:49:40.721Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-small",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "small.jpg",
+                "type": "image/jpeg",
+                "bytes": 14735,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"small\" src=\"http://127.0.0.1:8765/small.jpg\" width=\"260\" draggable=\"true\" alt=\"small fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/small.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T07:49:40.722Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-small",
+          "data": {
+            "name": "small.jpg",
+            "width": 1024,
+            "height": 768,
+            "bytes": 14735,
+            "elapsedMs": 1
+          }
+        }
+      ],
+      "sourcePoint": [224, 491],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9335/devtools/browser/4bca4f27-0478-409c-985e-c903dac09c9a"
+      }
+    },
+    {
+      "case": "Edge-html5-drag-large",
+      "status": "observed",
+      "records": [
+        {
+          "at": "2026-11-06T07:49:42.493Z",
+          "type": "html-enter",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"]
+          }
+        },
+        {
+          "at": "2026-11-06T07:49:42.852Z",
+          "type": "html-drop",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-large",
+          "data": {
+            "types": ["text/plain", "text/uri-list", "text/html", "Files"],
+            "items": [
+              {
+                "kind": "string",
+                "type": "text/plain",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/uri-list",
+                "isDirectory": null
+              },
+              {
+                "kind": "string",
+                "type": "text/html",
+                "isDirectory": null
+              },
+              {
+                "kind": "file",
+                "type": "image/jpeg",
+                "isDirectory": null
+              }
+            ],
+            "files": [
+              {
+                "name": "large.jpg",
+                "type": "image/jpeg",
+                "bytes": 23288788,
+                "path": null,
+                "relativePath": ""
+              }
+            ],
+            "strings": {
+              "text/uri-list": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              },
+              "text/html": {
+                "length": 103,
+                "preview": "<img id=\"large\" src=\"http://127.0.0.1:8765/large.jpg\" width=\"260\" draggable=\"true\" alt=\"large fixture\">"
+              },
+              "text/plain": {
+                "length": 31,
+                "preview": "http://127.0.0.1:8765/large.jpg"
+              }
+            }
+          }
+        },
+        {
+          "at": "2026-11-06T07:49:42.887Z",
+          "type": "html-image-decoded",
+          "versions": "",
+          "source": "Edge",
+          "case": "Edge-html5-drag-large",
+          "data": {
+            "name": "large.jpg",
+            "width": 6000,
+            "height": 4000,
+            "bytes": 23288788,
+            "elapsedMs": 34.59999990463257
+          }
+        }
+      ],
+      "sourcePoint": [224, 856],
+      "targetPoint": [2553, 600],
+      "browser": {
+        "Browser": "Edg/156.0.4314.58",
+        "File-Path-Style": "windows",
+        "Protocol-Version": "1.3",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+        "V8-Version": "15.6.12.10",
+        "WebKit-Version": "537.36 (@7806b68d20d1c1273d5b07b4f4de18e8f5852581)",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9335/devtools/browser/4bca4f27-0478-409c-985e-c903dac09c9a"
+      }
+    }
+  ],
+  "inputDesktopAccessible": true,
+  "screen": [3420, 2146],
+  "sessionId": "interactive scheduled task",
+  "finished": "2026-11-06T15:49:44+0800"
+}

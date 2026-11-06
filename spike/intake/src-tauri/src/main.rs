@@ -4,6 +4,22 @@ use serde_json::{Value, json};
 use std::{io::Write, time::SystemTime};
 use tauri::Manager;
 
+#[cfg(windows)]
+mod additional_objects;
+
+#[tauri::command]
+async fn install_additional_receiver(window: tauri::WebviewWindow) -> Result<(), String> {
+    #[cfg(windows)]
+    {
+        additional_objects::install(window)
+    }
+    #[cfg(not(windows))]
+    {
+        let _ = window;
+        Err("AdditionalObjects requires Windows WebView2".to_owned())
+    }
+}
+
 #[tauri::command]
 fn environment(app: tauri::AppHandle) -> Value {
     json!({
@@ -50,7 +66,8 @@ fn main() {
         .invoke_handler(tauri::generate_handler![
             environment,
             read_system_clipboard,
-            save_report
+            save_report,
+            install_additional_receiver
         ])
         .run(tauri::generate_context!())
         .expect("failed to run intake spike");

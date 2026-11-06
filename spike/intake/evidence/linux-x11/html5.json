@@ -1,0 +1,235 @@
+{
+  "currentContext": {
+    "case": "HTML5 mode native IPC clipboard marker",
+    "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+    "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+  },
+  "environment": {
+    "arch": "x86_64",
+    "clipboardLibrary": "clipboard-rs 0.3.5",
+    "debug": true,
+    "nativeDragDrop": false,
+    "os": "linux",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/60.5 Safari/605.1.15"
+  },
+  "exportedAt": "2026-11-06T06:46:03.613Z",
+  "records": [
+    {
+      "at": "2026-11-06T06:43:31.270Z",
+      "case": "",
+      "data": {
+        "arch": "x86_64",
+        "clipboardLibrary": "clipboard-rs 0.3.5",
+        "debug": true,
+        "nativeDragDrop": false,
+        "os": "linux",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/60.5 Safari/605.1.15"
+      },
+      "source": "",
+      "type": "environment",
+      "versions": ""
+    },
+    {
+      "at": "2026-11-06T06:44:08.944Z",
+      "case": "HTML5 mode: mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "types": ["text/uri-list", "text/html"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-enter",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:44:09.355Z",
+      "case": "HTML5 mode: mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "files": [],
+        "items": [
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/uri-list"
+          },
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/html"
+          }
+        ],
+        "strings": {
+          "text/html": {
+            "length": 454,
+            "preview": "<a style=\"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-size: medium; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4); -webkit-text-stroke-width: 0px; text-decoration: none;\">file:///tmp/tbt-spike-linux-artifacts/generated-32x32.png</a>"
+          },
+          "text/plain": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/uri-list": {
+            "length": 0,
+            "preview": ""
+          }
+        },
+        "types": ["text/uri-list", "text/html"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-drop",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:02.583Z",
+      "case": "HTML5 mode: mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "types": ["text/uri-list", "text/html"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-enter",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:02.992Z",
+      "case": "HTML5 mode: mixed PNG, Unicode filename, folder, synthetic RAW extension",
+      "data": {
+        "files": [],
+        "items": [
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/uri-list"
+          },
+          {
+            "isDirectory": null,
+            "kind": "string",
+            "type": "text/html"
+          }
+        ],
+        "strings": {
+          "text/html": {
+            "length": 454,
+            "preview": "<a style=\"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-size: medium; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4); -webkit-text-stroke-width: 0px; text-decoration: none;\">file:///tmp/tbt-spike-linux-artifacts/generated-32x32.png</a>"
+          },
+          "text/plain": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/uri-list": {
+            "length": 0,
+            "preview": ""
+          }
+        },
+        "types": ["text/uri-list", "text/html"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-drop",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:02.998Z",
+      "case": "Observed actual GTK URI drag: HTML anchor only, files=[] and URI text empty",
+      "data": {},
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "manual-observation",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:03.000Z",
+      "case": "synthetic HTML5 PNG File in actual WebKitGTK HTML5 mode",
+      "data": {
+        "files": [
+          {
+            "bytes": 102,
+            "name": "generated-32x32.png",
+            "path": null,
+            "relativePath": "",
+            "type": "image/png"
+          }
+        ],
+        "items": [
+          {
+            "isDirectory": false,
+            "kind": "file",
+            "type": "image/png"
+          }
+        ],
+        "strings": {
+          "text/html": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/plain": {
+            "length": 0,
+            "preview": ""
+          },
+          "text/uri-list": {
+            "length": 0,
+            "preview": ""
+          }
+        },
+        "types": ["Files"]
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-drop",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:03.001Z",
+      "case": "synthetic HTML5 PNG File in actual WebKitGTK HTML5 mode",
+      "data": {
+        "bytes": 102,
+        "elapsedMs": 1,
+        "height": 32,
+        "name": "generated-32x32.png",
+        "width": 32
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "html-image-decoded",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:03.305Z",
+      "case": "HTML5 mode native IPC clipboard marker",
+      "data": {},
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "clipboard-start",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    },
+    {
+      "at": "2026-11-06T06:46:03.508Z",
+      "case": "HTML5 mode native IPC clipboard marker",
+      "data": {
+        "contextMs": 0.49868000000000007,
+        "files": {
+          "elapsedMs": 50.181792,
+          "ok": true,
+          "value": []
+        },
+        "formats": {
+          "elapsedMs": 50.205131,
+          "ok": true,
+          "value": ["UTF8_STRING"]
+        },
+        "image": {
+          "elapsedMs": 50.193279,
+          "error": "No image data found",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "roundTripMs": 203,
+        "text": {
+          "elapsedMs": 50.200601,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": true,
+            "bytes": 20,
+            "preview": "RapidRAW:adjustments"
+          }
+        },
+        "totalMs": 201.344075
+      },
+      "source": "GTK fixture source + xdotool: real Xdnd text/uri-list",
+      "type": "system-clipboard",
+      "versions": "Linux X11 / GTK 3.24.52 / WebKitGTK 2.54.2"
+    }
+  ],
+  "schema": 1
+}

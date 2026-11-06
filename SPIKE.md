@@ -1,6 +1,6 @@
 # 阶段 1：拖放和剪贴板验证
 
-**状态：验证工具及 Linux 检查已完成，Windows/macOS 实测待补；阶段 1 尚未达到退出条件。**
+**状态：Linux 完整构建及窗口验证、Windows 构建和 Chrome/Edge 主要用例已实测；macOS 及下文列出的 Windows 剩余用例待补，阶段 1 尚未达到退出条件。**
 
 范围对应 `rapidraw-handoff/PLAN.md` 第 7 节阶段 1、`TASKS.md` 任务 7。基于 `92a70324`，分支为 `spike/phase-1-image-intake`。只增加本报告和 `spike/intake/`，不合并到主线。正式编辑器、Android、图片导入及编辑记录均没有改动。
 
@@ -12,12 +12,13 @@
 - `src-tauri/tauri.conf.json`：原生拖放开启；`tauri.html5.conf.json`：关闭原生拖放的对照配置。
 - `src-tauri/src/main.rs`：环境信息、后台剪贴板命令和 JSON 报告保存。
 - `src-tauri/src/lib.rs`：系统剪贴板格式枚举、文件/图片/文本读取及分段计时。
+- `src-tauri/src/additional_objects.rs`：Windows WebView2 的可选原生路径接收探针；勾选复选框后通过异步命令注册，COM 对象只在 UI 线程使用。
 - `src-tauri/examples/clipboard.rs`：无需 WebView 的剪贴板命令行探针。
 - 其余配置及锁文件仅用于独立构建；正式应用的配置、依赖和标识符未修改。
 
 原生拖放记录 `enter / over / leave / drop`，包括 Tauri 提供的路径。HTML5 记录 `DataTransfer.types / items / files`、目录标记、非标准 `File.path` 是否存在，以及 URI/HTML/文本摘要。可用的图片 File 会解码并显示尺寸与耗时；仅有 URL 时不会下载。字符串摘要最多保留 4096 个字符。
 
-系统剪贴板只在点击按钮时读取：记录所有原生格式名、文件列表、图片尺寸、读取耗时、PNG 编码字节数/耗时，以及文本摘要和调整参数标记是否匹配。文本摘要最多保留 512 个字符。后台读取不会阻塞页面，也不会修改系统剪贴板。读取过程中不要复制其他内容：各格式是顺序读取，并非原子快照。格式不支持或读取失败会记录具体错误，不视为空剪贴板。
+系统剪贴板只在点击按钮时读取：记录所有原生格式名、文件列表、图片尺寸、读取耗时、PNG 编码字节数/耗时，以及文本摘要和调整参数标记是否匹配。文本摘要最多保留 512 个字符。后台读取不会阻塞页面，也不会修改系统剪贴板。读取过程中不要复制其他内容：各格式是顺序读取，并非原子快照。库返回的错误会原样记录；Linux X11 实测发现，不支持的文件/文本读取也可能返回成功的空列表/空字符串，须结合格式枚举及具体来源判断，不能仅凭 `ok: true` 判断该格式存在。
 
 ## 在 Windows/macOS 上运行
 
@@ -64,23 +65,24 @@ cargo run --locked --no-default-features --example clipboard
 
 ## 目标平台实测矩阵
 
-以下全部为**未测**：当前只有无图形会话的 Linux 开发机，无法运行目标平台的来源浏览器及 WebView。没有 Windows/macOS 构建或运行成功的声明。
+Windows 已在 `pc.lan` 的实际桌面会话测试，来源页面由该机本地 HTTP 服务提供，图片是生成素材；没有将 Linux、合成 DOM 事件或无效鼠标落点填作目标平台成功。macOS 尚无可用测试主机。原始记录及版本见后文。
 
-| 系统    | 来源                              | 原生模式拖入 | HTML5 模式拖入 | 复制图片/文件后系统读取 | 大图耗时/报告 |
-| ------- | --------------------------------- | ------------ | -------------- | ----------------------- | ------------- |
-| Windows | Edge：网页 JPEG/PNG、小图/大图    | 未测         | 未测           | 未测                    | 未测          |
-| Windows | Chrome：网页 JPEG/PNG、小图/大图  | 未测         | 未测           | 未测                    | 未测          |
-| Windows | 资源管理器：单图/多图/文件夹/混合 | 未测         | 未测           | 未测                    | 未测          |
-| macOS   | Safari：网页 JPEG/PNG、小图/大图  | 未测         | 未测           | 未测                    | 未测          |
-| macOS   | Chrome：网页 JPEG/PNG、小图/大图  | 未测         | 未测           | 未测                    | 未测          |
-| macOS   | 访达：单图/多图/文件夹/混合       | 未测         | 未测           | 未测                    | 未测          |
+| 系统    | 来源                                               | 原生模式拖入                    | HTML5 模式拖入                                            | 复制图片/文件后系统读取                                 | 大图耗时/报告      |
+| ------- | -------------------------------------------------- | ------------------------------- | --------------------------------------------------------- | ------------------------------------------------------- | ------------------ |
+| Windows | Edge：网页 JPEG、小图/大图（PNG 来源待补）         | 真实源端拖动，目标未收到事件    | 图片 File 字节可用、可解码；无物理路径                    | “复制图像”成功，小图/大图各 3 次                        | 已记录，debug 构建 |
+| Windows | Chrome：网页 JPEG、小图/大图（PNG 来源待补）       | 真实源端拖动，目标未收到事件    | 图片 File 字节可用、可解码；无物理路径                    | “复制图片”成功，小图/大图各 3 次                        | 已记录，debug 构建 |
+| Windows | 资源管理器：单图/多图/文件夹/混合                  | 自动化落点/焦点无效，待有效复验 | 自动化落点/焦点无效，待有效复验                           | CF_HDROP 原生格式生成/读取已验证；不是资源管理器 Ctrl+C | 不适用             |
+| Windows | Windows Shell 原生 OLE 来源：文件/目录/混合/中日文 | 真实 native-drop 路径全部匹配   | 真实 HTML drop、目录标记及 AdditionalObjects 路径全部匹配 | 不涉及剪贴板                                            | 原始记录已保存     |
+| macOS   | Safari：网页 JPEG/PNG、小图/大图                   | 未测                            | 未测                                                      | 未测                                                    | 未测               |
+| macOS   | Chrome：网页 JPEG/PNG、小图/大图                   | 未测                            | 未测                                                      | 未测                                                    | 未测               |
+| macOS   | 访达：单图/多图/文件夹/混合                        | 未测                            | 未测                                                      | 未测                                                    | 未测               |
 
-| 系统剪贴板其他来源                                 | Windows | macOS |
-| -------------------------------------------------- | ------- | ----- |
-| 系统截图                                           | 未测    | 未测  |
-| 浏览器“复制图像地址”（Edge/Chrome；Safari/Chrome） | 未测    | 未测  |
-| 普通文本、空剪贴板、调整参数标记                   | 未测    | 未测  |
-| 大图首次及后续读取各 3 次                          | 未测    | 未测  |
+| 系统剪贴板其他来源                                 | Windows                                     | macOS |
+| -------------------------------------------------- | ------------------------------------------- | ----- |
+| 系统截图                                           | 未测                                        | 未测  |
+| 浏览器“复制图像地址”（Edge/Chrome；Safari/Chrome） | 未测                                        | 未测  |
+| 普通文本、空剪贴板、调整参数标记                   | Win32 生成内容，实际 Rust 读取已测          | 未测  |
+| 大图首次及后续读取各 3 次                          | Chrome/Edge 各 3 次已测；不是干净进程冷启动 | 未测  |
 
 ## 源码/文档结论与方案选择
 
@@ -88,11 +90,15 @@ cargo run --locked --no-default-features --example clipboard
 
 已核对 `arboard 3.7.0`（以及 3.6.1）也提供 `Clipboard::get().file_list()`。arboard 仍是正式实现的候选；本实验选择 clipboard-rs 的理由是格式枚举和诊断便利。两者都需要真机验证来源兼容性，不能仅凭 API 存在判定浏览器复制图片成功。
 
-**拖放保留 Tauri 原生本地拖放作为首选，正式输入方案待真机数据决定。** Tauri 官方配置文档明确：Windows 上 HTML5 拖放需要 `dragDropEnabled: false`，原生 handler 替换了 WebView2 的拖放处理器。因此提供两个启动配置做对照。普通 DOM File 不保证有本地绝对路径。
+**Windows 选定 HTML5 图片字节加 AdditionalObjects 本地路径；macOS 方案待实测，正式接入时补齐资源管理器 UI 及完整输入验收。** Windows 实测原生模式收不到 Chrome/Edge 的网页 JPEG 拖入；HTML5 模式两者均成功。Windows Shell 提供的原生文件/目录/混合拖放在 HTML5 模式也已取回正确的物理路径，保住本地输入能力。Tauri 官方文档明确 Windows 上 HTML5 拖放需要 `dragDropEnabled: false`。本次只验证方案，不修改正式应用的拖放配置。
 
 Windows 的 `chrome.webview.postMessageWithAdditionalObjects` 能将 File 送到原生端的 `ICoreWebView2File::Path`；Tauri/Wry 的普通字符串 IPC 不会把 AdditionalObjects 自动转为路径。需要通过 `with_webview` 注册 Windows COM 接收器，并在 WebView2 UI/STA 线程读取属性。macOS 没有这个接口，需要另外验证 WKWebView 的行为。
 
-工具中的 AdditionalObjects 复选框**只探测 JS API 是否存在以及能否发送**。本次未实现原生接收器；`additional-objects-sent` 中明确记录 `nativeReceiverInstalled: false`，不得据此声称本地路径可用。只有当真机结果表明必须用 HTML5 模式且本地路径丢失时，才有证据继续补这个 Windows 接收实验。网页图片或内存 File 也不能预设一定有磁盘路径。
+工具中的 AdditionalObjects 复选框现已连接 Windows 原生接收器。只有 `additional-paths` 的 `phase=receive, ok=true` 及实际 `paths` 才证明路径可用；发送成功或注册成功均不足以证明接收。实测：通过 CDP 文件输入提供的两个磁盘 File 可回传完整路径，含中日文文件名；Chrome/Edge 拖来的网页图片调用该 API 报“不是磁盘文件”，但它们的 HTML5 图片字节可解码。文件输入路径验证不替代资源管理器的实际拖放验证。
+
+接收器新增的直接依赖 `windows=0.62.2`、`webview2-com=0.39.1` 都与现有 Wry 栈的锁定版本一致，且仅在这个独立实验的 Windows desktop 特性启用。注册入口必须是异步命令；同步安装曾导致 WebView 无响应。发送消息使用 JSON 字符串：对象消息会使现有 Wry 字符串 IPC handler 提前失败，接收不到附加路径；改成字符串后已验证路径回传和后续正常 IPC。
+
+本探针嵌入静态页面，接收器只接受 `http://tauri.localhost` origin。正式程序的 Vite 开发入口需要同步匹配受信 origin，不能直接沿用这个固定值到开发服务器，也不能放开任意来源。
 
 尚不能断言“浏览器拖入代价过大”，也未决定第一版只支持粘贴。若后续实测得到这个结论，按 PLAN.md 第 11 节向产品负责人报告后决定。本地拖入优先的产品规则保持有效。
 
@@ -106,7 +112,7 @@ Windows 的 `chrome.webview.postMessageWithAdditionalObjects` 能将 File 送到
 
 ## 本机实际检查
 
-环境：Linux x86_64；Rust 1.99.1、Node 26.12.1；无 DISPLAY/Wayland 会话，无 GTK3/WebKitGTK 开发库。最终实验锁文件为 Tauri 2.12.1、tauri-runtime-wry 2.12.1、Wry 0.57.0、tao 0.37.1、clipboard-rs 0.3.5；CLI 固定 2.12.1。正式应用锁文件保持原样。初次 `tauri info` 检查使用了自动解析的较新补丁版本，提交前已固定并核对上述基线版本。
+环境：Linux x86_64；Rust 1.99.1、Node 26.12.1。首次检查时没有 DISPLAY/Wayland 会话及 GTK3/WebKitGTK 开发库；2026-11-06 补装 GTK 3.24.52、WebKitGTK 2.54.2、Xvfb、xclip 和 xdotool 后，已完成下述独立窗口构建及 X11 虚拟显示会话实测。最终实验锁文件为 Tauri 2.12.1、tauri-runtime-wry 2.12.1、Wry 0.57.0、tao 0.37.1、clipboard-rs 0.3.5；CLI 固定 2.12.1。正式应用锁文件保持原样。初次 `tauri info` 检查使用了自动解析的较新补丁版本，提交前已固定并核对上述基线版本。
 
 | 命令/用例                                                                            | 实际结果                                                                                                                                              |
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -116,8 +122,8 @@ Windows 的 `chrome.webview.postMessageWithAdditionalObjects` 能将 File 送到
 | 同目录 `cargo clippy --locked --no-default-features --lib --examples -- -D warnings` | 成功                                                                                                                                                  |
 | 同目录 `cargo run --locked --no-default-features --example clipboard`                | 正常返回 `contextError: $DISPLAY variable not set and no value was provided explicitly`，无 panic。只验证无图形环境的错误报告路径，不是读取剪贴板成功 |
 | 同目录 `cargo fmt -- --check`                                                        | 成功                                                                                                                                                  |
-| 同目录 `cargo check --locked`                                                        | 失败：系统缺少 `gdk-3.0`；完整窗口应用没有通过编译验证                                                                                                |
-| `cd spike/intake && npm exec tauri -- info`                                          | 识别独立应用配置和依赖；报告缺少 WebKitGTK 和 rustup                                                                                                  |
+| 同目录 `cargo check --locked`                                                        | 首次因缺少 `gdk-3.0` 失败；2026-11-06 补库后完整 desktop 检查通过，见下文                                                                             |
+| `cd spike/intake && npm exec tauri -- info`                                          | 首次识别独立应用配置和依赖，报告缺少 WebKitGTK 和 rustup；补库后的可选重查因 crates.io 连接重置而超时，未作为构建结论依据                             |
 | 两种合并后配置的 JSON Schema 检查，共享图标存在检查                                  | 通过。使用官方 Tauri 2 schema 和 Ajv，关闭 schema 中非标准数字格式注解的校验；结构、属性和类型校验开启                                                |
 | Linux headless Chromium 158.0.8127.18，Playwright 合成 DataTransfer                  | PNG File 元数据及 32×32 图片解码、URI/HTML 摘要、输入框粘贴未被拦截、JSON 下载、清空记录通过                                                          |
 | 同一浏览器，模拟 `window.__TAURI__` 桥接                                             | 原生事件转录、剪贴板命令及往返耗时记录、报告保存调用、AdditionalObjects 缺失报错、剪贴板错误后按钮恢复通过。是 mock，不是原生集成测试                 |
@@ -130,10 +136,133 @@ Windows 的 `chrome.webview.postMessageWithAdditionalObjects` 能将 File 送到
 
 浏览器冒烟使用本机已安装的 Playwright 和 Chromium，通过临时 Node HTTP 服务加载实验页面。拖放由合成 `DataTransfer`/`DragEvent` 触发；模拟 Tauri API 返回固定响应并核对事件、错误分支及导出的 JSON。临时脚本为 `/tmp/tbt-intake-smoke.cjs`。这些检查只证明页面记录逻辑可执行，不证明跨应用拖放、系统剪贴板、WebView2/WKWebView 或目标平台下载行为。
 
+### Linux 完整构建及实际窗口复验（2026-11-06）
+
+安装执行 `pacman -S --needed --noconfirm gtk3 webkit2gtk-4.1 xorg-server-xvfb xclip`，另装 `xdotool`。首次下载因镜像旧版本 404，整笔事务未安装；随后从 `archive.archlinux.org/packages/<首字母>/<包名>/` 补齐缺失精确版本包及 `.sig` 到 pacman 缓存，再重跑成功。没有执行系统更新、修改镜像配置或关闭签名校验。安装日志为 `/tmp/tbt-spike-pacman.log`、`/tmp/tbt-spike-archive.log` 和 `/tmp/tbt-spike-xdotool-install.log`。
+
+| 命令（独立应用目录内）                                                                 | 实际结果                                                            |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `src-tauri/`: `cargo check --locked`                                                   | 通过；默认特性包含 `desktop`，检查真实 Tauri 窗口、命令和剪贴板核心 |
+| `src-tauri/`: `cargo build --locked`                                                   | 通过；完整 debug 可执行文件成功链接，随后实际启动                   |
+| `src-tauri/`: `cargo clippy --locked --all-targets -- -D warnings`                     | 通过；包含 desktop、库和 example                                    |
+| `npm exec tauri -- build --debug --no-bundle --config src-tauri/tauri.html5.conf.json` | 通过；HTML5 对照配置实际构建及启动，`nativeDragDrop=false`          |
+| `npm run check`、`src-tauri/`: `cargo fmt -- --check`                                  | 通过                                                                |
+
+没有发现需要修复的实验代码编译问题。Tauri CLI 自动添加的两个空 `features` 数组已恢复，应用代码、依赖和锁文件均未改动。对照运行后重新执行默认配置的 check/build/Clippy，全部通过；最终构建产物恢复为原生模式。这里验证的是 debug 应用，没有执行 release 优化构建或安装包打包。
+
+使用 `xvfb-run ... dbus-run-session -- .../target/debug/rapidraw-intake-spike` 启动真实 GTK 窗口。初次 Xvfb 在本机 NVIDIA EGL 路径崩溃，继而导致 GTK 初始化失败；本次测试进程采用以下软件渲染设置后成功，未修改全局驱动配置：
+
+```sh
+LIBGL_ALWAYS_SOFTWARE=1 \
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json \
+xvfb-run -a -s '-screen 0 1280x1024x24 -extension GLX' \
+dbus-run-session -- ./src-tauri/target/debug/rapidraw-intake-spike
+```
+
+自动化通过 WebKitGTK 已有的 `WEBKIT_INSPECTOR_HTTP_SERVER=127.0.0.1:19231` 连接本机调试窗口，点击实际页面按钮并检查 DOM/原生导出文件；没有 mock `window.__TAURI__` 或增加应用测试钩子。测试时 `XDG_DATA_HOME=/tmp/tbt-spike-linux-data`，报告由实际 `save_report` 命令写到该目录下的应用 `results/`。软件渲染和缺少 AT-SPI 服务有警告，未阻止窗口和 IPC 运行。截图及完整日志保存在 `/tmp`；结束后关闭本次窗口、来源程序、调试端口和 Xvfb/dbus 会话。
+
+| 用例及来源                                           | 实际结果                                                                                                                                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 两种实际 Tauri 窗口初始化                            | `environment` 原生 IPC 返回 `os=linux`，原生/HTML5 模式的 `nativeDragDrop` 分别为 `true/false`；事件监听和剪贴板按钮正常启用                                             |
+| xclip：中日文普通文本、`RapidRAW:adjustments`        | 实际 X11 选择区读取成功，文本摘要及标记匹配；不是 JS mock                                                                                                                |
+| xclip：含空格、中文文件名的 `text/uri-list`          | `files.value` 保留百分号编码的 `file:///...` URI；此 Linux 库结果尚不是已解码的本地路径                                                                                  |
+| xclip：32×32、6000×4000 生成 PNG，各连续读取 3 次    | 原生图片读取、尺寸、PNG 编码及往返计时成功；详见下表                                                                                                                     |
+| xclip：无剪贴板 owner                                | 格式枚举返回 X11 Atom 错误，图片返回 `No image data found`；文件返回成功空列表、文本返回成功空字符串，页面按钮恢复可用                                                   |
+| xdotool：实际 Ctrl+V                                 | 普通输入框收到文本；聚焦测试区域后记录真实 `html-paste`，文本内容匹配                                                                                                    |
+| 临时 GTK 来源窗口：实际 Xdnd，原生模式               | 收到 `native-enter/over/drop/leave`；混合 PNG、中文空格文件名、目录、占位 `.RAW` 文件的四条绝对路径完整。没有执行 RAW 解码或文件过滤                                     |
+| 同一 GTK 来源：实际 Xdnd，HTML5 模式                 | 收到 `html-enter/drop`，但 `files=[]`、URI 字符串为空，仅 HTML 锚点包含第一条 file URI；没有可解码图片数据或目录标记。仅代表此 GTK URI 来源，不推断文件管理器/浏览器表现 |
+| 两种实际 WebView：合成 DOM `DataTransfer` / PNG File | 32×32 图片 File 元数据及解码成功，`File.path=null`；原生模式另验证 URI/HTML 摘要。这一行是合成事件，不是跨应用文件字节传输成功                                           |
+| 两种模式“导出 JSON”                                  | 实际 Rust `save_report` 写文件成功，回读确认模式、事件及剪贴板数据，原始报告见下文                                                                                       |
+
+6000×4000 素材是生成的灰度梯度转 RGB PNG，输入 81,157 字节；32×32 素材为生成的纯色 PNG。以下是最终测试序列的三次读取，进程和库已经经过前面的排查读测，**第 1 次不是进程冷启动**。这是 Linux X11、软件渲染、debug 构建、xclip 来源的结果，不能当作 Windows/macOS 浏览器复制图片的性能：
+
+| PNG 尺寸 / 次数 | 图片读取 `readMs` | PNG 编码 ms | 编码字节数 | 原生 `totalMs` | 页面往返 ms |
+| --------------- | ----------------- | ----------- | ---------- | -------------- | ----------- |
+| 32×32 / 1       | 50.37             | 0.19        | 221        | 201.66         | 203         |
+| 32×32 / 2       | 50.45             | 0.26        | 221        | 202.01         | 203         |
+| 32×32 / 3       | 51.57             | 0.19        | 221        | 153.27         | 154         |
+| 6000×4000 / 1   | 574.98            | 2779.72     | 473244     | 3510.01        | 3512        |
+| 6000×4000 / 2   | 586.03            | 2752.90     | 473244     | 3492.54        | 3493        |
+| 6000×4000 / 3   | 594.30            | 2774.40     | 473244     | 3523.97        | 3525        |
+
+读取耗时包含系统图片读取和解码，PNG 编码另外计时；总耗时还含格式枚举、文件、文本的顺序探测。报告原样保留不支持格式返回的空值和具体错误，不能把图片格式之外的 `text.ok=true` 解释为剪贴板同时存在文本。
+
+可复核产物：
+
+- [原生模式原始 JSON](spike/intake/evidence/linux-x11/native.json)：原生 IPC、X11 剪贴板、实际键盘粘贴、实际 Xdnd 路径，以及明确标注的合成 HTML5 事件。
+- [HTML5 模式原始 JSON](spike/intake/evidence/linux-x11/html5.json)：真实 GTK URI 拖入未获得 File 的结果、人工观察、合成 File 解码、原生剪贴板 IPC。
+- `/tmp/tbt-spike-linux-{check,build,clippy}.log` 和 `/tmp/tbt-spike-linux-final-{check,build,clippy}.log`；`/tmp/tbt-spike-linux-html5-build.log`；`/tmp/tbt-spike-linux-{js-check,fmt,versions}.log`。
+- `/tmp/tbt-spike-linux-smoke.log`、`/tmp/tbt-spike-html5-smoke.log`，以及 `/tmp/tbt-spike-linux-artifacts/` 内的截图、素材和计时汇总。初期断言按实际库的空值语义修正，失败记录保留在 `*-attempt*.log`，最终两套脚本退出码均为 0。
+- 临时驱动 `/tmp/tbt-spike-inspector.py`、`/tmp/tbt-spike-linux-smoke.py`、`/tmp/tbt-spike-html5-smoke.py`；实际拖放来源 `/tmp/tbt-spike-xdnd-source.c`。原生窗口日志 `/tmp/tbt-spike-linux-native-window.log`，HTML5 窗口日志 `/tmp/tbt-spike-linux-html5-window.log`，最初 Xvfb 崩溃栈 `/tmp/tbt-spike-xvfb-diagnostic.log`。
+
+## Windows 实机复验（2026-11-06）
+
+主机 `pc.lan`，Windows 10 x64、内核版本 `10.0.19045`。现有 Rust/Cargo 1.99.1、Visual Studio 2022 C++ 工具、Node 22.23.2；来源 Chrome `156.0.8078.74`、Edge `156.0.4314.58`，接收端 WebView2 `156.0.4314.58`。源码按用户指定用 rclone 放到 `E:\projects\tbt\rapidraw-intake-spike`，复用现有 Rust，没有运行此前准备的 Rust 安装脚本。
+
+编译和 UI 驱动通过临时计划任务在已登录的 **Session 1** 执行，`UserInteractive=true`，没有将 SSH Session 0 的剪贴板当作桌面剪贴板。浏览器使用这个目录下的独立 profile，没有接入用户已打开的浏览器标签页。CDP 仅设置实验标签、读取日志、提供明确标注的文件输入及调试信息；浏览器拖放使用实际 Win32 鼠标事件，复制图片通过真实浏览器右键菜单选择。
+
+Windows Cargo 公网下载持续超时，改由 Linux `cargo fetch --locked --target x86_64-pc-windows-msvc` 准备锁定依赖，通过内网传到项目专用 `cargo-home/`，使用 `--offline` 构建。Python 自动化依赖同样通过独立 `venv/` 离线安装。没有修改全局 PATH 或 Cargo 配置。以下命令均以独立工具的 `src-tauri/` 为工作目录：
+
+| 实际命令                                                                   | 结果                                                      |
+| -------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `cargo build --locked --offline`                                           | 原生模式编译及运行成功                                    |
+| 设置 `TAURI_CONFIG` 为 `tauri.html5.conf.json` 内容，再执行同一 build 命令 | HTML5 对照编译及运行成功，页面确认 `nativeDragDrop=false` |
+| `cargo build --locked --offline --no-default-features --example clipboard` | 剪贴板 CLI 编译及桌面会话运行成功                         |
+| `cargo clippy --locked --offline --all-targets -- -D warnings`             | 通过，包含 Windows COM 接收代码                           |
+
+可直接运行的两个 debug 可执行文件保留在 `E:\projects\tbt\rapidraw-intake-spike\artifacts\intake-native.exe` 和 `intake-html5.exe`，命令行探针为同目录 `clipboard.exe`。源码、构建日志、临时 UI 驱动和所有尝试的原始 JSON 均保留在该项目目录，源码和图片来源目录没有混放。
+
+测试结束后已移除两个临时计划任务并关闭本次应用及专用浏览器进程，回读确认剩余数量均为 0；恢复并核对生成的大小图素材仍在。用户原有浏览器进程、Rust、全局配置和项目目录保留。
+
+### 浏览器拖放与路径接收
+
+- 来源是 `http://127.0.0.1:8765/source.html`，图片为生成 JPEG：小图 1024×768、14,735 字节；大图 6000×4000、23,288,788 字节。大图使用固定随机种子的高熵 RGB 像素。此次不泛化为所有远程网站、CDN、受保护图片或 PNG 来源均已通过。
+- 最终浏览器拖放记录同时核对来源 `dragstart.isTrusted=true`、目标落点所属窗口以及 `dragend.dropEffect`。原生模式两浏览器均无目标拖放事件，源端结束为 `none`；HTML5 模式均为 `copy`，收到 `image/jpeg` File、URI/HTML/文本，图片能解码到原始尺寸。大图解码约 40 ms。`File.path=null`，不能从文件名推断源路径。
+- 勾选 AdditionalObjects 后，原生注册确认成功。通过 CDP 文件输入提供两个磁盘 File 后，真实 COM 接收器回传完整绝对路径，包含中日文；这一步没有伪装为资源管理器的物理拖动。
+- 同一接收器面对 Chrome/Edge 实际拖入的网页图片，JS API 报 `additional File object is not a file on the disk`，图片的 File 字节仍可解码。正式实现应分别处理磁盘路径和网页字节，不应对网页 File 强求物理路径。
+- 路径回传后再次调用 `environment` 并导出报告成功，现有 Tauri IPC 保持可用。首次同步安装导致无响应、对象消息发送后无路径回调的失败尝试保留在 Windows 项目的原始记录里；最终代码分别用异步安装和 JSON 字符串发送解决，并重跑验证。
+
+本地路径另用真实 Windows Shell 数据对象完成了端到端验证。最小来源窗口调用 Shell `GetUIObjectOf` 取得磁盘对象的 `IDataObject`，通过原生 OLE `DoDragDrop`、实际鼠标移动及释放拖入 Tauri；没有合成 DOM 拖放事件。它与资源管理器 UI 的自动化分开记录：
+
+| 来源选择        | 原生模式                           | HTML5 模式                             |
+| --------------- | ---------------------------------- | -------------------------------------- |
+| 单个 JPEG       | native-enter/drop 返回正确路径     | 图片字节可解码，原生接收器回传正确路径 |
+| 目录            | native-enter/drop 返回正确目录路径 | `isDirectory=true`，原生回传目录路径   |
+| JPEG 与目录混合 | 两条路径完整、顺序匹配             | 两个条目可区分目录，两个物理路径完整   |
+| 中日文文件名    | 原生路径完整                       | File 名称、图片解码及原生路径完整      |
+
+八个 OLE 用例均返回复制效果 `1`，拖入前核对目标窗口匹配。由此确认 Windows 本地拖放和网页拖放可共用 HTML5 模式，文件和目录均可保留路径。正式入口的格式过滤、只拖目录时提示、混合时忽略目录等行为仍属于后续输入任务。
+
+### 系统剪贴板与大图耗时
+
+Chrome 的“复制图片(Y)”和 Edge 的“复制图像(Y)”均通过真实右键菜单调用，小图、大图各复制并读取 3 次。Edge 最终驱动另记录了系统剪贴板序列号变化。原生格式包括 PNG、CF_DIBV5、HTML、URL 和 Chromium 自有格式；Rust 读取到正确尺寸，并完成 PNG 编码。
+
+以下是 **未优化 debug 实验应用** 的毫秒数；每个尺寸第 1 次为这段序列的首次读测，非干净进程冷启动。这个最小工具没有继承正式应用的 dev 优化配置，不能用编码耗时断言最终产品性能。大图编码输出为 96,011,388 字节，体现该高熵 RGBA 素材和当前编码方式的开销。
+
+| 来源 / 尺寸        | 三次图片读取 ms             | 三次 PNG 编码 ms               | 三次页面往返 ms             |
+| ------------------ | --------------------------- | ------------------------------ | --------------------------- |
+| Chrome / 1024×768  | 19.83 / 19.57 / 20.08       | 124.85 / 125.73 / 125.91       | 148.3 / 147.8 / 148.5       |
+| Chrome / 6000×4000 | 1664.86 / 1666.83 / 1673.37 | 16203.62 / 16285.26 / 16223.38 | 18109.6 / 18153.2 / 18137.3 |
+| Edge / 1024×768    | 19.29 / 19.30 / 19.45       | 126.68 / 126.86 / 126.21       | 150.3 / 149.8 / 148.7       |
+| Edge / 6000×4000   | 1657.05 / 1637.17 / 1637.19 | 16307.11 / 16268.48 / 16299.81 | 18060.0 / 18022.3 / 18050.2 |
+
+Chrome 大图首次读取时，格式枚举成功但返回空列表，随后图片读取成功；必须结合实际读出的内容判断，不能仅因一次枚举为空就认定没有图片。
+
+另用 Win32 API 生成 CF_HDROP 文件列表（含中日文路径）、调整参数标记、普通中日文文本、空剪贴板，由真实 Rust CLI 读取。文件列表与输入完全一致，文本及标记匹配，空剪贴板的格式列表为空，文件/图片/文本读取错误按原样记录。它验证系统格式与库的行为，不代表已通过资源管理器 Ctrl+C 或系统截图来源测试。
+
+### 原始证据与验收边界
+
+- [浏览器最终拖放与 Edge 剪贴板](spike/intake/evidence/windows/windows-final.json)：以可信源端事件及有效目标窗口为准；文件中失败的 Explorer 自动化行不算通过。
+- [Chrome 剪贴板序列](spike/intake/evidence/windows/windows-automation.json)：只引用其中真实右键复制成功的 Chrome 数据；这次早期尝试的拖放缺少有效源端事件，不能用于兼容性结论。
+- [AdditionalObjects 最终接收](spike/intake/evidence/windows/windows-additional-final.json)：含本地文件输入的真实路径回传、网页 File 的明确错误、后续 IPC/导出成功。
+- [Win32 系统剪贴板格式](spike/intake/evidence/windows/windows-system-clipboard.json)：明确标记生成来源。
+- [Windows Shell 原生拖放](spike/intake/evidence/windows/windows-shell-result.json)：八个真实 OLE 用例，包括 HTML5 的目录标记、混合列表及回传物理路径。
+- 早期 Explorer UI 自动化落点未匹配目标窗口，UIA 元素还曾失效；这些是测试驱动失败，不是产品不支持本地拖入的证据。实际资源管理器拖动仍需有效复验。
+
 ## 剩余验收及未处理问题
 
-- Windows 和 macOS 的实际构建、四个指定来源浏览器、资源管理器/访达及系统截图尚未测试。没有可报告的大图实测数字。
-- 尚未根据实测选择最终浏览器拖入路径；AdditionalObjects 原生接收器也未实现。
+- macOS 尚无实测：Safari/Chrome、访达、实际构建和剪贴板性能均待补。Windows 尚有资源管理器实际操作、PNG/远程网站来源、“复制图片地址”及系统截图用例待补；已完成的 Windows 浏览器和生成系统格式结果见上文。
+- Windows 已选定并验证 HTML5 加原生路径桥接；macOS 的输入方案仍待实测。不能据此宣布跨平台阶段完成或第一版仅支持网页粘贴。
 - 独立窗口未挂载编辑器的 @dnd-kit 面板/快捷条，正式输入接入时仍须实测拖放冲突。本次不修改正式功能。
-- 正式应用的完整 Rust 构建/Clippy 同样受桌面系统库限制，没有声称 CI 全通过。已有 TypeScript、ESLint、i18n 和格式问题记录如上，留给相应任务处理。
+- 正式应用的完整 Rust 构建/Clippy 本次未重跑；补库后通过的是独立实验应用，未据此声称正式应用或 CI 全通过。已有 TypeScript、ESLint、i18n 和格式问题记录如上，留给相应任务处理。
 - 完成目标平台矩阵、填入原始 JSON 和耗时并确定方案后，才能把阶段 1 标为完成。

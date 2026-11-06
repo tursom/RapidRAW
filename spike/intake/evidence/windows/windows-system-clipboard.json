@@ -1,0 +1,139 @@
+{
+  "method": "Generated Win32 CF_HDROP / Unicode text / empty clipboard, read by real Rust clipboard executable in interactive scheduled task; not Explorer copy.",
+  "cases": [
+    {
+      "case": "file-list",
+      "expected": [
+        "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\small.jpg",
+        "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\日本語 中文 濁音.jpg"
+      ],
+      "exit": 0,
+      "result": {
+        "contextMs": 0.1493,
+        "files": {
+          "elapsedMs": 0.0429,
+          "ok": true,
+          "value": [
+            "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\small.jpg",
+            "E:\\projects\\tbt\\rapidraw-intake-spike\\fixtures\\日本語 中文 濁音.jpg"
+          ]
+        },
+        "formats": {
+          "elapsedMs": 0.1046,
+          "ok": true,
+          "value": ["CF_HDROP"]
+        },
+        "image": {
+          "elapsedMs": 0.0785,
+          "error": "No image data in clipboard",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "text": {
+          "elapsedMs": 0.3559,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 0.784
+      }
+    },
+    {
+      "case": "marker",
+      "expected": "RapidRAW:adjustments",
+      "exit": 0,
+      "result": {
+        "contextMs": 0.0584,
+        "files": {
+          "elapsedMs": 0.3869,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.0614,
+          "ok": true,
+          "value": ["CF_UNICODETEXT", "CF_LOCALE", "CF_TEXT", "CF_OEMTEXT"]
+        },
+        "image": {
+          "elapsedMs": 0.0112,
+          "error": "No image data in clipboard",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "text": {
+          "elapsedMs": 0.0552,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": true,
+            "bytes": 20,
+            "preview": "RapidRAW:adjustments"
+          }
+        },
+        "totalMs": 0.6058
+      }
+    },
+    {
+      "case": "plain",
+      "expected": "RapidRAW 日本語 中文 text",
+      "exit": 0,
+      "result": {
+        "contextMs": 0.0492,
+        "files": {
+          "elapsedMs": 0.3548,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.056,
+          "ok": true,
+          "value": ["CF_UNICODETEXT", "CF_LOCALE", "CF_TEXT", "CF_OEMTEXT"]
+        },
+        "image": {
+          "elapsedMs": 0.011300000000000001,
+          "error": "No image data in clipboard",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "text": {
+          "elapsedMs": 0.0378,
+          "ok": true,
+          "value": {
+            "adjustmentsMarker": false,
+            "bytes": 30,
+            "preview": "RapidRAW 日本語 中文 text"
+          }
+        },
+        "totalMs": 0.5421999999999999
+      }
+    },
+    {
+      "case": "empty",
+      "expected": "",
+      "exit": 0,
+      "result": {
+        "contextMs": 0.047299999999999995,
+        "files": {
+          "elapsedMs": 0.4119,
+          "error": "Get files error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "formats": {
+          "elapsedMs": 0.1738,
+          "ok": true,
+          "value": []
+        },
+        "image": {
+          "elapsedMs": 0.0118,
+          "error": "No image data in clipboard",
+          "ok": false
+        },
+        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged during a read. image.elapsedMs includes PNG encoding.",
+        "text": {
+          "elapsedMs": 0.1314,
+          "error": "Get text error, code = OSError(0): 操作成功完成。",
+          "ok": false
+        },
+        "totalMs": 0.8077
+      }
+    }
+  ]
+}
