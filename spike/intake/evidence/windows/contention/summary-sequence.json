@@ -1,0 +1,2357 @@
+{
+  "completed": true,
+  "dispatchAnchor": false,
+  "browserSamples": 114,
+  "controlSamples": 10,
+  "excludedSamples": [],
+  "groups": [
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 101.474,
+        "median": 107.241,
+        "max": 300.577
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 148.548,
+        "median": 154.749,
+        "max": 160.834
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 50,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 50.246,
+        "median": 50.46,
+        "max": 50.686
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 151.363,
+        "median": 152.131,
+        "max": 152.888
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 144.655,
+        "median": 146.003,
+        "max": 158.564
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 150,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 150.059,
+        "median": 150.225,
+        "max": 150.491
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 251.938,
+        "median": 252.949,
+        "max": 253.466
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 150.789,
+        "median": 154.918,
+        "max": 157.875
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 350,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 350.121,
+        "median": 350.233,
+        "max": 350.389
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 451.86,
+        "median": 452.57,
+        "max": 462.942
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 150.039,
+        "median": 193.911,
+        "max": 196.352
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 700,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 700.153,
+        "median": 700.341,
+        "max": 700.42
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 802.086,
+        "median": 802.833,
+        "max": 803.475
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 20.003,
+        "median": 20.226,
+        "max": 20.654
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 1500,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 1500.259,
+        "median": 1500.295,
+        "max": 1500.32
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 1603.681,
+        "median": 1605.072,
+        "max": 1607.076
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 18.968,
+        "median": 19.333,
+        "max": 19.41
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 3000,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 3000.245,
+        "median": 3000.371,
+        "max": 3000.875
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 3101.238,
+        "median": 3101.368,
+        "max": 3103.302
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 18.234,
+        "median": 19.618,
+        "max": 21.287
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "observe",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 101.851,
+        "median": 103.437,
+        "max": 103.718
+      },
+      "explicitOpenFailureCodes": {}
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "open-retry",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 101.257,
+        "median": 101.395,
+        "max": 102.33
+      },
+      "explicitOpenFailureCodes": {
+        "5": 33
+      },
+      "openBoundsFromAnchorMs": [
+        {
+          "case": "Chrome-large.jpg-open-retry-0-1",
+          "lastFailureMs": 502.9388000000001,
+          "firstSuccessMs": 553.2102000000001
+        },
+        {
+          "case": "Chrome-large.jpg-open-retry-0-2",
+          "lastFailureMs": 504.7637,
+          "firstSuccessMs": 554.9097999999999
+        },
+        {
+          "case": "Chrome-large.jpg-open-retry-0-3",
+          "lastFailureMs": 504.2617000000001,
+          "firstSuccessMs": 554.6360999999999
+        }
+      ]
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 101.19,
+        "median": 102.215,
+        "max": 180.875
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 149.806,
+        "median": 154.302,
+        "max": 158.544
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 50,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 50.074,
+        "median": 50.23,
+        "max": 50.355
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 152.134,
+        "median": 152.426,
+        "max": 152.494
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 153.331,
+        "median": 155.612,
+        "max": 160.819
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 150,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 150.144,
+        "median": 150.35,
+        "max": 150.593
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 251.396,
+        "median": 251.957,
+        "max": 254.046
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 150.365,
+        "median": 151.51,
+        "max": 152.076
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 350,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 350.042,
+        "median": 350.178,
+        "max": 350.511
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 451.518,
+        "median": 451.94,
+        "max": 454.64
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 157.087,
+        "median": 172.779,
+        "max": 175.521
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 700,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 700.039,
+        "median": 700.048,
+        "max": 700.459
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 801.536,
+        "median": 801.734,
+        "max": 802.639
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 8.464,
+        "median": 8.626,
+        "max": 9.538
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 1500,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 1500.266,
+        "median": 1500.278,
+        "max": 1500.536
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 1601.167,
+        "median": 1601.583,
+        "max": 1602.716
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.973,
+        "median": 8.15,
+        "max": 8.308
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 3000,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 3000.023,
+        "median": 3000.307,
+        "max": 3000.629
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 3101.464,
+        "median": 3102.399,
+        "max": 3102.648
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.742,
+        "median": 7.837,
+        "max": 7.839
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "observe",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 100.992,
+        "median": 102.433,
+        "max": 102.859
+      },
+      "explicitOpenFailureCodes": {}
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "open-retry",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 101.587,
+        "median": 102.667,
+        "max": 104.179
+      },
+      "explicitOpenFailureCodes": {
+        "5": 33
+      },
+      "openBoundsFromAnchorMs": [
+        {
+          "case": "Chrome-photo-control.jpg-open-retry-0-1",
+          "lastFailureMs": 504.2299000000001,
+          "firstSuccessMs": 554.8317
+        },
+        {
+          "case": "Chrome-photo-control.jpg-open-retry-0-2",
+          "lastFailureMs": 503.268,
+          "firstSuccessMs": 553.865
+        },
+        {
+          "case": "Chrome-photo-control.jpg-open-retry-0-3",
+          "lastFailureMs": 519.4812999999999,
+          "firstSuccessMs": 569.7385999999999
+        }
+      ]
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "small.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 14.502,
+        "median": 16.062,
+        "max": 16.722
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.524,
+        "median": 14.053,
+        "max": 14.474
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 104.312,
+        "median": 104.451,
+        "max": 279.015
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 148.089,
+        "median": 154.812,
+        "max": 159.106
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 50,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 50.232,
+        "median": 50.264,
+        "max": 50.446
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 152.358,
+        "median": 172.003,
+        "max": 341.132
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 146.722,
+        "median": 147.929,
+        "max": 148.436
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 150,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 150.387,
+        "median": 150.408,
+        "max": 150.496
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 255.831,
+        "median": 259.927,
+        "max": 275.742
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 150.461,
+        "median": 157.317,
+        "max": 159.735
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 350,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 350.108,
+        "median": 350.283,
+        "max": 350.962
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 456.545,
+        "median": 464.535,
+        "max": 497.537
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 152.752,
+        "median": 154.417,
+        "max": 158.306
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 700,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 700.025,
+        "median": 700.165,
+        "max": 700.215
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 803.546,
+        "median": 813.183,
+        "max": 817.095
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 18.815,
+        "median": 19.474,
+        "max": 23.033
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 1500,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 1500.165,
+        "median": 1500.239,
+        "max": 1500.376
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 1606.324,
+        "median": 1607.803,
+        "max": 1613.494
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 18.615,
+        "median": 19.459,
+        "max": 42.249
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "delayMs": 3000,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 3000.028,
+        "median": 3000.228,
+        "max": 3000.775
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 3102.414,
+        "median": 3104.729,
+        "max": 3109.553
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 16.477,
+        "median": 18.015,
+        "max": 18.719
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "observe",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 106.8,
+        "median": 108.502,
+        "max": 128.218
+      },
+      "explicitOpenFailureCodes": {}
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "open-retry",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 102.191,
+        "median": 103.261,
+        "max": 103.647
+      },
+      "explicitOpenFailureCodes": {
+        "5": 36
+      },
+      "openBoundsFromAnchorMs": [
+        {
+          "case": "Edge-large.jpg-open-retry-0-1",
+          "lastFailureMs": 554.8122000000001,
+          "firstSuccessMs": 605.3702000000001
+        },
+        {
+          "case": "Edge-large.jpg-open-retry-0-2",
+          "lastFailureMs": 561.0352,
+          "firstSuccessMs": 611.3423
+        },
+        {
+          "case": "Edge-large.jpg-open-retry-0-3",
+          "lastFailureMs": 563.2813,
+          "firstSuccessMs": 613.8994
+        }
+      ]
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 104.948,
+        "median": 108.177,
+        "max": 169.736
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 146.12,
+        "median": 147.2,
+        "max": 154.294
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 50,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 50.317,
+        "median": 50.478,
+        "max": 50.812
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 152.67,
+        "median": 169.476,
+        "max": 222.431
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 144.487,
+        "median": 150.359,
+        "max": 150.531
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 150,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 150.095,
+        "median": 150.257,
+        "max": 150.391
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 251.548,
+        "median": 256.185,
+        "max": 332.919
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 149.254,
+        "median": 149.28,
+        "max": 157.162
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 350,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 350.107,
+        "median": 350.236,
+        "max": 350.875
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 453.25,
+        "median": 455.868,
+        "max": 460.215
+      },
+      "explicitOpenFailureCodes": {
+        "5": 3
+      },
+      "rawSuccess": 0,
+      "rawFailure": 3,
+      "validPng": 0,
+      "sourceMatches": 0,
+      "bytesEqualLateReference": 0,
+      "successReadMs": null,
+      "failureReadMs": {
+        "n": 3,
+        "min": 145.371,
+        "median": 147.449,
+        "max": 174.478
+      },
+      "rawErrorStringsDiagnosticOnly": {
+        "Get buffer error, code = OSError(5): 拒绝访问。": 3
+      },
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 700,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 700.245,
+        "median": 700.502,
+        "max": 700.937
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 801.339,
+        "median": 806.07,
+        "max": 815.571
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.636,
+        "median": 7.995,
+        "max": 8.082
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 1500,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 1500.325,
+        "median": 1500.461,
+        "max": 1500.468
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 1602.866,
+        "median": 1603.226,
+        "max": 1604.286
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.67,
+        "median": 8.004,
+        "max": 8.208
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "delayMs": 3000,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 3000.144,
+        "median": 3000.184,
+        "max": 3000.904
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 3106.452,
+        "median": 3107.432,
+        "max": 3111.342
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 7.5,
+        "median": 7.658,
+        "max": 7.707
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "observe",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 104.601,
+        "median": 106.482,
+        "max": 145.599
+      },
+      "explicitOpenFailureCodes": {}
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "open-retry",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 104.082,
+        "median": 106.095,
+        "max": 106.172
+      },
+      "explicitOpenFailureCodes": {
+        "5": 33
+      },
+      "openBoundsFromAnchorMs": [
+        {
+          "case": "Edge-photo-control.jpg-open-retry-0-1",
+          "lastFailureMs": 503.7573000000001,
+          "firstSuccessMs": 554.4407
+        },
+        {
+          "case": "Edge-photo-control.jpg-open-retry-0-2",
+          "lastFailureMs": 503.50179999999995,
+          "firstSuccessMs": 554.0697
+        },
+        {
+          "case": "Edge-photo-control.jpg-open-retry-0-3",
+          "lastFailureMs": 505.9602,
+          "firstSuccessMs": 556.5713999999999
+        }
+      ]
+    },
+    {
+      "browser": "Edge",
+      "fixture": "small.jpg",
+      "mode": "direct",
+      "delayMs": 0,
+      "n": 3,
+      "inputVerified": 3,
+      "actualDelayFromAnchorMs": {
+        "n": 3,
+        "min": 0.001,
+        "median": 0.001,
+        "max": 0.001
+      },
+      "readStartAfterMenuMs": {
+        "n": 3,
+        "min": 5.788,
+        "median": 5.813,
+        "max": 8.374
+      },
+      "explicitOpenFailureCodes": {},
+      "rawSuccess": 3,
+      "rawFailure": 0,
+      "validPng": 3,
+      "sourceMatches": 3,
+      "bytesEqualLateReference": 3,
+      "successReadMs": {
+        "n": 3,
+        "min": 6.61,
+        "median": 7.304,
+        "max": 8.285
+      },
+      "failureReadMs": null,
+      "rawErrorStringsDiagnosticOnly": {},
+      "textAfterFailureProbes": 0,
+      "oldMarkerReadAfterFailure": 0
+    }
+  ],
+  "timelines": [
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "n": 21,
+      "sequenceChangeCount": {
+        "n": 21,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 100.505,
+        "median": 102.417,
+        "max": 300.583
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 634.087,
+        "median": 641.645,
+        "max": 888.855
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 21,
+        "min": 532.971,
+        "median": 539.004,
+        "max": 588.279
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 63,
+          "followedByMoreChanges": 42,
+          "producerObservedOpen": 21
+        },
+        "200": {
+          "candidates": 43,
+          "followedByMoreChanges": 22,
+          "producerObservedOpen": 21
+        },
+        "350": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "500": {
+          "candidates": 22,
+          "followedByMoreChanges": 1,
+          "producerObservedOpen": 1
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "observe",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 101.859,
+        "median": 103.449,
+        "max": 103.726
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 634.529,
+        "median": 637.253,
+        "max": 647.057
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 532.679,
+        "median": 533.536,
+        "max": 543.622
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "large.jpg",
+      "mode": "open-retry",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 101.28,
+        "median": 101.398,
+        "max": 102.333
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 634.116,
+        "median": 641.104,
+        "max": 644.409
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 532.723,
+        "median": 539.849,
+        "max": 542.081
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "n": 21,
+      "sequenceChangeCount": {
+        "n": 21,
+        "min": 3,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 100.804,
+        "median": 101.78,
+        "max": 180.875
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 621.581,
+        "median": 628.212,
+        "max": 708.4
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 21,
+        "min": 519.468,
+        "median": 524.742,
+        "max": 548.057
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 63,
+          "followedByMoreChanges": 42,
+          "producerObservedOpen": 21
+        },
+        "200": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "350": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "500": {
+          "candidates": 21,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "observe",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 100.995,
+        "median": 102.864,
+        "max": 103.412
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 624.319,
+        "median": 628.24,
+        "max": 629.482
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 523.329,
+        "median": 525.383,
+        "max": 527.051
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "photo-control.jpg",
+      "mode": "open-retry",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 101.608,
+        "median": 102.673,
+        "max": 104.183
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 622.478,
+        "median": 639.031,
+        "max": 656.167
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 520.893,
+        "median": 536.365,
+        "max": 551.99
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Chrome",
+      "fixture": "small.jpg",
+      "mode": "direct",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 3,
+        "median": 3,
+        "max": 3
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 14.575,
+        "median": 16.292,
+        "max": 16.727
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 19.654,
+        "median": 19.987,
+        "max": 22.075
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 3.611,
+        "median": 5.354,
+        "max": 5.504
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "200": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "350": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "direct",
+      "n": 21,
+      "sequenceChangeCount": {
+        "n": 21,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 102.1,
+        "median": 109.294,
+        "max": 290.698
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 654.165,
+        "median": 685.08,
+        "max": 855.469
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 21,
+        "min": 552.073,
+        "median": 571.753,
+        "max": 640.125
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 63,
+          "followedByMoreChanges": 42,
+          "producerObservedOpen": 21
+        },
+        "200": {
+          "candidates": 44,
+          "followedByMoreChanges": 23,
+          "producerObservedOpen": 21
+        },
+        "350": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "500": {
+          "candidates": 36,
+          "followedByMoreChanges": 15,
+          "producerObservedOpen": 15
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "observe",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 106.804,
+        "median": 108.597,
+        "max": 128.216
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 664.527,
+        "median": 682.191,
+        "max": 711.062
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 556.061,
+        "median": 575.393,
+        "max": 582.846
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 5,
+          "followedByMoreChanges": 2,
+          "producerObservedOpen": 2
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "large.jpg",
+      "mode": "open-retry",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 102.214,
+        "median": 103.284,
+        "max": 103.667
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 659.622,
+        "median": 669.449,
+        "max": 671.357
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 555.977,
+        "median": 566.189,
+        "max": 569.168
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 5,
+          "followedByMoreChanges": 2,
+          "producerObservedOpen": 2
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "direct",
+      "n": 21,
+      "sequenceChangeCount": {
+        "n": 21,
+        "min": 4,
+        "median": 4,
+        "max": 5
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 100.846,
+        "median": 105.934,
+        "max": 182.828
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 21,
+        "min": 629.867,
+        "median": 644.844,
+        "max": 731.371
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 21,
+        "min": 528.712,
+        "median": 538.293,
+        "max": 609.63
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 63,
+          "followedByMoreChanges": 42,
+          "producerObservedOpen": 21
+        },
+        "200": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "350": {
+          "candidates": 42,
+          "followedByMoreChanges": 21,
+          "producerObservedOpen": 21
+        },
+        "500": {
+          "candidates": 23,
+          "followedByMoreChanges": 2,
+          "producerObservedOpen": 2
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "observe",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 3,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 104.607,
+        "median": 106.49,
+        "max": 145.086
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 638.929,
+        "median": 663.354,
+        "max": 682.374
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 534.329,
+        "median": 536.777,
+        "max": 556.873
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "photo-control.jpg",
+      "mode": "open-retry",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 104.082,
+        "median": 106.101,
+        "max": 106.242
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 646.616,
+        "median": 648.53,
+        "max": 657.79
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 542.437,
+        "median": 542.535,
+        "max": 551.64
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 9,
+          "followedByMoreChanges": 6,
+          "producerObservedOpen": 3
+        },
+        "200": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "350": {
+          "candidates": 6,
+          "followedByMoreChanges": 3,
+          "producerObservedOpen": 3
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    },
+    {
+      "browser": "Edge",
+      "fixture": "small.jpg",
+      "mode": "direct",
+      "n": 3,
+      "sequenceChangeCount": {
+        "n": 3,
+        "min": 3,
+        "median": 3,
+        "max": 4
+      },
+      "firstSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 5.793,
+        "median": 5.818,
+        "max": 8.379
+      },
+      "lastSequenceChangeAfterMenuMs": {
+        "n": 3,
+        "min": 10.503,
+        "median": 11.93,
+        "max": 13.886
+      },
+      "lastSequenceChangeAfterAnchorMs": {
+        "n": 3,
+        "min": 4.692,
+        "median": 5.519,
+        "max": 6.143
+      },
+      "quietCandidates": {
+        "100": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "200": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "350": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        },
+        "500": {
+          "candidates": 3,
+          "followedByMoreChanges": 0,
+          "producerObservedOpen": 0
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "case": "generated-lock-100-direct",
+      "holdMs": 100,
+      "primary": {
+        "elapsedMs": 104.5226,
+        "endMs": 283.8448,
+        "error": "Get buffer error, code = OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3728,
+        "threadLastErrorAfterReturnDiagnosticOnly": 5
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {},
+      "firstSuccessAtMs": 104.57610000000003,
+      "finalOpen": {
+        "atMs": 3579.6974,
+        "elapsedMs": 0.0021,
+        "ok": true,
+        "sequenceAfter": 3728,
+        "sequenceBefore": 3728
+      }
+    },
+    {
+      "case": "generated-lock-100-open-retry",
+      "holdMs": 100,
+      "primary": {
+        "ok": true,
+        "opensClipboard": true,
+        "operation": "explicit-open-only"
+      },
+      "openAttempts": 3,
+      "explicitOpenFailureCodes": {
+        "5": 2
+      },
+      "firstSuccessAtMs": 101.5138,
+      "finalOpen": {
+        "atMs": 3578.8711,
+        "elapsedMs": 0.0021,
+        "ok": true,
+        "sequenceAfter": 3738,
+        "sequenceBefore": 3738
+      }
+    },
+    {
+      "case": "generated-lock-350-direct",
+      "holdMs": 350,
+      "primary": {
+        "elapsedMs": 156.8627,
+        "endMs": 333.51399999999995,
+        "error": "Get buffer error, code = OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3745,
+        "threadLastErrorAfterReturnDiagnosticOnly": 5
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {
+        "5": 1
+      },
+      "firstSuccessAtMs": null,
+      "finalOpen": {
+        "atMs": 3577.6337,
+        "elapsedMs": 0.0024,
+        "ok": true,
+        "sequenceAfter": 3748,
+        "sequenceBefore": 3748
+      }
+    },
+    {
+      "case": "generated-lock-350-open-retry",
+      "holdMs": 350,
+      "primary": {
+        "ok": true,
+        "opensClipboard": true,
+        "operation": "explicit-open-only"
+      },
+      "openAttempts": 8,
+      "explicitOpenFailureCodes": {
+        "5": 7
+      },
+      "firstSuccessAtMs": 352.3588,
+      "finalOpen": {
+        "atMs": 3581.6991,
+        "elapsedMs": 0.002,
+        "ok": true,
+        "sequenceAfter": 3758,
+        "sequenceBefore": 3758
+      }
+    },
+    {
+      "case": "generated-lock-1000-direct",
+      "holdMs": 1000,
+      "primary": {
+        "elapsedMs": 145.4386,
+        "endMs": 323.1886,
+        "error": "Get buffer error, code = OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3765,
+        "threadLastErrorAfterReturnDiagnosticOnly": 5
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {
+        "5": 1
+      },
+      "firstSuccessAtMs": null,
+      "finalOpen": {
+        "atMs": 3577.795,
+        "elapsedMs": 0.0026,
+        "ok": true,
+        "sequenceAfter": 3768,
+        "sequenceBefore": 3768
+      }
+    },
+    {
+      "case": "generated-lock-1000-open-retry",
+      "holdMs": 1000,
+      "primary": {
+        "ok": true,
+        "opensClipboard": true,
+        "operation": "explicit-open-only"
+      },
+      "openAttempts": 21,
+      "explicitOpenFailureCodes": {
+        "5": 20
+      },
+      "firstSuccessAtMs": 1008.1866,
+      "finalOpen": {
+        "atMs": 3578.3709999999996,
+        "elapsedMs": 0.0023,
+        "ok": true,
+        "sequenceAfter": 3778,
+        "sequenceBefore": 3778
+      }
+    },
+    {
+      "case": "generated-lock-3500-direct",
+      "holdMs": 3500,
+      "primary": {
+        "elapsedMs": 148.095,
+        "endMs": 327.7408,
+        "error": "Get buffer error, code = OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3785,
+        "threadLastErrorAfterReturnDiagnosticOnly": 5
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {
+        "5": 1
+      },
+      "firstSuccessAtMs": null,
+      "finalOpen": {
+        "atMs": 3579.9703000000004,
+        "elapsedMs": 0.0068000000000000005,
+        "error": "OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3785,
+        "sequenceBefore": 3785,
+        "win32Code": 5
+      }
+    },
+    {
+      "case": "generated-lock-3500-open-retry",
+      "holdMs": 3500,
+      "primary": {
+        "ok": false,
+        "opensClipboard": true,
+        "operation": "explicit-open-only"
+      },
+      "openAttempts": 61,
+      "explicitOpenFailureCodes": {
+        "5": 61
+      },
+      "firstSuccessAtMs": null,
+      "finalOpen": {
+        "atMs": 3578.6974000000005,
+        "elapsedMs": 0.008199999999999999,
+        "error": "OSError(5): 拒绝访问。",
+        "ok": false,
+        "sequenceAfter": 3795,
+        "sequenceBefore": 3795,
+        "win32Code": 5
+      }
+    },
+    {
+      "case": "generated-stable-marker",
+      "holdMs": null,
+      "primary": {
+        "elapsedMs": 0.6629999999999999,
+        "endMs": 0.7592,
+        "error": "Get buffer error, code = OSError(0): 操作成功完成。",
+        "ok": false,
+        "sequenceAfter": 3803,
+        "threadLastErrorAfterReturnDiagnosticOnly": 0
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {},
+      "firstSuccessAtMs": 0.7181,
+      "finalOpen": {
+        "atMs": 3400.2117,
+        "elapsedMs": 0.0022,
+        "ok": true,
+        "sequenceAfter": 3803,
+        "sequenceBefore": 3803
+      }
+    },
+    {
+      "case": "generated-stable-empty",
+      "holdMs": null,
+      "primary": {
+        "elapsedMs": 0.7167,
+        "endMs": 0.8207000000000001,
+        "error": "Get buffer error, code = OSError(0): 操作成功完成。",
+        "ok": false,
+        "sequenceAfter": 3804,
+        "threadLastErrorAfterReturnDiagnosticOnly": 0
+      },
+      "openAttempts": 1,
+      "explicitOpenFailureCodes": {},
+      "firstSuccessAtMs": 0.7786,
+      "finalOpen": {
+        "atMs": 3400.6289,
+        "elapsedMs": 0.0024,
+        "ok": true,
+        "sequenceAfter": 3804,
+        "sequenceBefore": 3804
+      }
+    }
+  ],
+  "note": "Win32Code comes only from explicit OpenClipboard calls, not parsed error text. Quiet candidates are sequence-only observations, never none/ready decisions. Timelines are sampled, not atomic.",
+  "inputSha256": "13ec662a7c9b02257f8c8574eca8b61b1f32c8767da7eb281a1e0d062abd88c1"
+}

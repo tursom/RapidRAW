@@ -2521,6 +2521,7 @@ name = "rapidraw-intake-spike"
 version = "0.1.0"
 dependencies = [
  "clipboard-rs",
+ "clipboard-win",
  "serde_json",
  "sha2",
  "tauri",

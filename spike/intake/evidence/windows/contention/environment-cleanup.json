@@ -1,0 +1,40 @@
+﻿{
+  "cpu": {
+    "Name": "AMD Ryzen 7 5800X3D 8-Core Processor           ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "remainingOwnedProcesses": 0,
+  "artifacts": [
+    {
+      "Path": "E:\\projects\\tbt\\rapidraw-intake-spike\\artifacts\\clipboard-contention.exe",
+      "Hash": "1CDCEDECF14E18C43A5BC52A328FA079A419F867900EA940AAC324B96260C58D"
+    },
+    {
+      "Path": "E:\\projects\\tbt\\rapidraw-intake-spike\\artifacts\\clipboard-contention-dispatch.exe",
+      "Hash": "987001F45EAA56535A2230EBCD6783A18195FA735808070348E99D5D0D46B389"
+    }
+  ],
+  "os": {
+    "Caption": "Microsoft Windows 10 专业版",
+    "Version": "10.0.19045",
+    "OSArchitecture": "64-bit"
+  },
+  "remainingTasks": 0,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "tasksBeforeCleanup": [
+    {
+      "state": "Ready",
+      "name": "RapidRAW-Spike-Contention-Build"
+    },
+    {
+      "state": "Ready",
+      "name": "RapidRAW-Spike-Contention-Run"
+    },
+    {
+      "state": "Ready",
+      "name": "RapidRAW-Spike-Dispatch-Run"
+    }
+  ],
+  "finished": "2026-11-07T00:50:36.2212940+08:00"
+}

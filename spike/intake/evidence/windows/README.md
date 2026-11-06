@@ -26,4 +26,6 @@ Chrome 大图原始序列第 1、3 次（共 3 次）枚举成功但格式列表
 
 后续 [release 补测](release/README.md) 已另行记录 54 个 Chrome/Edge 真实复制样本、7 个生成格式用例和 18 个实际 release Tauri 按钮/IPC 样本。包含原始 PNG 直取、尺寸/像素/字节核对、独立模式的三次耗时、本地 PNG/WebP 来源及失败尝试。新增 `clipboard-release.exe`、`intake-html5-release.exe`；这些补测没有覆盖资源管理器、真实 RAW 或远程网站拖放，也不改变阶段 1 暂不通过的结论。
 
+[第 5 项占用实测](contention/README.md) 另有 114 条首次序列变化起点、54 条复制菜单释放起点和 10 条生成控制记录。直接取 PNG 的首个内容操作没有任何格式/文件/文本前置探测；占用时捕获了明确打开错误 5，也记录了尚未发布新内容时旧标记仍可读的窗口。新增 `clipboard-contention.exe` 和 `clipboard-contention-dispatch.exe`，不是正式粘贴实现。Mac 和全部人工缺口继续保留，系统截图应优先补测。
+
 Windows 上保留了完整工作目录 `E:\projects\tbt\rapidraw-intake-spike`，包含 `build.ps1`、各个 `windows-*.py` 驱动、独立 venv、原始日志及所有失败尝试。这里选择与结论直接相关的 JSON 入库。驱动没有包含远程连接凭据。可手动运行 `artifacts\intake-native.exe` 或 `artifacts\intake-html5.exe`，按 `SPIKE.md` 复测并通过工具导出新记录。

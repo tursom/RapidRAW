@@ -1,0 +1,8 @@
+﻿{
+  "sha256": "1CDCEDECF14E18C43A5BC52A328FA079A419F867900EA940AAC324B96260C58D",
+  "clippyExit": 0,
+  "command": "cargo build --locked --offline --release --no-default-features --example clipboard_contention",
+  "sessionId": 1,
+  "buildExit": 0,
+  "finished": "2026-11-06T23:47:52.1267506+08:00"
+}

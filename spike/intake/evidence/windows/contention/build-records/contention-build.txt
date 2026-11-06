@@ -1,0 +1,8 @@
+cargo.exe :    Compiling rapidraw-intake-spike v0.1.0 (E:\projects\tbt\rapidraw-intake-spike\spike\intake\src-tauri)
+所在位置 E:\projects\tbt\rapidraw-intake-spike\contention-build.ps1:6 字符: 1
++ & $rust build --locked --offline --release --no-default-features --ex ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (   Compiling ra...take\src-tauri):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+    Finished `release` profile [optimized] target(s) in 1.89s
