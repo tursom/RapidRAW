@@ -1,0 +1,12 @@
+{
+  "name": "rapidraw-intake-spike",
+  "private": true,
+  "scripts": {
+    "native": "tauri dev",
+    "html5": "tauri dev --config src-tauri/tauri.html5.conf.json",
+    "check": "node --check web/probe.js"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.1"
+  }
+}

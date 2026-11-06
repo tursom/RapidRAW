@@ -1,0 +1,13 @@
+{
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "RapidRAW Intake Spike — HTML5",
+        "width": 1050,
+        "height": 800,
+        "dragDropEnabled": false
+      }
+    ]
+  }
+}

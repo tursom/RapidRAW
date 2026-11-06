@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RapidRAW 输入验证</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="probe.js" defer></script>
+  </head>
+  <body>
+    <h1>RapidRAW 拖放 / 剪贴板验证</h1>
+    <p id="environment">正在初始化…</p>
+    <p>仅记录事件和数据摘要。不会打开、导入或修改图片。每次测试前填写来源与用例。</p>
+    <div class="fields">
+      <label>系统 / WebView 版本 <input id="versions" placeholder="例如 Windows 11 / WebView2 版本" /></label>
+      <label>来源 / 浏览器版本 <input id="source" placeholder="例如 Chrome 版本 / 资源管理器 / 访达" /></label>
+      <label>用例 / 素材 <input id="case" placeholder="例如 浏览器复制图像 / 6000×4000 JPEG / 第 1 次" /></label>
+    </div>
+    <div class="buttons">
+      <button id="clipboard" disabled>读取系统剪贴板</button>
+      <button id="observation">记录当前用例/观察</button>
+      <button id="export">导出 JSON</button>
+      <button id="clear">清空记录</button>
+      <label><input type="checkbox" id="additional" /> Windows：发送 AdditionalObjects 探针</label>
+    </div>
+    <p>AdditionalObjects 只检查 API 存在和能否发送；此版本没有原生接收器，不能据此认定拿到了路径。</p>
+    <div id="drop" tabindex="0">
+      从本地或浏览器拖放到这里<br />或聚焦此区域后按 Ctrl/Cmd+V（只记录 HTML paste，系统读取用上方按钮）
+    </div>
+    <img id="preview" alt="最近一次 HTML5 拖入的图片预览" hidden />
+    <p>HTML5 模式会记录 files / items / URI / HTML / text，图片 File 会尝试解码以确认数据可用。不会请求 URL。</p>
+    <pre id="log" aria-live="polite"></pre>
+  </body>
+</html>
