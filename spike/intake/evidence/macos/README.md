@@ -4,7 +4,7 @@
 
 ## 准备和启动
 
-将 `spike/phase-1-image-intake` 分支对应的 RapidRAW 仓库复制到 Mac，保留目录结构及 `src-tauri/icons/`。记录来源提交；保留两个锁文件。安装兼容锁文件的 Rust（已有验证环境为 1.99.1）、Node.js（建议 22 或更新版本）、Xcode Command Line Tools，以及 Safari、Chrome。需在已登录的图形桌面中测试。
+从 `main` 取得包含 `spike/intake/` 验证包的 RapidRAW 仓库并复制到 Mac，保留目录结构及 `src-tauri/icons/`。记录来源提交；保留两个锁文件。安装兼容锁文件的 Rust（已有验证环境为 1.99.1）、Node.js（建议 22 或更新版本）、Xcode Command Line Tools，以及 Safari、Chrome。需在已登录的图形桌面中测试。
 
 记录 macOS、CPU 架构、Rust、Node、Safari 和 Chrome 版本。可在仓库根目录执行以下命令采集环境信息；浏览器版本从各自“关于”菜单读取：
 

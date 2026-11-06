@@ -4,7 +4,7 @@
 
 用户已选择 **macOS 留待人工补测**。人工验证步骤和待填表见 [macOS 补测交接](spike/intake/evidence/macos/README.md)；当前 macOS 结果仍为未测，不再等待远程主机信息。
 
-范围对应 `rapidraw-handoff/PLAN.md` 第 7 节阶段 1、`TASKS.md` 任务 7。基于 `92a70324`，分支为 `spike/phase-1-image-intake`。只增加本报告和 `spike/intake/`，不合并到主线。正式编辑器、Android、图片导入及编辑记录均没有改动。
+范围对应 `rapidraw-handoff/PLAN.md` 第 7 节阶段 1、`TASKS.md` 任务 7。基于 `92a70324`，最初在 `spike/phase-1-image-intake` 分支实施。用户后续明确要求将提交 rebase 到 `main` 并推送，此交付决定取代最初“验证代码不合入主线”的安排。改动仅包括本报告和 `spike/intake/`，验证工具保持独立；正式编辑器、Android、图片导入及编辑记录均没有改动。
 
 ## 实验工具
 
