@@ -1,0 +1,3 @@
+{"keyboardQuitEnabled":true,"type":"environment","qpcFrequency":10000000,"sessionId":1,"utc":"2026-11-07T01:56:57.5377808Z","outputPath":"E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-q-review-b64231feb8\\duration.ndjson","method":"Window/PID queries only; no clipboard open or content reads; unknown identities remain unknown","requestedIntervalMs":10,"durationSeconds":1}
+{"type":"observation","utc":"2026-11-07T01:56:57.5917764Z","qpc":471608928577,"elapsedMs":55.197700000000005,"window":0,"processId":0,"sequence":4625,"processName":null,"creationUtc":null,"executablePath":null}
+{"utc":"2026-11-07T01:56:58.8599490Z","reason":"duration","type":"completed","elapsedMs":1322.4483}

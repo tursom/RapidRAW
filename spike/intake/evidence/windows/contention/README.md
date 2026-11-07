@@ -112,11 +112,15 @@ PID 13760 的 181 段覆盖全部 168 个浏览器用例，包括小图；进入
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\spike\intake\scripts\windows-clipboard-processes.ps1 -OutputPath .\evidence\clipboard-processes-20261107.ndjson -Seconds 3600
 ```
 
-执行策略仅对这次启动的 PowerShell 进程设为 `Bypass`，不修改系统策略。相对 `OutputPath` 按调用时 PowerShell 当前目录解析；上述输出为 `E:\projects\tbt\rapidraw-intake-spike\evidence\clipboard-processes-20261107.ndjson`，也可直接传绝对路径。脚本启动时显示完整输出路径和时长，首条 `environment` 也保存 `outputPath`，开始操作前先核对；输出文件必须为新文件，避免覆盖证据。默认和示例均记录一小时，整轮超过一小时时，启动前按预计时长增大 `-Seconds`（最多 86400，即一天）。看到完成提示就表示已停止记录，剩余用例开始前须另用新文件重启，不能把停止后的用例当作已覆盖。
+执行策略仅对这次启动的 PowerShell 进程设为 `Bypass`，不修改系统策略。相对 `OutputPath` 按调用时 PowerShell 当前目录解析；上述输出为 `E:\projects\tbt\rapidraw-intake-spike\evidence\clipboard-processes-20261107.ndjson`，也可直接传绝对路径。脚本启动时显示完整输出路径和时长，首条 `environment` 也保存 `outputPath`，开始操作前先核对；输出文件必须为新文件，避免覆盖证据。默认和示例均记录一小时，整轮超过一小时时，启动前按预计时长增大 `-Seconds`（最多 86400，即一天）。
+
+提前做完时，回到运行观察脚本的控制台，**按 Q（无需回车）正常结束**。它会退出观察循环，再保存服务名映射和最后一条 `completed`（`reason=q-key`），显示完成提示后才可关闭窗口；到时自动结束则记录 `reason=duration`。不要用 Ctrl+C 或直接关窗口来结束正常补测，它们不能保证保存这两项。按键只在这个控制台生效，不会截获测试应用里的 Q；无可用控制台输入时会提示，且 `environment.keyboardQuitEnabled=false`，只能按设定时长结束。看到完成提示就表示已停止记录，剩余用例开始前须另用新文件重启，不能把停止后的用例当作已覆盖。
 
 路径修正已在 Windows PowerShell 5.1、桌面 Session 1 实跑：将 .NET 当前目录留在 `C:\Windows`，再用 PowerShell 切到 E 盘测试目录。旧解析会指向 `C:\Windows\direct\relative.ndjson`，修正后相对路径实际写入 E 盘当前目录；带 `-ExecutionPolicy Bypass -File` 的示例形式也完成并退出 0。重复使用已有输出文件被拒绝，原文件 SHA-256 不变，详见 [process-path-validation.json](process-path-validation.json)。两次实际记录各 2 秒；一小时默认值通过脚本 AST 核对，未运行满一小时，也未借此宣称整轮人工补测完成。
 
-随后在另一窗口执行用例，保存各次操作的 UTC 时间与用例名，将 NDJSON 一起提交。脚本记录 QPC、UTC、序列号、打开窗口 PID、进程名和创建时间，结束时查询存活服务映射。它只查询窗口和身份，**不调用 OpenClipboard 或读取内容**。10ms 是请求间隔，进程查询有开销、调度可能漏掉短时打开；无 HWND、权限不足或已退出时只能记录未知，不能据此证明没有占用。它提供来源诊断，不能替代 Rust 时序测量。Windows Session 1 已验证空闲运行及 2 秒持锁控制：准确记录了 Python 进程名、创建时间和打开／释放，序列号保持不变，见 [process-observer-validation.json](process-observer-validation.json)。本次验证未清空或改写剪贴板。
+Q 提前结束也已在 Windows PowerShell 5.1、桌面 Session 1 实跑：观察器配置为 3600 秒并使用真实独立控制台，通过 `WriteConsoleInputW` 向该控制台注入 Q 按下／释放事件，在约 6.23 秒正常结束、退出码 0。最后一条 `completed.reason=q-key` 之前确实保存了 PID 13760 的 `cbdhsvc_101adc` 服务映射。为观察到真实服务打开，测试使用专用 Chrome profile 从本地高熵 JPEG 执行真实“复制图片”；生成文本／位图的先前尝试没有采样到该服务，不能作为服务映射通过证据，失败尝试仅留在 Windows 工作目录。这不是新增的人工补测覆盖。另跑 1 秒限时用例，验证 `reason=duration` 和退出码 0。见 [验证摘要](process-q-validation.json)、[Q 用例原始 NDJSON](process-q.ndjson) 和 [限时用例原始 NDJSON](process-duration.ndjson)；摘要保存所测脚本及原始文件的 SHA-256。
+
+随后在另一窗口执行用例，保存各次操作的 UTC 时间与用例名，将 NDJSON 一起提交。脚本记录 QPC、UTC、序列号、打开窗口 PID、进程名和创建时间，结束时查询存活服务映射。它只查询窗口和身份，**不调用 OpenClipboard 或读取内容**。10ms 是请求间隔，进程查询有开销、调度可能漏掉短时打开；无 HWND、权限不足或已退出时只能记录未知，不能据此证明没有占用。它提供来源诊断，不能替代 Rust 时序测量。Windows Session 1 已验证空闲运行及 2 秒持锁控制：准确记录了 Python 进程名、创建时间和打开／释放，序列号保持不变，见 [process-observer-validation.json](process-observer-validation.json)。该 2 秒持锁验证未清空或改写剪贴板。
 
 ## 证据、复算与复现
 

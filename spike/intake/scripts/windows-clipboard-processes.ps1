@@ -22,18 +22,33 @@ $stream = [IO.File]::Open($absolute, [IO.FileMode]::CreateNew, [IO.FileAccess]::
 $writer = New-Object IO.StreamWriter($stream, (New-Object Text.UTF8Encoding($false)))
 $writer.AutoFlush = $true
 Write-Host "Recording clipboard process observations to $absolute for $Seconds seconds."
+$canReadKeys = $false
+try { $canReadKeys = -not [Console]::IsInputRedirected } catch { }
+if ($canReadKeys) {
+    Write-Host 'Press Q in this console to finish early and save service mappings.'
+} else {
+    Write-Host 'Keyboard input is unavailable; recording will finish at the configured duration.'
+}
 $timer = [Diagnostics.Stopwatch]::StartNew()
 $seen = @{}
 $lastState = ''
+$completionReason = 'duration'
 try {
     $writer.WriteLine((@{
         type = 'environment'; utc = [DateTime]::UtcNow.ToString('o')
         sessionId = (Get-Process -Id $PID).SessionId
         qpcFrequency = [Diagnostics.Stopwatch]::Frequency
         durationSeconds = $Seconds; requestedIntervalMs = 10; outputPath = $absolute
+        keyboardQuitEnabled = $canReadKeys
         method = 'Window/PID queries only; no clipboard open or content reads; unknown identities remain unknown'
     } | ConvertTo-Json -Compress))
     while ($timer.Elapsed.TotalSeconds -lt $Seconds) {
+        if ($canReadKeys -and [Console]::KeyAvailable) {
+            if ([Console]::ReadKey($true).Key -eq [ConsoleKey]::Q) {
+                $completionReason = 'q-key'
+                break
+            }
+        }
         $window = [ClipboardProcessObserver]::GetOpenClipboardWindow()
         [uint32]$openerId = 0
         if ($window -ne [IntPtr]::Zero) {
@@ -71,7 +86,10 @@ try {
             processId = $_.ProcessId; name = $_.Name; displayName = $_.DisplayName
         } | ConvertTo-Json -Compress))
     }
-    $writer.WriteLine((@{type = 'completed'; utc = [DateTime]::UtcNow.ToString('o')} | ConvertTo-Json -Compress))
+    $writer.WriteLine((@{
+        type = 'completed'; utc = [DateTime]::UtcNow.ToString('o')
+        reason = $completionReason; elapsedMs = $timer.Elapsed.TotalMilliseconds
+    } | ConvertTo-Json -Compress))
 } finally {
     $writer.Dispose()
     $stream.Dispose()

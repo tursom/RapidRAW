@@ -1,0 +1,3 @@
+# Keep the original Windows bytes so the recorded SHA-256 remains verifiable.
+/process-q.ndjson -text whitespace=cr-at-eol
+/process-duration.ndjson -text whitespace=cr-at-eol

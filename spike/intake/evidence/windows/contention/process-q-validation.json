@@ -1,0 +1,55 @@
+{
+  "lastTaskResult": 0,
+  "state": "Ready",
+  "report": {
+    "schema": 1,
+    "scriptSha256": "40308125026cfb741b8c233e97e4214b6345a1a83a6ec519d8fd9398b850207a",
+    "method": "Windows Session 1; allocated a real hidden console; injected Q key-down/up with WriteConsoleInputW, not stdin or a stop-file; Chrome real image-copy menu on a local fixture to exercise service mapping",
+    "source": {
+      "fixture": "large.jpg",
+      "sha256": "746fcea9f6455cdb1cbf3120155fa02c0dd8435b14512efc1f87b77a7d515fd5",
+      "copy": {
+        "name": "复制图片(Y)",
+        "sequenceBefore": 4617,
+        "sequenceAfter": 4618
+      }
+    },
+    "earlyStop": {
+      "exitCode": 0,
+      "requestedSeconds": 3600,
+      "injectedKey": "Q",
+      "keyboardQuitEnabled": true,
+      "completed": {
+        "utc": "2026-11-07T01:56:56.8167722Z",
+        "reason": "q-key",
+        "type": "completed",
+        "elapsedMs": 6231.241300000001
+      },
+      "services": [
+        {
+          "processId": 13760,
+          "utc": "2026-11-07T01:56:56.8137756Z",
+          "name": "cbdhsvc_101adc",
+          "displayName": "cbdhsvc_101adc",
+          "type": "service"
+        }
+      ],
+      "observationCount": 7,
+      "rawFile": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-q-review-b64231feb8\\q.ndjson",
+      "rawSha256": "3e2e2063b67889dc9509250129c094467cfbe347460812a0c5149a58fd951865"
+    },
+    "durationStop": {
+      "exitCode": 0,
+      "requestedSeconds": 1,
+      "completed": {
+        "utc": "2026-11-07T01:56:58.8599490Z",
+        "reason": "duration",
+        "type": "completed",
+        "elapsedMs": 1322.4483
+      },
+      "rawFile": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-q-review-b64231feb8\\duration.ndjson",
+      "rawSha256": "8b44bac4e64f4787b4227bd494fcd5cbaf1cf299918e2c56dd2e618391a84581"
+    },
+    "passed": true
+  }
+}
