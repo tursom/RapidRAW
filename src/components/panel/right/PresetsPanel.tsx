@@ -343,6 +343,7 @@ function PresetItemDisplay({
           >
             <div className="mt-3 px-1 pb-1">
               <Slider
+                snapToZero={false}
                 min={0}
                 max={200}
                 defaultValue={100}

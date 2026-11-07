@@ -1,0 +1,14 @@
+{
+  "finished": "2026-11-07T23:24:51.0088559+08:00",
+  "removedTasks": ["RapidRAW-Slider-Build", "RapidRAW-Slider-Smoke"],
+  "remainingOwnedProcesses": 0,
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "task2ExeSha256": "44df8416ee3b1ebe6694221d7ff8d3ee459634c72d05a18ad3e924198ad69967",
+  "controllerSha256": "6318bd81b27904ceaae5f1a90604937c28072f0145163a9f4d351c1bc2ef70a1",
+  "fixtureSha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+  "profileRestored": true,
+  "releaseExit": 0,
+  "smokeExit": 0,
+  "caseCount": 25,
+  "inputsRestored": true
+}

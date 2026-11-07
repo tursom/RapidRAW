@@ -157,6 +157,7 @@ const BrushTools = ({
   return (
     <div>
       <Slider
+        snapToZero={false}
         defaultValue={100}
         label={t('editor.ai.brush.size')}
         max={200}
@@ -167,6 +168,7 @@ const BrushTools = ({
         fillOrigin="min"
       />
       <Slider
+        snapToZero={false}
         defaultValue={defaultFeather}
         label={t('editor.ai.brush.feather')}
         max={100}
@@ -323,6 +325,7 @@ const CloneHealControls = ({
         </div>
       </div>
       <Slider
+        snapToZero={false}
         defaultValue={100}
         label={t('editor.masks.settings.opacity')}
         max={100}
@@ -2333,6 +2336,7 @@ function SettingsPanel({
 
               {subMaskConfig.parameters?.map((param: any) => (
                 <Slider
+                  snapToZero={false}
                   key={param.key}
                   label={t('editor.ai.params.' + param.key, param.key)}
                   min={param.min}

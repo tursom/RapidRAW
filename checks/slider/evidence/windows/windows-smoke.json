@@ -1,0 +1,1464 @@
+{
+  "schema": "rapidraw-slider-windows-smoke",
+  "started": "2026-11-07T23:23:46+0800",
+  "scriptSha256": "6318bd81b27904ceaae5f1a90604937c28072f0145163a9f4d351c1bc2ef70a1",
+  "driverSha256": "afbb755826f3691ce84296d52446507d25ad1877fde0cb00d8f8dd6f866ffc64",
+  "observerSha256": "487c7acf01b9cbbc4d00091d584e16755dfdeb08e644759edc0a1d2f2b3dc87b",
+  "exeSha256": "44df8416ee3b1ebe6694221d7ff8d3ee459634c72d05a18ad3e924198ad69967",
+  "fixture": {
+    "path": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+    "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+    "source": "set-a/photo-000.NEF",
+    "bytes": 10656312
+  },
+  "cases": [
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1075,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1075,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1075,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1075,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "track-inside-4"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1067,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1067,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1067,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1067,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "track-inside--4"
+    },
+    {
+      "value": 7,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "track-outside-8"
+    },
+    {
+      "value": -8,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "track-outside--8"
+    },
+    {
+      "value": 1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1073,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1073,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1073,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1073,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "fine-shift"
+    },
+    {
+      "value": -1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": true,
+          "x": 1070,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": true,
+          "x": 1070,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": true,
+          "x": 1070,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": true,
+          "x": 1070,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "fine-alt"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1095,
+          "y": 368
+        },
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1074,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag-1-3"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1068,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag-1--3"
+    },
+    {
+      "value": -8,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag-1--8"
+    },
+    {
+      "value": -8,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1063,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "release-1"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1047,
+          "y": 368
+        },
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1068,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag--1--3"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1074,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag--1-3"
+    },
+    {
+      "value": 7,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "drag--1-8"
+    },
+    {
+      "value": 7,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1079,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "release--1"
+    },
+    {
+      "value": 1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousemove",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        },
+        {
+          "type": "mousedown",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        },
+        {
+          "type": "mouseup",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        },
+        {
+          "type": "click",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        },
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowUp",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowUp",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowUp-1"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowDown",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowDown",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowDown-0"
+    },
+    {
+      "value": -1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowDown",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowDown",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowDown--1"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowRight",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowRight",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowRight-0"
+    },
+    {
+      "value": 1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowRight",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowRight",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowRight-1"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "keydown",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowLeft",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keyup",
+          "role": "range",
+          "trusted": true,
+          "key": "ArrowLeft",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "focused-ArrowLeft-0"
+    },
+    {
+      "value": 1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "wheel",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "shift-wheel-1"
+    },
+    {
+      "value": 0,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "wheel",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "shift-wheel-0"
+    },
+    {
+      "value": -1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "wheel",
+          "role": "range",
+          "trusted": true,
+          "key": null,
+          "shift": true,
+          "alt": false,
+          "x": 1071,
+          "y": 368
+        }
+      ],
+      "windowKeys": [],
+      "name": "shift-wheel--1"
+    },
+    {
+      "value": 1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousedown",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1177,
+          "y": 342
+        },
+        {
+          "type": "mouseup",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1177,
+          "y": 342
+        },
+        {
+          "type": "click",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1177,
+          "y": 342
+        },
+        {
+          "type": "beforeinput",
+          "role": "text",
+          "trusted": true,
+          "key": null,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "input",
+          "role": "text",
+          "trusted": true,
+          "key": null,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keydown",
+          "role": "text",
+          "trusted": true,
+          "key": "Enter",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "text-1"
+    },
+    {
+      "value": -1,
+      "min": -100,
+      "max": 100,
+      "step": 1,
+      "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+      "focused": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "events": [
+        {
+          "type": "mousedown",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1181,
+          "y": 342
+        },
+        {
+          "type": "mouseup",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1181,
+          "y": 342
+        },
+        {
+          "type": "click",
+          "role": "other",
+          "trusted": true,
+          "key": null,
+          "shift": false,
+          "alt": false,
+          "x": 1181,
+          "y": 342
+        },
+        {
+          "type": "beforeinput",
+          "role": "text",
+          "trusted": true,
+          "key": null,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "input",
+          "role": "text",
+          "trusted": true,
+          "key": null,
+          "x": null,
+          "y": null
+        },
+        {
+          "type": "keydown",
+          "role": "text",
+          "trusted": true,
+          "key": "Enter",
+          "shift": false,
+          "alt": false,
+          "x": null,
+          "y": null
+        }
+      ],
+      "windowKeys": [],
+      "name": "text--1"
+    }
+  ],
+  "launch": {
+    "pid": 32372,
+    "attachMs": 964.2856999998912,
+    "nativeVisibleUpperMs": 1778.7005999998655,
+    "initialWindowState": {
+      "width": 1280,
+      "height": 720,
+      "x": 100,
+      "y": 100,
+      "maximized": false,
+      "fullscreen": false
+    },
+    "launchPerfCounter": 95569.8350932
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/157.0.4341.42",
+    "revision": "@7b1486be4607d53d9f93841b7c776bc525ca74b7",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "jsVersion": "15.7.11.4"
+  },
+  "effectiveRootFolders": ["E:\\projects\\tbt\\rapidraw-slider\\fixture"],
+  "rangeGeometry": {
+    "x": 1071.5,
+    "y": 368,
+    "left": 959,
+    "width": 225
+  },
+  "setupValueBeforeReset": 7,
+  "setupReset": {
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "step": 1,
+    "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+    "focused": false,
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "dpr": 1
+    },
+    "events": [
+      {
+        "type": "mousedown",
+        "role": "label",
+        "trusted": true,
+        "key": null,
+        "shift": false,
+        "alt": false,
+        "x": 989,
+        "y": 342
+      },
+      {
+        "type": "mouseup",
+        "role": "label",
+        "trusted": true,
+        "key": null,
+        "shift": false,
+        "alt": false,
+        "x": 989,
+        "y": 342
+      },
+      {
+        "type": "click",
+        "role": "label",
+        "trusted": true,
+        "key": null,
+        "shift": false,
+        "alt": false,
+        "x": 989,
+        "y": 342
+      }
+    ],
+    "windowKeys": []
+  },
+  "pointerDownSamples": [
+    {
+      "requestedX": 1075.5,
+      "modifiers": 0,
+      "state": {
+        "value": 0,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1075,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1075,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1067.5,
+      "modifiers": 0,
+      "state": {
+        "value": 0,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1067,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1067,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1079.5,
+      "modifiers": 0,
+      "state": {
+        "value": 7,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1079,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1079,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1063.5,
+      "modifiers": 0,
+      "state": {
+        "value": -8,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1063,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1063,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1073,
+      "modifiers": 8,
+      "state": {
+        "value": 1,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": true,
+            "alt": false,
+            "x": 1073,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": true,
+            "alt": false,
+            "x": 1073,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1070,
+      "modifiers": 1,
+      "state": {
+        "value": -1,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": true,
+            "x": 1070,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": true,
+            "x": 1070,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    },
+    {
+      "requestedX": 1071.5,
+      "modifiers": 0,
+      "state": {
+        "value": 0,
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "selectedPath": "E:\\projects\\tbt\\rapidraw-slider\\fixture\\photo-000.NEF",
+        "focused": false,
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "events": [
+          {
+            "type": "mousemove",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1071,
+            "y": 368
+          },
+          {
+            "type": "mousedown",
+            "role": "range",
+            "trusted": true,
+            "key": null,
+            "shift": false,
+            "alt": false,
+            "x": 1071,
+            "y": 368
+          }
+        ],
+        "windowKeys": []
+      }
+    }
+  ],
+  "passed": true,
+  "profileRestored": true,
+  "fixtureSha256After": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+  "finished": "2026-11-07T23:23:53+0800"
+}

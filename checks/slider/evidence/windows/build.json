@@ -1,0 +1,65 @@
+{
+  "started": "2026-11-07T23:08:55+0800",
+  "checks": {
+    "release": 0
+  },
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "sourceBase": "72dc3ec91049b17595c379ad6ef278af09043a98",
+  "appliedInputs": 412,
+  "changedFiles": [
+    {
+      "path": "src-tauri/src/lib.rs",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src-tauri\\src\\lib.rs",
+      "beforeSha256": "864b832486fb61703df47d8cf3d9daa458deb5eb7d920301f0901676bd32f657"
+    },
+    {
+      "path": "src/components/modals/CollageModal.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\modals\\CollageModal.tsx",
+      "beforeSha256": "5c2db6d4bc31b699d3cdc5361bcc88e66344c327f49f1438c9a6129c54524e7a"
+    },
+    {
+      "path": "src/components/modals/CullingModal.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\modals\\CullingModal.tsx",
+      "beforeSha256": "be5ffdef9467b882baea96d0180aeb65712e1c48718ec756ecee5ee9af152bce"
+    },
+    {
+      "path": "src/components/panel/SettingsPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\panel\\SettingsPanel.tsx",
+      "beforeSha256": "31ab99538f0eec0f359c97cb31d4bd37865a36b90ab68021bdcf92eb4a2ab758"
+    },
+    {
+      "path": "src/components/panel/right/AIPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\panel\\right\\AIPanel.tsx",
+      "beforeSha256": "be1f865a295a90043619f8fecabfb56050b0c5ab2620219216d25dec64fe6925"
+    },
+    {
+      "path": "src/components/panel/right/ExportPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\panel\\right\\ExportPanel.tsx",
+      "beforeSha256": "0b2d2bf8984f88a936498d15f639e45eec9309ebbcf4783376e4c9bb2e4a5efe"
+    },
+    {
+      "path": "src/components/panel/right/PresetsPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\panel\\right\\PresetsPanel.tsx",
+      "beforeSha256": "2e3e45198227d68795e94e19fe86a5a0d012738cd87ec5c12ceeca2f09298385"
+    },
+    {
+      "path": "src/components/ui/Slider.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-slider\\original\\source\\src\\components\\ui\\Slider.tsx",
+      "beforeSha256": "17d1394e3ac8b21183a1aec283244ee841ebc2b30c353a583427bec19edc9d4d"
+    }
+  ],
+  "inputsUnchangedDuringBuild": true,
+  "exePath": "E:\\projects\\tbt\\rapidraw-baseline\\app\\src-tauri\\target\\release\\RapidRAW-slider.exe",
+  "exeSha256": "44df8416ee3b1ebe6694221d7ff8d3ee459634c72d05a18ad3e924198ad69967",
+  "originalInputsRestored": true,
+  "restoredOriginalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "finished": "2026-11-07T23:23:42+0800"
+}

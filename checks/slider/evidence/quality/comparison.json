@@ -1,0 +1,53 @@
+{
+  "sourceBase": "72dc3ec91049b17595c379ad6ef278af09043a98",
+  "sliderSha256": "8f2cd6aad449ac4712fc905c9a4804cc0210b92092f44e6ed9ac0c3c047aef04",
+  "typescript": {
+    "beforeDiagnostics": 64,
+    "afterDiagnostics": 64,
+    "afterExit": 2,
+    "added": [],
+    "removed": []
+  },
+  "eslint": {
+    "beforeErrors": 835,
+    "afterErrors": 835,
+    "beforeWarnings": 45,
+    "afterWarnings": 45,
+    "afterExit": 1,
+    "added": [],
+    "removed": []
+  },
+  "comparison": "Diagnostics normalized only for source-root and line/column shifts; rule, severity, message and multiplicity preserved. Baseline src from git archive 72dc3ec9.",
+  "elapsedSeconds": 12.729,
+  "rawFiles": [
+    {
+      "file": "typescript-before.txt.gz",
+      "rawBytes": 31805,
+      "rawSha256": "07fc54168c245f75d431b7e51c63d65fc91d4d97638bf3d57a005a446f00f974",
+      "gzipSha256": "7e79ec8fee27d7bc0a7a63fd19a41e7c49dfc73cd78f36c96c9795a9af00d6fa"
+    },
+    {
+      "file": "typescript-after.txt.gz",
+      "rawBytes": 31805,
+      "rawSha256": "aeddb212c754ae9d25315034d0b027a05107139bbfb511e3d99924af232fcb4b",
+      "gzipSha256": "8b856db39cef0b2bac3e406f2543c2645b4d3625f8143ca5905ed9b8bd4ba958"
+    },
+    {
+      "file": "eslint-before.json.gz",
+      "rawBytes": 2513323,
+      "rawSha256": "8da18fce47d4f926d7bc743500fa1e8efa09987218803e80b53d0415ab5bdad4",
+      "gzipSha256": "d68cfe8a95dbc763f18934c43ff76e903568acd0ac02165f1cadc42c77310fe0"
+    },
+    {
+      "file": "eslint-after.json.gz",
+      "rawBytes": 2515099,
+      "rawSha256": "e0652b3d8d6a1bee8af3bea388db0b69249fb4c7f62be663ad49b783e9098b24",
+      "gzipSha256": "bef0c2e4da91401be97fd53e5ae1e971ed888404b703872e91f1d60f3f3bdb53"
+    }
+  ],
+  "tools": {
+    "node": "v26.13.0",
+    "typescript": "Version 6.0.3",
+    "eslint": "v10.9.0"
+  }
+}

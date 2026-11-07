@@ -1,0 +1,53 @@
+{
+  "source": "Native Windows bytes, hashed before SCP; gzip preserves BOM/newlines exactly. Readable JSON is reformatted UTF-8/LF without semantic changes.",
+  "files": [
+    {
+      "file": "build.json",
+      "bytes": 3077,
+      "sha256": "003cf26aa2f3a578aefad71b05625b2160b163e0080683f69baab55b5a82c1a2",
+      "gzipFile": "raw/build.json.gz",
+      "gzipSha256": "dbf6a8f337b44d35206ef3afbbf4a8ac5c7817ff134881cad4e79d22945606e7",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "source-inputs.json",
+      "bytes": 62932,
+      "sha256": "f0713387965c3949cdd4cae5017cdeaf6e7bb7ee04179c780d16dc98f9e336ed",
+      "gzipFile": "raw/source-inputs.json.gz",
+      "gzipSha256": "089101eee69f8ea53a8b787f6ad0bcaa4dd95dd069f9a473f699fe5e5fe0132c",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "fixture.json",
+      "bytes": 232,
+      "sha256": "4f0109fe2ac0aaa71a8e7a52ae5e4e04962023ac4d576f5fbdd9ba0fa6c102fd",
+      "gzipFile": "raw/fixture.json.gz",
+      "gzipSha256": "2b32556994779460846d48dfaeec3c979fe4c3862003f14255f71e8c69b19336",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "windows-smoke.json",
+      "bytes": 34065,
+      "sha256": "af9bd8259600013e954b92f3c08a4250f00e3058b608c22bcb99367427398745",
+      "gzipFile": "raw/windows-smoke.json.gz",
+      "gzipSha256": "6be56fb97e81b36420cc2ef611ae41765fd1c6697c085eaa852a5b2241368d08",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "run-result.json",
+      "bytes": 161,
+      "sha256": "9b9597d36f296b47ced2260a67b9fb9edcbfb3f574b0e3964be0e81b3a5e8980",
+      "gzipFile": "raw/run-result.json.gz",
+      "gzipSha256": "b4113b0c4782cdec6a7ad1294670aa2c3ac14643d3de4870780aca3c48db3629",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "cleanup.json",
+      "bytes": 751,
+      "sha256": "40d7f9057164968febbb793b69bd47d457dbf3fe07c1ec000e106f42d1b5c430",
+      "gzipFile": "raw/cleanup.json.gz",
+      "gzipSha256": "639c651451d8abd6c87c5c0207c9138f9be7726e6f1c32481c2afa37aa8cbc77",
+      "canonicalJsonSemanticMatch": true
+    }
+  ]
+}

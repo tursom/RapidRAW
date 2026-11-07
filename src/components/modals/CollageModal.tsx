@@ -689,6 +689,7 @@ export default function CollageModal({ isOpen, onClose, onSave, sourceImages }: 
 
       <div className="space-y-2">
         <Slider
+          snapToZero={false}
           label={t('modals.collage.spacing')}
           min={0}
           max={50}
@@ -699,6 +700,7 @@ export default function CollageModal({ isOpen, onClose, onSave, sourceImages }: 
           fillOrigin="min"
         />
         <Slider
+          snapToZero={false}
           label={t('modals.collage.borderRadius')}
           min={0}
           max={50}

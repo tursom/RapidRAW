@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo, memo, RefObje
 import { useTranslation } from 'react-i18next';
 import { GLOBAL_KEYS } from './AppProperties';
 import { useEditorStore } from '../../store/useEditorStore';
+import { useSettingsStore } from '../../store/useSettingsStore';
 import { SPEED_EDIT_ADJUSTMENTS } from '../../utils/adjustments';
 
 export type SliderChangeEvent =
@@ -53,6 +54,7 @@ interface SliderProps {
   onDragStateChange?(state: boolean): void;
   onPointerUp?(): void;
   scale?: SliderScale;
+  snapToZero?: boolean;
   speedEditId?: string;
   step: number;
   value: number;
@@ -65,6 +67,7 @@ const DOUBLE_CLICK_THRESHOLD_MS = 150;
 export const FINE_ADJUSTMENT_MULTIPLIER = 0.2;
 const TOUCH_DRAG_THRESHOLD_PX = 10;
 const TOUCH_THUMB_HIT_RADIUS_PX = 24;
+const ZERO_SNAP_PX = 5;
 
 const getFraction = (value: number, min: number, max: number) => (max !== min ? (value - min) / (max - min) : 0);
 
@@ -87,6 +90,7 @@ const Slider = ({
   onDragStateChange = () => {},
   onPointerUp,
   scale = LINEAR_SCALE,
+  snapToZero = min <= 0 && max >= 0 && defaultValue === 0,
   speedEditId,
   step = 1,
   value,
@@ -95,6 +99,7 @@ const Slider = ({
   suffix = '',
 }: SliderProps) => {
   const { t } = useTranslation();
+  const isAndroid = useSettingsStore((state) => state.osPlatform === 'android');
   const [displayValue, setDisplayValue] = useState<number>(value);
   const [isDragging, setIsDragging] = useState(false);
   const animationFrameRef = useRef<number | undefined>(undefined);
@@ -120,6 +125,7 @@ const Slider = ({
   const pendingDragValueRef = useRef<number | null>(null);
   const lastEmittedValueRef = useRef<number | null>(null);
   const isDraggingRef = useRef(false);
+  const desktopDragActiveRef = useRef(false);
   const hasReportedDragStateRef = useRef(false);
 
   useEffect(() => {
@@ -161,11 +167,24 @@ const Slider = ({
   const snapToStepRef = useRef(snapToStep);
   const rangeRef = useRef({ min: minPosition, max: maxPosition });
   const scaleRef = useRef(scale);
+  const zeroSnapEnabledRef = useRef(false);
 
   onChangeRef.current = onChange;
   snapToStepRef.current = snapToStep;
   rangeRef.current = { min: minPosition, max: maxPosition };
   scaleRef.current = scale;
+  zeroSnapEnabledRef.current = !isAndroid && snapToZero && min <= 0 && max >= 0;
+
+  const getPointerValue = useCallback((position: number, width: number, fineAdjustment: boolean) => {
+    const { min: curMin, max: curMax } = rangeRef.current;
+    if (zeroSnapEnabledRef.current && !fineAdjustment && width > 0) {
+      const zeroPosition = scaleRef.current.toPosition(0);
+      const distancePx = (Math.abs(position - zeroPosition) / (curMax - curMin)) * width;
+      // Nonlinear scales can round an exact 5px boundary slightly upward.
+      if (distancePx <= ZERO_SNAP_PX + 1e-9) return 0;
+    }
+    return snapToStepRef.current(scaleRef.current.fromPosition(position));
+  }, []);
 
   const onDragStateChangeRef = useRef(onDragStateChange);
   onDragStateChangeRef.current = onDragStateChange;
@@ -227,6 +246,7 @@ const Slider = ({
 
     pendingTouchRef.current = null;
     suppressTouchChangeRef.current = false;
+    desktopDragActiveRef.current = false;
     isWheelActivelyChangingRef.current = false;
 
     if (wheelTimeoutRef.current !== undefined) {
@@ -341,7 +361,8 @@ const Slider = ({
         lastPointerXRef.current = clientX;
       }
 
-      pendingDragValueRef.current = snapToStepRef.current(scaleRef.current.fromPosition(accumulatedValueRef.current));
+      // Snap only the output; accumulated position must keep following the pointer.
+      pendingDragValueRef.current = getPointerValue(accumulatedValueRef.current, sliderWidth, shiftKey);
       if (dragFrameRef.current === undefined) {
         dragFrameRef.current = requestAnimationFrame(flushDragValue);
       }
@@ -352,6 +373,7 @@ const Slider = ({
         cancelAnimationFrame(dragFrameRef.current);
       }
       flushDragValue();
+      desktopDragActiveRef.current = false;
       lastUpTime.current = Date.now();
       pendingTouchRef.current = null;
       suppressTouchChangeRef.current = false;
@@ -379,7 +401,7 @@ const Slider = ({
       window.removeEventListener('touchend', handlePointerUp);
       window.removeEventListener('touchcancel', handlePointerUp);
     };
-  }, [disabled, isDragging]);
+  }, [disabled, isDragging, getPointerValue]);
 
   useEffect(() => {
     if (isDragging) {
@@ -456,7 +478,7 @@ const Slider = ({
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (disabled || suppressTouchChangeRef.current) {
+    if (disabled || suppressTouchChangeRef.current || (!isAndroid && desktopDragActiveRef.current)) {
       return;
     }
 
@@ -481,12 +503,14 @@ const Slider = ({
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
     const rawPosition = minPosition + fraction * (maxPosition - minPosition);
-    const snappedValue = snapToStep(scale.fromPosition(rawPosition));
+    const snappedValue = getPointerValue(rawPosition, rect.width, hasFineAdjustmentModifier(e));
 
     accumulatedValueRef.current = rawPosition;
     lastPointerXRef.current = e.clientX;
     lastEmittedValueRef.current = snappedValue;
 
+    // React state may not be committed before the range emits a native change.
+    desktopDragActiveRef.current = !isAndroid;
     setIsDragging(true);
     setDisplayValue(snappedValue);
     setInputValue(String(snappedValue));
@@ -547,7 +571,7 @@ const Slider = ({
     const rect = inputEl.getBoundingClientRect();
     const multiplier = hasFineAdjustmentModifier(e) ? FINE_ADJUSTMENT_MULTIPLIER : 1;
     const rawPosition = pendingTouch.startPosition + (deltaX / rect.width) * (maxPosition - minPosition) * multiplier;
-    const snappedValue = snapToStep(scale.fromPosition(rawPosition));
+    const snappedValue = getPointerValue(rawPosition, rect.width, hasFineAdjustmentModifier(e));
 
     accumulatedValueRef.current = rawPosition;
     lastPointerXRef.current = touch.clientX;
@@ -558,6 +582,7 @@ const Slider = ({
       e.preventDefault();
     }
 
+    desktopDragActiveRef.current = !isAndroid;
     setIsDragging(true);
     setDisplayValue(snappedValue);
     setInputValue(String(snappedValue));
@@ -651,6 +676,16 @@ const Slider = ({
   const handleRangeKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.ctrlKey || e.metaKey) {
       e.currentTarget.blur();
+      return;
+    }
+    if (!isAndroid && !disabled && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+      e.preventDefault();
+      e.stopPropagation();
+      const direction = e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1;
+      const nextValue = snapToStep(numericValue + direction * step);
+      setDisplayValue(nextValue);
+      setInputValue(String(nextValue));
+      onChange({ target: { value: nextValue } });
       return;
     }
     if (GLOBAL_KEYS.includes(e.key)) {

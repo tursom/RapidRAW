@@ -1,0 +1,19 @@
+@import '../../src/styles.css';
+@source './fixture.tsx';
+
+:root {
+  --app-bg-primary: #151515;
+  --app-bg-secondary: #202020;
+  --app-surface: #292929;
+  --app-card-active: #454545;
+  --app-text-primary: #eee;
+  --app-text-secondary: #bbb;
+  --app-accent: #78baff;
+  --font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 64px;
+  background: var(--app-bg-primary);
+}

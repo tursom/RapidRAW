@@ -754,6 +754,7 @@ export default function ExportPanel({
               {[FileFormats.Jpeg, FileFormats.Webp, FileFormats.Jxl].includes(fileFormat as FileFormats) && (
                 <div className={isExporting ? 'opacity-50 pointer-events-none' : ''}>
                   <Slider
+                    snapToZero={false}
                     defaultValue={90}
                     label={
                       fileFormat === FileFormats.Jxl && jpegQuality === 100
@@ -1035,6 +1036,7 @@ export default function ExportPanel({
                           />
                           <div>
                             <Slider
+                              snapToZero={false}
                               label={t('export.watermark.scale')}
                               min={1}
                               max={100}
@@ -1045,6 +1047,7 @@ export default function ExportPanel({
                               defaultValue={10}
                             />
                             <Slider
+                              snapToZero={false}
                               label={t('export.watermark.spacing')}
                               min={0}
                               max={25}
@@ -1055,6 +1058,7 @@ export default function ExportPanel({
                               defaultValue={5}
                             />
                             <Slider
+                              snapToZero={false}
                               label={t('export.watermark.opacity')}
                               min={0}
                               max={100}

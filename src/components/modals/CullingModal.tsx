@@ -184,6 +184,7 @@ export default function CullingModal({
           {settings.groupSimilar && (
             <div className="mt-2 pl-4 border-l-2 border-border-color ml-1">
               <Slider
+                snapToZero={false}
                 label={t('modals.culling.similarityThreshold')}
                 min={1}
                 max={64}
@@ -208,6 +209,7 @@ export default function CullingModal({
           {settings.filterBlurry && (
             <div className="mt-2  pl-4 border-l-2 border-border-color ml-1">
               <Slider
+                snapToZero={false}
                 label={t('modals.culling.blurThreshold')}
                 min={25}
                 max={500}

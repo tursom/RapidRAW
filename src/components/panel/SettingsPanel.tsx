@@ -1515,6 +1515,7 @@ export default function SettingsPanel({
                                   description={t('settings.tagging.maxAiTagsDesc')}
                                 >
                                   <Slider
+                                    snapToZero={false}
                                     label={t('settings.tagging.amount')}
                                     min={1}
                                     max={20}
@@ -2126,6 +2127,7 @@ export default function SettingsPanel({
                                     description={t('settings.processing.workerThreadsDesc')}
                                   >
                                     <Slider
+                                      snapToZero={false}
                                       label={t('settings.processing.threads')}
                                       min={2}
                                       max={10}
@@ -2147,6 +2149,7 @@ export default function SettingsPanel({
                                     description={t('settings.processing.imageCacheDesc')}
                                   >
                                     <Slider
+                                      snapToZero={false}
                                       label={t('settings.processing.images')}
                                       min={2}
                                       max={10}
@@ -2242,6 +2245,7 @@ export default function SettingsPanel({
                         description={t('settings.processing.preprocessing.colorNrDesc')}
                       >
                         <Slider
+                          snapToZero={false}
                           label={t('settings.tagging.amount')}
                           min={0}
                           max={1.0}
@@ -2260,6 +2264,7 @@ export default function SettingsPanel({
                         description={t('settings.processing.preprocessing.sharpeningDesc')}
                       >
                         <Slider
+                          snapToZero={false}
                           label={t('settings.tagging.amount')}
                           min={0}
                           max={1.0}
@@ -2340,6 +2345,7 @@ export default function SettingsPanel({
                                   description={t('settings.processing.preprocessing.baselineExposureAmountDesc')}
                                 >
                                   <Slider
+                                    snapToZero={false}
                                     label={t('settings.tagging.amount')}
                                     min={0}
                                     max={2}
@@ -2485,6 +2491,7 @@ export default function SettingsPanel({
 
                       <SettingItem label={t('settings.controls.zoom')} description={t('settings.controls.zoomDesc')}>
                         <Slider
+                          snapToZero={false}
                           label={t('settings.controls.speed')}
                           min={0.1}
                           max={3.0}

@@ -1,0 +1,48 @@
+{
+  "base": "72dc3ec91049b17595c379ad6ef278af09043a98",
+  "files": [
+    {
+      "file": "src/components/modals/CollageModal.tsx",
+      "optOutCount": 2,
+      "sha256": "d0a8657189943d74d582b8bd9cf14baafd986666c9086e03d7a08519308bdc5c",
+      "baseSha256": "5c2db6d4bc31b699d3cdc5361bcc88e66344c327f49f1438c9a6129c54524e7a",
+      "onlyChangesAreOptOutProps": true
+    },
+    {
+      "file": "src/components/modals/CullingModal.tsx",
+      "optOutCount": 2,
+      "sha256": "9cd23738f48ae4742ac1cad4f91c7d8ca41f8e0607734aa5df6a237850bb9e24",
+      "baseSha256": "be5ffdef9467b882baea96d0180aeb65712e1c48718ec756ecee5ee9af152bce",
+      "onlyChangesAreOptOutProps": true
+    },
+    {
+      "file": "src/components/panel/SettingsPanel.tsx",
+      "optOutCount": 7,
+      "sha256": "f2d1419d14739a1ad88db77f88a9e2c7a0c8b01322e3ef3c50409aa4e71403ae",
+      "baseSha256": "31ab99538f0eec0f359c97cb31d4bd37865a36b90ab68021bdcf92eb4a2ab758",
+      "onlyChangesAreOptOutProps": true
+    },
+    {
+      "file": "src/components/panel/right/AIPanel.tsx",
+      "optOutCount": 4,
+      "sha256": "bf8b6ece0f9f02eeef6a8bc3418b61a9e8a4a1a2225b510bcbde966eb1abb7f7",
+      "baseSha256": "be1f865a295a90043619f8fecabfb56050b0c5ab2620219216d25dec64fe6925",
+      "onlyChangesAreOptOutProps": true
+    },
+    {
+      "file": "src/components/panel/right/ExportPanel.tsx",
+      "optOutCount": 4,
+      "sha256": "030169bcca48601786389fbefcd1b59c68638eda3f6c474665c932386bfa1997",
+      "baseSha256": "0b2d2bf8984f88a936498d15f639e45eec9309ebbcf4783376e4c9bb2e4a5efe",
+      "onlyChangesAreOptOutProps": true
+    },
+    {
+      "file": "src/components/panel/right/PresetsPanel.tsx",
+      "optOutCount": 1,
+      "sha256": "b0292bdab032f8f0b9e98e254368cebebc74acc0e1918a3491522d2d73769ed1",
+      "baseSha256": "2e3e45198227d68795e94e19fe86a5a0d012738cd87ec5c12ceeca2f09298385",
+      "onlyChangesAreOptOutProps": true
+    }
+  ],
+  "total": 20
+}

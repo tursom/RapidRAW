@@ -1,0 +1,50 @@
+{
+  "wrapperPid": 1529183,
+  "runnerPid": 1529184,
+  "exitCode": 0,
+  "allSourceAndFixtureHashesStable": true,
+  "before": {
+    "checks/slider/README.md": "9d392252f8ed454a746d6761e020491532af147f0d8acb9b394c7d2110446984",
+    "checks/slider/run.mjs": "46eba2c3aaff87eb50a2d486bc4b34b5102eb7228ee8c871afd368f78eb59e8d",
+    "checks/slider/fixture.tsx": "755c3a2fdab60a18056d07ade18e0aed97b4c5544a0630b677382f0e0e431fa6",
+    "checks/slider/vite.config.mjs": "685305e72df1739731f99381d1de56bc66a488643f33256a7fcfedf3da44d6f2",
+    "checks/slider/actualstyles.css": "cdd2bb91fd48711f299d96c892b152b73f93c549dc2b458b227346d03e683530",
+    "checks/slider/index.html": "7547173ac31b7b8954bf582d7415e544a6948c7ace6206765a9520aca7cd95f8",
+    "checks/slider/virtual.d.ts": "5997dd4220cf393d3fabecaed2fd2c48d775c0575bfdc5bd913f4bb5c82e9810",
+    "src/components/ui/Slider.tsx": "8f2cd6aad449ac4712fc905c9a4804cc0210b92092f44e6ed9ac0c3c047aef04",
+    "src/styles.css": "e5959c4da9d37bbd3fc920e6c209799d53ad9f4321b6d84115134251e357e1a9",
+    "src/components/ui/AppProperties.tsx": "46c7b937751f72c6992bb19de1f9ab16bbd6a90901791905670e875550ddbff6",
+    "src/store/useEditorStore.ts": "e976861bf8075424493e71bd2a14d03f765fd538ca754c3e2e0b370856ebeee3",
+    "src/store/useSettingsStore.ts": "9e5b295cfea558565bc9b55be918c5f71ef4469d8a9de2b8d7fac80fc37468e2"
+  },
+  "after": {
+    "checks/slider/README.md": "9d392252f8ed454a746d6761e020491532af147f0d8acb9b394c7d2110446984",
+    "checks/slider/run.mjs": "46eba2c3aaff87eb50a2d486bc4b34b5102eb7228ee8c871afd368f78eb59e8d",
+    "checks/slider/fixture.tsx": "755c3a2fdab60a18056d07ade18e0aed97b4c5544a0630b677382f0e0e431fa6",
+    "checks/slider/vite.config.mjs": "685305e72df1739731f99381d1de56bc66a488643f33256a7fcfedf3da44d6f2",
+    "checks/slider/actualstyles.css": "cdd2bb91fd48711f299d96c892b152b73f93c549dc2b458b227346d03e683530",
+    "checks/slider/index.html": "7547173ac31b7b8954bf582d7415e544a6948c7ace6206765a9520aca7cd95f8",
+    "checks/slider/virtual.d.ts": "5997dd4220cf393d3fabecaed2fd2c48d775c0575bfdc5bd913f4bb5c82e9810",
+    "src/components/ui/Slider.tsx": "8f2cd6aad449ac4712fc905c9a4804cc0210b92092f44e6ed9ac0c3c047aef04",
+    "src/styles.css": "e5959c4da9d37bbd3fc920e6c209799d53ad9f4321b6d84115134251e357e1a9",
+    "src/components/ui/AppProperties.tsx": "46c7b937751f72c6992bb19de1f9ab16bbd6a90901791905670e875550ddbff6",
+    "src/store/useEditorStore.ts": "e976861bf8075424493e71bd2a14d03f765fd538ca754c3e2e0b370856ebeee3",
+    "src/store/useSettingsStore.ts": "9e5b295cfea558565bc9b55be918c5f71ef4469d8a9de2b8d7fac80fc37468e2"
+  },
+  "runnerRecordedHashesMatch": true,
+  "resultStatus": "passed",
+  "processes": {
+    "vitePid": 1529229,
+    "browserPid": 1529320,
+    "stopped": {
+      "browser": true,
+      "vite": true
+    }
+  },
+  "counts": {
+    "passed": 46,
+    "expected-failure": 3,
+    "failed": 0
+  },
+  "failures": []
+}
