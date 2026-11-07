@@ -267,7 +267,7 @@ Chrome 的“复制图片(Y)”和 Edge 的“复制图像(Y)”均通过真实�
 
 ### 验收整改：release 与原始 PNG 实测
 
-已在同一 Windows 桌面完成 release CLI 和 HTML5 Tauri 窗口构建，运行结果明确记录 `profile=release`、`optLevel=3`、`debugAssertions=false`。Chrome 本轮已更新到 157.0.8103.38，Edge/WebView2 仍为 156.0.4314.58。原有 debug 可执行文件保留，新增 `artifacts/clipboard-release.exe` 和 `artifacts/intake-html5-release.exe`。完整方法、逐次数据、构建日志及失败尝试见 [release 补测报告](spike/intake/evidence/windows/release/README.md)。
+已在同一 Windows 桌面完成 release CLI 和 HTML5 Tauri 窗口构建，运行结果明确记录 `profile=release`、`optLevel=3`、`debugAssertions=false`。Chrome 本轮已更新到 157.0.8103.38，Edge/WebView2 仍为 156.0.4314.58。原有 debug 可执行文件保留，新增 `artifacts/clipboard-release.exe` 和 `artifacts/intake-html5-release.exe`。完整方法、逐次数据、构建日志及失败教训见 [release 补测报告](spike/intake/evidence/windows/release/README.md)；失败尝试原始记录已从当前版本删除，可从 Git 提交 `3b5df34f` 追溯。
 
 Chrome/Edge 的 54 个真实右键复制样本覆盖旧大小 JPEG、仓库照片放大的 6000×4000 对照，以及本地透明 PNG、WebP。实际读取原始 PNG 的是 32 个样本，其 SHA-256 与独立 Win32 读取一致；另外 22 个仅运行重编码路径，不读取原始 PNG。54 个样本的图片尺寸和规范化 RGBA8 摘要均与来源、Pillow 一致；对照模式的两条路径像素一致。同一剪贴板的独立参考读取连续三次完整字节相等。PNG/WebP 仅补了本地网页的复制测试，真实网站和拖放仍待补。
 

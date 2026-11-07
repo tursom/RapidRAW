@@ -106,13 +106,17 @@ PID 13760 的 181 段覆盖全部 168 个浏览器用例，包括小图；进入
 
 生成持锁控制另有八个打开窗口 PID，可由已保存 HWND 对应到控制器；它们已退出，本次没有取得历史进程名。未记录名称的短命浏览器、读取器和控制器不会用事后新 PID 身份补猜。未来测试须现场采集名称。
 
-后续 Windows 人工补测前，在**同一个已登录桌面**另开 PowerShell，先运行：
+后续 Windows 人工补测前，在**同一个已登录桌面**另开 PowerShell，先切到项目根目录 `E:\projects\tbt\rapidraw-intake-spike`，再运行：
 
 ```powershell
-.\spike\intake\scripts\windows-clipboard-processes.ps1 -OutputPath .\evidence\clipboard-processes-20261107.ndjson -Seconds 120
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\spike\intake\scripts\windows-clipboard-processes.ps1 -OutputPath .\evidence\clipboard-processes-20261107.ndjson -Seconds 3600
 ```
 
-随后在另一窗口执行用例，保存各次操作的 UTC 时间与用例名，将 NDJSON 一起提交。脚本记录 QPC、UTC、序列号、打开窗口 PID、进程名和创建时间，结束时查询存活服务映射；输出文件必须为新文件，避免覆盖证据。它只查询窗口和身份，**不调用 OpenClipboard 或读取内容**。10ms 是请求间隔，进程查询有开销、调度可能漏掉短时打开；无 HWND、权限不足或已退出时只能记录未知，不能据此证明没有占用。它提供来源诊断，不能替代 Rust 时序测量。Windows Session 1 已验证空闲运行及 2 秒持锁控制：准确记录了 Python 进程名、创建时间和打开／释放，序列号保持不变，见 [process-observer-validation.json](process-observer-validation.json)。本次验证未清空或改写剪贴板。
+执行策略仅对这次启动的 PowerShell 进程设为 `Bypass`，不修改系统策略。相对 `OutputPath` 按调用时 PowerShell 当前目录解析；上述输出为 `E:\projects\tbt\rapidraw-intake-spike\evidence\clipboard-processes-20261107.ndjson`，也可直接传绝对路径。脚本启动时显示完整输出路径和时长，首条 `environment` 也保存 `outputPath`，开始操作前先核对；输出文件必须为新文件，避免覆盖证据。默认和示例均记录一小时，整轮超过一小时时，启动前按预计时长增大 `-Seconds`（最多 86400，即一天）。看到完成提示就表示已停止记录，剩余用例开始前须另用新文件重启，不能把停止后的用例当作已覆盖。
+
+路径修正已在 Windows PowerShell 5.1、桌面 Session 1 实跑：将 .NET 当前目录留在 `C:\Windows`，再用 PowerShell 切到 E 盘测试目录。旧解析会指向 `C:\Windows\direct\relative.ndjson`，修正后相对路径实际写入 E 盘当前目录；带 `-ExecutionPolicy Bypass -File` 的示例形式也完成并退出 0。重复使用已有输出文件被拒绝，原文件 SHA-256 不变，详见 [process-path-validation.json](process-path-validation.json)。两次实际记录各 2 秒；一小时默认值通过脚本 AST 核对，未运行满一小时，也未借此宣称整轮人工补测完成。
+
+随后在另一窗口执行用例，保存各次操作的 UTC 时间与用例名，将 NDJSON 一起提交。脚本记录 QPC、UTC、序列号、打开窗口 PID、进程名和创建时间，结束时查询存活服务映射。它只查询窗口和身份，**不调用 OpenClipboard 或读取内容**。10ms 是请求间隔，进程查询有开销、调度可能漏掉短时打开；无 HWND、权限不足或已退出时只能记录未知，不能据此证明没有占用。它提供来源诊断，不能替代 Rust 时序测量。Windows Session 1 已验证空闲运行及 2 秒持锁控制：准确记录了 Python 进程名、创建时间和打开／释放，序列号保持不变，见 [process-observer-validation.json](process-observer-validation.json)。本次验证未清空或改写剪贴板。
 
 ## 证据、复算与复现
 

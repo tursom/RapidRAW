@@ -1,0 +1,37 @@
+{
+  "lastTaskResult": 0,
+  "state": "Ready",
+  "report": {
+    "schema": 1,
+    "capturedAt": "2026-11-07T09:30:11.4521817+08:00",
+    "sessionId": 1,
+    "powerShellVersion": "5.1.19041.7802",
+    "scriptSha256": "142EDFA473F8FD04DA0B44703E5B6328B23A946D9FDA732EB9CCD5798899642D",
+    "nativeCurrentDirectory": "C:\\Windows",
+    "powerShellCurrentDirectory": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-path-review",
+    "direct": {
+      "durationSeconds": 2,
+      "expectedPath": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-path-review\\direct\\relative.ndjson",
+      "oldDotNetResolution": "C:\\Windows\\direct\\relative.ndjson",
+      "reportedPath": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-path-review\\direct\\relative.ndjson",
+      "completed": true,
+      "argument": ".\\direct\\relative.ndjson"
+    },
+    "executionPolicyCommand": {
+      "flags": "-NoProfile -ExecutionPolicy Bypass -File",
+      "exitCode": 0,
+      "expectedPath": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-path-review\\bypass\\relative.ndjson",
+      "reportedPath": "E:\\projects\\tbt\\rapidraw-intake-spike\\evidence\\process-path-review\\bypass\\relative.ndjson",
+      "completed": true,
+      "argument": ".\\bypass\\relative.ndjson"
+    },
+    "existingOutput": {
+      "sha256Before": "549950A6B11C0EF49D1D848B22CF04120E6D6825ADA60C894E36E2B13F63D162",
+      "rejected": true,
+      "sha256After": "549950A6B11C0EF49D1D848B22CF04120E6D6825ADA60C894E36E2B13F63D162"
+    },
+    "defaultSeconds": 3600,
+    "defaultVerification": "Parsed AST only; did not wait one hour",
+    "method": "Interactive desktop Session 1; changed PowerShell location while .NET current directory stayed C:\\Windows; no clipboard writes or content reads"
+  }
+}

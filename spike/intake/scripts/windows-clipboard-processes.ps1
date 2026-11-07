@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)][string]$OutputPath,
-    [ValidateRange(1, 3600)][int]$Seconds = 120
+    [ValidateRange(1, 86400)][int]$Seconds = 3600
 )
 
 # Run in the same interactive desktop as the test. Never opens the clipboard.
@@ -15,12 +15,13 @@ public static class ClipboardProcessObserver {
 }
 '@
 
-$absolute = [IO.Path]::GetFullPath($OutputPath)
+$absolute = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputPath)
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($absolute)) | Out-Null
 # CreateNew prevents accidentally replacing an earlier observation.
 $stream = [IO.File]::Open($absolute, [IO.FileMode]::CreateNew, [IO.FileAccess]::Write, [IO.FileShare]::Read)
 $writer = New-Object IO.StreamWriter($stream, (New-Object Text.UTF8Encoding($false)))
 $writer.AutoFlush = $true
+Write-Host "Recording clipboard process observations to $absolute for $Seconds seconds."
 $timer = [Diagnostics.Stopwatch]::StartNew()
 $seen = @{}
 $lastState = ''
@@ -29,7 +30,7 @@ try {
         type = 'environment'; utc = [DateTime]::UtcNow.ToString('o')
         sessionId = (Get-Process -Id $PID).SessionId
         qpcFrequency = [Diagnostics.Stopwatch]::Frequency
-        durationSeconds = $Seconds; requestedIntervalMs = 10
+        durationSeconds = $Seconds; requestedIntervalMs = 10; outputPath = $absolute
         method = 'Window/PID queries only; no clipboard open or content reads; unknown identities remain unknown'
     } | ConvertTo-Json -Compress))
     while ($timer.Elapsed.TotalSeconds -lt $Seconds) {
@@ -75,3 +76,4 @@ try {
     $writer.Dispose()
     $stream.Dispose()
 }
+Write-Host "Recording completed: $absolute"
