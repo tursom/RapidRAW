@@ -1,0 +1,59 @@
+{
+  "lines": [
+    {
+      "method": "Window/PID queries only; no clipboard open or content reads; unknown identities remain unknown",
+      "durationSeconds": 6,
+      "requestedIntervalMs": 10,
+      "sessionId": 1,
+      "type": "environment",
+      "utc": "2026-11-07T01:15:04.1696186Z",
+      "qpcFrequency": 10000000
+    },
+    {
+      "type": "observation",
+      "utc": "2026-11-07T01:15:04.2198198Z",
+      "qpc": 446475354795,
+      "elapsedMs": 50.6113,
+      "window": 0,
+      "processId": 0,
+      "sequence": 4587,
+      "processName": null,
+      "creationUtc": null,
+      "executablePath": null
+    },
+    {
+      "type": "observation",
+      "utc": "2026-11-07T01:15:07.1066428Z",
+      "qpc": 446504216484,
+      "elapsedMs": 2936.7756,
+      "window": 6950774,
+      "processId": 27596,
+      "sequence": 4587,
+      "processName": "python",
+      "creationUtc": "2026-11-07T01:15:05.8540322Z",
+      "executablePath": "D:\\Program Files\\Python312\\python.exe"
+    },
+    {
+      "type": "observation",
+      "utc": "2026-11-07T01:15:09.1126608Z",
+      "qpc": 446524278388,
+      "elapsedMs": 4942.965200000001,
+      "window": 0,
+      "processId": 0,
+      "sequence": 4587,
+      "processName": null,
+      "creationUtc": null,
+      "executablePath": null
+    },
+    {
+      "type": "completed",
+      "utc": "2026-11-07T01:15:10.4973594Z"
+    }
+  ],
+  "result": 0,
+  "holder": {
+    "pid": 27596,
+    "opened": true
+  },
+  "method": "Interactive Session 1 scheduled task; real HWND holder opens for 2 seconds without clearing or writing clipboard; observer task exits 0"
+}

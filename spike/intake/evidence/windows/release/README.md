@@ -104,17 +104,17 @@ cd E:\projects\tbt\rapidraw-intake-spike
 
 venv 依赖 Pillow 13.0.0、pywinauto 0.6.9、pywin32 312、websocket-client 1.9.2。驱动需要保留原来的 `fixtures/small.jpg`、`large.jpg` 和仓库照片；结果写入该 Windows 工作目录的 `evidence/clipboard-release/`。每个驱动结束后关闭自己的浏览器/窗口和 HTTP 服务，不关闭用户浏览器。
 
-最终 CLI 数据来自增加模式、来源素材和完成状态断言后的完整序列（22:07:06–22:09:09）；54 个浏览器样本和 7 个生成用例在同轮完成。`--generated-only` 必须检查浏览器完成标志和完整的 54 个唯一用例，不能将中途失败的浏览器序列改成通过。窗口最终序列另存 `ui-results.json`。归档保留失败尝试，没有将驱动失败当成兼容性失败：
+最终 CLI 数据来自增加模式、来源素材和完成状态断言后的完整序列（22:07:06–22:09:09）；54 个浏览器样本和 7 个生成用例在同轮完成。`--generated-only` 必须检查浏览器完成标志和完整的 54 个唯一用例，不能将中途失败的浏览器序列改成通过。窗口最终序列另存 `ui-results.json`。按任务 7 决定，以下失败或被替代的原始 JSON 已从当前版本删除，可从 Git 提交 `3b5df34f` 的本目录追溯；保留失败教训，没有将驱动失败当成兼容性失败：
 
 - `attempt1.json`：29 个已完成样本后 Edge 菜单定位失败。
 - `attempt2.json`：独立参考读取 `OpenClipboard` 短暂被占用，未完成；随后参考读取增加了有界重试。
 - `attempt3.json`：54 个浏览器样本完成，随后原先假定所有 DIBV5 都成功的断言失败；后续区分 BI_RGB 与 BI_BITFIELDS。
 - `generated-attempt2.json`：保存 DIB 诊断，以及原先假定错标 JPEG 必须完全拒绝的断言失败；最终明确为原始 PNG 拒绝、旧解码路径接受有效 JPEG。
 - `ui-attempt1.json`：CDP 过早连接空白初始化页，尚无按钮；修正就绪判断后重跑 18 组成功。
-- `before-source-validation.json`、`ui-before-source-validation.json`：第一轮已通过的 release 记录，尚未在驱动内加入严格的模式与素材绑定断言；保留作历史对照，不与最终序列混合统计。
+- `before-source-validation.json`、`ui-before-source-validation.json`：第一轮 release 记录尚未在驱动内加入严格的模式与素材绑定断言；仅在 Git 历史中作对照，不与最终序列混合统计。
 - `source-attempt1.json`：仅用 canvas 像素摘要作来源基准，首张小图不匹配而停止；最终同时记录源文件 Pillow 解码基准，结果须匹配至少一个基准，并检查尺寸、复制序列和实际执行模式。
 
-这些旧尝试中的数据不与最终序列混合求中位数。原始 JSON 只统一排版，字段和值未更改。
+这些旧尝试中的数据不与最终序列混合求中位数。保留的最终 JSON 未因本次清理改变字段或值。
 
 测试结束后的 [cleanup.json](cleanup.json) 确认本轮计划任务与专用进程剩余均为 0，旧 debug 与新 release 产物均保留。
 

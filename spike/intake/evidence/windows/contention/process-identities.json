@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "capturedAt": "2026-11-07T09:11:33.6129934+08:00",
+  "boot": "2026-11-06T20:50:56.5000000+08:00",
+  "method": "Read-only Win32_Process and Win32_Service CIM lookup over SSH; no command lines or credentials collected",
+  "requestedPids": [
+    13760, 29192, 10992, 2540, 20456, 33484, 36892, 31996, 15244, 14364, 18576, 19484, 8404, 34448, 27036, 30040, 34568,
+    33932, 34680
+  ],
+  "processes": [
+    {
+      "ProcessId": 10992,
+      "Name": "DefenderSessionHelper.exe",
+      "ExecutablePath": null,
+      "ParentProcessId": 6036,
+      "creation": "2026-11-06T20:51:19.7291850+08:00"
+    },
+    {
+      "ProcessId": 13760,
+      "Name": "svchost.exe",
+      "ExecutablePath": "C:\\WINDOWS\\system32\\svchost.exe",
+      "ParentProcessId": 1216,
+      "creation": "2026-11-06T20:51:21.5744350+08:00"
+    },
+    {
+      "ProcessId": 20456,
+      "Name": "HNOfficeCenter.exe",
+      "ExecutablePath": "C:\\Program Files\\HONOR\\OfficeCenter\\HNOfficeCenter.exe",
+      "ParentProcessId": 5992,
+      "creation": "2026-11-06T20:51:34.9529130+08:00"
+    },
+    {
+      "ProcessId": 19484,
+      "Name": "HnTrustCircleService.exe",
+      "ExecutablePath": "C:\\Program Files\\HONOR\\TrustCircle\\HnTrustCircleService.exe",
+      "ParentProcessId": 5992,
+      "creation": "2026-11-06T20:51:34.9943540+08:00"
+    },
+    {
+      "ProcessId": 2540,
+      "Name": "RadeonSoftware.exe",
+      "ExecutablePath": "C:\\Program Files\\AMD\\CNext\\CNext\\Radeonsoftware.exe",
+      "ParentProcessId": 11908,
+      "creation": "2026-11-06T20:51:51.0095560+08:00"
+    },
+    {
+      "ProcessId": 29192,
+      "Name": "GameViewer.exe",
+      "ExecutablePath": "D:\\Program Files\\Netease\\GameViewer\\bin\\GameViewer.exe",
+      "ParentProcessId": 23884,
+      "creation": "2026-11-06T20:52:00.3255640+08:00"
+    }
+  ],
+  "services": [
+    {
+      "ProcessId": 13760,
+      "Name": "cbdhsvc_101adc",
+      "DisplayName": "cbdhsvc_101adc",
+      "State": "Running",
+      "StartMode": "Manual"
+    }
+  ]
+}
