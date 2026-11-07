@@ -1,0 +1,15 @@
+{
+  "restoredOriginalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "checks": {
+    "rustfmt": 0,
+    "release": 0,
+    "clippy": 0
+  },
+  "exeSha256": "2692a2ebfff4f23d2afd446db89b68651f8708d419823f364d1531efe39ae9e6",
+  "exePath": "E:\\projects\\tbt\\rapidraw-baseline\\app\\src-tauri\\target\\release\\RapidRAW-window-size.exe",
+  "started": "2026-11-07T21:16:41.7009745+08:00",
+  "restoredOriginalSourceSha256": "864b832486fb61703df47d8cf3d9daa458deb5eb7d920301f0901676bd32f657",
+  "sourceSha256": "c8798a1f52847c9734a4b6780eb49c686cfa9cc21ba4d484fd010fd48f59fb85",
+  "finished": "2026-11-07T21:31:08.3250808+08:00",
+  "sourceBase": "9588e26c"
+}

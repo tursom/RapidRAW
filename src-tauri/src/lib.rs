@@ -2141,6 +2141,9 @@ const MAIN_WINDOW_STATE_FILE: &str = "window_state.json";
 #[cfg(not(target_os = "android"))]
 const MAIN_WINDOW_MIN_SIZE: (f64, f64) = (800.0, 600.0);
 
+#[cfg(windows)]
+struct InitialMainWindowState(Mutex<Option<WindowState>>);
+
 #[cfg(not(target_os = "android"))]
 #[derive(Clone, Copy, Debug)]
 struct MonitorBounds {
@@ -2225,6 +2228,49 @@ fn saved_window_state_is_usable(
     })
 }
 
+#[cfg(windows)]
+fn show_main_window(window: tauri::Window) -> tauri::Result<()> {
+    let window_to_show = window.clone();
+    window.run_on_main_thread(move || {
+        if let Err(e) = window_to_show.show() {
+            log::error!("Failed to show window: {}", e);
+            return;
+        }
+
+        // Consume the setup snapshot once, without holding its lock during window API calls.
+        // The background saver may already have overwritten the on-disk state while hidden.
+        let initial_state = {
+            let state = window_to_show.state::<InitialMainWindowState>();
+            state.inner().0.lock().unwrap().take()
+        };
+        if let Some(initial_state) = initial_state {
+            let target_size = tauri::PhysicalSize::new(initial_state.width, initial_state.height);
+            // Showing an undecorated Windows window recalculates its non-client area.
+            // Reapply the physical inner size using the now-visible frame offsets.
+            match window_to_show.inner_size() {
+                Ok(size) if size != target_size => {
+                    if let Err(e) = window_to_show.set_size(target_size) {
+                        log::error!("Failed to restore window size after showing: {}", e);
+                    }
+                }
+                Err(e) => log::error!("Failed to read window size after showing: {}", e),
+                _ => {}
+            }
+            // set_size can unmaximize the window, so restore modes after correcting the size.
+            if initial_state.maximized {
+                let _ = window_to_show.maximize();
+            }
+            if initial_state.fullscreen {
+                let _ = window_to_show.set_fullscreen(true);
+            }
+        }
+
+        if let Err(e) = window_to_show.set_focus() {
+            log::error!("Failed to focus window: {}", e);
+        }
+    })
+}
+
 #[tauri::command]
 fn frontend_ready(
     app_handle: tauri::AppHandle,
@@ -2237,7 +2283,15 @@ fn frontend_ready(
     #[cfg(target_os = "android")]
     let _ = (is_first_run, &window, &app_handle);
 
-    #[cfg(not(target_os = "android"))]
+    #[cfg(windows)]
+    {
+        let _ = (&app_handle, is_first_run);
+        if let Err(e) = show_main_window(window.clone()) {
+            log::error!("Failed to schedule window display: {}", e);
+        }
+    }
+
+    #[cfg(not(any(windows, target_os = "android")))]
     {
         #[cfg(any(windows, target_os = "linux"))]
         let mut should_maximize = false;
@@ -2595,8 +2649,14 @@ pub fn run() {
 
                 let mut initial_normal_rect = (default_w, default_h, 100i32, 100i32);
                 let mut state_loaded = false;
+                #[cfg(windows)]
+                let mut initial_window_modes = (false, false);
 
                 if let Some(state) = read_window_state(app.handle(), MAIN_WINDOW_STATE_FILE) {
+                    #[cfg(windows)]
+                    {
+                        initial_window_modes = (state.maximized, state.fullscreen);
+                    }
                     let monitor_bounds = available_monitor_bounds(&window);
                     let monitor_size = window.current_monitor().ok().flatten().map(|m| *m.size());
 
@@ -2636,6 +2696,16 @@ pub fn run() {
                     }
                 }
 
+                #[cfg(windows)]
+                app.manage(InitialMainWindowState(Mutex::new(Some(WindowState {
+                    width: initial_normal_rect.0,
+                    height: initial_normal_rect.1,
+                    x: initial_normal_rect.2,
+                    y: initial_normal_rect.3,
+                    maximized: initial_window_modes.0,
+                    fullscreen: initial_window_modes.1,
+                }))));
+
                 let window_failsafe = window.clone();
                 tauri::async_runtime::spawn(async move {
                     tokio::time::sleep(std::time::Duration::from_secs(4)).await;
@@ -2643,8 +2713,15 @@ pub fn run() {
                         log::warn!(
                             "Frontend failed to report ready within timeout. Forcing window visibility."
                         );
-                        let _ = window_failsafe.show();
-                        let _ = window_failsafe.set_focus();
+                        #[cfg(windows)]
+                        if let Err(e) = show_main_window(window_failsafe.as_ref().window()) {
+                            log::error!("Failed to schedule fallback window display: {}", e);
+                        }
+                        #[cfg(not(windows))]
+                        {
+                            let _ = window_failsafe.show();
+                            let _ = window_failsafe.set_focus();
+                        }
                     }
                 });
 
@@ -2691,8 +2768,10 @@ pub fn run() {
                         let mut normal = last_normal_rect_handler.lock().unwrap();
 
                         if !maximized && !fullscreen {
+                            // Persist inner dimensions in physical pixels to match set_size(PhysicalSize),
+                            // so window decorations are not added again on each launch.
                             let (curr_w, curr_h) = window_for_handler
-                                .outer_size()
+                                .inner_size()
                                 .map(|s| (s.width, s.height))
                                 .unwrap_or((0, 0));
 

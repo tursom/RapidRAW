@@ -8,6 +8,11 @@ and human visual checks remain pending. These scripts observe the full release
 application and are never bundled into it. Stage 1 acceptance remains pending;
 task 10 is prohibited until that prerequisite passes.
 
+The v3 samples and their script hashes refer to commit `9588e26c`, before the
+independent window-size fix. Compare historical hashes against that revision,
+not subsequent application or driver changes. The current driver defaults to a
+720px state seed for the corrected window; no historical raw values are changed.
+
 ## Workload
 
 [sources.json](sources.json) pins URLs, SHA-256 and credits for two genuine Nikon
@@ -77,6 +82,11 @@ run builds, scans, copies or competing benchmarks during sampling.
 
 Run the two conditions sequentially, then analyze (analysis also runs on Linux):
 
+When reproducing the **old** v3 executable (SHA-256 `26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6`),
+first set `$env:RAPIDRAW_BASELINE_SEED_HEIGHT = '689'` to retain its calibrated
+viewport. For the corrected executable, leave that variable unset (720px default).
+Do not carry the old compensation into new performance comparisons.
+
 ```powershell
 python baseline\scripts\check-identity.py
 python baseline\scripts\windows-measure.py
@@ -128,12 +138,12 @@ Setup changes only the dedicated generated fixture and this fork's settings:
    only after the actual panel condition passes.
 5. Requires each measured and isolated-drag process to have a 1280×720 CSS
    viewport and DPR 1. The driver's window-state reset compensates for the
-   inherited outer-size save / inner-size restore behavior. On this Windows
-   host, the frameless client gains 31px after showing: a 1280×720 state seed
-   produces a visible 1280×751 client. The calibrated seed is 1280×689, written
-   before timing starts and recorded as `initialWindowState`; actual visible
-   CSS dimensions must still pass the 1280×720 check. Another host may need a
-   different calibration; do not reuse the seed without checking its viewport.
+   window behavior. The historical v3 binary required a 1280×689 seed because
+   its frameless client gained 31px on showing. The independent fix removes
+   that discrepancy, so the current seed is 1280×720. The environment override
+   above exists only for historical reproduction or explicit host calibration.
+   Every seed is written before timing and recorded as `initialWindowState`;
+   actual CSS dimensions must still pass the 1280×720 check.
 
 ## Samples and timing definitions
 
@@ -229,6 +239,13 @@ At a roughly 60Hz ceiling, FPS cannot detect a slower preview pipeline that
 keeps scheduling frames. The independent trusted drag below verifies input only.
 Neither provides an input-to-updated-preview latency baseline; that still needs
 a separately validated method before making preview-responsiveness claims.
+
+For task 6/13 comparisons, rerun the preserved baseline executable and the
+candidate in the same measurement session with the same scripts, viewport and
+display conditions, and record the monitor refresh rate. Select the historical
+689px seed for the old executable and the 720px default for the corrected one,
+so both actually render at 1280×720. Do not compare a new run directly against
+the historical v3 FPS: the unchanged executable already varied between v2/v3.
 
 ## Independent slider check
 

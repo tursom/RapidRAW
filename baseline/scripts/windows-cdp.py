@@ -71,10 +71,11 @@ def launch(*args, reset_window_state=True):
     # Reset only this task's fork configuration, outside the timing window.
     config = Path(os.environ["APPDATA"]) / "io.github.tursom.RapidRAW"
     config.mkdir(parents=True, exist_ok=True)
-    # On this host at DPR 1, a 720px seed becomes a 751px visible client after
-    # the frameless window is shown. A 689px seed calibrates it to 720px. Every
-    # measurement still checks the actual visible CSS viewport, not this seed.
-    window_state = {"width": 1280, "height": 689, "x": 100, "y": 100,
+    # The window-size fix restores the requested client size. The historical
+    # v3 binary needed a 689px seed to compensate for its extra 31px; set
+    # RAPIDRAW_BASELINE_SEED_HEIGHT=689 only when reproducing that old binary.
+    # Every measurement still checks the actual CSS viewport, not this seed.
+    window_state = {"width": 1280, "height": int(os.environ.get("RAPIDRAW_BASELINE_SEED_HEIGHT", "720")), "x": 100, "y": 100,
                     "maximized": False, "fullscreen": False}
     state_file = config / "window_state.json"
     if reset_window_state:
