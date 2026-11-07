@@ -1,0 +1,5749 @@
+{
+  "schema": "rapidraw-task1-baseline",
+  "measurementVersion": 2,
+  "method": "Unmodified release; WebView2 CDP; page performance.now/rAF; startup polled every 20ms",
+  "started": "2026-11-07T10:48:03+0800",
+  "startup": [
+    {
+      "pid": 2896,
+      "attachMs": 599.3757000032929,
+      "nativeVisibleUpperMs": 1410.471700000926,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50232.5517148,
+      "landingReadyUpperMs": 1426.0894000035478,
+      "index": 0,
+      "warmup": true,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1820.2048000021023,
+      "thumbnailCoverage": {
+        "at": 1162.7000000029802,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2434.4453000012436,
+      "status": {
+        "at": 1777.5,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pid": 14052,
+      "attachMs": 576.8106999967131,
+      "nativeVisibleUpperMs": 1351.9851000019116,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50235.5970277,
+      "landingReadyUpperMs": 1359.3413999988115,
+      "index": 1,
+      "warmup": false,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1727.4823999978253,
+      "thumbnailCoverage": {
+        "at": 1098.8000000044703,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2250.039899998228,
+      "status": {
+        "at": 1622,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pid": 35064,
+      "attachMs": 583.0635000020266,
+      "nativeVisibleUpperMs": 1336.3523000007262,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50238.4520091,
+      "landingReadyUpperMs": 1350.4286999959731,
+      "index": 2,
+      "warmup": false,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1741.594899998745,
+      "thumbnailCoverage": {
+        "at": 1116.2999999970198,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2330.870400001004,
+      "status": {
+        "at": 1722,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pid": 10820,
+      "attachMs": 576.3644000035129,
+      "nativeVisibleUpperMs": 1340.578800001822,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50241.3993277,
+      "landingReadyUpperMs": 1355.1996000023792,
+      "index": 3,
+      "warmup": false,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1729.9150000035297,
+      "thumbnailCoverage": {
+        "at": 1101.2000000029802,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2293.058100003691,
+      "status": {
+        "at": 1664.8000000044703,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pid": 30664,
+      "attachMs": 636.8473999973503,
+      "nativeVisibleUpperMs": 1379.5314000017243,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50244.2938691,
+      "landingReadyUpperMs": 1391.7811999999685,
+      "index": 4,
+      "warmup": false,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1754.4650999989244,
+      "thumbnailCoverage": {
+        "at": 1091.6000000014901,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2308.8711999953375,
+      "status": {
+        "at": 1646.5,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pid": 31104,
+      "attachMs": 572.7267999973265,
+      "nativeVisibleUpperMs": 1335.2653999972972,
+      "initialWindowState": {
+        "width": 1280,
+        "height": 689,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "launchPerfCounter": 50247.2120221,
+      "landingReadyUpperMs": 1349.5001999981469,
+      "index": 5,
+      "warmup": false,
+      "page": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      },
+      "libraryThumbsUpperMs": 1721.9282000005478,
+      "thumbnailCoverage": {
+        "at": 1097.5,
+        "mounted": 10,
+        "expected": 4,
+        "loaded": 4,
+        "missing": 0,
+        "items": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ]
+      },
+      "automatedEditorReadyUpperMs": 2324.1847999961465,
+      "status": {
+        "at": 1702.8999999985099,
+        "selected": {
+          "exif": {},
+          "group_id": null,
+          "height": 2844,
+          "isRaw": false,
+          "isReady": true,
+          "metadata": {
+            "version": 1,
+            "rating": 0,
+            "adjustments": {
+              "exposure": 0.25
+            },
+            "tags": null
+          },
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+          "thumbnailUrl": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F272641dd595611cd8d31abda27d9543dfb05604853ae614273df368a63e0c7b1_medium.jpg",
+          "width": 4284,
+          "asShotWhiteBalance": {
+            "temperature": 6503.707029390634,
+            "tint": 9.769979251235142
+          }
+        },
+        "imageCount": 164,
+        "thumbs": [
+          {
+            "name": "photo-000.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+            "rect": {
+              "x": 370,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 532.5,
+              "bottom": 641,
+              "left": 370
+            }
+          },
+          {
+            "name": "photo-001.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+            "rect": {
+              "x": 540.5078125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 703.0078125,
+              "bottom": 641,
+              "left": 540.5078125
+            }
+          },
+          {
+            "name": "photo-002.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+            "rect": {
+              "x": 711.0156860351562,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 873.5156860351562,
+              "bottom": 641,
+              "left": 711.0156860351562
+            }
+          },
+          {
+            "name": "photo-003.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+            "rect": {
+              "x": 881.5234985351562,
+              "y": 533,
+              "width": 161.99993896484375,
+              "height": 108,
+              "top": 533,
+              "right": 1043.5234375,
+              "bottom": 641,
+              "left": 881.5234985351562
+            }
+          },
+          {
+            "name": "photo-004.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+            "rect": {
+              "x": 1051.5234375,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1214.0234375,
+              "bottom": 641,
+              "left": 1051.5234375
+            }
+          },
+          {
+            "name": "photo-005.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+            "rect": {
+              "x": 1222.0313720703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1384.5313720703125,
+              "bottom": 641,
+              "left": 1222.0313720703125
+            }
+          },
+          {
+            "name": "photo-006.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+            "rect": {
+              "x": 1392.5391845703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1555.0391845703125,
+              "bottom": 641,
+              "left": 1392.5391845703125
+            }
+          },
+          {
+            "name": "photo-007.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+            "rect": {
+              "x": 1563.0469970703125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 1725.0469970703125,
+              "bottom": 641,
+              "left": 1563.0469970703125
+            }
+          },
+          {
+            "name": "photo-008.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+            "rect": {
+              "x": 1733.0469970703125,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 1895.5469970703125,
+              "bottom": 641,
+              "left": 1733.0469970703125
+            }
+          },
+          {
+            "name": "photo-009.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+            "rect": {
+              "x": 1903.5548095703125,
+              "y": 533,
+              "width": 162.4998779296875,
+              "height": 108,
+              "top": 533,
+              "right": 2066.0546875,
+              "bottom": 641,
+              "left": 1903.5548095703125
+            }
+          },
+          {
+            "name": "photo-010.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+            "rect": {
+              "x": 2074.062744140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2236.562744140625,
+              "bottom": 641,
+              "left": 2074.062744140625
+            }
+          },
+          {
+            "name": "photo-011.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+            "rect": {
+              "x": 2244.570556640625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 2406.570556640625,
+              "bottom": 641,
+              "left": 2244.570556640625
+            }
+          },
+          {
+            "name": "photo-012.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+            "rect": {
+              "x": 2414.570556640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2577.070556640625,
+              "bottom": 641,
+              "left": 2414.570556640625
+            }
+          },
+          {
+            "name": "photo-013.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+            "rect": {
+              "x": 2585.078369140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2747.578369140625,
+              "bottom": 641,
+              "left": 2585.078369140625
+            }
+          },
+          {
+            "name": "photo-014.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+            "rect": {
+              "x": 2755.586181640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 2918.086181640625,
+              "bottom": 641,
+              "left": 2755.586181640625
+            }
+          },
+          {
+            "name": "photo-015.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+            "rect": {
+              "x": 2926.093994140625,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3088.093994140625,
+              "bottom": 641,
+              "left": 2926.093994140625
+            }
+          },
+          {
+            "name": "photo-016.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+            "rect": {
+              "x": 3096.093994140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3258.593994140625,
+              "bottom": 641,
+              "left": 3096.093994140625
+            }
+          },
+          {
+            "name": "photo-017.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+            "rect": {
+              "x": 3266.601806640625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3429.101806640625,
+              "bottom": 641,
+              "left": 3266.601806640625
+            }
+          },
+          {
+            "name": "photo-018.NEF",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+            "rect": {
+              "x": 3437.109619140625,
+              "y": 533,
+              "width": 162.5,
+              "height": 108,
+              "top": 533,
+              "right": 3599.609619140625,
+              "bottom": 641,
+              "left": 3437.109619140625
+            }
+          },
+          {
+            "name": "photo-019.jpg",
+            "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+            "rect": {
+              "x": 3607.61767578125,
+              "y": 533,
+              "width": 162,
+              "height": 108,
+              "top": 533,
+              "right": 3769.61767578125,
+              "bottom": 641,
+              "left": 3607.61767578125
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "switches": [
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 0,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "name": "photo-000.NEF",
+      "start": 1773.0999999940395,
+      "selectedAt": 1796.5999999940395,
+      "previewAt": 1815.5999999940395,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7aa2a65170c9f34f60337d7ad3f00a659356eec2b7ecc9fc3c9a0a06ac67ada7_medium.jpg",
+      "readyAt": 2175.1999999955297,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "end": 2198.0999999940395,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 1,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "name": "photo-002.NEF",
+      "start": 2289.39999999851,
+      "selectedAt": 2307.39999999851,
+      "previewAt": 2321,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F10536211fdf4b09364d474aa74972df422a5aba3bc95c0567e6aeee7ab874b45_medium.jpg",
+      "readyAt": 2854.1999999955297,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "end": 2898.5999999940395,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 2,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "name": "photo-003.jpg",
+      "start": 2972.39999999851,
+      "selectedAt": 2988,
+      "previewAt": 3000.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6760a65436188ecb70213648edbbb6496fd6e3ce20026acfc4fb98b1a5bf57cb_medium.jpg",
+      "readyAt": 3052.5999999940395,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "end": 3083.7999999970198,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 3,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "name": "photo-005.jpg",
+      "start": 3170.5,
+      "selectedAt": 3186.2999999970198,
+      "previewAt": 3201,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6134896d1877ce7943a0c06a6a023c622f6b8d4270c4e53e4ce8c4ac419c5d5a_medium.jpg",
+      "readyAt": 3319.89999999851,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "end": 3349.39999999851,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 4,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "name": "photo-016.NEF",
+      "start": 3429.6999999955297,
+      "selectedAt": 3446.5,
+      "previewAt": 3466.89999999851,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F75174e0216079ee3bc541b6c50382c4913f0718d6868bebd85df3ab87909129d_medium.jpg",
+      "readyAt": 3839.7999999970198,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "end": 3866.39999999851,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 5,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "name": "photo-018.NEF",
+      "start": 3947.5,
+      "selectedAt": 3961.89999999851,
+      "previewAt": 3984.0999999940395,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
+      "readyAt": 4462.79999999702,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "end": 4500.0999999940395,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 6,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "name": "photo-017.jpg",
+      "start": 4591.5,
+      "selectedAt": 4608.39999999851,
+      "previewAt": 4617.89999999851,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff8a3ff2deea404bb4b27dd80ec1d34709d90822d44267715c57d79c9494bbe80_medium.jpg",
+      "readyAt": 4717.5999999940395,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "end": 4750.69999999553,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 7,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "name": "photo-019.jpg",
+      "start": 4845.19999999553,
+      "selectedAt": 4862.89999999851,
+      "previewAt": 4884.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
+      "readyAt": 5025.29999999702,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "end": 5050.89999999851,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 8,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "name": "photo-000.NEF",
+      "start": 5126.89999999851,
+      "selectedAt": 5156,
+      "readyAt": 5156,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "previewAt": 5167.79999999702,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7aa2a65170c9f34f60337d7ad3f00a659356eec2b7ecc9fc3c9a0a06ac67ada7_medium.jpg",
+      "end": 5200.89999999851,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 9,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "name": "photo-002.NEF",
+      "start": 5296.19999999553,
+      "selectedAt": 5353.19999999553,
+      "readyAt": 5353.19999999553,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewAt": 5368.0999999940395,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F10536211fdf4b09364d474aa74972df422a5aba3bc95c0567e6aeee7ab874b45_medium.jpg",
+      "end": 5401.29999999702,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 10,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "name": "photo-003.jpg",
+      "start": 5472.69999999553,
+      "selectedAt": 5548.79999999702,
+      "readyAt": 5548.79999999702,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "previewAt": 5568.69999999553,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6760a65436188ecb70213648edbbb6496fd6e3ce20026acfc4fb98b1a5bf57cb_medium.jpg",
+      "end": 5603.69999999553,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 11,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "name": "photo-005.jpg",
+      "start": 5675.29999999702,
+      "selectedAt": 5703.19999999553,
+      "readyAt": 5703.19999999553,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "previewAt": 5718.29999999702,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6134896d1877ce7943a0c06a6a023c622f6b8d4270c4e53e4ce8c4ac419c5d5a_medium.jpg",
+      "end": 5751.39999999851,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 12,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "name": "photo-016.NEF",
+      "start": 5824,
+      "selectedAt": 5852.79999999702,
+      "readyAt": 5852.79999999702,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "previewAt": 5868.69999999553,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F75174e0216079ee3bc541b6c50382c4913f0718d6868bebd85df3ab87909129d_medium.jpg",
+      "end": 5901.5,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 13,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "name": "photo-018.NEF",
+      "start": 5977.89999999851,
+      "selectedAt": 6050.5,
+      "readyAt": 6050.5,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewAt": 6068.5999999940395,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
+      "end": 6102,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 14,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "name": "photo-017.jpg",
+      "start": 6182,
+      "selectedAt": 6210.79999999702,
+      "readyAt": 6210.79999999702,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "previewAt": 6235.5999999940395,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff8a3ff2deea404bb4b27dd80ec1d34709d90822d44267715c57d79c9494bbe80_medium.jpg",
+      "end": 6268.79999999702,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 15,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "name": "photo-019.jpg",
+      "start": 6344.5999999940395,
+      "selectedAt": 6371.19999999553,
+      "readyAt": 6371.19999999553,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewAt": 6385.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
+      "end": 6418.69999999553,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    }
+  ],
+  "sourceIO": {
+    "status": "unknown",
+    "traced": false
+  },
+  "backendCache": {
+    "status": "unknown",
+    "note": "Repeated selection is not evidence of a backend cache hit; preloader remains enabled"
+  },
+  "condition": "default",
+  "presetLibrary": {
+    "count": 0,
+    "workspace": {
+      "leftPanelWidth": 350,
+      "rightPanelWidth": 350,
+      "leftTopHeight": 450,
+      "rightTopHeight": 450,
+      "panelLayout": {
+        "leftTop": ["metadata", "folderTree", "export"],
+        "leftBottom": [],
+        "rightTop": ["adjustments", "crop", "masks", "ai", "presets"],
+        "rightBottom": []
+      },
+      "activePanels": {
+        "leftTop": "folderTree",
+        "leftBottom": null,
+        "rightTop": "adjustments",
+        "rightBottom": null
+      },
+      "panelSwitcherPlacement": {
+        "leftTop": "bottom",
+        "leftBottom": "bottom",
+        "rightTop": "right",
+        "rightBottom": "right"
+      }
+    }
+  },
+  "fixtureSetup": {
+    "count": 164,
+    "entries": [
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+        "kind": "RAW",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+        "kind": "JPEG",
+        "edited": true
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-026.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-027.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-028.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-029.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-030.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-031.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-032.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-033.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-034.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-035.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-036.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-037.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-038.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-039.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-040.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-041.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-042.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-043.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-044.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-045.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-046.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-047.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-048.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-049.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-050.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-051.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-052.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-053.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-054.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-055.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-056.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-057.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-058.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-059.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-060.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-061.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-062.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-063.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-064.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-065.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-066.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-067.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-068.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-069.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-070.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-071.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-072.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-073.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-074.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-075.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-076.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-077.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-078.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-079.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-080.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-081.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-082.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-083.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-084.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-085.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-086.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-087.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-088.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-089.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-090.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-091.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-092.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-093.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-094.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-095.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-096.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-097.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-098.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-099.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-100.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-101.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-102.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-103.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-104.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-105.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-106.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-107.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-108.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-109.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-110.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-111.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-112.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-113.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-114.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-115.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-116.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-117.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-118.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-119.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-120.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-121.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-122.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-123.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-124.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-125.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-126.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-127.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-128.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-129.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-130.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-131.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-132.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-133.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-134.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-135.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-136.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-137.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-138.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-139.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-140.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-141.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-142.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-143.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-144.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-145.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-146.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-147.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-148.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-149.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-150.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-151.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-152.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-153.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-154.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-155.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-156.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-157.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-158.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-159.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-160.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-161.jpg",
+        "kind": "JPEG",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-162.NEF",
+        "kind": "RAW",
+        "edited": false
+      },
+      {
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-163.jpg",
+        "kind": "JPEG",
+        "edited": false
+      }
+    ],
+    "editedPaths": [
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg"
+    ],
+    "settingsRoot": ["E:\\projects\\tbt\\rapidraw-baseline\\fixtures"],
+    "generatedThumbnailPaths": [
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-163.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-162.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-160.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-159.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-158.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-155.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-156.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-157.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-153.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-154.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-151.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-152.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-150.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-149.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-147.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-146.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-145.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-148.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-144.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-143.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-141.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-142.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-139.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-140.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-137.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-138.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-136.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-135.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-161.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-133.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-134.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-132.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-130.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-129.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-128.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-127.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-124.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-131.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-126.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-125.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-123.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-120.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-119.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-122.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-118.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-117.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-114.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-115.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-116.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-113.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-112.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-110.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-109.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-108.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-107.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-106.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-104.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-105.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-103.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-102.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-101.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-099.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-100.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-111.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-098.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-097.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-095.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-093.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-094.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-096.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-092.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-091.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-089.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-088.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-087.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-090.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-086.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-085.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-082.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-084.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-081.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-083.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-079.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-080.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-077.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-078.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-075.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-074.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-073.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-076.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-071.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-072.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-069.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-070.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-067.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-068.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-065.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-064.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-063.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-062.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-061.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-121.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-060.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-059.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-066.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-058.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-057.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-056.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-053.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-054.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-051.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-050.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-052.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-049.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-048.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-055.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-046.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-045.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-042.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-043.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-041.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-040.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-047.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-038.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-039.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-037.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-036.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-035.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-034.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-033.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-032.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-031.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-029.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-030.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-028.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-027.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-026.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-044.NEF"
+    ]
+  },
+  "switchPhase": {
+    "start": 1708.8999999985099,
+    "initialPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
+    "seenPaths": ["E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg"],
+    "pid": 31104,
+    "end": 6429.5,
+    "errors": [],
+    "keyboardEvents": 0,
+    "selectionHistory": [
+      {
+        "at": 1182.0999999940395,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg"
+      },
+      {
+        "at": 1796.5999999940395,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
+      },
+      {
+        "at": 2307.39999999851,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF"
+      },
+      {
+        "at": 2988,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg"
+      },
+      {
+        "at": 3186.2999999970198,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
+      },
+      {
+        "at": 3446.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
+      },
+      {
+        "at": 3961.89999999851,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF"
+      },
+      {
+        "at": 4608.39999999851,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg"
+      },
+      {
+        "at": 4862.89999999851,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg"
+      },
+      {
+        "at": 5156,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
+      },
+      {
+        "at": 5353.19999999553,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF"
+      },
+      {
+        "at": 5548.79999999702,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg"
+      },
+      {
+        "at": 5703.19999999553,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
+      },
+      {
+        "at": 5852.79999999702,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
+      },
+      {
+        "at": 6050.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF"
+      },
+      {
+        "at": 6210.79999999702,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg"
+      },
+      {
+        "at": 6371.19999999553,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg"
+      }
+    ]
+  },
+  "switchPlan": [
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    }
+  ],
+  "filmstripScroll": {
+    "start": 6459.5,
+    "end": 9456.09999999404,
+    "width": 548,
+    "scrollWidth": 27944,
+    "frames": [
+      {
+        "at": 6472.0999999940395,
+        "deltaMs": 12.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 0
+      },
+      {
+        "at": 6485.39999999851,
+        "deltaMs": 13.300000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 0
+      },
+      {
+        "at": 6503.29999999702,
+        "deltaMs": 17.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 80
+      },
+      {
+        "at": 6518.5999999940395,
+        "deltaMs": 15.299999997019768,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 160
+      },
+      {
+        "at": 6538.19999999553,
+        "deltaMs": 19.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 240
+      },
+      {
+        "at": 6551.79999999702,
+        "deltaMs": 13.600000001490116,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 320
+      },
+      {
+        "at": 6580.69999999553,
+        "deltaMs": 28.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 400
+      },
+      {
+        "at": 6592.0999999940395,
+        "deltaMs": 11.399999998509884,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 480
+      },
+      {
+        "at": 6609.19999999553,
+        "deltaMs": 17.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 560
+      },
+      {
+        "at": 6618.89999999851,
+        "deltaMs": 9.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 640
+      },
+      {
+        "at": 6641,
+        "deltaMs": 22.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 720
+      },
+      {
+        "at": 6655.79999999702,
+        "deltaMs": 14.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 800
+      },
+      {
+        "at": 6669.39999999851,
+        "deltaMs": 13.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 880
+      },
+      {
+        "at": 6692.19999999553,
+        "deltaMs": 22.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 960
+      },
+      {
+        "at": 6703.29999999702,
+        "deltaMs": 11.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1040
+      },
+      {
+        "at": 6733.69999999553,
+        "deltaMs": 30.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1120
+      },
+      {
+        "at": 6743.5,
+        "deltaMs": 9.800000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1200
+      },
+      {
+        "at": 6756.39999999851,
+        "deltaMs": 12.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1280
+      },
+      {
+        "at": 6771.89999999851,
+        "deltaMs": 15.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1360
+      },
+      {
+        "at": 6789.19999999553,
+        "deltaMs": 17.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1440
+      },
+      {
+        "at": 6802.5,
+        "deltaMs": 13.300000004470348,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 1520
+      },
+      {
+        "at": 6822.19999999553,
+        "deltaMs": 19.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1600
+      },
+      {
+        "at": 6836.39999999851,
+        "deltaMs": 14.200000002980232,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 1680
+      },
+      {
+        "at": 6866.5999999940395,
+        "deltaMs": 30.19999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1760
+      },
+      {
+        "at": 6872,
+        "deltaMs": 5.4000000059604645,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1840
+      },
+      {
+        "at": 6887.29999999702,
+        "deltaMs": 15.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1920
+      },
+      {
+        "at": 6903,
+        "deltaMs": 15.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2000
+      },
+      {
+        "at": 6918.79999999702,
+        "deltaMs": 15.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2080
+      },
+      {
+        "at": 6937.29999999702,
+        "deltaMs": 18.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2160
+      },
+      {
+        "at": 6952.29999999702,
+        "deltaMs": 15,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2240
+      },
+      {
+        "at": 6971.29999999702,
+        "deltaMs": 19,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2320
+      },
+      {
+        "at": 6985.89999999851,
+        "deltaMs": 14.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2400
+      },
+      {
+        "at": 7004.39999999851,
+        "deltaMs": 18.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2480
+      },
+      {
+        "at": 7018.89999999851,
+        "deltaMs": 14.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2560
+      },
+      {
+        "at": 7037.5,
+        "deltaMs": 18.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2640
+      },
+      {
+        "at": 7052.29999999702,
+        "deltaMs": 14.799999997019768,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 2720
+      },
+      {
+        "at": 7071.0999999940395,
+        "deltaMs": 18.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2800
+      },
+      {
+        "at": 7085.39999999851,
+        "deltaMs": 14.300000004470348,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 2880
+      },
+      {
+        "at": 7105.0999999940395,
+        "deltaMs": 19.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2960
+      },
+      {
+        "at": 7119.0999999940395,
+        "deltaMs": 14,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 3040
+      },
+      {
+        "at": 7137.89999999851,
+        "deltaMs": 18.80000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3120
+      },
+      {
+        "at": 7152.39999999851,
+        "deltaMs": 14.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3200
+      },
+      {
+        "at": 7170.5999999940395,
+        "deltaMs": 18.19999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3280
+      },
+      {
+        "at": 7186.79999999702,
+        "deltaMs": 16.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3360
+      },
+      {
+        "at": 7202.39999999851,
+        "deltaMs": 15.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3440
+      },
+      {
+        "at": 7221.0999999940395,
+        "deltaMs": 18.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3520
+      },
+      {
+        "at": 7236,
+        "deltaMs": 14.900000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3600
+      },
+      {
+        "at": 7254.5,
+        "deltaMs": 18.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3680
+      },
+      {
+        "at": 7269.0999999940395,
+        "deltaMs": 14.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3760
+      },
+      {
+        "at": 7288,
+        "deltaMs": 18.900000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3840
+      },
+      {
+        "at": 7302.5,
+        "deltaMs": 14.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3920
+      },
+      {
+        "at": 7321.0999999940395,
+        "deltaMs": 18.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4000
+      },
+      {
+        "at": 7336.0999999940395,
+        "deltaMs": 15,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4080
+      },
+      {
+        "at": 7354.89999999851,
+        "deltaMs": 18.80000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4160
+      },
+      {
+        "at": 7369.5999999940395,
+        "deltaMs": 14.699999995529652,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4240
+      },
+      {
+        "at": 7388,
+        "deltaMs": 18.400000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4320
+      },
+      {
+        "at": 7402.89999999851,
+        "deltaMs": 14.899999998509884,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4400
+      },
+      {
+        "at": 7421.29999999702,
+        "deltaMs": 18.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4480
+      },
+      {
+        "at": 7436.0999999940395,
+        "deltaMs": 14.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4560
+      },
+      {
+        "at": 7453.39999999851,
+        "deltaMs": 17.30000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4640
+      },
+      {
+        "at": 7470.5999999940395,
+        "deltaMs": 17.19999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4720
+      },
+      {
+        "at": 7487.29999999702,
+        "deltaMs": 16.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4800
+      },
+      {
+        "at": 7504.19999999553,
+        "deltaMs": 16.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4880
+      },
+      {
+        "at": 7519.29999999702,
+        "deltaMs": 15.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4960
+      },
+      {
+        "at": 7537.29999999702,
+        "deltaMs": 18,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5040
+      },
+      {
+        "at": 7552.89999999851,
+        "deltaMs": 15.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5120
+      },
+      {
+        "at": 7571.69999999553,
+        "deltaMs": 18.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5200
+      },
+      {
+        "at": 7586.29999999702,
+        "deltaMs": 14.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5280
+      },
+      {
+        "at": 7605.19999999553,
+        "deltaMs": 18.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5360
+      },
+      {
+        "at": 7619.5,
+        "deltaMs": 14.300000004470348,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 5440
+      },
+      {
+        "at": 7638.0999999940395,
+        "deltaMs": 18.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5520
+      },
+      {
+        "at": 7652.89999999851,
+        "deltaMs": 14.800000004470348,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 5600
+      },
+      {
+        "at": 7671.5999999940395,
+        "deltaMs": 18.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5680
+      },
+      {
+        "at": 7686.19999999553,
+        "deltaMs": 14.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5760
+      },
+      {
+        "at": 7704.39999999851,
+        "deltaMs": 18.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5840
+      },
+      {
+        "at": 7720.39999999851,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5920
+      },
+      {
+        "at": 7736.29999999702,
+        "deltaMs": 15.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6000
+      },
+      {
+        "at": 7755.19999999553,
+        "deltaMs": 18.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6080
+      },
+      {
+        "at": 7770,
+        "deltaMs": 14.800000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6160
+      },
+      {
+        "at": 7787.89999999851,
+        "deltaMs": 17.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6240
+      },
+      {
+        "at": 7804.19999999553,
+        "deltaMs": 16.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6320
+      },
+      {
+        "at": 7820.69999999553,
+        "deltaMs": 16.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6400
+      },
+      {
+        "at": 7836.5,
+        "deltaMs": 15.800000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6480
+      },
+      {
+        "at": 7855.5,
+        "deltaMs": 19,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6560
+      },
+      {
+        "at": 7869.79999999702,
+        "deltaMs": 14.299999997019768,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6640
+      },
+      {
+        "at": 7888.39999999851,
+        "deltaMs": 18.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6720
+      },
+      {
+        "at": 7903,
+        "deltaMs": 14.600000001490116,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6800
+      },
+      {
+        "at": 7922.5,
+        "deltaMs": 19.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6880
+      },
+      {
+        "at": 7936.39999999851,
+        "deltaMs": 13.899999998509884,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6960
+      },
+      {
+        "at": 7955.19999999553,
+        "deltaMs": 18.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 7040
+      },
+      {
+        "at": 7970,
+        "deltaMs": 14.800000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 7120
+      },
+      {
+        "at": 7988.5999999940395,
+        "deltaMs": 18.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 7200
+      },
+      {
+        "at": 8003.89999999851,
+        "deltaMs": 15.300000004470348,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 7120
+      },
+      {
+        "at": 8020.5999999940395,
+        "deltaMs": 16.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 7040
+      },
+      {
+        "at": 8038.0999999940395,
+        "deltaMs": 17.5,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6960
+      },
+      {
+        "at": 8054.39999999851,
+        "deltaMs": 16.30000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6880
+      },
+      {
+        "at": 8070.89999999851,
+        "deltaMs": 16.5,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6800
+      },
+      {
+        "at": 8087.39999999851,
+        "deltaMs": 16.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6720
+      },
+      {
+        "at": 8105.0999999940395,
+        "deltaMs": 17.69999999552965,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 6640
+      },
+      {
+        "at": 8120.29999999702,
+        "deltaMs": 15.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6560
+      },
+      {
+        "at": 8137.69999999553,
+        "deltaMs": 17.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6480
+      },
+      {
+        "at": 8153.29999999702,
+        "deltaMs": 15.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6400
+      },
+      {
+        "at": 8176.79999999702,
+        "deltaMs": 23.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6320
+      },
+      {
+        "at": 8186.79999999702,
+        "deltaMs": 10,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6240
+      },
+      {
+        "at": 8205.39999999851,
+        "deltaMs": 18.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6160
+      },
+      {
+        "at": 8220,
+        "deltaMs": 14.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6080
+      },
+      {
+        "at": 8238.69999999553,
+        "deltaMs": 18.69999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 6000
+      },
+      {
+        "at": 8253.29999999702,
+        "deltaMs": 14.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5920
+      },
+      {
+        "at": 8271.5,
+        "deltaMs": 18.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5840
+      },
+      {
+        "at": 8287.59999999404,
+        "deltaMs": 16.099999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5760
+      },
+      {
+        "at": 8304,
+        "deltaMs": 16.400000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5680
+      },
+      {
+        "at": 8321.39999999851,
+        "deltaMs": 17.399999998509884,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 5600
+      },
+      {
+        "at": 8337.59999999404,
+        "deltaMs": 16.19999999552965,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5520
+      },
+      {
+        "at": 8354.39999999851,
+        "deltaMs": 16.80000000447035,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 5440
+      },
+      {
+        "at": 8370.79999999702,
+        "deltaMs": 16.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5360
+      },
+      {
+        "at": 8388.39999999851,
+        "deltaMs": 17.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5280
+      },
+      {
+        "at": 8404.39999999851,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5200
+      },
+      {
+        "at": 8421.5,
+        "deltaMs": 17.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5120
+      },
+      {
+        "at": 8436.79999999702,
+        "deltaMs": 15.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 5040
+      },
+      {
+        "at": 8456,
+        "deltaMs": 19.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4960
+      },
+      {
+        "at": 8470.09999999404,
+        "deltaMs": 14.099999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4880
+      },
+      {
+        "at": 8488.69999999553,
+        "deltaMs": 18.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4800
+      },
+      {
+        "at": 8503.69999999553,
+        "deltaMs": 15,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4720
+      },
+      {
+        "at": 8522,
+        "deltaMs": 18.30000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4640
+      },
+      {
+        "at": 8536.89999999851,
+        "deltaMs": 14.899999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4560
+      },
+      {
+        "at": 8554.39999999851,
+        "deltaMs": 17.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4480
+      },
+      {
+        "at": 8571.5,
+        "deltaMs": 17.100000001490116,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4400
+      },
+      {
+        "at": 8587.5,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4320
+      },
+      {
+        "at": 8605,
+        "deltaMs": 17.5,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4240
+      },
+      {
+        "at": 8623.29999999702,
+        "deltaMs": 18.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4160
+      },
+      {
+        "at": 8638.5,
+        "deltaMs": 15.200000002980232,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 4080
+      },
+      {
+        "at": 8654.79999999702,
+        "deltaMs": 16.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 4000
+      },
+      {
+        "at": 8672,
+        "deltaMs": 17.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3920
+      },
+      {
+        "at": 8688,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3840
+      },
+      {
+        "at": 8704.79999999702,
+        "deltaMs": 16.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3760
+      },
+      {
+        "at": 8720.29999999702,
+        "deltaMs": 15.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3680
+      },
+      {
+        "at": 8739,
+        "deltaMs": 18.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3600
+      },
+      {
+        "at": 8754.09999999404,
+        "deltaMs": 15.099999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3520
+      },
+      {
+        "at": 8772.39999999851,
+        "deltaMs": 18.30000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3440
+      },
+      {
+        "at": 8787.09999999404,
+        "deltaMs": 14.699999995529652,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3360
+      },
+      {
+        "at": 8805.39999999851,
+        "deltaMs": 18.30000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3280
+      },
+      {
+        "at": 8821.19999999553,
+        "deltaMs": 15.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3200
+      },
+      {
+        "at": 8837.89999999851,
+        "deltaMs": 16.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 3120
+      },
+      {
+        "at": 8855,
+        "deltaMs": 17.100000001490116,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 3040
+      },
+      {
+        "at": 8871,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2960
+      },
+      {
+        "at": 8888.39999999851,
+        "deltaMs": 17.399999998509884,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 2880
+      },
+      {
+        "at": 8904.79999999702,
+        "deltaMs": 16.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2800
+      },
+      {
+        "at": 8921.29999999702,
+        "deltaMs": 16.5,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 2720
+      },
+      {
+        "at": 8937,
+        "deltaMs": 15.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2640
+      },
+      {
+        "at": 8955.39999999851,
+        "deltaMs": 18.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2560
+      },
+      {
+        "at": 8970.89999999851,
+        "deltaMs": 15.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2480
+      },
+      {
+        "at": 8988.29999999702,
+        "deltaMs": 17.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2400
+      },
+      {
+        "at": 9004.09999999404,
+        "deltaMs": 15.799999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2320
+      },
+      {
+        "at": 9022.89999999851,
+        "deltaMs": 18.80000000447035,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2240
+      },
+      {
+        "at": 9037.59999999404,
+        "deltaMs": 14.699999995529652,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2160
+      },
+      {
+        "at": 9055,
+        "deltaMs": 17.400000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2080
+      },
+      {
+        "at": 9070.59999999404,
+        "deltaMs": 15.599999994039536,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 2000
+      },
+      {
+        "at": 9088.29999999702,
+        "deltaMs": 17.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1920
+      },
+      {
+        "at": 9104.59999999404,
+        "deltaMs": 16.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1840
+      },
+      {
+        "at": 9121.09999999404,
+        "deltaMs": 16.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1760
+      },
+      {
+        "at": 9138.09999999404,
+        "deltaMs": 17,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 1680
+      },
+      {
+        "at": 9154.5,
+        "deltaMs": 16.400000005960464,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1600
+      },
+      {
+        "at": 9171.5,
+        "deltaMs": 17,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 1520
+      },
+      {
+        "at": 9187.79999999702,
+        "deltaMs": 16.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1440
+      },
+      {
+        "at": 9205.19999999553,
+        "deltaMs": 17.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1360
+      },
+      {
+        "at": 9221.19999999553,
+        "deltaMs": 16,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1280
+      },
+      {
+        "at": 9238.39999999851,
+        "deltaMs": 17.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1200
+      },
+      {
+        "at": 9254.09999999404,
+        "deltaMs": 15.699999995529652,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1120
+      },
+      {
+        "at": 9272.29999999702,
+        "deltaMs": 18.200000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 1040
+      },
+      {
+        "at": 9287.69999999553,
+        "deltaMs": 15.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 960
+      },
+      {
+        "at": 9305.09999999404,
+        "deltaMs": 17.399999998509884,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 880
+      },
+      {
+        "at": 9320.79999999702,
+        "deltaMs": 15.700000002980232,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 800
+      },
+      {
+        "at": 9339.09999999404,
+        "deltaMs": 18.299999997019768,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 720
+      },
+      {
+        "at": 9354.69999999553,
+        "deltaMs": 15.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 640
+      },
+      {
+        "at": 9370.79999999702,
+        "deltaMs": 16.100000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 560
+      },
+      {
+        "at": 9388.5,
+        "deltaMs": 17.700000002980232,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 480
+      },
+      {
+        "at": 9404,
+        "deltaMs": 15.5,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 400
+      },
+      {
+        "at": 9422.29999999702,
+        "deltaMs": 18.299999997019768,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 320
+      },
+      {
+        "at": 9437.89999999851,
+        "deltaMs": 15.600000001490116,
+        "visible": 4,
+        "loaded": 4,
+        "missing": 0,
+        "scrollLeft": 240
+      },
+      {
+        "at": 9455.09999999404,
+        "deltaMs": 17.19999999552965,
+        "visible": 5,
+        "loaded": 5,
+        "missing": 0,
+        "scrollLeft": 160
+      }
+    ]
+  },
+  "upstreamReplay": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+    "recordedAt": "2026-11-07T02:49:07.923Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "devicePixelRatio": 1
+    },
+    "config": {
+      "iterations": 10,
+      "warmupIterations": 2
+    },
+    "iterations": [
+      {
+        "index": 0,
+        "warmup": true,
+        "phases": {
+          "scroll": {
+            "durationMs": 510.8999999985099,
+            "frameCount": 31,
+            "avgFps": 59.949719590021225,
+            "worstFrameMs": 17,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.6000000014901161,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1326.1999999955297,
+            "frameCount": 80,
+            "avgFps": 59.96551982609998,
+            "worstFrameMs": 17.399999999999636,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 1,
+        "warmup": true,
+        "phases": {
+          "scroll": {
+            "durationMs": 516,
+            "frameCount": 31,
+            "avgFps": 59.949719590021225,
+            "worstFrameMs": 16.80000000000109,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.6000000014901161,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1332.5,
+            "frameCount": 80,
+            "avgFps": 59.96102533353325,
+            "worstFrameMs": 17.399999999999636,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 2,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 500.5,
+            "frameCount": 30,
+            "avgFps": 59.952038369304596,
+            "worstFrameMs": 16.799999999999272,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.5,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1362.1999999955297,
+            "frameCount": 82,
+            "avgFps": 59.954668421437574,
+            "worstFrameMs": 17.399999999997817,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 3,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 501.79999999701977,
+            "frameCount": 30,
+            "avgFps": 59.94005994005994,
+            "worstFrameMs": 16.80000000000291,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.5,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1348.5,
+            "frameCount": 81,
+            "avgFps": 59.95115091407008,
+            "worstFrameMs": 18.099999999998545,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 4,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 508.19999999552965,
+            "frameCount": 31,
+            "avgFps": 59.94971959002102,
+            "worstFrameMs": 16.899999999997817,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.6000000014901161,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1361.2000000029802,
+            "frameCount": 82,
+            "avgFps": 59.22715781870712,
+            "worstFrameMs": 33.400000000001455,
+            "droppedFrameCount": 1,
+            "droppedFrameTimeMs": 33.400000000001455
+          }
+        }
+      },
+      {
+        "index": 5,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 508.1000000014901,
+            "frameCount": 30,
+            "avgFps": 59.952038369304375,
+            "worstFrameMs": 16.799999999999272,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.5,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1319.5,
+            "frameCount": 79,
+            "avgFps": 59.94839884656248,
+            "worstFrameMs": 17.799999999999272,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 6,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 500.3999999985099,
+            "frameCount": 30,
+            "avgFps": 59.952038369304375,
+            "worstFrameMs": 16.799999999999272,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.5,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1373.5,
+            "frameCount": 83,
+            "avgFps": 59.96676540712367,
+            "worstFrameMs": 17.69999999999709,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 7,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 500.5,
+            "frameCount": 30,
+            "avgFps": 59.95203836930526,
+            "worstFrameMs": 16.80000000000291,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.5,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1397,
+            "frameCount": 84,
+            "avgFps": 59.94861547245231,
+            "worstFrameMs": 17.69999999999709,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 8,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 512.3999999985099,
+            "frameCount": 31,
+            "avgFps": 59.949719590021445,
+            "worstFrameMs": 16.900000000001455,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.6000000014901161,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1368.5,
+            "frameCount": 82,
+            "avgFps": 59.941520467836256,
+            "worstFrameMs": 17.599999999998545,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      },
+      {
+        "index": 9,
+        "warmup": false,
+        "phases": {
+          "scroll": {
+            "durationMs": 506.09999999403954,
+            "frameCount": 31,
+            "avgFps": 59.9497195900206,
+            "worstFrameMs": 16.89999999999418,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "open": {
+            "durationMs": 0.3999999985098839,
+            "frameCount": 0,
+            "avgFps": 0,
+            "worstFrameMs": 0,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          },
+          "edit": {
+            "durationMs": 1365.1000000014901,
+            "frameCount": 82,
+            "avgFps": 59.95028512940476,
+            "worstFrameMs": 17.200000000004366,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
+          }
+        }
+      }
+    ],
+    "summary": {
+      "scroll": {
+        "durationMs": {
+          "median": 503.94999999552965,
+          "p95": 512.3999999985099,
+          "stdev": 4.289813515334812
+        },
+        "avgFps": {
+          "median": 59.95087897966291,
+          "p95": 59.95203836930526,
+          "stdev": 0.003788094897975708
+        },
+        "worstFrameMs": {
+          "median": 16.80000000000291,
+          "p95": 16.900000000001455,
+          "stdev": 0.04841229182618373
+        },
+        "droppedFrameCount": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        },
+        "droppedFrameTimeMs": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        }
+      },
+      "open": {
+        "durationMs": {
+          "median": 0.5,
+          "p95": 0.6000000014901161,
+          "stdev": 0.05994789493470222
+        },
+        "avgFps": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        },
+        "worstFrameMs": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        },
+        "droppedFrameCount": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        },
+        "droppedFrameTimeMs": {
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
+        }
+      },
+      "edit": {
+        "durationMs": {
+          "median": 1363.6499999985099,
+          "p95": 1397,
+          "stdev": 20.610248512580707
+        },
+        "avgFps": {
+          "median": 59.94945030092853,
+          "p95": 59.96676540712367,
+          "stdev": 0.23969083277518322
+        },
+        "worstFrameMs": {
+          "median": 17.69999999999709,
+          "p95": 33.400000000001455,
+          "stdev": 5.217144214032039
+        },
+        "droppedFrameCount": {
+          "median": 0,
+          "p95": 1,
+          "stdev": 0.33071891388307384
+        },
+        "droppedFrameTimeMs": {
+          "median": 0,
+          "p95": 33.400000000001455,
+          "stdev": 11.046011723695148
+        }
+      }
+    }
+  },
+  "upstreamReplayErrors": [],
+  "sliderDrag": {
+    "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+    "initialEdited": true,
+    "initialPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+    "before": "0.25",
+    "pathChanges": [],
+    "samples": 29,
+    "trustedEvents": [
+      {
+        "type": "mousedown",
+        "trusted": true,
+        "at": 1942.2999999970198
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 1948.0999999940395
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 1981.5
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2015.1999999955297
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2048.0999999940395
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2081.5
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2114.89999999851
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2148.1999999955297
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2181.5999999940395
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2215
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2250.39999999851
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2307.1999999955297
+      },
+      {
+        "type": "mousemove",
+        "trusted": true,
+        "at": 2348.5999999940395
+      },
+      {
+        "type": "mouseup",
+        "trusted": true,
+        "at": 2370.5999999940395
+      }
+    ],
+    "start": 1922.5,
+    "after": "-1.77",
+    "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+    "end": 2428.7999999970198,
+    "assertions": {
+      "valueChanged": true,
+      "editedTarget": true,
+      "pathUnchanged": true,
+      "trustedMouse": true,
+      "isolated": true,
+      "elementConnected": true
+    },
+    "pid": 26760,
+    "startupPids": [2896, 14052, 35064, 10820, 30664, 31104],
+    "page": {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+    },
+    "inputMethod": "CDP Input.dispatchMouseEvent",
+    "points": {
+      "x": 1076.525,
+      "y": 296,
+      "endX": 1036.325
+    },
+    "switchSamplesInProcess": 0
+  },
+  "assertions": {
+    "switchesComplete": true,
+    "startupComplete": true,
+    "isolatedMouseDrag": true,
+    "keyboardFree": true,
+    "targetPathsVerified": true
+  },
+  "finished": "2026-11-07T10:49:12+0800"
+}

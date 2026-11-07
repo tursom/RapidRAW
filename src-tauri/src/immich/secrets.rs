@@ -1,4 +1,7 @@
+#[cfg(target_os = "android")]
 const SERVICE: &str = "io.github.CyberTimon.RapidRAW.immich";
+#[cfg(not(target_os = "android"))]
+const SERVICE: &str = "io.github.tursom.RapidRAW.immich";
 const ACCOUNT: &str = "api-key";
 
 #[cfg(any(

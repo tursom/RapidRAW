@@ -1,0 +1,5 @@
+{
+  "clippyDefaultExit": 0,
+  "finished": "2026-11-07T11:00:08.1653965+08:00",
+  "features": "default + tauri/custom-protocol"
+}

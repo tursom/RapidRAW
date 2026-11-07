@@ -1,0 +1,18 @@
+[
+  {
+    "name": "iss030e122639.NEF",
+    "url": "https://raw.githubusercontent.com/letmaik/rawpy/main/test/iss030e122639.NEF",
+    "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+    "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, ISS030-E-122639; https://eol.jsc.nasa.gov/",
+    "license": "NASA astronaut photography, no NASA copyright; subject to NASA conditions of use",
+    "licenseEvidence": "https://eol.jsc.nasa.gov/FAQ/"
+  },
+  {
+    "name": "iss042e297200.NEF",
+    "url": "https://raw.githubusercontent.com/letmaik/rawpy/main/test/iss042e297200.NEF",
+    "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1",
+    "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, ISS042-E-297200; https://eol.jsc.nasa.gov/",
+    "license": "NASA astronaut photography, no NASA copyright; subject to NASA conditions of use",
+    "licenseEvidence": "https://eol.jsc.nasa.gov/FAQ/"
+  }
+]

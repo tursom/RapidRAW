@@ -1,0 +1,59 @@
+{
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "rust": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "capturedAt": "2026-11-07T10:51:40.2281258+08:00",
+  "sessionId": 0,
+  "gpus": [
+    {
+      "Name": "GameViewer Virtual Display Adapter",
+      "DriverVersion": "15.6.5.199",
+      "AdapterRAM": null
+    },
+    {
+      "Name": "USB Mobile Monitor Virtual Display",
+      "DriverVersion": "2.0.0.1",
+      "AdapterRAM": null
+    },
+    {
+      "Name": "AMD Radeon RX 9060 XT",
+      "DriverVersion": "32.0.31007.5012",
+      "AdapterRAM": 4293918720
+    }
+  ],
+  "binarySha256": "26E37FFEC105A56210BB6AC8940F742DF01C7970224048685B2D811DFE707DE6",
+  "os": {
+    "caption": "Microsoft Windows 10 专业版",
+    "totalMemoryKiB": 50240548,
+    "build": "19045",
+    "version": "10.0.19045"
+  },
+  "webViewVersions": ["156.0.4314.58", "157.0.4341.42"],
+  "logicalDisks": [
+    {
+      "DeviceID": "C:",
+      "DriveType": 3,
+      "Size": 1023447887872
+    },
+    {
+      "DeviceID": "D:",
+      "DriveType": 3,
+      "Size": 4000650883072
+    },
+    {
+      "DeviceID": "E:",
+      "DriveType": 3,
+      "Size": 4000768323584
+    },
+    {
+      "DeviceID": "F:",
+      "DriveType": 3,
+      "Size": 1000203087872
+    }
+  ],
+  "powerPlan": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)",
+  "cpu": {
+    "Name": "AMD Ryzen 7 5800X3D 8-Core Processor           ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  }
+}

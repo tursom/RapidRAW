@@ -1,0 +1,15 @@
+{
+  "realValidControlAccepted": true,
+  "negativeCasesRejectedWithoutSummaryOverwrite": [
+    "legacy-version",
+    "keyboard-pollution",
+    "missing-native-visibility",
+    "missing-thumbnail",
+    "missing-ready",
+    "wrong-target-path",
+    "unedited-slider-target",
+    "false-drag-value"
+  ],
+  "negativeCasesAreSynthetic": "Mutated copies of final real records only in a disposable temp directory, never committed as measurements",
+  "observerVisibilityCounterexample": "actual visibleRect helper rejects self opacity=0, own visibility=hidden/display=none, and transparent ancestor; visible control accepted"
+}

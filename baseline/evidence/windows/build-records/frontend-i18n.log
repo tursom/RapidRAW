@@ -1,0 +1,58 @@
+npm notice run i18n:check
+npm notice run i18next-cli extract --ci --dry-run && npm run i18n:runtime-check
+- Running i18next key extractor...
+
+✔ Extraction complete!
+❌ Some files were updated. This should not happen in CI mode.
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/en.json [en]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/de.json [de]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/pl.json [pl]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/zh-CN.json [zh-CN]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/zh-TW.json [zh-TW]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/es.json [es]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/fr.json [fr]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/it.json [it]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/pt.json [pt]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/ja.json [ja]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/ko.json [ko]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/ru.json [ru]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/uk.json [uk]
+    + settings.general.hideCollapsedPanels: ""
+    + settings.general.hideCollapsedPanelsDesc: ""
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/ca.json [ca]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/nl.json [nl]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/cs.json [cs]
+    (no key differences — only formatting or ordering changes)
+
+  /root/dev/work/tbt/RapidRAW/src/i18n/locales/lt.json [lt]
+    (no key differences — only formatting or ordering changes)

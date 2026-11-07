@@ -1,0 +1,20 @@
+cargo.exe :     Checking tauri v2.12.1
+所在位置 E:\projects\tbt\rapidraw-baseline\audit-clippy-default.ps1:5 字符: 1
++ & cargo clippy --release --all-targets --locked --features tauri/cust ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (    Checking tauri v2.12.1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+   Compiling RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+    Checking tauri-plugin-fs v2.6.0
+    Checking tauri-plugin-store v2.5.0
+    Checking tauri-plugin-process v2.3.1
+    Checking tauri-plugin-os v2.3.2
+    Checking tauri-plugin-shell v2.3.5
+    Checking tauri-plugin-single-instance v2.4.3
+    Checking tauri-plugin-http v2.8.0
+    Checking tauri-plugin-dialog v2.7.2
+    Checking tauri-plugin-clerk v0.1.1
+    Finished `release` profile [optimized] target(s) in 22.21s

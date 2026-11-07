@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-11-07T10:55:19.778507+08:00",
+  "sourceFilesChecked": 412,
+  "sourceMismatches": [],
+  "fixtureFilesChecked": 164,
+  "fixtureByteMismatches": [],
+  "sourceBase": "d84e758e",
+  "sourceScope": "Tracked src, src-tauri, public and root build files; excludes generated src-tauri/gen, target; includes new Android config",
+  "sourceManifestSha256": "2aee0f3a0b4779b1a69869b72bd1f949ccd70262a906112c63659f7da306dcff",
+  "passed": true,
+  "scope": "Read-only hash verification after all timed measurements; only dedicated app sources and disposable fixture files read. Sidecar changes are expected and not original photo bytes."
+}

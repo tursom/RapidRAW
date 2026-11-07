@@ -1,0 +1,816 @@
+{
+  "schema": "rapidraw-task1-baseline-summary",
+  "measurementVersion": 2,
+  "units": "milliseconds unless stated",
+  "p95": "nearest rank",
+  "conditions": {
+    "measurements.json": {
+      "condition": "default",
+      "finished": "2026-11-07T10:49:12+0800",
+      "presetCount": 0,
+      "sourceIO": {
+        "status": "unknown",
+        "traced": false
+      },
+      "backendCache": {
+        "status": "unknown",
+        "note": "Repeated selection is not evidence of a backend cache hit; preloader remains enabled"
+      },
+      "viewports": [
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        }
+      ],
+      "imageCounts": [164, 164, 164, 164, 164, 164],
+      "startupThumbnailCounts": [
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        }
+      ],
+      "thumbnailPathsGenerated": 164,
+      "startup": {
+        "nativeVisibleUpperMs": {
+          "n": 5,
+          "median": 1340.578800001822,
+          "p95": 1379.5314000017243,
+          "min": 1335.2653999972972,
+          "max": 1379.5314000017243
+        },
+        "landingReadyUpperMs": {
+          "n": 5,
+          "median": 1355.1996000023792,
+          "p95": 1391.7811999999685,
+          "min": 1349.5001999981469,
+          "max": 1391.7811999999685
+        },
+        "libraryThumbsUpperMs": {
+          "n": 5,
+          "median": 1729.9150000035297,
+          "p95": 1754.4650999989244,
+          "min": 1721.9282000005478,
+          "max": 1754.4650999989244
+        },
+        "automatedEditorReadyUpperMs": {
+          "n": 5,
+          "median": 2308.8711999953375,
+          "p95": 2330.870400001004,
+          "min": 2250.039899998228,
+          "max": 2330.870400001004
+        }
+      },
+      "switchesByGroup": [
+        {
+          "edited": true,
+          "kind": "RAW",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 483.44999999925494,
+            "p95": 564.7999999970198,
+            "min": 402.1000000014901,
+            "max": 564.7999999970198
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 37.05000000074506,
+              "p95": 42.5,
+              "min": 31.600000001490116,
+              "max": 42.5
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "RAW",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 43.05000000074506,
+            "p95": 57.0,
+            "min": 29.100000001490116,
+            "max": 57.0
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 56.399999998509884,
+              "p95": 71.89999999850988,
+              "min": 40.899999998509884,
+              "max": 71.89999999850988
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "JPEG",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 114.79999999701977,
+            "p95": 149.39999999850988,
+            "min": 80.19999999552965,
+            "max": 149.39999999850988
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 29.300000000745058,
+              "p95": 30.5,
+              "min": 28.100000001490116,
+              "max": 30.5
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "JPEG",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 52.0,
+            "p95": 76.10000000149012,
+            "min": 27.899999998509884,
+            "max": 76.10000000149012
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 69.5,
+              "p95": 96.0,
+              "min": 43.0,
+              "max": 96.0
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "RAW",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 462.69999999925494,
+            "p95": 515.2999999970198,
+            "min": 410.1000000014901,
+            "max": 515.2999999970198
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 36.899999998509884,
+              "p95": 37.20000000298023,
+              "min": 36.599999994039536,
+              "max": 37.20000000298023
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "RAW",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 50.69999999925494,
+            "p95": 72.60000000149012,
+            "min": 28.799999997019768,
+            "max": 72.60000000149012
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 67.69999999552965,
+              "p95": 90.69999999552965,
+              "min": 44.69999999552965,
+              "max": 90.69999999552965
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "JPEG",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 153.09999999776483,
+            "p95": 180.10000000149012,
+            "min": 126.09999999403954,
+            "max": 180.10000000149012
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 32.850000001490116,
+              "p95": 39.30000000447035,
+              "min": 26.399999998509884,
+              "max": 39.30000000447035
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "JPEG",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 27.699999999254942,
+            "p95": 28.799999997019768,
+            "min": 26.600000001490116,
+            "max": 28.799999997019768
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 47.25,
+              "p95": 53.599999994039536,
+              "min": 40.900000005960464,
+              "max": 53.599999994039536
+            }
+          }
+        }
+      ],
+      "sliderDrag": {
+        "assertions": {
+          "valueChanged": true,
+          "editedTarget": true,
+          "pathUnchanged": true,
+          "trustedMouse": true,
+          "isolated": true,
+          "elementConnected": true
+        },
+        "before": "0.25",
+        "after": "-1.77",
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+        "note": "Separate process functional check; not a click-to-ready latency sample"
+      },
+      "filmstrip": {
+        "frames": 180,
+        "frameIntervalMs": {
+          "n": 180,
+          "median": 16.400000005960464,
+          "p95": 19.5,
+          "min": 5.4000000059604645,
+          "max": 30.399999998509884
+        },
+        "averageFps": 60.08812925636205,
+        "framesWithMissingLoadedThumbs": 0,
+        "maxMissingThumbs": 0,
+        "maxScrollLeft": 7200
+      },
+      "upstreamReplay": {
+        "scroll": {
+          "durationMs": {
+            "median": 503.94999999552965,
+            "p95": 512.3999999985099,
+            "stdev": 4.289813515334812
+          },
+          "avgFps": {
+            "median": 59.95087897966291,
+            "p95": 59.95203836930526,
+            "stdev": 0.003788094897975708
+          },
+          "worstFrameMs": {
+            "median": 16.80000000000291,
+            "p95": 16.900000000001455,
+            "stdev": 0.04841229182618373
+          },
+          "droppedFrameCount": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameTimeMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          }
+        },
+        "open": {
+          "durationMs": {
+            "median": 0.5,
+            "p95": 0.6000000014901161,
+            "stdev": 0.05994789493470222
+          },
+          "avgFps": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "worstFrameMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameCount": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameTimeMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          }
+        },
+        "edit": {
+          "durationMs": {
+            "median": 1363.6499999985099,
+            "p95": 1397,
+            "stdev": 20.610248512580707
+          },
+          "avgFps": {
+            "median": 59.94945030092853,
+            "p95": 59.96676540712367,
+            "stdev": 0.23969083277518322
+          },
+          "worstFrameMs": {
+            "median": 17.69999999999709,
+            "p95": 33.400000000001455,
+            "stdev": 5.217144214032039
+          },
+          "droppedFrameCount": {
+            "median": 0,
+            "p95": 1,
+            "stdev": 0.33071891388307384
+          },
+          "droppedFrameTimeMs": {
+            "median": 0,
+            "p95": 33.400000000001455,
+            "stdev": 11.046011723695148
+          }
+        }
+      }
+    },
+    "presets20.json": {
+      "condition": "presets20",
+      "finished": "2026-11-07T10:50:23+0800",
+      "presetCount": 20,
+      "sourceIO": {
+        "status": "unknown",
+        "traced": false
+      },
+      "backendCache": {
+        "status": "unknown",
+        "note": "Repeated selection is not evidence of a backend cache hit; preloader remains enabled"
+      },
+      "viewports": [
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        }
+      ],
+      "imageCounts": [164, 164, 164, 164, 164, 164],
+      "startupThumbnailCounts": [
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        },
+        {
+          "mounted": 10,
+          "expected": 4,
+          "loaded": 4,
+          "missing": 0
+        }
+      ],
+      "thumbnailPathsGenerated": 164,
+      "startup": {
+        "nativeVisibleUpperMs": {
+          "n": 5,
+          "median": 1366.965599998366,
+          "p95": 1372.482200000377,
+          "min": 1339.1442999927676,
+          "max": 1372.482200000377
+        },
+        "landingReadyUpperMs": {
+          "n": 5,
+          "median": 1374.2367000013473,
+          "p95": 1383.4672000011778,
+          "min": 1350.7212999975309,
+          "max": 1383.4672000011778
+        },
+        "libraryThumbsUpperMs": {
+          "n": 5,
+          "median": 1757.1546000035596,
+          "p95": 1779.1369000042323,
+          "min": 1741.0021999967285,
+          "max": 1779.1369000042323
+        },
+        "automatedEditorReadyUpperMs": {
+          "n": 5,
+          "median": 2284.965500002727,
+          "p95": 2318.1693000005907,
+          "min": 2257.4632999967434,
+          "max": 2318.1693000005907
+        }
+      },
+      "switchesByGroup": [
+        {
+          "edited": true,
+          "kind": "RAW",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 388.1000000014901,
+            "p95": 685.8000000044703,
+            "min": 90.39999999850988,
+            "max": 685.8000000044703
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 89.60000000149012,
+              "p95": 141.80000000447035,
+              "min": 37.399999998509884,
+              "max": 141.80000000447035
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "RAW",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 259.75,
+            "p95": 464.79999999701977,
+            "min": 54.70000000298023,
+            "max": 464.79999999701977
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 57.95000000298023,
+              "p95": 75.80000000447035,
+              "min": 40.100000001490116,
+              "max": 75.80000000447035
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "JPEG",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 161.55000000074506,
+            "p95": 220,
+            "min": 103.10000000149012,
+            "max": 220
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 44.80000000074506,
+              "p95": 46.600000001490116,
+              "min": 43.0,
+              "max": 46.600000001490116
+            }
+          }
+        },
+        {
+          "edited": true,
+          "kind": "JPEG",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 117.55000000074506,
+            "p95": 146.20000000298023,
+            "min": 88.89999999850988,
+            "max": 146.20000000298023
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 78.30000000074506,
+              "p95": 113.60000000149012,
+              "min": 43.0,
+              "max": 113.60000000149012
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "RAW",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 529.7499999962747,
+            "p95": 620.3999999985099,
+            "min": 439.09999999403954,
+            "max": 620.3999999985099
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 47.24999999627471,
+              "p95": 48.69999999552965,
+              "min": 45.79999999701977,
+              "max": 48.69999999552965
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "RAW",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 79.35000000149012,
+            "p95": 108.20000000298023,
+            "min": 50.5,
+            "max": 108.20000000298023
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 91.0,
+              "p95": 124.20000000298023,
+              "min": 57.79999999701977,
+              "max": 124.20000000298023
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "JPEG",
+          "selection": "first-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 134.19999999925494,
+            "p95": 165.79999999701977,
+            "min": 102.60000000149012,
+            "max": 165.79999999701977
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 76.75,
+              "p95": 95.60000000149012,
+              "min": 57.899999998509884,
+              "max": 95.60000000149012
+            }
+          }
+        },
+        {
+          "edited": false,
+          "kind": "JPEG",
+          "selection": "repeated-selection",
+          "n": 2,
+          "clickToUsableReadyMs": {
+            "n": 2,
+            "median": 85.0,
+            "p95": 132.5,
+            "min": 37.5,
+            "max": 132.5
+          },
+          "previewByMethod": {
+            "svg-decode-raf": {
+              "n": 2,
+              "median": 94.44999999552965,
+              "p95": 142.29999999701977,
+              "min": 46.599999994039536,
+              "max": 142.29999999701977
+            }
+          }
+        }
+      ],
+      "sliderDrag": {
+        "assertions": {
+          "valueChanged": true,
+          "editedTarget": true,
+          "pathUnchanged": true,
+          "trustedMouse": true,
+          "isolated": true,
+          "elementConnected": true
+        },
+        "before": "0.25",
+        "after": "-1.77",
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+        "note": "Separate process functional check; not a click-to-ready latency sample"
+      },
+      "filmstrip": {
+        "frames": 180,
+        "frameIntervalMs": {
+          "n": 180,
+          "median": 16.600000001490116,
+          "p95": 23.100000001490116,
+          "min": 8.899999998509884,
+          "max": 38.899999998509884
+        },
+        "averageFps": 58.333603396255675,
+        "framesWithMissingLoadedThumbs": 0,
+        "maxMissingThumbs": 0,
+        "maxScrollLeft": 7200
+      },
+      "upstreamReplay": {
+        "scroll": {
+          "durationMs": {
+            "median": 506.29999999701977,
+            "p95": 509,
+            "stdev": 2.9609964515962255
+          },
+          "avgFps": {
+            "median": 59.952038369304375,
+            "p95": 59.96131528046422,
+            "stdev": 0.007927964109627724
+          },
+          "worstFrameMs": {
+            "median": 16.80000000000291,
+            "p95": 17,
+            "stdev": 0.07071067811794732
+          },
+          "droppedFrameCount": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameTimeMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          }
+        },
+        "open": {
+          "durationMs": {
+            "median": 0.5500000007450581,
+            "p95": 0.8000000044703484,
+            "stdev": 0.11110243187200008
+          },
+          "avgFps": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "worstFrameMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameCount": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          },
+          "droppedFrameTimeMs": {
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
+          }
+        },
+        "edit": {
+          "durationMs": {
+            "median": 1440.949999999255,
+            "p95": 1496,
+            "stdev": 36.23666780719302
+          },
+          "avgFps": {
+            "median": 58.93486799853302,
+            "p95": 59.95115091406992,
+            "stdev": 0.8388751406945804
+          },
+          "worstFrameMs": {
+            "median": 33.39999999999782,
+            "p95": 33.69999999999709,
+            "stdev": 5.345076589722796
+          },
+          "droppedFrameCount": {
+            "median": 1.5,
+            "p95": 4,
+            "stdev": 1.1989578808281798
+          },
+          "droppedFrameTimeMs": {
+            "median": 49.849999999998545,
+            "p95": 133.6999999999971,
+            "stdev": 40.01697881837024
+          }
+        }
+      }
+    }
+  }
+}

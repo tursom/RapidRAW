@@ -1,0 +1,1177 @@
+{
+  "sources": [
+    {
+      "name": "iss030e122639.NEF",
+      "url": "https://raw.githubusercontent.com/letmaik/rawpy/main/test/iss030e122639.NEF",
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+      "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, ISS030-E-122639; https://eol.jsc.nasa.gov/",
+      "license": "NASA astronaut photography, no NASA copyright; subject to NASA conditions of use",
+      "licenseEvidence": "https://eol.jsc.nasa.gov/FAQ/",
+      "camera": "RawType.Flat",
+      "raw_dimensions": [4288, 2844]
+    },
+    {
+      "name": "iss042e297200.NEF",
+      "url": "https://raw.githubusercontent.com/letmaik/rawpy/main/test/iss042e297200.NEF",
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1",
+      "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, ISS042-E-297200; https://eol.jsc.nasa.gov/",
+      "license": "NASA astronaut photography, no NASA copyright; subject to NASA conditions of use",
+      "licenseEvidence": "https://eol.jsc.nasa.gov/FAQ/",
+      "camera": "RawType.Flat",
+      "raw_dimensions": [4992, 3292]
+    }
+  ],
+  "files": [
+    {
+      "path": "set-a/photo-000.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-001.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3386125,
+      "sha256": "75d337ceb1e86ebcb2cc61c13fa93518227aa3a7966c1b10d59db406891605ab"
+    },
+    {
+      "path": "set-c/photo-002.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-003.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3465933,
+      "sha256": "21a0555d8c8d981b5e3996bed643ab759b64a25f3b3b6734d3f5578248050fd3"
+    },
+    {
+      "path": "set-a/photo-004.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-005.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3864808,
+      "sha256": "83e20ba0d7f44bd77d1e5d827ce83fd2a95398f5aa3dd11fe87b0c8b49b2ed76"
+    },
+    {
+      "path": "set-c/photo-006.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-007.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3869206,
+      "sha256": "18053b46bcef6fab9497aaefeb6d872a48df2dd089db6087af47a38da2c49348"
+    },
+    {
+      "path": "set-a/photo-008.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-009.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4280922,
+      "sha256": "e8d43885297486f71e7ab19efc099a55555cc819caa664618654ae0a63212877"
+    },
+    {
+      "path": "set-c/photo-010.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-011.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3128976,
+      "sha256": "d8aedbe216e3dfc3feae652faad979d435347e00b8202becd389d657dd7ed282"
+    },
+    {
+      "path": "set-a/photo-012.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-013.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3508495,
+      "sha256": "aaa131f79adbf3b459dcf517c452268087b8b2472e142bd5d3cf4a9d8750cb33"
+    },
+    {
+      "path": "set-c/photo-014.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-015.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3579875,
+      "sha256": "ba2b671dc903f379df1c3a1ebefa25542ab10aeb9eaffdb57c2d10d448f45831"
+    },
+    {
+      "path": "set-a/photo-016.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-017.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3960144,
+      "sha256": "a8ddd1563e2a1333465b7aeef4ce6213a08cc1187c47d8f7dddf5c5fa86ee8c8"
+    },
+    {
+      "path": "set-c/photo-018.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-019.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3974169,
+      "sha256": "0ebbe27e50045b2697fcf7206d25541033b2e97b951bf8c1fb9a9d368b441b9a"
+    },
+    {
+      "path": "set-a/photo-020.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-021.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4383180,
+      "sha256": "12b666cb3fa8b8f89e81f89b2f5f4f0f8dc747257b0a8bd719d91ffa30ee7fee"
+    },
+    {
+      "path": "set-c/photo-022.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-023.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3237006,
+      "sha256": "9dc2280c455cb7d110e5ba9a74f4e4a8fb46b1ac32fd03e14fcde917991a2bc4"
+    },
+    {
+      "path": "set-a/photo-024.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-025.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3628139,
+      "sha256": "ae8f95f35245a3d9bd5c6d142b1eee48617e580e32f99e35bfb324ca82eac2ff"
+    },
+    {
+      "path": "set-c/photo-026.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-027.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3688760,
+      "sha256": "5616f1d125bf83dcdeef65b6e408a1a0ab43bbed7fc70d276824e77604c8ef77"
+    },
+    {
+      "path": "set-a/photo-028.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-029.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4070622,
+      "sha256": "424ba46ea673ff2bb07e7a4107d3f8e56aab9dcb4233a53e1c7d39f88d9caaeb"
+    },
+    {
+      "path": "set-c/photo-030.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-031.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4075350,
+      "sha256": "a33705ce93a94dbd755fb1ed13355351ab8bd791121a3ef422c8ce8a2a0e8929"
+    },
+    {
+      "path": "set-a/photo-032.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-033.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3266636,
+      "sha256": "4ddad1d4b3ba321a33520d824b092acdf4c41d90feb03cca3b48b2df7d324d49"
+    },
+    {
+      "path": "set-c/photo-034.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-035.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3351832,
+      "sha256": "8312b70b0b6ff4f9db6c95aec768a87b194dbd0bc0b9ca710de76a53fd011c62"
+    },
+    {
+      "path": "set-a/photo-036.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-037.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3747893,
+      "sha256": "236a96b4f67e4b081230aa31d3a7fc6fa76ed65b726f63596ea6cd86f35f87bb"
+    },
+    {
+      "path": "set-c/photo-038.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-039.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3760122,
+      "sha256": "70aa49fd448531a0e1b4cd430be2eca74fecd54bfc4234ac2b356170a8c151d8"
+    },
+    {
+      "path": "set-a/photo-040.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-041.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4177935,
+      "sha256": "6d7af063847e47d299b6627fa894d1aa0c855db0ecce43186b602871a1f4f770"
+    },
+    {
+      "path": "set-c/photo-042.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-043.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4177594,
+      "sha256": "919a9e6e7de396fc1aa01d9a387fe1ede8497a149b4d23d7542ecdb71e621682"
+    },
+    {
+      "path": "set-a/photo-044.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-045.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3386125,
+      "sha256": "75d337ceb1e86ebcb2cc61c13fa93518227aa3a7966c1b10d59db406891605ab"
+    },
+    {
+      "path": "set-c/photo-046.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-047.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3465933,
+      "sha256": "21a0555d8c8d981b5e3996bed643ab759b64a25f3b3b6734d3f5578248050fd3"
+    },
+    {
+      "path": "set-a/photo-048.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-049.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3864808,
+      "sha256": "83e20ba0d7f44bd77d1e5d827ce83fd2a95398f5aa3dd11fe87b0c8b49b2ed76"
+    },
+    {
+      "path": "set-c/photo-050.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-051.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3869206,
+      "sha256": "18053b46bcef6fab9497aaefeb6d872a48df2dd089db6087af47a38da2c49348"
+    },
+    {
+      "path": "set-a/photo-052.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-053.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4280922,
+      "sha256": "e8d43885297486f71e7ab19efc099a55555cc819caa664618654ae0a63212877"
+    },
+    {
+      "path": "set-c/photo-054.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-055.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3128976,
+      "sha256": "d8aedbe216e3dfc3feae652faad979d435347e00b8202becd389d657dd7ed282"
+    },
+    {
+      "path": "set-a/photo-056.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-057.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3508495,
+      "sha256": "aaa131f79adbf3b459dcf517c452268087b8b2472e142bd5d3cf4a9d8750cb33"
+    },
+    {
+      "path": "set-c/photo-058.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-059.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3579875,
+      "sha256": "ba2b671dc903f379df1c3a1ebefa25542ab10aeb9eaffdb57c2d10d448f45831"
+    },
+    {
+      "path": "set-a/photo-060.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-061.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3960144,
+      "sha256": "a8ddd1563e2a1333465b7aeef4ce6213a08cc1187c47d8f7dddf5c5fa86ee8c8"
+    },
+    {
+      "path": "set-c/photo-062.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-063.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3974169,
+      "sha256": "0ebbe27e50045b2697fcf7206d25541033b2e97b951bf8c1fb9a9d368b441b9a"
+    },
+    {
+      "path": "set-a/photo-064.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-065.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4383180,
+      "sha256": "12b666cb3fa8b8f89e81f89b2f5f4f0f8dc747257b0a8bd719d91ffa30ee7fee"
+    },
+    {
+      "path": "set-c/photo-066.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-067.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3237006,
+      "sha256": "9dc2280c455cb7d110e5ba9a74f4e4a8fb46b1ac32fd03e14fcde917991a2bc4"
+    },
+    {
+      "path": "set-a/photo-068.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-069.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3628139,
+      "sha256": "ae8f95f35245a3d9bd5c6d142b1eee48617e580e32f99e35bfb324ca82eac2ff"
+    },
+    {
+      "path": "set-c/photo-070.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-071.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3688760,
+      "sha256": "5616f1d125bf83dcdeef65b6e408a1a0ab43bbed7fc70d276824e77604c8ef77"
+    },
+    {
+      "path": "set-a/photo-072.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-073.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4070622,
+      "sha256": "424ba46ea673ff2bb07e7a4107d3f8e56aab9dcb4233a53e1c7d39f88d9caaeb"
+    },
+    {
+      "path": "set-c/photo-074.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-075.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4075350,
+      "sha256": "a33705ce93a94dbd755fb1ed13355351ab8bd791121a3ef422c8ce8a2a0e8929"
+    },
+    {
+      "path": "set-a/photo-076.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-077.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3266636,
+      "sha256": "4ddad1d4b3ba321a33520d824b092acdf4c41d90feb03cca3b48b2df7d324d49"
+    },
+    {
+      "path": "set-c/photo-078.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-079.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3351832,
+      "sha256": "8312b70b0b6ff4f9db6c95aec768a87b194dbd0bc0b9ca710de76a53fd011c62"
+    },
+    {
+      "path": "set-a/photo-080.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-081.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3747893,
+      "sha256": "236a96b4f67e4b081230aa31d3a7fc6fa76ed65b726f63596ea6cd86f35f87bb"
+    },
+    {
+      "path": "set-c/photo-082.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-083.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3760122,
+      "sha256": "70aa49fd448531a0e1b4cd430be2eca74fecd54bfc4234ac2b356170a8c151d8"
+    },
+    {
+      "path": "set-a/photo-084.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-085.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4177935,
+      "sha256": "6d7af063847e47d299b6627fa894d1aa0c855db0ecce43186b602871a1f4f770"
+    },
+    {
+      "path": "set-c/photo-086.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-087.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4177594,
+      "sha256": "919a9e6e7de396fc1aa01d9a387fe1ede8497a149b4d23d7542ecdb71e621682"
+    },
+    {
+      "path": "set-a/photo-088.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-089.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3386125,
+      "sha256": "75d337ceb1e86ebcb2cc61c13fa93518227aa3a7966c1b10d59db406891605ab"
+    },
+    {
+      "path": "set-c/photo-090.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-091.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3465933,
+      "sha256": "21a0555d8c8d981b5e3996bed643ab759b64a25f3b3b6734d3f5578248050fd3"
+    },
+    {
+      "path": "set-a/photo-092.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-093.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3864808,
+      "sha256": "83e20ba0d7f44bd77d1e5d827ce83fd2a95398f5aa3dd11fe87b0c8b49b2ed76"
+    },
+    {
+      "path": "set-c/photo-094.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-095.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3869206,
+      "sha256": "18053b46bcef6fab9497aaefeb6d872a48df2dd089db6087af47a38da2c49348"
+    },
+    {
+      "path": "set-a/photo-096.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-097.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4280922,
+      "sha256": "e8d43885297486f71e7ab19efc099a55555cc819caa664618654ae0a63212877"
+    },
+    {
+      "path": "set-c/photo-098.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-099.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3128976,
+      "sha256": "d8aedbe216e3dfc3feae652faad979d435347e00b8202becd389d657dd7ed282"
+    },
+    {
+      "path": "set-a/photo-100.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-101.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3508495,
+      "sha256": "aaa131f79adbf3b459dcf517c452268087b8b2472e142bd5d3cf4a9d8750cb33"
+    },
+    {
+      "path": "set-c/photo-102.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-103.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3579875,
+      "sha256": "ba2b671dc903f379df1c3a1ebefa25542ab10aeb9eaffdb57c2d10d448f45831"
+    },
+    {
+      "path": "set-a/photo-104.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-105.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3960144,
+      "sha256": "a8ddd1563e2a1333465b7aeef4ce6213a08cc1187c47d8f7dddf5c5fa86ee8c8"
+    },
+    {
+      "path": "set-c/photo-106.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-107.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3974169,
+      "sha256": "0ebbe27e50045b2697fcf7206d25541033b2e97b951bf8c1fb9a9d368b441b9a"
+    },
+    {
+      "path": "set-a/photo-108.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-109.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4383180,
+      "sha256": "12b666cb3fa8b8f89e81f89b2f5f4f0f8dc747257b0a8bd719d91ffa30ee7fee"
+    },
+    {
+      "path": "set-c/photo-110.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-111.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3237006,
+      "sha256": "9dc2280c455cb7d110e5ba9a74f4e4a8fb46b1ac32fd03e14fcde917991a2bc4"
+    },
+    {
+      "path": "set-a/photo-112.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-113.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3628139,
+      "sha256": "ae8f95f35245a3d9bd5c6d142b1eee48617e580e32f99e35bfb324ca82eac2ff"
+    },
+    {
+      "path": "set-c/photo-114.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-115.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3688760,
+      "sha256": "5616f1d125bf83dcdeef65b6e408a1a0ab43bbed7fc70d276824e77604c8ef77"
+    },
+    {
+      "path": "set-a/photo-116.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-117.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4070622,
+      "sha256": "424ba46ea673ff2bb07e7a4107d3f8e56aab9dcb4233a53e1c7d39f88d9caaeb"
+    },
+    {
+      "path": "set-c/photo-118.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-119.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4075350,
+      "sha256": "a33705ce93a94dbd755fb1ed13355351ab8bd791121a3ef422c8ce8a2a0e8929"
+    },
+    {
+      "path": "set-a/photo-120.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-121.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3266636,
+      "sha256": "4ddad1d4b3ba321a33520d824b092acdf4c41d90feb03cca3b48b2df7d324d49"
+    },
+    {
+      "path": "set-c/photo-122.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-123.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3351832,
+      "sha256": "8312b70b0b6ff4f9db6c95aec768a87b194dbd0bc0b9ca710de76a53fd011c62"
+    },
+    {
+      "path": "set-a/photo-124.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-125.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3747893,
+      "sha256": "236a96b4f67e4b081230aa31d3a7fc6fa76ed65b726f63596ea6cd86f35f87bb"
+    },
+    {
+      "path": "set-c/photo-126.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-127.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3760122,
+      "sha256": "70aa49fd448531a0e1b4cd430be2eca74fecd54bfc4234ac2b356170a8c151d8"
+    },
+    {
+      "path": "set-a/photo-128.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-129.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4177935,
+      "sha256": "6d7af063847e47d299b6627fa894d1aa0c855db0ecce43186b602871a1f4f770"
+    },
+    {
+      "path": "set-c/photo-130.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-131.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4177594,
+      "sha256": "919a9e6e7de396fc1aa01d9a387fe1ede8497a149b4d23d7542ecdb71e621682"
+    },
+    {
+      "path": "set-a/photo-132.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-133.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3386125,
+      "sha256": "75d337ceb1e86ebcb2cc61c13fa93518227aa3a7966c1b10d59db406891605ab"
+    },
+    {
+      "path": "set-c/photo-134.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-135.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3465933,
+      "sha256": "21a0555d8c8d981b5e3996bed643ab759b64a25f3b3b6734d3f5578248050fd3"
+    },
+    {
+      "path": "set-a/photo-136.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-137.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3864808,
+      "sha256": "83e20ba0d7f44bd77d1e5d827ce83fd2a95398f5aa3dd11fe87b0c8b49b2ed76"
+    },
+    {
+      "path": "set-c/photo-138.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-139.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3869206,
+      "sha256": "18053b46bcef6fab9497aaefeb6d872a48df2dd089db6087af47a38da2c49348"
+    },
+    {
+      "path": "set-a/photo-140.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-141.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4280922,
+      "sha256": "e8d43885297486f71e7ab19efc099a55555cc819caa664618654ae0a63212877"
+    },
+    {
+      "path": "set-c/photo-142.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-143.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3128976,
+      "sha256": "d8aedbe216e3dfc3feae652faad979d435347e00b8202becd389d657dd7ed282"
+    },
+    {
+      "path": "set-a/photo-144.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-145.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3508495,
+      "sha256": "aaa131f79adbf3b459dcf517c452268087b8b2472e142bd5d3cf4a9d8750cb33"
+    },
+    {
+      "path": "set-c/photo-146.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-147.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3579875,
+      "sha256": "ba2b671dc903f379df1c3a1ebefa25542ab10aeb9eaffdb57c2d10d448f45831"
+    },
+    {
+      "path": "set-a/photo-148.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-149.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3960144,
+      "sha256": "a8ddd1563e2a1333465b7aeef4ce6213a08cc1187c47d8f7dddf5c5fa86ee8c8"
+    },
+    {
+      "path": "set-c/photo-150.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-151.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3974169,
+      "sha256": "0ebbe27e50045b2697fcf7206d25541033b2e97b951bf8c1fb9a9d368b441b9a"
+    },
+    {
+      "path": "set-a/photo-152.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-153.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4383180,
+      "sha256": "12b666cb3fa8b8f89e81f89b2f5f4f0f8dc747257b0a8bd719d91ffa30ee7fee"
+    },
+    {
+      "path": "set-c/photo-154.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-155.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3237006,
+      "sha256": "9dc2280c455cb7d110e5ba9a74f4e4a8fb46b1ac32fd03e14fcde917991a2bc4"
+    },
+    {
+      "path": "set-a/photo-156.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-157.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 3628139,
+      "sha256": "ae8f95f35245a3d9bd5c6d142b1eee48617e580e32f99e35bfb324ca82eac2ff"
+    },
+    {
+      "path": "set-c/photo-158.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-159.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 3688760,
+      "sha256": "5616f1d125bf83dcdeef65b6e408a1a0ab43bbed7fc70d276824e77604c8ef77"
+    },
+    {
+      "path": "set-a/photo-160.NEF",
+      "kind": "RAW",
+      "source": "iss030e122639.NEF",
+      "bytes": 10656312,
+      "sha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4"
+    },
+    {
+      "path": "日本語 [set b]/photo-161.jpg",
+      "kind": "JPEG",
+      "source": "iss030e122639.NEF",
+      "bytes": 4070622,
+      "sha256": "424ba46ea673ff2bb07e7a4107d3f8e56aab9dcb4233a53e1c7d39f88d9caaeb"
+    },
+    {
+      "path": "set-c/photo-162.NEF",
+      "kind": "RAW",
+      "source": "iss042e297200.NEF",
+      "bytes": 17202207,
+      "sha256": "b21e9752aaf8e678fe4d8138986bc9819aa89b7b969a28d43c619af3bd6d58c1"
+    },
+    {
+      "path": "set-d/photo-163.jpg",
+      "kind": "JPEG",
+      "source": "iss042e297200.NEF",
+      "bytes": 4075350,
+      "sha256": "a33705ce93a94dbd755fb1ed13355351ab8bd791121a3ef422c8ce8a2a0e8929"
+    }
+  ],
+  "raw_count": 82,
+  "jpeg_count": 82,
+  "limitation": "2 source photographs, repeated RAW bytes; derived JPEGs; no removable drive"
+}

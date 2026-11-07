@@ -1,0 +1,15 @@
+cargo.exe : warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+所在位置 E:\projects\tbt\rapidraw-baseline\audit-quality.ps1:8 字符: 1
++ & cargo test --release --lib --locked --features tauri/custom-protoco ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: RapidR...pping download.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+   Compiling RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+    Finished `release` profile [optimized] target(s) in 2m 37s
+     Running unittests src\lib.rs (target\release\deps\rapidraw_lib-16d4a73579525463.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

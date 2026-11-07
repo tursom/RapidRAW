@@ -1,0 +1,38 @@
+{
+  "typecheck": {
+    "base": {
+      "exitCode": 2
+    },
+    "task1": {
+      "exitCode": 2
+    },
+    "sameDiagnostics": true
+  },
+  "i18n": {
+    "base": {
+      "exitCode": 1
+    },
+    "task1": {
+      "exitCode": 1
+    },
+    "sameDiagnostics": true
+  },
+  "eslint": {
+    "base": {
+      "exitCode": 1,
+      "errors": 835,
+      "warnings": 45,
+      "rawSha256": "024d2c609a9cf7c9ce80398c294a9c51f59d03202c28a673121c72d07160d6ed"
+    },
+    "task1": {
+      "exitCode": 1,
+      "errors": 835,
+      "warnings": 45,
+      "rawSha256": "2935a51ac6f51968a33ea2f6b74d5265fbdcc07b4b3d608e75e05654521fc40a"
+    },
+    "scope": "eslint . --ignore-pattern **/target/**; exclude generated Rust assets on both copies",
+    "sameErrorDiagnostics": true,
+    "newErrors": 0
+  },
+  "scopeNote": "TypeScript/i18n compare to pre-task source; ESLint compares source excluding generated **/target/** assets in both trees. Unfiltered current workspace has ten additional parse errors in pre-existing generated Rust asset files."
+}

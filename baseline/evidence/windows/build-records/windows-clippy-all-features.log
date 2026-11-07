@@ -1,0 +1,697 @@
+cargo.exe :     Checking cfg-if v1.0.4
+所在位置 E:\projects\tbt\rapidraw-baseline\audit-quality.ps1:10 字符: 1
++ & cargo clippy --release --all-targets --all-features --locked -- -D  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (    Checking cfg-if v1.0.4:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+    Checking windows-link v0.2.1
+    Checking memchr v2.8.3
+    Checking serde_core v1.0.229
+    Checking once_cell v1.21.4
+    Checking smallvec v1.15.2
+    Checking stable_deref_trait v1.2.1
+    Checking log v0.4.34
+    Checking pin-project-lite v0.2.17
+    Checking libm v0.2.16
+    Checking crossbeam-utils v0.8.22
+    Checking windows-sys v0.61.2
+    Checking bytemuck v1.25.2
+    Checking equivalent v1.0.2
+    Checking libc v0.2.189
+    Checking thiserror v2.0.20
+    Checking zerofrom v0.1.8
+    Checking windows-result v0.4.1
+    Checking windows-strings v0.5.1
+    Checking itoa v1.0.18
+    Checking scopeguard v1.2.0
+    Checking hashbrown v0.17.1
+    Checking tracing-core v0.1.36
+    Checking bytes v1.12.1
+    Checking parking_lot_core v0.9.12
+    Checking yoke v0.8.3
+    Checking writeable v0.6.4
+    Checking lock_api v0.4.14
+    Checking percent-encoding v2.3.2
+    Checking litemap v0.8.3
+    Checking utf8_iter v1.0.4
+    Checking either v1.18.0
+    Checking icu_properties_data v2.3.0
+    Checking icu_normalizer_data v2.3.0
+    Checking crossbeam-epoch v0.9.20
+    Checking zerovec v0.11.8
+    Checking zerotrie v0.2.5
+    Checking windows-core v0.62.2
+    Checking anyhow v1.0.104
+    Checking windows-threading v0.2.1
+    Checking form_urlencoded v1.2.2
+    Checking parking_lot v0.12.5
+    Checking rand_core v0.10.1
+    Checking fnv v1.0.7
+    Checking raw-window-handle v0.6.2
+    Checking zmij v1.0.23
+    Checking tracing v0.1.44
+    Checking base64 v0.22.1
+    Checking getrandom v0.4.3
+    Checking zerocopy v0.8.56
+    Checking crossbeam-deque v0.8.7
+   Compiling tauri v2.12.1
+    Checking indexmap v2.14.0
+    Checking deranged v0.5.8
+    Checking time-core v0.1.9
+    Checking powerfmt v0.2.0
+    Checking http v1.5.0
+    Checking num-conv v0.2.2
+    Checking aho-corasick v1.1.5
+    Checking rayon-core v1.13.0
+    Checking windows-future v0.3.2
+    Checking windows-numerics v0.3.1
+    Checking windows-collections v0.3.2
+    Checking futures-core v0.3.34
+    Checking tinystr v0.8.4
+    Checking potential_utf v0.1.6
+    Checking regex-syntax v0.8.11
+    Checking arrayvec v0.7.8
+    Checking icu_collections v2.3.0
+    Checking num-traits v0.2.19
+    Checking icu_locale_core v2.3.0
+    Checking rayon v1.12.0
+    Checking futures-sink v0.3.34
+    Checking alloc-no-stdlib v3.0.0
+    Checking typeid v1.0.3
+    Checking getrandom v0.3.4
+    Checking alloc-stdlib v0.3.0
+    Checking dunce v1.0.5
+    Checking simd-adler32 v0.3.10
+    Checking winnow v1.0.4
+    Checking windows v0.62.2
+    Checking web-time v1.1.0
+    Checking siphasher v1.0.3
+    Checking slab v0.4.12
+    Checking brotli-decompressor v6.0.1
+    Checking phf_shared v0.13.1
+    Checking futures-channel v0.3.34
+    Checking windows-version v0.1.7
+    Checking num-integer v0.1.47
+    Checking num-complex v0.4.6
+    Checking toml_parser v1.1.3+spec-1.1.0
+    Checking time v0.3.55
+    Checking unicode-segmentation v1.13.3
+    Checking zeroize v1.9.0
+    Checking icu_provider v2.3.1
+    Checking toml_writer v1.1.2+spec-1.1.0
+    Checking serde v1.0.229
+    Checking bitflags v2.13.1
+    Checking serde_json v1.0.151
+    Checking uuid v1.25.0
+    Checking num-bigint v0.4.8
+    Checking regex-automata v0.4.18
+    Checking toml_datetime v1.1.1+spec-1.1.0
+    Checking serde_spanned v1.1.1
+    Checking serde_with v3.22.0
+    Checking erased-serde v0.4.10
+    Checking mime v0.3.17
+    Checking icu_properties v2.3.0
+    Checking icu_normalizer v2.3.0
+    Checking toml v1.1.4+spec-1.1.0
+    Checking brotli v9.0.0
+    Checking cfb v0.14.0
+    Checking dpi v0.1.2
+    Checking quick-xml v0.41.0
+    Checking serde-untagged v0.1.9
+    Checking phf v0.13.1
+    Checking profiling v1.0.18
+    Checking equator v0.4.2
+    Checking crossbeam-channel v0.5.16
+    Checking jsonptr v0.7.1
+    Checking infer v0.22.0
+    Checking adler2 v2.0.1
+    Checking semver v1.0.28
+    Checking futures-task v0.3.34
+    Checking glob v0.3.4
+    Checking num-rational v0.4.2
+    Checking ctor v1.0.13
+    Checking futures-io v0.3.34
+    Checking json-patch v4.2.0
+    Checking miniz_oxide v0.8.9
+    Checking futures-util v0.3.34
+    Checking aligned-vec v0.6.4
+    Checking no_std_io2 v0.9.4
+    Checking idna_adapter v1.2.2
+    Checking half v2.7.1
+    Checking allocator-api2 v0.2.21
+    Checking idna v1.1.0
+    Checking option-ext v0.2.0
+    Checking imgref v1.12.2
+    Checking foldhash v0.2.0
+    Checking v_frame v0.3.9
+    Checking crc32fast v1.5.0
+    Checking keyboard-types v0.8.3
+    Checking rustls-pki-types v1.15.1
+    Checking url v2.5.8
+    Checking aws-lc-sys v0.44.0
+    Checking hashbrown v0.16.1
+    Checking cookie v0.18.2
+    Checking http-body v1.1.0
+    Checking jxl-bitstream v1.1.0
+    Checking itertools v0.14.0
+    Checking rgb v0.8.53
+    Checking plist v1.10.0
+    Checking getrandom v0.2.17
+    Checking regex v1.13.1
+    Checking as-slice v0.2.1
+    Checking untrusted v0.9.0
+    Checking aligned v0.4.3
+    Checking serialize-to-javascript v0.1.2
+    Checking ring v0.17.14
+   Compiling tauri-macros v2.7.1
+    Checking nom v8.0.0
+    Checking heck v0.5.0
+    Checking atomic-waker v1.1.2
+    Checking http-range v0.1.5
+    Checking aws-lc-rs v1.18.0
+    Checking try-lock v0.2.5
+    Checking urlpattern v0.6.0
+    Checking y4m v0.8.0
+    Checking tower-service v0.3.3
+    Checking quick-error v2.0.1
+    Checking want v0.3.1
+    Checking httparse v1.10.1
+    Checking jxl-oxide-common v1.0.0
+    Checking av-scenechange v0.14.1
+    Checking flate2 v1.1.9
+    Checking bitstream-io v4.10.0
+    Checking raw-cpuid v11.6.0
+    Checking maybe-rayon v0.1.1
+    Checking jxl-grid v0.6.2
+    Checking weezl v0.1.12
+    Checking pulp-wasm-simd-flag v0.1.1
+    Checking subtle v2.6.1
+    Checking reborrow v0.5.5
+    Checking new_debug_unreachable v1.0.6
+    Checking zune-core v0.5.3
+    Checking jxl-coding v1.0.1
+    Checking loop9 v0.1.5
+    Checking jxl-threadpool v1.0.0
+    Checking zune-inflate v0.2.54
+    Checking fdeflate v0.3.7
+    Checking avif-serialize v0.8.9
+    Checking windows-registry v0.6.1
+    Checking zune-jpeg v0.5.15
+    Checking libloading v0.8.9
+    Checking rustls-webpki v0.103.15
+    Checking safe_unaligned_simd v0.2.5
+    Checking color_quant v1.1.0
+    Checking lebe v0.5.3
+    Checking bit_field v0.10.3
+    Checking fax v0.2.7
+    Checking pxfm v0.1.30
+    Checking byteorder-lite v0.1.0
+    Checking ipnet v2.12.1
+    Checking gif v0.14.2
+    Checking archmage v0.9.28
+    Checking png v0.18.1
+    Checking windows_x86_64_msvc v0.53.1
+    Checking sync_wrapper v1.0.2
+    Checking qoi v0.4.1
+    Checking image-webp v0.2.4
+    Checking tower-layer v0.3.3
+    Checking rustls v0.23.43
+    Checking alloc-no-stdlib v2.0.4
+    Checking tiff v0.11.3
+    Checking unicode-width v0.2.2
+    Checking typenum v1.20.1
+    Checking bit-vec v0.9.1
+    Checking ryu v1.0.23
+    Checking alloc-stdlib v0.2.4
+    Checking magetypes v0.9.26
+    Checking codespan-reporting v0.13.1
+    Checking windows-targets v0.53.5
+    Checking bit-set v0.9.1
+    Checking jxl-modular v0.11.3
+    Checking jxl-image v0.13.0
+    Checking av1-grain v0.2.5
+    Checking pulp v0.22.3
+    Checking http-body-util v0.1.5
+    Checking webpki-roots v1.0.9
+    Checking spirv v0.4.0+sdk-1.4.341.0
+    Checking rawpointer v0.2.1
+    Checking unicode-ident v1.0.24
+    Checking unicase v2.9.0
+    Checking foldhash v0.1.5
+    Checking psl-types v2.0.11
+    Checking cpufeatures v0.3.0
+    Checking rustc-hash v1.1.0
+    Checking hexf-parse v0.2.1
+    Checking rav1e v0.8.1
+    Checking publicsuffix v2.3.0
+    Checking mime_guess v2.0.5
+    Checking hashbrown v0.15.5
+    Checking matrixmultiply v0.3.11
+    Checking jxl-vardct v0.11.1
+    Checking windows_x86_64_msvc v0.52.6
+    Checking windows-sys v0.60.2
+    Checking ash v0.38.0+1.3.281
+    Checking brotli-decompressor v5.0.3
+    Checking wgpu-types v29.0.4
+    Checking gpu-descriptor-types v0.2.0
+    Checking safe_arch v1.2.0
+    Checking socket2 v0.6.5
+    Checking mio v1.2.2
+    Checking winapi-util v0.1.11
+    Checking dirs-sys v0.5.0
+    Checking softbuffer v0.4.8
+    Checking dirs v7.0.0
+    Checking same-file v1.0.6
+    Checking muda v0.20.0
+    Checking window-vibrancy v0.8.1
+    Checking walkdir v2.5.0
+    Checking moxcms v0.8.1
+    Checking schannel v0.1.29
+    Checking tokio v1.53.1
+    Checking tauri-utils v2.10.1
+    Checking native-tls v0.2.18
+    Checking naga v29.0.4
+    Checking encoding_rs v0.8.35
+    Checking unic-char-range v0.9.0
+    Checking presser v0.3.1
+    Checking unic-common v0.9.0
+    Checking strength_reduce v0.2.4
+    Checking unic-ucd-version v0.9.0
+    Checking unic-char-property v0.9.0
+    Checking wide v1.6.1
+    Checking gpu-descriptor v0.3.2
+    Checking transpose v0.2.3
+    Checking exr v1.74.2
+    Checking jxl-frame v0.13.3
+    Checking windows-targets v0.52.6
+    Checking glutin_wgl_sys v0.6.1
+    Checking cookie_store v0.22.1
+    Checking khronos-egl v6.0.0
+    Checking hybrid-array v0.4.14
+    Checking serde_urlencoded v0.7.1
+    Checking primal-check v0.3.4
+    Checking ordered-float v5.5.0
+    Checking range-alloc v0.1.5
+    Checking renderdoc-sys v1.1.0
+    Checking glow v0.17.0
+    Checking rustfft v6.4.1
+    Checking windows-result v0.1.2
+    Checking unic-ucd-ident v0.9.0
+    Checking chacha20 v0.10.1
+    Checking jxl-color v0.11.0
+    Checking futures-executor v0.3.34
+    Checking ppv-lite86 v0.2.21
+    Checking toml_datetime v0.6.3
+    Checking dary_heap v0.3.9
+    Checking serde_spanned v0.6.9
+    Checking num-iter v0.1.46
+    Checking approx v0.5.1
+    Checking rand_core v0.9.5
+    Checking static_assertions v1.1.0
+    Checking ttf-parser v0.25.1
+    Checking minimal-lexical v0.2.1
+    Checking ravif v0.13.0
+    Checking rle-decode-fast v1.0.3
+    Checking winnow v0.5.40
+    Checking libflate_lz77 v2.3.0
+    Checking nom v7.1.3
+    Checking rand_chacha v0.9.0
+    Checking jxl-render v0.12.4
+    Checking windows-core v0.56.0
+    Checking num v0.4.3
+    Checking futures v0.3.34
+    Checking rand v0.10.2
+    Checking tokio-util v0.7.19
+    Checking tokio-rustls v0.26.4
+    Checking image v0.25.10
+    Checking tower v0.5.3
+    Checking tokio-native-tls v0.3.1
+    Checking target-features v0.1.6
+    Checking urlpattern v0.3.0
+    Checking h2 v0.4.19
+    Checking toml_edit v0.20.2
+    Checking block-buffer v0.12.1
+   Compiling tauri-plugin-fs v2.6.0
+   Compiling tauri-plugin-store v2.5.0
+   Compiling tauri-plugin-shell v2.3.5
+    Checking owned_ttf_parser v0.25.1
+   Compiling tauri-plugin-process v2.3.1
+   Compiling tauri-plugin-os v2.3.2
+   Compiling tauri-plugin-http v2.8.0
+   Compiling tauri-plugin-dialog v2.7.2
+    Checking crypto-common v0.2.2
+   Compiling tauri-plugin-clerk v0.1.1
+    Checking onig_sys v69.9.3
+    Checking winapi v0.3.9
+    Checking linear-srgb v0.6.12
+    Checking tower-http v0.6.11
+    Checking jxl-jbr v0.2.1
+    Checking ndarray v0.16.1
+    Checking castaway v0.2.4
+    Checking base64 v0.13.1
+    Checking adler32 v1.2.0
+    Checking const-oid v0.10.2
+    Checking mutate_once v0.1.2
+    Checking crc-catalog v2.5.0
+    Checking enough v0.4.4
+    Checking rustc-demangle v0.1.28
+    Checking data-url v0.3.2
+    Checking ab_glyph_rasterizer v0.1.10
+    Checking byteorder v1.5.0
+    Checking ab_glyph v0.2.32
+    Checking rustdct v0.7.1
+    Checking macro_rules_attribute v0.2.3
+   Compiling RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+    Checking backtrace v0.3.76
+    Checking crc v3.4.0
+    Checking digest v0.11.3
+    Checking kamadak-exif v0.6.1
+    Checking zenyuv v0.1.3
+    Checking spm_precompiled v0.1.4
+    Checking toml v0.8.2
+    Checking libflate v2.3.1
+    Checking compact_str v0.9.1
+    Checking monostate v0.1.18
+    Checking onig v6.5.3
+    Checking num_enum v0.7.6
+    Checking multiversion v0.8.0
+    Checking derive_builder v0.20.2
+    Checking ntapi v0.4.3
+    Checking ort-sys v2.0.0-rc.10
+    Checking rand_distr v0.6.0
+    Checking windows v0.56.0
+    Checking libwebp-sys v0.9.6
+    Checking ahash v0.8.12
+    Checking libmimalloc-sys v0.1.49
+    Checking simba v0.10.2
+    Checking rfd v0.16.0
+    Checking esaxx-rs v0.1.10
+    Checking rand v0.9.5
+    Checking butteraugli v0.9.3
+    Checking jxl-encoder-simd v0.3.0
+    Checking shared_child v1.1.1
+    Checking jxl-oxide v0.12.6
+    Checking rustls-platform-verifier v0.7.1
+    Checking brotli v8.0.4
+    Checking os_pipe v1.2.3
+    Checking hyper v1.11.0
+    Checking os_info v3.15.0
+    Checking rayon-cond v0.4.0
+    Checking chrono v0.4.45
+    Checking open v5.4.1
+    Checking quick-xml v0.37.5
+    Checking unicode-normalization-alignments v0.1.12
+    Checking keyring-core v1.0.0
+    Checking wgpu-naga-bridge v29.0.4
+    Checking thread_local v1.1.10
+    Checking gethostname v1.1.0
+    Checking sys-locale v0.3.2
+    Checking daachorse v1.0.1
+    Checking constant_time_eq v0.4.2
+    Checking memmap2 v0.9.11
+    Checking md5 v0.8.1
+    Checking hex v0.4.3
+    Checking unicode_categories v0.1.1
+    Checking lazy_static v1.5.0
+    Checking smallvec v2.0.0-alpha.10
+    Checking whereat v0.1.5
+    Checking fastrand v2.5.0
+    Checking blake3 v1.8.7
+    Checking windows-native-keyring-store v1.1.0
+    Checking fuzzy-matcher v0.3.7
+    Checking image-hdr v0.6.0
+    Checking hyper-util v0.1.20
+    Checking tokenizers v0.23.1
+    Checking image_hasher v3.1.1
+    Checking ort v2.0.0-rc.10
+    Checking rawler v0.7.1 (https://github.com/CyberTimon/RapidRAW-DngLab.git#9dbcc565)
+    Checking tempfile v3.27.0
+    Checking jxl-encoder v0.3.1
+    Checking webp v0.3.1
+    Checking mimalloc v0.1.52
+    Checking mozjpeg-rs v0.9.2
+    Checking sha2 v0.11.0
+    Checking lsdetect v0.3.0
+    Checking fern v0.7.1
+    Checking filetime v0.2.29
+    Checking base64 v0.23.1
+    Checking pollster v1.0.1
+    Checking glam v0.33.5
+    Checking hyper-rustls v0.27.9
+    Checking hyper-tls v0.6.0
+    Checking reqwest v0.12.28
+    Checking reqwest v0.13.4
+    Checking little_exif v0.6.23
+    Checking nalgebra v0.35.0
+    Checking clerk-fapi-rs v0.2.0
+    Checking trash v5.2.6
+    Checking imageproc v0.27.0
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+    Checking webview2-com-sys v0.39.1
+    Checking tao v0.37.1
+    Checking gpu-allocator v0.28.0
+    Checking sysinfo v0.39.6
+    Checking wgpu-hal v29.0.4
+    Checking webview2-com v0.39.1
+    Checking wgpu-core-deps-windows-linux-android v29.0.4
+    Checking wgpu-core v29.0.4
+    Checking wry v0.57.0
+    Checking tauri-runtime v2.12.1
+    Checking tauri-runtime-wry v2.12.1
+    Checking wgpu v29.0.4
+    Checking tauri-plugin-single-instance v2.4.3
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:157:17
+    |
+157 |             use gphoto2::widget::WidgetValue;
+    |                 ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:282:17
+    |
+282 |             use gphoto2::widget::WidgetType;
+    |                 ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:127:28
+    |
+127 |                     && let gphoto2::CameraEvent::Timeout = event
+    |                            ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:327:49
+    |
+327 | ...                   .set_value(&gphoto2::widget::WidgetValue::Range(parsed_f))
+    |                                   ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:398:37
+    |
+398 |                         .set_value(&gphoto2::widget::WidgetValue::Toggle(true))
+    |                                     ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:419:43
+    |
+419 |                 let _ = widget.set_value(&gphoto2::widget::WidgetValue::Toggle(false));
+    |                                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+   --> src\camera_tethering.rs:473:24
+    |
+473 |                 if let gphoto2::CameraEvent::Timeout = event {
+    |                        ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+    |
+    = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:33:26
+   |
+33 |                 context: gphoto2::Context::new().ok(),
+   |                          ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use std::task::Context;
+   |
+help: if you import `Context`, refer to it directly
+   |
+33 -                 context: gphoto2::Context::new().ok(),
+33 +                 context: Context::new().ok(),
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:52:27
+   |
+52 |             let context = gphoto2::Context::new()
+   |                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use std::task::Context;
+   |
+help: if you import `Context`, refer to it directly
+   |
+52 -             let context = gphoto2::Context::new()
+52 +             let context = Context::new()
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:54:27
+   |
+54 |             let cameras = gphoto2::Camera::autodetect(&context).map_err(|e| e.to_string())?;
+   |                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use crate::lens_correction::Camera;
+   |
+help: if you import `Camera`, refer to it directly
+   |
+54 -             let cameras = gphoto2::Camera::autodetect(&context).map_err(|e| e.to_string())?;
+54 +             let cameras = Camera::autodetect(&context).map_err(|e| e.to_string())?;
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:81:27
+   |
+81 |             let context = gphoto2::Context::new()
+   |                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use std::task::Context;
+   |
+help: if you import `Context`, refer to it directly
+   |
+81 -             let context = gphoto2::Context::new()
+81 +             let context = Context::new()
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:84:27
+   |
+84 |             let cameras = gphoto2::Camera::autodetect(&context).map_err(|e| e.to_string())?;
+   |                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use crate::lens_correction::Camera;
+   |
+help: if you import `Camera`, refer to it directly
+   |
+84 -             let cameras = gphoto2::Camera::autodetect(&context).map_err(|e| e.to_string())?;
+84 +             let cameras = Camera::autodetect(&context).map_err(|e| e.to_string())?;
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:87:32
+   |
+87 |             let camera = match gphoto2::Camera::open(&context, &descriptor.model, &descriptor.port)
+   |                                ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use crate::lens_correction::Camera;
+   |
+help: if you import `Camera`, refer to it directly
+   |
+87 -             let camera = match gphoto2::Camera::open(&context, &descriptor.model, &descriptor.port)
+87 +             let camera = match Camera::open(&context, &descriptor.model, &descriptor.port)
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:92:21
+   |
+92 |                     gphoto2::Camera::open(&context, &descriptor.model, &descriptor.port)
+   |                     ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+   |
+ 3 + use crate::lens_correction::Camera;
+   |
+help: if you import `Camera`, refer to it directly
+   |
+92 -                     gphoto2::Camera::open(&context, &descriptor.model, &descriptor.port)
+92 +                     Camera::open(&context, &descriptor.model, &descriptor.port)
+   |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+    --> src\lib.rs:2386:27
+     |
+2386 |                     match gphoto2::Context::new() {
+     |                           ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+     |
+     = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+     |
+   1 + use std::task::Context;
+     |
+help: if you import `Context`, refer to it directly
+     |
+2386 -                     match gphoto2::Context::new() {
+2386 +                     match Context::new() {
+     |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+    --> src\lib.rs:2389:35
+     |
+2389 | ...                   match gphoto2::Camera::autodetect(&context) {
+     |                             ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+     |
+     = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+help: consider importing this struct
+     |
+   1 + use crate::lens_correction::Camera;
+     |
+help: if you import `Camera`, refer to it directly
+     |
+2389 -                             match gphoto2::Camera::autodetect(&context) {
+2389 +                             match Camera::autodetect(&context) {
+     |
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:21:25
+   |
+21 |     pub context: Option<gphoto2::Context>,
+   |                         ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `gphoto2` in this scope
+  --> src\camera_tethering.rs:22:24
+   |
+22 |     pub camera: Option<gphoto2::Camera>,
+   |                        ^^^^^^^ use of unresolved module or unlinked crate `gphoto2`
+   |
+   = help: if you wanted to use a crate named `gphoto2`, use `cargo add gphoto2` to add it to your `Cargo.toml`
+
+For more information about this error, try `rustc --explain E0433`.
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+error: could not compile `RapidRAW` (lib test) due to 18 previous errors
+warning: build failed, waiting for other jobs to finish...
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+error: could not compile `RapidRAW` (lib) due to 18 previous errors

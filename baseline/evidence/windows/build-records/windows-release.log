@@ -1,0 +1,42 @@
+
+> tauri
+> tauri build --no-bundle
+
+npm.cmd :         Info Looking up installed tauri packages to check mismatched versions...
+所在位置 E:\projects\tbt\rapidraw-baseline\audit-fixed-build.ps1:10 字符: 1
++ & npm.cmd run tauri -- build --no-bundle *> "$root\logs\audit-fixed-b ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (        Info Lo...hed versions...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+     Running beforeBuildCommand `npm run build`
+
+> build
+> vite build
+
+[36mvite v8.2.2 [32mbuilding client environment for production...[36m[39m
+transforming...
+鉁?2596 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.86 kB 鈹?gzip:     0.46 kB
+dist/assets/index-BVOzcSBX.css    112.34 kB 鈹?gzip:    16.64 kB
+dist/assets/index-DclA4o4a.js   5,270.62 kB 鈹?gzip: 1,708.58 kB
+
+[32m鉁?built in 5.92s[39m
+[33m[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeS
+plitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[33m[33m[PLUGIN_TIMINGS] [0mYour build spent 91% of 5.9s inside plugin hooks (5.4s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - @tailwindcss/vite:generate:build transform (67%, 3.9s, 2 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+[39m
+   Compiling RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+    Finished `release` profile [optimized] target(s) in 15m 14s
+       Built application at: E:\projects\tbt\rapidraw-baseline\app\src-tauri\target\release\RapidRAW.exe

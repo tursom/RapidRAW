@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "sessionId": 1,
+  "renderedTitle": "RapidRAW TBT",
+  "nativeWindows": [
+    {
+      "title": "RapidRAW TBT",
+      "visible": true
+    },
+    {
+      "title": "Temp Window",
+      "visible": false
+    },
+    {
+      "title": "io.github.tursom.RapidRAW-siw",
+      "visible": true
+    },
+    {
+      "title": "",
+      "visible": true
+    },
+    {
+      "title": "MSCTFIME UI",
+      "visible": false
+    },
+    {
+      "title": "Default IME",
+      "visible": false
+    },
+    {
+      "title": "Default IME",
+      "visible": false
+    }
+  ],
+  "executableSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "forkImmichServicePresentInBinary": true,
+  "officialImmichServiceAbsentFromBinary": true,
+  "scope": "Desktop titles and compiled service-name strings only; no credential values read or written by this check; not a keyring integration, macOS or installer coexistence test"
+}
