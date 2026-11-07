@@ -1,13 +1,91 @@
 {
   "schema": "rapidraw-task1-baseline-summary",
-  "measurementVersion": 2,
+  "measurementVersion": 3,
   "units": "milliseconds unless stated",
   "p95": "nearest rank",
   "conditions": {
     "measurements.json": {
       "condition": "default",
-      "finished": "2026-11-07T10:49:12+0800",
+      "finished": "2026-11-07T13:01:58+0800",
       "presetCount": 0,
+      "presetPanel": {
+        "startup": [
+          {
+            "at": 1678.9000000059605,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          {
+            "at": 1727.3999999985099,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          {
+            "at": 1730,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          {
+            "at": 1653.7000000029802,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          {
+            "at": 1676.3000000044703,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          {
+            "at": 1659.1000000014901,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          }
+        ],
+        "switchPhase": {
+          "presetPanelBefore": {
+            "at": 1664.8000000044703,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          },
+          "presetPanelAfter": {
+            "at": 15128.89999999851,
+            "visible": false,
+            "panelRect": null,
+            "mountedCardCount": 0,
+            "visibleCardCount": 0,
+            "cards": []
+          }
+        },
+        "sliderDrag": {
+          "at": 1934.3999999985099,
+          "visible": false,
+          "panelRect": null,
+          "mountedCardCount": 0,
+          "visibleCardCount": 0,
+          "cards": []
+        }
+      },
       "sourceIO": {
         "status": "unknown",
         "traced": false
@@ -91,31 +169,31 @@
       "startup": {
         "nativeVisibleUpperMs": {
           "n": 5,
-          "median": 1340.578800001822,
-          "p95": 1379.5314000017243,
-          "min": 1335.2653999972972,
-          "max": 1379.5314000017243
+          "median": 1352.1335999976145,
+          "p95": 1357.446300004085,
+          "min": 1348.6919999995735,
+          "max": 1357.446300004085
         },
         "landingReadyUpperMs": {
           "n": 5,
-          "median": 1355.1996000023792,
-          "p95": 1391.7811999999685,
-          "min": 1349.5001999981469,
-          "max": 1391.7811999999685
+          "median": 1363.3709999994608,
+          "p95": 1363.755799997307,
+          "min": 1361.9101000003866,
+          "max": 1363.755799997307
         },
         "libraryThumbsUpperMs": {
           "n": 5,
-          "median": 1729.9150000035297,
-          "p95": 1754.4650999989244,
-          "min": 1721.9282000005478,
-          "max": 1754.4650999989244
+          "median": 1731.4642000055755,
+          "p95": 1762.635200000659,
+          "min": 1725.2756000016234,
+          "max": 1762.635200000659
         },
         "automatedEditorReadyUpperMs": {
           "n": 5,
-          "median": 2308.8711999953375,
-          "p95": 2330.870400001004,
-          "min": 2250.039899998228,
-          "max": 2330.870400001004
+          "median": 2299.954499998421,
+          "p95": 2360.873500001617,
+          "min": 2263.812000004691,
+          "max": 2360.873500001617
         }
       },
       "switchesByGroup": [
@@ -123,21 +201,21 @@
           "edited": true,
           "kind": "RAW",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 483.44999999925494,
-            "p95": 564.7999999970198,
-            "min": 402.1000000014901,
-            "max": 564.7999999970198
+            "n": 5,
+            "median": 421.0,
+            "p95": 566.7999999970198,
+            "min": 396.8999999985099,
+            "max": 566.7999999970198
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 37.05000000074506,
-              "p95": 42.5,
-              "min": 31.600000001490116,
-              "max": 42.5
+              "n": 5,
+              "median": 31.299999997019768,
+              "p95": 35.900000005960464,
+              "min": 28.599999994039536,
+              "max": 35.900000005960464
             }
           }
         },
@@ -145,21 +223,21 @@
           "edited": true,
           "kind": "RAW",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 43.05000000074506,
-            "p95": 57.0,
-            "min": 29.100000001490116,
-            "max": 57.0
+            "n": 5,
+            "median": 47.0,
+            "p95": 76.20000000298023,
+            "min": 27.30000000447035,
+            "max": 76.20000000298023
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
+              "n": 5,
               "median": 56.399999998509884,
-              "p95": 71.89999999850988,
-              "min": 40.899999998509884,
-              "max": 71.89999999850988
+              "p95": 96.40000000596046,
+              "min": 43.30000000447035,
+              "max": 96.40000000596046
             }
           }
         },
@@ -167,20 +245,20 @@
           "edited": true,
           "kind": "JPEG",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 114.79999999701977,
-            "p95": 149.39999999850988,
-            "min": 80.19999999552965,
-            "max": 149.39999999850988
+            "n": 5,
+            "median": 131.39999999850988,
+            "p95": 176.60000000149012,
+            "min": 49.70000000298023,
+            "max": 176.60000000149012
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 29.300000000745058,
+              "n": 5,
+              "median": 30.200000002980232,
               "p95": 30.5,
-              "min": 28.100000001490116,
+              "min": 27.69999999552965,
               "max": 30.5
             }
           }
@@ -189,21 +267,21 @@
           "edited": true,
           "kind": "JPEG",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 52.0,
-            "p95": 76.10000000149012,
-            "min": 27.899999998509884,
-            "max": 76.10000000149012
+            "n": 5,
+            "median": 30.399999998509884,
+            "p95": 62.0,
+            "min": 28.5,
+            "max": 62.0
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 69.5,
-              "p95": 96.0,
-              "min": 43.0,
-              "max": 96.0
+              "n": 5,
+              "median": 48.70000000298023,
+              "p95": 84.39999999850988,
+              "min": 47.0,
+              "max": 84.39999999850988
             }
           }
         },
@@ -211,21 +289,21 @@
           "edited": false,
           "kind": "RAW",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 462.69999999925494,
-            "p95": 515.2999999970198,
-            "min": 410.1000000014901,
-            "max": 515.2999999970198
+            "n": 5,
+            "median": 499.29999999701977,
+            "p95": 615.0,
+            "min": 388.3999999985099,
+            "max": 615.0
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 36.899999998509884,
-              "p95": 37.20000000298023,
-              "min": 36.599999994039536,
-              "max": 37.20000000298023
+              "n": 5,
+              "median": 26.5,
+              "p95": 41.19999999552965,
+              "min": 25.299999997019768,
+              "max": 41.19999999552965
             }
           }
         },
@@ -233,21 +311,21 @@
           "edited": false,
           "kind": "RAW",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 50.69999999925494,
-            "p95": 72.60000000149012,
-            "min": 28.799999997019768,
-            "max": 72.60000000149012
+            "n": 5,
+            "median": 51.100000001490116,
+            "p95": 81.70000000298023,
+            "min": 27.600000001490116,
+            "max": 81.70000000298023
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 67.69999999552965,
-              "p95": 90.69999999552965,
-              "min": 44.69999999552965,
-              "max": 90.69999999552965
+              "n": 5,
+              "median": 96.30000000447035,
+              "p95": 109.20000000298023,
+              "min": 41.80000000447035,
+              "max": 109.20000000298023
             }
           }
         },
@@ -255,21 +333,21 @@
           "edited": false,
           "kind": "JPEG",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 153.09999999776483,
-            "p95": 180.10000000149012,
-            "min": 126.09999999403954,
-            "max": 180.10000000149012
+            "n": 5,
+            "median": 150.79999999701977,
+            "p95": 216.70000000298023,
+            "min": 36.399999998509884,
+            "max": 216.70000000298023
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 32.850000001490116,
-              "p95": 39.30000000447035,
-              "min": 26.399999998509884,
-              "max": 39.30000000447035
+              "n": 5,
+              "median": 37.899999998509884,
+              "p95": 69.40000000596046,
+              "min": 24.899999998509884,
+              "max": 69.40000000596046
             }
           }
         },
@@ -277,21 +355,21 @@
           "edited": false,
           "kind": "JPEG",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 27.699999999254942,
-            "p95": 28.799999997019768,
-            "min": 26.600000001490116,
-            "max": 28.799999997019768
+            "n": 5,
+            "median": 47.5,
+            "p95": 74.30000000447035,
+            "min": 31.19999999552965,
+            "max": 74.30000000447035
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 47.25,
-              "p95": 53.599999994039536,
-              "min": 40.900000005960464,
-              "max": 53.599999994039536
+              "n": 5,
+              "median": 78.79999999701977,
+              "p95": 98.60000000149012,
+              "min": 46.600000001490116,
+              "max": 98.60000000149012
             }
           }
         }
@@ -314,12 +392,12 @@
         "frames": 180,
         "frameIntervalMs": {
           "n": 180,
-          "median": 16.400000005960464,
-          "p95": 19.5,
-          "min": 5.4000000059604645,
-          "max": 30.399999998509884
+          "median": 18.0,
+          "p95": 21.799999997019768,
+          "min": 7.799999997019768,
+          "max": 34.5
         },
-        "averageFps": 60.08812925636205,
+        "averageFps": 55.36076766933705,
         "framesWithMissingLoadedThumbs": 0,
         "maxMissingThumbs": 0,
         "maxScrollLeft": 7200
@@ -327,19 +405,19 @@
       "upstreamReplay": {
         "scroll": {
           "durationMs": {
-            "median": 503.94999999552965,
-            "p95": 512.3999999985099,
-            "stdev": 4.289813515334812
+            "median": 511.75,
+            "p95": 520,
+            "stdev": 5.410854254062649
           },
           "avgFps": {
-            "median": 59.95087897966291,
-            "p95": 59.95203836930526,
-            "stdev": 0.003788094897975708
+            "median": 56.468736636576914,
+            "p95": 56.85159772593625,
+            "stdev": 0.5019874437991442
           },
           "worstFrameMs": {
-            "median": 16.80000000000291,
-            "p95": 16.900000000001455,
-            "stdev": 0.04841229182618373
+            "median": 18.100000000000364,
+            "p95": 18.30000000000291,
+            "stdev": 0.0661437827775429
           },
           "droppedFrameCount": {
             "median": 0,
@@ -354,9 +432,9 @@
         },
         "open": {
           "durationMs": {
-            "median": 0.5,
-            "p95": 0.6000000014901161,
-            "stdev": 0.05994789493470222
+            "median": 0.29999999701976776,
+            "p95": 0.3999999985098839,
+            "stdev": 0.06614378129818606
           },
           "avgFps": {
             "median": 0,
@@ -381,37 +459,1249 @@
         },
         "edit": {
           "durationMs": {
-            "median": 1363.6499999985099,
-            "p95": 1397,
-            "stdev": 20.610248512580707
+            "median": 1307.449999999255,
+            "p95": 1332.8999999985099,
+            "stdev": 12.824335995012216
           },
           "avgFps": {
-            "median": 59.94945030092853,
-            "p95": 59.96676540712367,
-            "stdev": 0.23969083277518322
+            "median": 56.01551658875776,
+            "p95": 56.949361243650856,
+            "stdev": 0.5918523124513227
           },
           "worstFrameMs": {
-            "median": 17.69999999999709,
-            "p95": 33.400000000001455,
-            "stdev": 5.217144214032039
+            "median": 18.100000000000364,
+            "p95": 18.299999999999272,
+            "stdev": 0.08660254037718364
           },
           "droppedFrameCount": {
             "median": 0,
-            "p95": 1,
-            "stdev": 0.33071891388307384
+            "p95": 0,
+            "stdev": 0
           },
           "droppedFrameTimeMs": {
             "median": 0,
-            "p95": 33.400000000001455,
-            "stdev": 11.046011723695148
+            "p95": 0,
+            "stdev": 0
           }
         }
       }
     },
     "presets20.json": {
       "condition": "presets20",
-      "finished": "2026-11-07T10:50:23+0800",
+      "finished": "2026-11-07T13:03:20+0800",
       "presetCount": 20,
+      "presetPanel": {
+        "startup": [
+          {
+            "at": 1678.5999999940395,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "at": 1601.7000000029802,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "at": 1618.6000000014901,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "at": 1635.4000000059605,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "at": 1641.5,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "at": 1665.3000000044703,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "switchPhase": {
+          "presetPanelBefore": {
+            "at": 1681.3000000044703,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          },
+          "presetPanelAfter": {
+            "at": 19036.20000000298,
+            "visible": true,
+            "panelRect": {
+              "left": 9,
+              "top": 285,
+              "right": 349,
+              "bottom": 662
+            },
+            "mountedCardCount": 20,
+            "visibleCardCount": 4,
+            "cards": [
+              {
+                "id": "task1-00",
+                "name": "Task1 exposure 00",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-01",
+                "name": "Task1 exposure 01",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-02",
+                "name": "Task1 exposure 02",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-03",
+                "name": "Task1 exposure 03",
+                "inPanel": true,
+                "visible": true
+              },
+              {
+                "id": "task1-04",
+                "name": "Task1 exposure 04",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-05",
+                "name": "Task1 exposure 05",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-06",
+                "name": "Task1 exposure 06",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-07",
+                "name": "Task1 exposure 07",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-08",
+                "name": "Task1 exposure 08",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-09",
+                "name": "Task1 exposure 09",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-10",
+                "name": "Task1 exposure 10",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-11",
+                "name": "Task1 exposure 11",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-12",
+                "name": "Task1 exposure 12",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-13",
+                "name": "Task1 exposure 13",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-14",
+                "name": "Task1 exposure 14",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-15",
+                "name": "Task1 exposure 15",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-16",
+                "name": "Task1 exposure 16",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-17",
+                "name": "Task1 exposure 17",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-18",
+                "name": "Task1 exposure 18",
+                "inPanel": true,
+                "visible": false
+              },
+              {
+                "id": "task1-19",
+                "name": "Task1 exposure 19",
+                "inPanel": true,
+                "visible": false
+              }
+            ]
+          }
+        },
+        "sliderDrag": {
+          "at": 1974.7000000029802,
+          "visible": true,
+          "panelRect": {
+            "left": 9,
+            "top": 285,
+            "right": 349,
+            "bottom": 662
+          },
+          "mountedCardCount": 20,
+          "visibleCardCount": 4,
+          "cards": [
+            {
+              "id": "task1-00",
+              "name": "Task1 exposure 00",
+              "inPanel": true,
+              "visible": true
+            },
+            {
+              "id": "task1-01",
+              "name": "Task1 exposure 01",
+              "inPanel": true,
+              "visible": true
+            },
+            {
+              "id": "task1-02",
+              "name": "Task1 exposure 02",
+              "inPanel": true,
+              "visible": true
+            },
+            {
+              "id": "task1-03",
+              "name": "Task1 exposure 03",
+              "inPanel": true,
+              "visible": true
+            },
+            {
+              "id": "task1-04",
+              "name": "Task1 exposure 04",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-05",
+              "name": "Task1 exposure 05",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-06",
+              "name": "Task1 exposure 06",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-07",
+              "name": "Task1 exposure 07",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-08",
+              "name": "Task1 exposure 08",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-09",
+              "name": "Task1 exposure 09",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-10",
+              "name": "Task1 exposure 10",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-11",
+              "name": "Task1 exposure 11",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-12",
+              "name": "Task1 exposure 12",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-13",
+              "name": "Task1 exposure 13",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-14",
+              "name": "Task1 exposure 14",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-15",
+              "name": "Task1 exposure 15",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-16",
+              "name": "Task1 exposure 16",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-17",
+              "name": "Task1 exposure 17",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-18",
+              "name": "Task1 exposure 18",
+              "inPanel": true,
+              "visible": false
+            },
+            {
+              "id": "task1-19",
+              "name": "Task1 exposure 19",
+              "inPanel": true,
+              "visible": false
+            }
+          ]
+        }
+      },
       "sourceIO": {
         "status": "unknown",
         "traced": false
@@ -495,31 +1785,31 @@
       "startup": {
         "nativeVisibleUpperMs": {
           "n": 5,
-          "median": 1366.965599998366,
-          "p95": 1372.482200000377,
-          "min": 1339.1442999927676,
-          "max": 1372.482200000377
+          "median": 1359.2250000001513,
+          "p95": 1384.9224000005051,
+          "min": 1353.222799996729,
+          "max": 1384.9224000005051
         },
         "landingReadyUpperMs": {
           "n": 5,
-          "median": 1374.2367000013473,
-          "p95": 1383.4672000011778,
-          "min": 1350.7212999975309,
-          "max": 1383.4672000011778
+          "median": 1372.4972999989404,
+          "p95": 1396.5813999966485,
+          "min": 1366.679099999601,
+          "max": 1396.5813999966485
         },
         "libraryThumbsUpperMs": {
           "n": 5,
-          "median": 1757.1546000035596,
-          "p95": 1779.1369000042323,
-          "min": 1741.0021999967285,
-          "max": 1779.1369000042323
+          "median": 1752.6136999949813,
+          "p95": 1800.9396999987075,
+          "min": 1742.8326000008383,
+          "max": 1800.9396999987075
         },
         "automatedEditorReadyUpperMs": {
           "n": 5,
-          "median": 2284.965500002727,
-          "p95": 2318.1693000005907,
-          "min": 2257.4632999967434,
-          "max": 2318.1693000005907
+          "median": 2259.3798999951105,
+          "p95": 2300.1613000014913,
+          "min": 2240.960499999346,
+          "max": 2300.1613000014913
         }
       },
       "switchesByGroup": [
@@ -527,21 +1817,21 @@
           "edited": true,
           "kind": "RAW",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 388.1000000014901,
-            "p95": 685.8000000044703,
-            "min": 90.39999999850988,
-            "max": 685.8000000044703
+            "n": 5,
+            "median": 588.5999999940395,
+            "p95": 661.5,
+            "min": 423.29999999701977,
+            "max": 661.5
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 89.60000000149012,
-              "p95": 141.80000000447035,
-              "min": 37.399999998509884,
-              "max": 141.80000000447035
+              "n": 5,
+              "median": 47.5,
+              "p95": 133.89999999850988,
+              "min": 36.899999998509884,
+              "max": 133.89999999850988
             }
           }
         },
@@ -549,21 +1839,21 @@
           "edited": true,
           "kind": "RAW",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 259.75,
-            "p95": 464.79999999701977,
-            "min": 54.70000000298023,
-            "max": 464.79999999701977
+            "n": 5,
+            "median": 69.20000000298023,
+            "p95": 602.7000000029802,
+            "min": 44.100000001490116,
+            "max": 602.7000000029802
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 57.95000000298023,
-              "p95": 75.80000000447035,
-              "min": 40.100000001490116,
-              "max": 75.80000000447035
+              "n": 5,
+              "median": 91.80000000447035,
+              "p95": 122.29999999701977,
+              "min": 64.30000000447035,
+              "max": 122.29999999701977
             }
           }
         },
@@ -571,21 +1861,21 @@
           "edited": true,
           "kind": "JPEG",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 161.55000000074506,
-            "p95": 220,
-            "min": 103.10000000149012,
-            "max": 220
+            "n": 5,
+            "median": 159.89999999850988,
+            "p95": 185.60000000149012,
+            "min": 72.79999999701977,
+            "max": 185.60000000149012
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 44.80000000074506,
-              "p95": 46.600000001490116,
-              "min": 43.0,
-              "max": 46.600000001490116
+              "n": 5,
+              "median": 46.5,
+              "p95": 54.30000000447035,
+              "min": 43.70000000298023,
+              "max": 54.30000000447035
             }
           }
         },
@@ -593,21 +1883,21 @@
           "edited": true,
           "kind": "JPEG",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 117.55000000074506,
-            "p95": 146.20000000298023,
-            "min": 88.89999999850988,
-            "max": 146.20000000298023
+            "n": 5,
+            "median": 34.70000000298023,
+            "p95": 78.10000000149012,
+            "min": 32.399999998509884,
+            "max": 78.10000000149012
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 78.30000000074506,
-              "p95": 113.60000000149012,
-              "min": 43.0,
-              "max": 113.60000000149012
+              "n": 5,
+              "median": 46.79999999701977,
+              "p95": 99.69999999552965,
+              "min": 46.5,
+              "max": 99.69999999552965
             }
           }
         },
@@ -615,21 +1905,21 @@
           "edited": false,
           "kind": "RAW",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 529.7499999962747,
-            "p95": 620.3999999985099,
-            "min": 439.09999999403954,
-            "max": 620.3999999985099
+            "n": 5,
+            "median": 516.3999999985099,
+            "p95": 691.8999999985099,
+            "min": 425.20000000298023,
+            "max": 691.8999999985099
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 47.24999999627471,
-              "p95": 48.69999999552965,
-              "min": 45.79999999701977,
-              "max": 48.69999999552965
+              "n": 5,
+              "median": 55.099999994039536,
+              "p95": 70.59999999403954,
+              "min": 39.399999998509884,
+              "max": 70.59999999403954
             }
           }
         },
@@ -637,21 +1927,21 @@
           "edited": false,
           "kind": "RAW",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 79.35000000149012,
-            "p95": 108.20000000298023,
-            "min": 50.5,
-            "max": 108.20000000298023
+            "n": 5,
+            "median": 110.29999999701977,
+            "p95": 558.5,
+            "min": 56.899999998509884,
+            "max": 558.5
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 91.0,
-              "p95": 124.20000000298023,
-              "min": 57.79999999701977,
-              "max": 124.20000000298023
+              "n": 5,
+              "median": 76.89999999850988,
+              "p95": 129.79999999701977,
+              "min": 34.19999999552965,
+              "max": 129.79999999701977
             }
           }
         },
@@ -659,21 +1949,21 @@
           "edited": false,
           "kind": "JPEG",
           "selection": "first-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 134.19999999925494,
-            "p95": 165.79999999701977,
-            "min": 102.60000000149012,
-            "max": 165.79999999701977
+            "n": 5,
+            "median": 212.10000000149012,
+            "p95": 326.8999999985099,
+            "min": 136.5,
+            "max": 326.8999999985099
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 76.75,
-              "p95": 95.60000000149012,
-              "min": 57.899999998509884,
-              "max": 95.60000000149012
+              "n": 5,
+              "median": 89.90000000596046,
+              "p95": 131.5,
+              "min": 47.600000001490116,
+              "max": 131.5
             }
           }
         },
@@ -681,21 +1971,21 @@
           "edited": false,
           "kind": "JPEG",
           "selection": "repeated-selection",
-          "n": 2,
+          "n": 5,
           "clickToUsableReadyMs": {
-            "n": 2,
-            "median": 85.0,
-            "p95": 132.5,
-            "min": 37.5,
-            "max": 132.5
+            "n": 5,
+            "median": 48.29999999701977,
+            "p95": 155.79999999701977,
+            "min": 34.20000000298023,
+            "max": 155.79999999701977
           },
           "previewByMethod": {
             "svg-decode-raf": {
-              "n": 2,
-              "median": 94.44999999552965,
-              "p95": 142.29999999701977,
-              "min": 46.599999994039536,
-              "max": 142.29999999701977
+              "n": 5,
+              "median": 61.70000000298023,
+              "p95": 81.69999999552965,
+              "min": 32.70000000298023,
+              "max": 81.69999999552965
             }
           }
         }
@@ -718,12 +2008,12 @@
         "frames": 180,
         "frameIntervalMs": {
           "n": 180,
-          "median": 16.600000001490116,
-          "p95": 23.100000001490116,
-          "min": 8.899999998509884,
-          "max": 38.899999998509884
+          "median": 17.5,
+          "p95": 22.200000002980232,
+          "min": 12.799999997019768,
+          "max": 35.100000001490116
         },
-        "averageFps": 58.333603396255675,
+        "averageFps": 55.732730594121406,
         "framesWithMissingLoadedThumbs": 0,
         "maxMissingThumbs": 0,
         "maxScrollLeft": 7200
@@ -731,19 +2021,19 @@
       "upstreamReplay": {
         "scroll": {
           "durationMs": {
-            "median": 506.29999999701977,
-            "p95": 509,
-            "stdev": 2.9609964515962255
+            "median": 526.0500000007451,
+            "p95": 539.7000000029802,
+            "stdev": 4.960279730586951
           },
           "avgFps": {
-            "median": 59.952038369304375,
-            "p95": 59.96131528046422,
-            "stdev": 0.007927964109627724
+            "median": 57.02338164586338,
+            "p95": 57.48227629814165,
+            "stdev": 0.5361998403317174
           },
           "worstFrameMs": {
-            "median": 16.80000000000291,
-            "p95": 17,
-            "stdev": 0.07071067811794732
+            "median": 18.100000000002183,
+            "p95": 18.10000000000582,
+            "stdev": 0.03307189138920115
           },
           "droppedFrameCount": {
             "median": 0,
@@ -758,9 +2048,9 @@
         },
         "open": {
           "durationMs": {
-            "median": 0.5500000007450581,
-            "p95": 0.8000000044703484,
-            "stdev": 0.11110243187200008
+            "median": 0.20000000298023224,
+            "p95": 0.30000000447034836,
+            "stdev": 0.05000000074505811
           },
           "avgFps": {
             "median": 0,
@@ -785,29 +2075,29 @@
         },
         "edit": {
           "durationMs": {
-            "median": 1440.949999999255,
-            "p95": 1496,
-            "stdev": 36.23666780719302
+            "median": 1328.7499999962747,
+            "p95": 1337.2000000029802,
+            "stdev": 9.76600449346422
           },
           "avgFps": {
-            "median": 58.93486799853302,
-            "p95": 59.95115091406992,
-            "stdev": 0.8388751406945804
+            "median": 56.97588904160247,
+            "p95": 57.38771137807018,
+            "stdev": 0.2002550282654291
           },
           "worstFrameMs": {
-            "median": 33.39999999999782,
-            "p95": 33.69999999999709,
-            "stdev": 5.345076589722796
+            "median": 18.10000000000582,
+            "p95": 18.10000000000582,
+            "stdev": 1.203148399811012e-12
           },
           "droppedFrameCount": {
-            "median": 1.5,
-            "p95": 4,
-            "stdev": 1.1989578808281798
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
           },
           "droppedFrameTimeMs": {
-            "median": 49.849999999998545,
-            "p95": 133.6999999999971,
-            "stdev": 40.01697881837024
+            "median": 0,
+            "p95": 0,
+            "stdev": 0
           }
         }
       }

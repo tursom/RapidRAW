@@ -3,7 +3,7 @@
   if (window.baseline) throw Error('Observer already installed; use a fresh process');
   const data = (window.baseline = {
     schema: 'rapidraw-task1-baseline',
-    measurementVersion: 2,
+    measurementVersion: 3,
     clicks: [],
     frames: [],
     errors: [],
@@ -72,6 +72,32 @@
       loaded,
       missing: items.length - loaded,
       items,
+    };
+  };
+  data.presetPanel = () => {
+    // Inspect mounted draggable cards and the actual English panel heading,
+    // not settings. Offscreen cards count as mounted, never as visible.
+    const headings = [...document.querySelectorAll('p,span,h1,h2,h3,div')].filter(
+      (node) => node.childElementCount === 0 && node.textContent === 'Presets' && visibleRect(node),
+    );
+    if (headings.length > 1) throw Error('Ambiguous visible Presets heading');
+    const panel = headings[0]?.parentElement.parentElement;
+    const cards = [...document.querySelectorAll('[role="button"][aria-roledescription="draggable"]')]
+      .map((node) => ({ node, preset: propsAbove(node, (p) => !!p?.preset?.id && !!p.onApply)?.preset }))
+      .filter(({ preset }) => preset)
+      .map(({ node, preset }) => ({
+        id: preset.id,
+        name: preset.name,
+        inPanel: !!panel?.contains(node),
+        visible: !!visibleRect(node),
+      }));
+    return {
+      at: performance.now(),
+      visible: !!panel && !!visibleRect(panel),
+      panelRect: panel ? visibleRect(panel) : null,
+      mountedCardCount: cards.length,
+      visibleCardCount: cards.filter((card) => card.visible && card.inPanel).length,
+      cards,
     };
   };
   data.scroller = () => {

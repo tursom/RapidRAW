@@ -1,13 +1,13 @@
 {
   "schema": "rapidraw-task1-baseline",
-  "measurementVersion": 2,
+  "measurementVersion": 3,
   "method": "Unmodified release; WebView2 CDP; page performance.now/rAF; startup polled every 20ms",
-  "started": "2026-11-07T10:49:12+0800",
+  "started": "2026-11-07T13:01:58+0800",
   "startup": [
     {
-      "pid": 20336,
-      "attachMs": 642.1711999937543,
-      "nativeVisibleUpperMs": 1394.993699999759,
+      "pid": 27360,
+      "attachMs": 631.946200002858,
+      "nativeVisibleUpperMs": 1434.9111000046832,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -16,8 +16,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50301.5941412,
-      "landingReadyUpperMs": 1408.5230999990017,
+      "launchPerfCounter": 58267.922772,
+      "landingReadyUpperMs": 1443.800300003204,
       "index": 0,
       "warmup": true,
       "page": {
@@ -28,9 +28,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1785.1876999993692,
+      "libraryThumbsUpperMs": 1842.9927000033786,
       "thumbnailCoverage": {
-        "at": 1108.5,
+        "at": 1139.7999999970198,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -50,9 +50,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2297.1326999977464,
+      "automatedEditorReadyUpperMs": 2361.3441999987117,
       "status": {
-        "at": 1621.1999999955297,
+        "at": 1659.0999999940395,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -358,12 +358,146 @@
             }
           }
         ]
+      },
+      "presetPanel": {
+        "at": 1678.5999999940395,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
+          }
+        ]
       }
     },
     {
-      "pid": 34796,
-      "attachMs": 582.2056000033626,
-      "nativeVisibleUpperMs": 1366.965599998366,
+      "pid": 31844,
+      "attachMs": 612.214299995685,
+      "nativeVisibleUpperMs": 1359.2250000001513,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -372,8 +506,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50304.4996463,
-      "landingReadyUpperMs": 1374.2367000013473,
+      "launchPerfCounter": 58270.9088272,
+      "landingReadyUpperMs": 1372.4972999989404,
       "index": 1,
       "warmup": false,
       "page": {
@@ -384,9 +518,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1748.100800003158,
+      "libraryThumbsUpperMs": 1742.8326000008383,
       "thumbnailCoverage": {
-        "at": 1111,
+        "at": 1093,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -406,9 +540,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2291.755899997952,
+      "automatedEditorReadyUpperMs": 2240.960499999346,
       "status": {
-        "at": 1662.2999999970198,
+        "at": 1591.8999999985099,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -714,12 +848,146 @@
             }
           }
         ]
+      },
+      "presetPanel": {
+        "at": 1601.7000000029802,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
+          }
+        ]
       }
     },
     {
-      "pid": 15940,
-      "attachMs": 582.0661000034306,
-      "nativeVisibleUpperMs": 1372.482200000377,
+      "pid": 24212,
+      "attachMs": 602.8965000004973,
+      "nativeVisibleUpperMs": 1354.1688999976031,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -728,8 +996,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50307.4100623,
-      "landingReadyUpperMs": 1376.9343000021763,
+      "launchPerfCounter": 58273.7689811,
+      "landingReadyUpperMs": 1366.679099999601,
       "index": 2,
       "warmup": false,
       "page": {
@@ -740,9 +1008,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1757.1546000035596,
+      "libraryThumbsUpperMs": 1752.6136999949813,
       "thumbnailCoverage": {
-        "at": 1122.1000000014901,
+        "at": 1116,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -762,9 +1030,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2318.1693000005907,
+      "automatedEditorReadyUpperMs": 2245.784200000344,
       "status": {
-        "at": 1690.5,
+        "at": 1610.2000000029802,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -1070,12 +1338,146 @@
             }
           }
         ]
+      },
+      "presetPanel": {
+        "at": 1618.6000000014901,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
+          }
+        ]
       }
     },
     {
-      "pid": 35196,
-      "attachMs": 579.4618999934755,
-      "nativeVisibleUpperMs": 1339.1442999927676,
+      "pid": 2556,
+      "attachMs": 612.2401999964495,
+      "nativeVisibleUpperMs": 1353.222799996729,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -1084,8 +1486,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50310.3448847,
-      "landingReadyUpperMs": 1350.7212999975309,
+      "launchPerfCounter": 58276.6304278,
+      "landingReadyUpperMs": 1368.572100000165,
       "index": 3,
       "warmup": false,
       "page": {
@@ -1096,9 +1498,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1741.0021999967285,
+      "libraryThumbsUpperMs": 1751.3307999979588,
       "thumbnailCoverage": {
-        "at": 1108.7000000029802,
+        "at": 1112.7000000029802,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -1118,9 +1520,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2283.7052999966545,
+      "automatedEditorReadyUpperMs": 2259.3798999951105,
       "status": {
-        "at": 1657.8000000044703,
+        "at": 1628.3000000044703,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -1426,12 +1828,146 @@
             }
           }
         ]
+      },
+      "presetPanel": {
+        "at": 1635.4000000059605,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
+          }
+        ]
       }
     },
     {
-      "pid": 23672,
-      "attachMs": 603.4854000026826,
-      "nativeVisibleUpperMs": 1369.7034000069834,
+      "pid": 37672,
+      "attachMs": 605.2195000011125,
+      "nativeVisibleUpperMs": 1377.774500004307,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -1440,8 +1976,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50313.2423256,
-      "landingReadyUpperMs": 1383.4672000011778,
+      "launchPerfCounter": 58279.5129272,
+      "landingReadyUpperMs": 1393.9170000012382,
       "index": 4,
       "warmup": false,
       "page": {
@@ -1452,9 +1988,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1779.1369000042323,
+      "libraryThumbsUpperMs": 1792.733300004329,
       "thumbnailCoverage": {
-        "at": 1123.1999999955297,
+        "at": 1139.1000000014901,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -1474,9 +2010,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2284.965500002727,
+      "automatedEditorReadyUpperMs": 2276.182500005234,
       "status": {
-        "at": 1638.6999999955297,
+        "at": 1623.5,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -1782,12 +2318,146 @@
             }
           }
         ]
+      },
+      "presetPanel": {
+        "at": 1641.5,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
+          }
+        ]
       }
     },
     {
-      "pid": 19804,
-      "attachMs": 579.0516999986721,
-      "nativeVisibleUpperMs": 1352.3796999943443,
+      "pid": 19040,
+      "attachMs": 593.2133999958751,
+      "nativeVisibleUpperMs": 1384.9224000005051,
       "initialWindowState": {
         "width": 1280,
         "height": 689,
@@ -1796,8 +2466,8 @@
         "maximized": false,
         "fullscreen": false
       },
-      "launchPerfCounter": 50316.1465765,
-      "landingReadyUpperMs": 1369.082699995488,
+      "launchPerfCounter": 58282.4139079,
+      "landingReadyUpperMs": 1396.5813999966485,
       "index": 5,
       "warmup": false,
       "page": {
@@ -1808,9 +2478,9 @@
         },
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
       },
-      "libraryThumbsUpperMs": 1760.7255999973859,
+      "libraryThumbsUpperMs": 1800.9396999987075,
       "thumbnailCoverage": {
-        "at": 1129.6000000014901,
+        "at": 1155.3000000044703,
         "mounted": 10,
         "expected": 4,
         "loaded": 4,
@@ -1830,9 +2500,9 @@
           }
         ]
       },
-      "automatedEditorReadyUpperMs": 2257.4632999967434,
+      "automatedEditorReadyUpperMs": 2300.1613000014913,
       "status": {
-        "at": 1627.7000000029802,
+        "at": 1656.6000000014901,
         "selected": {
           "exif": {},
           "group_id": null,
@@ -2136,6 +2806,140 @@
               "bottom": 641,
               "left": 3607.61767578125
             }
+          }
+        ]
+      },
+      "presetPanel": {
+        "at": 1665.3000000044703,
+        "visible": true,
+        "panelRect": {
+          "left": 9,
+          "top": 285,
+          "right": 349,
+          "bottom": 662
+        },
+        "mountedCardCount": 20,
+        "visibleCardCount": 4,
+        "cards": [
+          {
+            "id": "task1-00",
+            "name": "Task1 exposure 00",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-01",
+            "name": "Task1 exposure 01",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-02",
+            "name": "Task1 exposure 02",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-03",
+            "name": "Task1 exposure 03",
+            "inPanel": true,
+            "visible": true
+          },
+          {
+            "id": "task1-04",
+            "name": "Task1 exposure 04",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-05",
+            "name": "Task1 exposure 05",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-06",
+            "name": "Task1 exposure 06",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-07",
+            "name": "Task1 exposure 07",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-08",
+            "name": "Task1 exposure 08",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-09",
+            "name": "Task1 exposure 09",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-10",
+            "name": "Task1 exposure 10",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-11",
+            "name": "Task1 exposure 11",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-12",
+            "name": "Task1 exposure 12",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-13",
+            "name": "Task1 exposure 13",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-14",
+            "name": "Task1 exposure 14",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-15",
+            "name": "Task1 exposure 15",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-16",
+            "name": "Task1 exposure 16",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-17",
+            "name": "Task1 exposure 17",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-18",
+            "name": "Task1 exposure 18",
+            "inPanel": true,
+            "visible": false
+          },
+          {
+            "id": "task1-19",
+            "name": "Task1 exposure 19",
+            "inPanel": true,
+            "visible": false
           }
         ]
       }
@@ -2151,15 +2955,15 @@
       "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "name": "photo-000.NEF",
-      "start": 1745.5,
-      "selectedAt": 1783.7000000029802,
-      "previewAt": 1887.3000000044703,
+      "start": 1780.9000000059605,
+      "selectedAt": 1819.7000000029802,
+      "previewAt": 1914.8000000044703,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7aa2a65170c9f34f60337d7ad3f00a659356eec2b7ecc9fc3c9a0a06ac67ada7_medium.jpg",
-      "readyAt": 2431.3000000044703,
+      "readyAt": 2369.5,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
-      "end": 2470.3000000044703,
+      "end": 2431.9000000059605,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "assertions": {
         "targetMatched": true,
@@ -2177,47 +2981,16 @@
       "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
       "name": "photo-002.NEF",
-      "start": 2560.60000000149,
-      "selectedAt": 2584.3000000044703,
-      "previewAt": 2598,
+      "start": 2536,
+      "selectedAt": 2556.5,
+      "previewAt": 2583.5,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F10536211fdf4b09364d474aa74972df422a5aba3bc95c0567e6aeee7ab874b45_medium.jpg",
-      "readyAt": 2651,
+      "readyAt": 3197.5,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
-      "end": 2682.3000000044703,
+      "end": 3247.3000000044703,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
-      "assertions": {
-        "targetMatched": true,
-        "selectionStable": true,
-        "keyboardFree": true
-      },
-      "gpuFrames": [
-        {
-          "at": 2593.60000000149,
-          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
-        }
-      ]
-    },
-    {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
-      "edited": true,
-      "kind": "JPEG",
-      "selection": "first-selection",
-      "index": 2,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
-      "name": "photo-003.jpg",
-      "start": 2809.5,
-      "selectedAt": 2832.3000000044703,
-      "previewAt": 2852.5,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
-      "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6760a65436188ecb70213648edbbb6496fd6e3ce20026acfc4fb98b1a5bf57cb_medium.jpg",
-      "readyAt": 2912.60000000149,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
-      "end": 2954.7000000029802,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2226,24 +2999,216 @@
       "gpuFrames": []
     },
     {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 2,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "name": "photo-004.NEF",
+      "start": 3350.8000000044703,
+      "selectedAt": 3373.2000000029802,
+      "previewAt": 3387.7000000029802,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fdd7cd1e5b2eecf8d65ce6c928ff44ab19708086ac2d3c0b0cca38e041ab8b59e_medium.jpg",
+      "readyAt": 3774.10000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "end": 3823.60000000149,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 3,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "name": "photo-006.NEF",
+      "start": 3920.3000000044703,
+      "selectedAt": 3947.9000000059605,
+      "previewAt": 3963.8000000044703,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F42510b0abf7fcceba63f92ca496323d4246b14a4badb426f8971708edca12476_medium.jpg",
+      "readyAt": 4531,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "end": 4606.80000000447,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 3957.7000000029802,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 4,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "name": "photo-008.NEF",
+      "start": 4698,
+      "selectedAt": 4724,
+      "previewAt": 4759.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F2e92c35bc52094ebc41981528287b0a99d927ec253ffc391bdb1797f9d130ac2_medium.jpg",
+      "readyAt": 5191,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "end": 5254.9000000059605,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 5,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "name": "photo-003.jpg",
+      "start": 5335.4000000059605,
+      "selectedAt": 5360,
+      "previewAt": 5381.9000000059605,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6760a65436188ecb70213648edbbb6496fd6e3ce20026acfc4fb98b1a5bf57cb_medium.jpg",
+      "readyAt": 5408.20000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "end": 5456.60000000149,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 5370.20000000298,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF"
+        }
+      ]
+    },
+    {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
       "edited": true,
       "kind": "JPEG",
       "selection": "first-selection",
-      "index": 3,
+      "index": 6,
       "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
       "name": "photo-005.jpg",
-      "start": 3073,
-      "selectedAt": 3092.5,
-      "previewAt": 3119.60000000149,
+      "start": 5571.60000000149,
+      "selectedAt": 5590.70000000298,
+      "previewAt": 5616.30000000447,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6134896d1877ce7943a0c06a6a023c622f6b8d4270c4e53e4ce8c4ac419c5d5a_medium.jpg",
-      "readyAt": 3293,
+      "readyAt": 5652.4000000059605,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
-      "end": 3332.7000000029802,
+      "end": 5702.80000000447,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 7,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "name": "photo-007.jpg",
+      "start": 5804.70000000298,
+      "selectedAt": 5823.30000000447,
+      "previewAt": 5848.4000000059605,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F5da0d153a3f03410c8be08d4d3767c0a3c2249b3f1eea209c6d8f76b4b0ef41b_medium.jpg",
+      "readyAt": 5964.60000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "end": 6010.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 8,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "name": "photo-009.jpg",
+      "start": 6141.5,
+      "selectedAt": 6162.70000000298,
+      "previewAt": 6191,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7b0d58813d8d306ffff013af2cab1c8482096db4751c6004b8fd2cb4a5ccc63a_medium.jpg",
+      "readyAt": 6302.20000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "end": 6333.9000000059605,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 9,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "name": "photo-011.jpg",
+      "start": 6441,
+      "selectedAt": 6461.5,
+      "previewAt": 6495.30000000447,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F846b9852e2ddab451dc74b11d84c35207e84cad5ae6fb6bf1d2e10a7de991c6a_medium.jpg",
+      "readyAt": 6626.60000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "end": 6674.20000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2256,20 +3221,46 @@
       "edited": false,
       "kind": "RAW",
       "selection": "first-selection",
-      "index": 4,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "index": 10,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
       "name": "photo-016.NEF",
-      "start": 3422.8000000044703,
-      "selectedAt": 3446.3000000044703,
-      "previewAt": 3471.5,
+      "start": 6781.9000000059605,
+      "selectedAt": 6801.5,
+      "previewAt": 6837,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F75174e0216079ee3bc541b6c50382c4913f0718d6868bebd85df3ab87909129d_medium.jpg",
-      "readyAt": 3861.89999999851,
+      "readyAt": 7298.30000000447,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
-      "end": 3930.10000000149,
+      "end": 7339.10000000149,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 11,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "name": "photo-018.NEF",
+      "start": 7435.80000000447,
+      "selectedAt": 7457.30000000447,
+      "previewAt": 7482.4000000059605,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
+      "readyAt": 8041.60000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "end": 8092.9000000059605,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2277,30 +3268,82 @@
       },
       "gpuFrames": [
         {
-          "at": 3458.39999999851,
-          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
+          "at": 7470.10000000149,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
         }
       ]
     },
     {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
       "edited": false,
       "kind": "RAW",
       "selection": "first-selection",
-      "index": 5,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
-      "name": "photo-018.NEF",
-      "start": 4038.3000000044703,
-      "selectedAt": 4058.8000000044703,
-      "previewAt": 4084.10000000149,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "index": 12,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "name": "photo-020.NEF",
+      "start": 8218.20000000298,
+      "selectedAt": 8239.20000000298,
+      "previewAt": 8257.60000000149,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
       "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
-      "readyAt": 4658.70000000298,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
-      "end": 4699.5,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff7b34def87beb5a3d919201ddd17e58562a0f68c663893efd92aab7f6be2a1a7_medium.jpg",
+      "readyAt": 8643.40000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "end": 8688.10000000149,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 13,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "name": "photo-022.NEF",
+      "start": 8884.90000000596,
+      "selectedAt": 8906.80000000447,
+      "previewAt": 8955.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff896173fabe369f6e14b3e025c9c4429f4f57d3a0de153897bd79286d641a87c_medium.jpg",
+      "readyAt": 9576.80000000447,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "end": 9619.90000000596,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection",
+      "index": 14,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "name": "photo-024.NEF",
+      "start": 9798.5,
+      "selectedAt": 9820.5,
+      "previewAt": 9853.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fc3e5d1202599c50c2efb2378dae4b46aedbbf20211be61bfcf9ab62530d71540_medium.jpg",
+      "readyAt": 10225.70000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "end": 10268.5,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2313,20 +3356,51 @@
       "edited": false,
       "kind": "JPEG",
       "selection": "first-selection",
-      "index": 6,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "index": 15,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "name": "photo-017.jpg",
-      "start": 4826.10000000149,
-      "selectedAt": 4852.89999999851,
-      "previewAt": 4884,
+      "start": 10364.80000000447,
+      "selectedAt": 10385.5,
+      "previewAt": 10412.40000000596,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff8a3ff2deea404bb4b27dd80ec1d34709d90822d44267715c57d79c9494bbe80_medium.jpg",
-      "readyAt": 4928.70000000298,
+      "readyAt": 10537.20000000298,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
-      "end": 4977.89999999851,
+      "end": 10605.10000000149,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 10396.40000000596,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 16,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "name": "photo-019.jpg",
+      "start": 10704.80000000447,
+      "selectedAt": 10726.5,
+      "previewAt": 10754,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
+      "readyAt": 10957.80000000447,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "end": 11016.90000000596,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2335,24 +3409,76 @@
       "gpuFrames": []
     },
     {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
       "edited": false,
       "kind": "JPEG",
       "selection": "first-selection",
-      "index": 7,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
-      "name": "photo-019.jpg",
-      "start": 5080.60000000149,
-      "selectedAt": 5112.20000000298,
-      "previewAt": 5176.20000000298,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "index": 17,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "name": "photo-021.jpg",
+      "start": 11219.5,
+      "selectedAt": 11280.30000000447,
+      "previewAt": 11309.40000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
       "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
-      "readyAt": 5246.39999999851,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
-      "end": 5309,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fad2a390f567e859d881363985076af2d0b47e528a0625c5b8fec06102a1339a8_medium.jpg",
+      "readyAt": 11356,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "end": 11395.90000000596,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 18,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "name": "photo-023.jpg",
+      "start": 11612,
+      "selectedAt": 11666.80000000447,
+      "previewAt": 11730.90000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fcae3a95474edeb188c31d8ac10d20c525cb23286025ed79789d5aa551e66e1ab_medium.jpg",
+      "readyAt": 11824.10000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "end": 11864,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection",
+      "index": 19,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "name": "photo-025.jpg",
+      "start": 12084.20000000298,
+      "selectedAt": 12146.5,
+      "previewAt": 12215.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F48c348fb74b27ab500d46501ddbfa72f1579face1c7e3eaab334e7ea8c38b0d0_medium.jpg",
+      "readyAt": 12411.10000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "end": 12464.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2365,20 +3491,51 @@
       "edited": true,
       "kind": "RAW",
       "selection": "repeated-selection",
-      "index": 8,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "index": 20,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "name": "photo-000.NEF",
-      "start": 5397.60000000149,
-      "selectedAt": 5418.10000000149,
-      "previewAt": 5437.70000000298,
+      "start": 12563.10000000149,
+      "selectedAt": 12632.30000000447,
+      "readyAt": 12632.30000000447,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "previewAt": 12654.90000000596,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7aa2a65170c9f34f60337d7ad3f00a659356eec2b7ecc9fc3c9a0a06ac67ada7_medium.jpg",
-      "readyAt": 5862.39999999851,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
-      "end": 5900.60000000149,
+      "end": 12689.5,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 12595.30000000447,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 21,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "name": "photo-002.NEF",
+      "start": 12807.90000000596,
+      "selectedAt": 12865.90000000596,
+      "readyAt": 12865.90000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewAt": 12889.40000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F10536211fdf4b09364d474aa74972df422a5aba3bc95c0567e6aeee7ab874b45_medium.jpg",
+      "end": 12941.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2387,24 +3544,50 @@
       "gpuFrames": []
     },
     {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
       "edited": true,
       "kind": "RAW",
       "selection": "repeated-selection",
-      "index": 9,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
-      "name": "photo-002.NEF",
-      "start": 5975.39999999851,
-      "selectedAt": 6030.10000000149,
-      "readyAt": 6030.10000000149,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
-      "previewAt": 6051.20000000298,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "index": 22,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "name": "photo-004.NEF",
+      "start": 13024.70000000298,
+      "selectedAt": 13042.40000000596,
+      "previewAt": 13144.40000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
       "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F10536211fdf4b09364d474aa74972df422a5aba3bc95c0567e6aeee7ab874b45_medium.jpg",
-      "end": 6084.20000000298,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fdd7cd1e5b2eecf8d65ce6c928ff44ab19708086ac2d3c0b0cca38e041ab8b59e_medium.jpg",
+      "readyAt": 13627.40000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "end": 13661.5,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 23,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "name": "photo-006.NEF",
+      "start": 13757.60000000149,
+      "selectedAt": 13801.70000000298,
+      "readyAt": 13801.70000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "previewAt": 13821.90000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F42510b0abf7fcceba63f92ca496323d4246b14a4badb426f8971708edca12476_medium.jpg",
+      "end": 13858.5,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2412,29 +3595,55 @@
       },
       "gpuFrames": [
         {
-          "at": 5991.70000000298,
-          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
+          "at": 13772.10000000149,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF"
         }
       ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 24,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "name": "photo-008.NEF",
+      "start": 13942.40000000596,
+      "selectedAt": 14012.10000000149,
+      "previewAt": 14064.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F2e92c35bc52094ebc41981528287b0a99d927ec253ffc391bdb1797f9d130ac2_medium.jpg",
+      "readyAt": 14440,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "end": 14488.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
     },
     {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "edited": true,
       "kind": "JPEG",
       "selection": "repeated-selection",
-      "index": 10,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
+      "index": 25,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "name": "photo-003.jpg",
-      "start": 6221.10000000149,
-      "selectedAt": 6310,
-      "readyAt": 6310,
+      "start": 14593.10000000149,
+      "selectedAt": 14635.80000000447,
+      "readyAt": 14635.80000000447,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
-      "previewAt": 6334.70000000298,
+      "previewAt": 14666.20000000298,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6760a65436188ecb70213648edbbb6496fd6e3ce20026acfc4fb98b1a5bf57cb_medium.jpg",
-      "end": 6368.80000000447,
+      "end": 14702.40000000596,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "assertions": {
         "targetMatched": true,
@@ -2448,20 +3657,103 @@
       "edited": true,
       "kind": "JPEG",
       "selection": "repeated-selection",
-      "index": 11,
+      "index": 26,
       "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
       "name": "photo-005.jpg",
-      "start": 6441.60000000149,
-      "selectedAt": 6460.60000000149,
-      "previewAt": 6484.60000000149,
+      "start": 14781.30000000447,
+      "selectedAt": 14859.40000000596,
+      "readyAt": 14859.40000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "previewAt": 14881,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F6134896d1877ce7943a0c06a6a023c622f6b8d4270c4e53e4ce8c4ac419c5d5a_medium.jpg",
-      "readyAt": 6587.80000000447,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
-      "end": 6619.5,
+      "end": 14918.90000000596,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 14832.10000000149,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 27,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "name": "photo-007.jpg",
+      "start": 14995.80000000447,
+      "selectedAt": 15028.20000000298,
+      "readyAt": 15028.20000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "previewAt": 15042.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F5da0d153a3f03410c8be08d4d3767c0a3c2249b3f1eea209c6d8f76b4b0ef41b_medium.jpg",
+      "end": 15077.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 28,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "name": "photo-009.jpg",
+      "start": 15158,
+      "selectedAt": 15192,
+      "readyAt": 15192,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "previewAt": 15204.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F7b0d58813d8d306ffff013af2cab1c8482096db4751c6004b8fd2cb4a5ccc63a_medium.jpg",
+      "end": 15239.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 29,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "name": "photo-011.jpg",
+      "start": 15319.70000000298,
+      "selectedAt": 15354.40000000596,
+      "readyAt": 15354.40000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "previewAt": 15366.5,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F846b9852e2ddab451dc74b11d84c35207e84cad5ae6fb6bf1d2e10a7de991c6a_medium.jpg",
+      "end": 15401.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2474,20 +3766,46 @@
       "edited": false,
       "kind": "RAW",
       "selection": "repeated-selection",
-      "index": 12,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "index": 30,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
       "name": "photo-016.NEF",
-      "start": 6735.20000000298,
-      "selectedAt": 6785.70000000298,
-      "readyAt": 6785.70000000298,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
-      "previewAt": 6793,
+      "start": 15481.80000000447,
+      "selectedAt": 15499.80000000447,
+      "previewAt": 15516,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F75174e0216079ee3bc541b6c50382c4913f0718d6868bebd85df3ab87909129d_medium.jpg",
-      "end": 6818,
+      "readyAt": 15971.60000000149,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "end": 16014.40000000596,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 31,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "name": "photo-018.NEF",
+      "start": 16116.10000000149,
+      "selectedAt": 16173,
+      "readyAt": 16173,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewAt": 16193,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
+      "end": 16229.40000000596,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2495,30 +3813,86 @@
       },
       "gpuFrames": [
         {
-          "at": 6757,
-          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
+          "at": 16133.80000000447,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
+        },
+        {
+          "at": 16184.70000000298,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
         }
       ]
     },
     {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
       "edited": false,
       "kind": "RAW",
       "selection": "repeated-selection",
-      "index": 13,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
-      "name": "photo-018.NEF",
-      "start": 6957,
-      "selectedAt": 7065.20000000298,
-      "readyAt": 7065.20000000298,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
-      "previewAt": 7081.20000000298,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "index": 32,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "name": "photo-020.NEF",
+      "start": 16420.10000000149,
+      "selectedAt": 16489.70000000298,
+      "readyAt": 16489.70000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "previewAt": 16517.80000000447,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
       "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Feb424257859d9956eb51dd39de0739cb0892e26c6ed0656a852510a7004bf885_medium.jpg",
-      "end": 7136,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff7b34def87beb5a3d919201ddd17e58562a0f68c663893efd92aab7f6be2a1a7_medium.jpg",
+      "end": 16554.10000000149,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 33,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "name": "photo-022.NEF",
+      "start": 16762.90000000596,
+      "selectedAt": 16873.20000000298,
+      "readyAt": 16873.20000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "previewAt": 16892.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff896173fabe369f6e14b3e025c9c4429f4f57d3a0de153897bd79286d641a87c_medium.jpg",
+      "end": 16929.30000000447,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection",
+      "index": 34,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "name": "photo-024.NEF",
+      "start": 17124.80000000447,
+      "selectedAt": 17156.90000000596,
+      "previewAt": 17182,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fc3e5d1202599c50c2efb2378dae4b46aedbbf20211be61bfcf9ab62530d71540_medium.jpg",
+      "readyAt": 17683.30000000447,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "end": 17719.30000000447,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2531,20 +3905,51 @@
       "edited": false,
       "kind": "JPEG",
       "selection": "repeated-selection",
-      "index": 14,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
+      "index": 35,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "name": "photo-017.jpg",
-      "start": 7258.70000000298,
-      "selectedAt": 7391.20000000298,
-      "readyAt": 7391.20000000298,
+      "start": 17816.90000000596,
+      "selectedAt": 17872.60000000149,
+      "readyAt": 17872.60000000149,
       "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
-      "previewAt": 7401,
+      "previewAt": 17898.60000000149,
       "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "previewMethod": "svg-decode-raf",
       "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Ff8a3ff2deea404bb4b27dd80ec1d34709d90822d44267715c57d79c9494bbe80_medium.jpg",
-      "end": 7452.30000000447,
+      "end": 17935.5,
       "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 17834,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 36,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "name": "photo-019.jpg",
+      "start": 18014.60000000149,
+      "selectedAt": 18048.90000000596,
+      "readyAt": 18048.90000000596,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewAt": 18061,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
+      "end": 18095.80000000447,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -2553,24 +3958,81 @@
       "gpuFrames": []
     },
     {
-      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
       "edited": false,
       "kind": "JPEG",
       "selection": "repeated-selection",
-      "index": 15,
-      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
-      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
-      "name": "photo-019.jpg",
-      "start": 7527.30000000447,
-      "selectedAt": 7564.80000000447,
-      "readyAt": 7564.80000000447,
-      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
-      "previewAt": 7573.89999999851,
-      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "index": 37,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "name": "photo-021.jpg",
+      "start": 18215,
+      "selectedAt": 18249.20000000298,
+      "readyAt": 18249.20000000298,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "previewAt": 18276.70000000298,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
       "previewMethod": "svg-decode-raf",
-      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fada0d56a8c1b3c612d2aa534b1d0a288601fc340af284e3560c63da8fcb78a93_medium.jpg",
-      "end": 7602,
-      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fad2a390f567e859d881363985076af2d0b47e528a0625c5b8fec06102a1339a8_medium.jpg",
+      "end": 18313.80000000447,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": []
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 38,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "name": "photo-023.jpg",
+      "start": 18469.70000000298,
+      "selectedAt": 18518,
+      "readyAt": 18518,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "previewAt": 18542.90000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2Fcae3a95474edeb188c31d8ac10d20c525cb23286025ed79789d5aa551e66e1ab_medium.jpg",
+      "end": 18579.70000000298,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "assertions": {
+        "targetMatched": true,
+        "selectionStable": true,
+        "keyboardFree": true
+      },
+      "gpuFrames": [
+        {
+          "at": 18529.90000000596,
+          "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg"
+        }
+      ]
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection",
+      "index": 39,
+      "oldPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "actualPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "name": "photo-025.jpg",
+      "start": 18779.20000000298,
+      "selectedAt": 18797.5,
+      "previewAt": 18811.90000000596,
+      "previewPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "previewMethod": "svg-decode-raf",
+      "previewHref": "http://asset.localhost/C%3A%2FUsers%2Ftursom%2FAppData%2FLocal%2Fio.github.tursom.RapidRAW%2Fthumbnails%2F48c348fb74b27ab500d46501ddbfa72f1579face1c7e3eaab334e7ea8c38b0d0_medium.jpg",
+      "readyAt": 18935,
+      "readyPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "end": 18999.5,
+      "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
       "assertions": {
         "targetMatched": true,
         "selectionStable": true,
@@ -3459,250 +4921,614 @@
     ],
     "settingsRoot": ["E:\\projects\\tbt\\rapidraw-baseline\\fixtures"],
     "generatedThumbnailPaths": [
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-163.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-162.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-160.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-159.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-161.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-156.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-157.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-154.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-155.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-153.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-163.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-158.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-159.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-157.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-156.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-155.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-154.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-152.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-151.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-150.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-153.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-149.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-148.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-147.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-146.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-145.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-147.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-144.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-143.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-142.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-141.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-140.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-137.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-136.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-150.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-134.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-139.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-135.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-131.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-130.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-129.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-141.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-142.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-138.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-128.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-139.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-136.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-135.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-134.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-133.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-132.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-131.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-130.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-137.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-129.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-128.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-126.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-125.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-127.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-124.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-123.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-122.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-121.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-120.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-119.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-118.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-119.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-117.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-116.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-115.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-113.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-114.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-113.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-112.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-111.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-122.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-110.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-126.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-109.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-108.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-107.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-106.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-105.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-104.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-103.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-102.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-108.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-101.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-100.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-099.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-098.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-097.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-096.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-095.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-107.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-099.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-094.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-093.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-092.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-091.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-090.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-092.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-089.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-088.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-087.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-085.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-086.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-084.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-085.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-087.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-083.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-082.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-084.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-081.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-080.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-079.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-078.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-082.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-077.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-076.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-075.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-074.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-073.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-072.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-075.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-071.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-070.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-069.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-068.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-067.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-066.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-065.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-069.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-064.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-063.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-062.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-061.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-060.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-059.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-058.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-062.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-057.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-056.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-055.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-054.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-053.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-052.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-051.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-055.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-050.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-049.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-048.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-047.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-046.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-045.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-044.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-048.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-045.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-043.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-042.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-041.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-042.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-040.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-039.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-038.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-037.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-036.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-035.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-034.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-038.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-032.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-033.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-031.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-030.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-029.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-028.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-031.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-027.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-026.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-015.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-014.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-012.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-010.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-013.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
       "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
-      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-125.jpg"
+      "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-162.NEF"
     ]
   },
   "switchPhase": {
-    "start": 1644.5,
+    "start": 1675.5,
     "initialPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg",
     "seenPaths": ["E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg"],
-    "pid": 19804,
-    "end": 7611.80000000447,
+    "pid": 19040,
+    "presetPanelBefore": {
+      "at": 1681.3000000044703,
+      "visible": true,
+      "panelRect": {
+        "left": 9,
+        "top": 285,
+        "right": 349,
+        "bottom": 662
+      },
+      "mountedCardCount": 20,
+      "visibleCardCount": 4,
+      "cards": [
+        {
+          "id": "task1-00",
+          "name": "Task1 exposure 00",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-01",
+          "name": "Task1 exposure 01",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-02",
+          "name": "Task1 exposure 02",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-03",
+          "name": "Task1 exposure 03",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-04",
+          "name": "Task1 exposure 04",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-05",
+          "name": "Task1 exposure 05",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-06",
+          "name": "Task1 exposure 06",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-07",
+          "name": "Task1 exposure 07",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-08",
+          "name": "Task1 exposure 08",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-09",
+          "name": "Task1 exposure 09",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-10",
+          "name": "Task1 exposure 10",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-11",
+          "name": "Task1 exposure 11",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-12",
+          "name": "Task1 exposure 12",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-13",
+          "name": "Task1 exposure 13",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-14",
+          "name": "Task1 exposure 14",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-15",
+          "name": "Task1 exposure 15",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-16",
+          "name": "Task1 exposure 16",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-17",
+          "name": "Task1 exposure 17",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-18",
+          "name": "Task1 exposure 18",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-19",
+          "name": "Task1 exposure 19",
+          "inPanel": true,
+          "visible": false
+        }
+      ]
+    },
+    "end": 19027.80000000447,
     "errors": [],
     "keyboardEvents": 0,
     "selectionHistory": [
       {
-        "at": 1235.3999999985099,
+        "at": 1262.3000000044703,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-001.jpg"
       },
       {
-        "at": 1783.7000000029802,
+        "at": 1819.7000000029802,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
       },
       {
-        "at": 2584.3000000044703,
+        "at": 2556.5,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF"
       },
       {
-        "at": 2832.3000000044703,
+        "at": 3373.2000000029802,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF"
+      },
+      {
+        "at": 3947.9000000059605,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF"
+      },
+      {
+        "at": 4724,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF"
+      },
+      {
+        "at": 5360,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg"
       },
       {
-        "at": 3092.5,
+        "at": 5590.70000000298,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
       },
       {
-        "at": 3446.3000000044703,
+        "at": 5823.30000000447,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg"
+      },
+      {
+        "at": 6162.70000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg"
+      },
+      {
+        "at": 6461.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg"
+      },
+      {
+        "at": 6801.5,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
       },
       {
-        "at": 4058.8000000044703,
+        "at": 7457.30000000447,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF"
       },
       {
-        "at": 4852.89999999851,
+        "at": 8239.20000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF"
+      },
+      {
+        "at": 8906.80000000447,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF"
+      },
+      {
+        "at": 9820.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF"
+      },
+      {
+        "at": 10385.5,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg"
       },
       {
-        "at": 5112.20000000298,
+        "at": 10726.5,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg"
       },
       {
-        "at": 5418.10000000149,
+        "at": 11280.30000000447,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg"
+      },
+      {
+        "at": 11666.80000000447,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg"
+      },
+      {
+        "at": 12146.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg"
+      },
+      {
+        "at": 12632.30000000447,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF"
       },
       {
-        "at": 6030.10000000149,
+        "at": 12865.90000000596,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-002.NEF"
       },
       {
-        "at": 6310,
+        "at": 13042.40000000596,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF"
+      },
+      {
+        "at": 13801.70000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF"
+      },
+      {
+        "at": 14012.10000000149,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF"
+      },
+      {
+        "at": 14635.80000000447,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg"
       },
       {
-        "at": 6460.60000000149,
+        "at": 14859.40000000596,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg"
       },
       {
-        "at": 6785.70000000298,
+        "at": 15028.20000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg"
+      },
+      {
+        "at": 15192,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg"
+      },
+      {
+        "at": 15354.40000000596,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg"
+      },
+      {
+        "at": 15499.80000000447,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-016.NEF"
       },
       {
-        "at": 7065.20000000298,
+        "at": 16173,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-018.NEF"
       },
       {
-        "at": 7391.20000000298,
+        "at": 16489.70000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF"
+      },
+      {
+        "at": 16873.20000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF"
+      },
+      {
+        "at": 17156.90000000596,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF"
+      },
+      {
+        "at": 17872.60000000149,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg"
       },
       {
-        "at": 7564.80000000447,
+        "at": 18048.90000000596,
         "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg"
+      },
+      {
+        "at": 18249.20000000298,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg"
+      },
+      {
+        "at": 18518,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg"
+      },
+      {
+        "at": 18797.5,
+        "path": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg"
       }
-    ]
+    ],
+    "presetPanelAfter": {
+      "at": 19036.20000000298,
+      "visible": true,
+      "panelRect": {
+        "left": 9,
+        "top": 285,
+        "right": 349,
+        "bottom": 662
+      },
+      "mountedCardCount": 20,
+      "visibleCardCount": 4,
+      "cards": [
+        {
+          "id": "task1-00",
+          "name": "Task1 exposure 00",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-01",
+          "name": "Task1 exposure 01",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-02",
+          "name": "Task1 exposure 02",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-03",
+          "name": "Task1 exposure 03",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-04",
+          "name": "Task1 exposure 04",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-05",
+          "name": "Task1 exposure 05",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-06",
+          "name": "Task1 exposure 06",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-07",
+          "name": "Task1 exposure 07",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-08",
+          "name": "Task1 exposure 08",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-09",
+          "name": "Task1 exposure 09",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-10",
+          "name": "Task1 exposure 10",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-11",
+          "name": "Task1 exposure 11",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-12",
+          "name": "Task1 exposure 12",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-13",
+          "name": "Task1 exposure 13",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-14",
+          "name": "Task1 exposure 14",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-15",
+          "name": "Task1 exposure 15",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-16",
+          "name": "Task1 exposure 16",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-17",
+          "name": "Task1 exposure 17",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-18",
+          "name": "Task1 exposure 18",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-19",
+          "name": "Task1 exposure 19",
+          "inPanel": true,
+          "visible": false
+        }
+      ]
+    }
   },
   "switchPlan": [
     {
@@ -3718,6 +5544,24 @@
       "selection": "first-selection"
     },
     {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "edited": true,
       "kind": "JPEG",
@@ -3725,6 +5569,24 @@
     },
     {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "edited": true,
       "kind": "JPEG",
       "selection": "first-selection"
@@ -3742,6 +5604,24 @@
       "selection": "first-selection"
     },
     {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "first-selection"
+    },
+    {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "edited": false,
       "kind": "JPEG",
@@ -3749,6 +5629,24 @@
     },
     {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-019.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "first-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
       "edited": false,
       "kind": "JPEG",
       "selection": "first-selection"
@@ -3766,6 +5664,24 @@
       "selection": "repeated-selection"
     },
     {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-004.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-006.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-008.NEF",
+      "edited": true,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-003.jpg",
       "edited": true,
       "kind": "JPEG",
@@ -3773,6 +5689,24 @@
     },
     {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-005.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-007.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-009.jpg",
+      "edited": true,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-011.jpg",
       "edited": true,
       "kind": "JPEG",
       "selection": "repeated-selection"
@@ -3790,6 +5724,24 @@
       "selection": "repeated-selection"
     },
     {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-020.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-c\\photo-022.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-024.NEF",
+      "edited": false,
+      "kind": "RAW",
+      "selection": "repeated-selection"
+    },
+    {
       "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-017.jpg",
       "edited": false,
       "kind": "JPEG",
@@ -3800,1088 +5752,1106 @@
       "edited": false,
       "kind": "JPEG",
       "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-021.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-d\\photo-023.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
+    },
+    {
+      "targetPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\日本語 [set b]\\photo-025.jpg",
+      "edited": false,
+      "kind": "JPEG",
+      "selection": "repeated-selection"
     }
   ],
   "filmstripScroll": {
-    "start": 7635.89999999851,
-    "end": 10722.80000000447,
+    "start": 19064.10000000149,
+    "end": 22294.80000000447,
     "width": 548,
-    "scrollWidth": 27944,
+    "scrollWidth": 27942,
     "frames": [
       {
-        "at": 7651.39999999851,
-        "deltaMs": 15.5,
+        "at": 19085.30000000447,
+        "deltaMs": 21.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 0
       },
       {
-        "at": 7668.20000000298,
-        "deltaMs": 16.80000000447035,
+        "at": 19098.40000000596,
+        "deltaMs": 13.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 0
       },
       {
-        "at": 7687,
-        "deltaMs": 18.799999997019768,
+        "at": 19117.80000000447,
+        "deltaMs": 19.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 80
       },
       {
-        "at": 7702.10000000149,
-        "deltaMs": 15.100000001490116,
+        "at": 19134.70000000298,
+        "deltaMs": 16.899999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 160
       },
       {
-        "at": 7720.70000000298,
-        "deltaMs": 18.600000001490116,
+        "at": 19154.10000000149,
+        "deltaMs": 19.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 240
       },
       {
-        "at": 7734.80000000447,
-        "deltaMs": 14.100000001490116,
+        "at": 19171.10000000149,
+        "deltaMs": 17,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 320
       },
       {
-        "at": 7773.70000000298,
-        "deltaMs": 38.899999998509884,
+        "at": 19206.20000000298,
+        "deltaMs": 35.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 400
       },
       {
-        "at": 7784.80000000447,
-        "deltaMs": 11.100000001490116,
+        "at": 19227.60000000149,
+        "deltaMs": 21.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 480
       },
       {
-        "at": 7806.80000000447,
-        "deltaMs": 22,
+        "at": 19249.70000000298,
+        "deltaMs": 22.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 560
       },
       {
-        "at": 7818.89999999851,
-        "deltaMs": 12.099999994039536,
+        "at": 19262.5,
+        "deltaMs": 12.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 640
       },
       {
-        "at": 7836.60000000149,
-        "deltaMs": 17.700000002980232,
+        "at": 19284.70000000298,
+        "deltaMs": 22.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 720
       },
       {
-        "at": 7853.20000000298,
-        "deltaMs": 16.600000001490116,
+        "at": 19297.80000000447,
+        "deltaMs": 13.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 800
       },
       {
-        "at": 7869,
-        "deltaMs": 15.799999997019768,
+        "at": 19314.10000000149,
+        "deltaMs": 16.299999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 880
       },
       {
-        "at": 7887.60000000149,
-        "deltaMs": 18.600000001490116,
+        "at": 19333.20000000298,
+        "deltaMs": 19.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 960
       },
       {
-        "at": 7902.30000000447,
-        "deltaMs": 14.700000002980232,
+        "at": 19352.40000000596,
+        "deltaMs": 19.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1040
       },
       {
-        "at": 7933.30000000447,
-        "deltaMs": 31,
+        "at": 19373.30000000447,
+        "deltaMs": 20.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1120
       },
       {
-        "at": 7963.60000000149,
-        "deltaMs": 30.299999997019768,
+        "at": 19390.20000000298,
+        "deltaMs": 16.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1200
       },
       {
-        "at": 7995.70000000298,
-        "deltaMs": 32.100000001490116,
+        "at": 19407.90000000596,
+        "deltaMs": 17.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1280
       },
       {
-        "at": 8018.80000000447,
-        "deltaMs": 23.100000001490116,
+        "at": 19422.70000000298,
+        "deltaMs": 14.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1360
       },
       {
-        "at": 8031.10000000149,
-        "deltaMs": 12.299999997019768,
+        "at": 19443.5,
+        "deltaMs": 20.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1440
       },
       {
-        "at": 8045.10000000149,
-        "deltaMs": 14,
+        "at": 19458,
+        "deltaMs": 14.5,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 1520
       },
       {
-        "at": 8056.80000000447,
-        "deltaMs": 11.700000002980232,
+        "at": 19480.70000000298,
+        "deltaMs": 22.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1600
       },
       {
-        "at": 8070.5,
-        "deltaMs": 13.699999995529652,
+        "at": 19494.60000000149,
+        "deltaMs": 13.899999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 1680
       },
       {
-        "at": 8088.39999999851,
-        "deltaMs": 17.899999998509884,
+        "at": 19514,
+        "deltaMs": 19.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1760
       },
       {
-        "at": 8102.39999999851,
-        "deltaMs": 14,
+        "at": 19529.40000000596,
+        "deltaMs": 15.400000005960464,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1840
       },
       {
-        "at": 8120.89999999851,
-        "deltaMs": 18.5,
+        "at": 19549,
+        "deltaMs": 19.599999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1920
       },
       {
-        "at": 8136.60000000149,
-        "deltaMs": 15.700000002980232,
+        "at": 19566.40000000596,
+        "deltaMs": 17.400000005960464,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2000
       },
       {
-        "at": 8154.5,
-        "deltaMs": 17.899999998509884,
+        "at": 19583.60000000149,
+        "deltaMs": 17.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2080
       },
       {
-        "at": 8174.39999999851,
-        "deltaMs": 19.899999998509884,
+        "at": 19606.70000000298,
+        "deltaMs": 23.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2160
       },
       {
-        "at": 8198.80000000447,
-        "deltaMs": 24.400000005960464,
+        "at": 19620.5,
+        "deltaMs": 13.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2240
       },
       {
-        "at": 8216.89999999851,
-        "deltaMs": 18.099999994039536,
+        "at": 19639.90000000596,
+        "deltaMs": 19.400000005960464,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2320
       },
       {
-        "at": 8229,
-        "deltaMs": 12.100000001490116,
+        "at": 19666.30000000447,
+        "deltaMs": 26.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2400
       },
       {
-        "at": 8241.39999999851,
-        "deltaMs": 12.399999998509884,
+        "at": 19697.90000000596,
+        "deltaMs": 31.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2480
       },
       {
-        "at": 8255.39999999851,
-        "deltaMs": 14,
+        "at": 19728.90000000596,
+        "deltaMs": 31,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2560
       },
       {
-        "at": 8273.89999999851,
-        "deltaMs": 18.5,
+        "at": 19750,
+        "deltaMs": 21.099999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2640
       },
       {
-        "at": 8289.39999999851,
-        "deltaMs": 15.5,
+        "at": 19764.60000000149,
+        "deltaMs": 14.600000001490116,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 2720
       },
       {
-        "at": 8305.20000000298,
-        "deltaMs": 15.800000004470348,
+        "at": 19784.5,
+        "deltaMs": 19.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2800
       },
       {
-        "at": 8321.80000000447,
-        "deltaMs": 16.600000001490116,
+        "at": 19798.40000000596,
+        "deltaMs": 13.900000005960464,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 2880
       },
       {
-        "at": 8340.60000000149,
-        "deltaMs": 18.799999997019768,
+        "at": 19821.40000000596,
+        "deltaMs": 23,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2960
       },
       {
-        "at": 8362.39999999851,
-        "deltaMs": 21.799999997019768,
+        "at": 19835.90000000596,
+        "deltaMs": 14.5,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 3040
       },
       {
-        "at": 8373.10000000149,
-        "deltaMs": 10.700000002980232,
+        "at": 19859,
+        "deltaMs": 23.099999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3120
       },
       {
-        "at": 8385.80000000447,
-        "deltaMs": 12.700000002980232,
+        "at": 19877.70000000298,
+        "deltaMs": 18.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3200
       },
       {
-        "at": 8403.20000000298,
-        "deltaMs": 17.399999998509884,
+        "at": 19891.60000000149,
+        "deltaMs": 13.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3280
       },
       {
-        "at": 8421.5,
-        "deltaMs": 18.299999997019768,
+        "at": 19907.90000000596,
+        "deltaMs": 16.30000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3360
       },
       {
-        "at": 8436.10000000149,
-        "deltaMs": 14.600000001490116,
+        "at": 19925.90000000596,
+        "deltaMs": 18,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3440
       },
       {
-        "at": 8470.30000000447,
-        "deltaMs": 34.20000000298023,
+        "at": 19947.10000000149,
+        "deltaMs": 21.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3520
       },
       {
-        "at": 8494,
-        "deltaMs": 23.69999999552965,
+        "at": 19961.80000000447,
+        "deltaMs": 14.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3600
       },
       {
-        "at": 8521.80000000447,
-        "deltaMs": 27.80000000447035,
+        "at": 19982.20000000298,
+        "deltaMs": 20.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3680
       },
       {
-        "at": 8543.39999999851,
-        "deltaMs": 21.599999994039536,
+        "at": 19997.70000000298,
+        "deltaMs": 15.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3760
       },
       {
-        "at": 8559.89999999851,
-        "deltaMs": 16.5,
+        "at": 20020.10000000149,
+        "deltaMs": 22.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3840
       },
       {
-        "at": 8574.60000000149,
-        "deltaMs": 14.700000002980232,
+        "at": 20037.5,
+        "deltaMs": 17.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3920
       },
       {
-        "at": 8591.70000000298,
-        "deltaMs": 17.100000001490116,
+        "at": 20051.60000000149,
+        "deltaMs": 14.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4000
       },
       {
-        "at": 8612.5,
-        "deltaMs": 20.799999997019768,
+        "at": 20067.5,
+        "deltaMs": 15.899999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4080
       },
       {
-        "at": 8628.5,
-        "deltaMs": 16,
+        "at": 20087.20000000298,
+        "deltaMs": 19.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4160
       },
       {
-        "at": 8644.60000000149,
-        "deltaMs": 16.100000001490116,
+        "at": 20103.60000000149,
+        "deltaMs": 16.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4240
       },
       {
-        "at": 8661.39999999851,
-        "deltaMs": 16.799999997019768,
+        "at": 20123.40000000596,
+        "deltaMs": 19.80000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4320
       },
       {
-        "at": 8676.10000000149,
-        "deltaMs": 14.700000002980232,
+        "at": 20139.60000000149,
+        "deltaMs": 16.19999999552965,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4400
       },
       {
-        "at": 8691.10000000149,
-        "deltaMs": 15,
+        "at": 20159.10000000149,
+        "deltaMs": 19.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4480
       },
       {
-        "at": 8705.60000000149,
-        "deltaMs": 14.5,
+        "at": 20174.20000000298,
+        "deltaMs": 15.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4560
       },
       {
-        "at": 8720.10000000149,
-        "deltaMs": 14.5,
+        "at": 20192.10000000149,
+        "deltaMs": 17.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4640
       },
       {
-        "at": 8744.10000000149,
-        "deltaMs": 24,
+        "at": 20209.60000000149,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4720
       },
       {
-        "at": 8753,
-        "deltaMs": 8.899999998509884,
+        "at": 20226.10000000149,
+        "deltaMs": 16.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4800
       },
       {
-        "at": 8770.70000000298,
-        "deltaMs": 17.700000002980232,
+        "at": 20246.20000000298,
+        "deltaMs": 20.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4880
       },
       {
-        "at": 8787,
-        "deltaMs": 16.299999997019768,
+        "at": 20261.20000000298,
+        "deltaMs": 15,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4960
       },
       {
-        "at": 8804,
-        "deltaMs": 17,
+        "at": 20280.40000000596,
+        "deltaMs": 19.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5040
       },
       {
-        "at": 8819.60000000149,
-        "deltaMs": 15.600000001490116,
+        "at": 20299.5,
+        "deltaMs": 19.099999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5120
       },
       {
-        "at": 8837.89999999851,
-        "deltaMs": 18.299999997019768,
+        "at": 20316.80000000447,
+        "deltaMs": 17.30000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5200
       },
       {
-        "at": 8852.80000000447,
-        "deltaMs": 14.900000005960464,
+        "at": 20332.40000000596,
+        "deltaMs": 15.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5280
       },
       {
-        "at": 8871.5,
-        "deltaMs": 18.69999999552965,
+        "at": 20352.20000000298,
+        "deltaMs": 19.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5360
       },
       {
-        "at": 8886.20000000298,
-        "deltaMs": 14.700000002980232,
+        "at": 20367.5,
+        "deltaMs": 15.299999997019768,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 5440
       },
       {
-        "at": 8904.70000000298,
-        "deltaMs": 18.5,
+        "at": 20386.30000000447,
+        "deltaMs": 18.80000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5520
       },
       {
-        "at": 8919.5,
-        "deltaMs": 14.799999997019768,
+        "at": 20402,
+        "deltaMs": 15.699999995529652,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 5600
       },
       {
-        "at": 8938.39999999851,
-        "deltaMs": 18.899999998509884,
+        "at": 20421.10000000149,
+        "deltaMs": 19.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5680
       },
       {
-        "at": 8952.80000000447,
-        "deltaMs": 14.400000005960464,
+        "at": 20437.5,
+        "deltaMs": 16.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5760
       },
       {
-        "at": 8971.39999999851,
-        "deltaMs": 18.599999994039536,
+        "at": 20455.40000000596,
+        "deltaMs": 17.900000005960464,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5840
       },
       {
-        "at": 8987.39999999851,
-        "deltaMs": 16,
+        "at": 20473.10000000149,
+        "deltaMs": 17.69999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5920
       },
       {
-        "at": 9002.80000000447,
-        "deltaMs": 15.400000005960464,
+        "at": 20490.80000000447,
+        "deltaMs": 17.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6000
       },
       {
-        "at": 9021.5,
-        "deltaMs": 18.69999999552965,
+        "at": 20508.30000000447,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6080
       },
       {
-        "at": 9036.30000000447,
-        "deltaMs": 14.800000004470348,
+        "at": 20525.10000000149,
+        "deltaMs": 16.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6160
       },
       {
-        "at": 9054.5,
-        "deltaMs": 18.19999999552965,
+        "at": 20544.30000000447,
+        "deltaMs": 19.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6240
       },
       {
-        "at": 9071.20000000298,
-        "deltaMs": 16.700000002980232,
+        "at": 20559.40000000596,
+        "deltaMs": 15.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6320
       },
       {
-        "at": 9087.70000000298,
-        "deltaMs": 16.5,
+        "at": 20578.10000000149,
+        "deltaMs": 18.69999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6400
       },
       {
-        "at": 9103.20000000298,
-        "deltaMs": 15.5,
+        "at": 20594.10000000149,
+        "deltaMs": 16,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6480
       },
       {
-        "at": 9121.60000000149,
-        "deltaMs": 18.399999998509884,
+        "at": 20613.10000000149,
+        "deltaMs": 19,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6560
       },
       {
-        "at": 9136.39999999851,
-        "deltaMs": 14.799999997019768,
+        "at": 20628.20000000298,
+        "deltaMs": 15.100000001490116,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6640
       },
       {
-        "at": 9155.10000000149,
-        "deltaMs": 18.700000002980232,
+        "at": 20647.80000000447,
+        "deltaMs": 19.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6720
       },
       {
-        "at": 9169.70000000298,
-        "deltaMs": 14.600000001490116,
+        "at": 20663.20000000298,
+        "deltaMs": 15.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6800
       },
       {
-        "at": 9188.39999999851,
-        "deltaMs": 18.69999999552965,
+        "at": 20683,
+        "deltaMs": 19.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6880
       },
       {
-        "at": 9203.30000000447,
-        "deltaMs": 14.900000005960464,
+        "at": 20698.20000000298,
+        "deltaMs": 15.200000002980232,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6960
       },
       {
-        "at": 9221.70000000298,
-        "deltaMs": 18.399999998509884,
+        "at": 20718,
+        "deltaMs": 19.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 7040
       },
       {
-        "at": 9236.39999999851,
-        "deltaMs": 14.699999995529652,
+        "at": 20733.10000000149,
+        "deltaMs": 15.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 7120
       },
       {
-        "at": 9254.39999999851,
-        "deltaMs": 18,
+        "at": 20752.10000000149,
+        "deltaMs": 19,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 7200
       },
       {
-        "at": 9270.5,
-        "deltaMs": 16.100000001490116,
+        "at": 20769.60000000149,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 7120
       },
       {
-        "at": 9287,
-        "deltaMs": 16.5,
+        "at": 20785.5,
+        "deltaMs": 15.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 7040
       },
       {
-        "at": 9304.70000000298,
-        "deltaMs": 17.700000002980232,
+        "at": 20804.40000000596,
+        "deltaMs": 18.900000005960464,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6960
       },
       {
-        "at": 9321.20000000298,
-        "deltaMs": 16.5,
+        "at": 20821.60000000149,
+        "deltaMs": 17.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6880
       },
       {
-        "at": 9337.80000000447,
-        "deltaMs": 16.600000001490116,
+        "at": 20840.20000000298,
+        "deltaMs": 18.600000001490116,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6800
       },
       {
-        "at": 9353.89999999851,
-        "deltaMs": 16.099999994039536,
+        "at": 20858.10000000149,
+        "deltaMs": 17.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6720
       },
       {
-        "at": 9371.60000000149,
-        "deltaMs": 17.700000002980232,
+        "at": 20875.5,
+        "deltaMs": 17.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 6640
       },
       {
-        "at": 9386.70000000298,
-        "deltaMs": 15.100000001490116,
+        "at": 20892.10000000149,
+        "deltaMs": 16.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6560
       },
       {
-        "at": 9404.89999999851,
-        "deltaMs": 18.19999999552965,
+        "at": 20910.30000000447,
+        "deltaMs": 18.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6480
       },
       {
-        "at": 9419.89999999851,
-        "deltaMs": 15,
+        "at": 20927.10000000149,
+        "deltaMs": 16.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6400
       },
       {
-        "at": 9438.5,
-        "deltaMs": 18.600000001490116,
+        "at": 20946.90000000596,
+        "deltaMs": 19.80000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6320
       },
       {
-        "at": 9453.5,
-        "deltaMs": 15,
+        "at": 20962.10000000149,
+        "deltaMs": 15.199999995529652,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6240
       },
       {
-        "at": 9472,
-        "deltaMs": 18.5,
+        "at": 20981.90000000596,
+        "deltaMs": 19.80000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6160
       },
       {
-        "at": 9486.70000000298,
-        "deltaMs": 14.700000002980232,
+        "at": 20998.10000000149,
+        "deltaMs": 16.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6080
       },
       {
-        "at": 9505.30000000447,
-        "deltaMs": 18.600000001490116,
+        "at": 21017.80000000447,
+        "deltaMs": 19.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 6000
       },
       {
-        "at": 9520.10000000149,
-        "deltaMs": 14.799999997019768,
+        "at": 21034,
+        "deltaMs": 16.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5920
       },
       {
-        "at": 9538,
-        "deltaMs": 17.899999998509884,
+        "at": 21053.70000000298,
+        "deltaMs": 19.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5840
       },
       {
-        "at": 9554.39999999851,
-        "deltaMs": 16.399999998509884,
+        "at": 21070.90000000596,
+        "deltaMs": 17.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5760
       },
       {
-        "at": 9570.70000000298,
-        "deltaMs": 16.30000000447035,
+        "at": 21088.70000000298,
+        "deltaMs": 17.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5680
       },
       {
-        "at": 9588.20000000298,
-        "deltaMs": 17.5,
+        "at": 21107.20000000298,
+        "deltaMs": 18.5,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 5600
       },
       {
-        "at": 9604.20000000298,
-        "deltaMs": 16,
+        "at": 21124.90000000596,
+        "deltaMs": 17.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5520
       },
       {
-        "at": 9621.39999999851,
-        "deltaMs": 17.19999999552965,
+        "at": 21142.30000000447,
+        "deltaMs": 17.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 5440
       },
       {
-        "at": 9637.39999999851,
-        "deltaMs": 16,
+        "at": 21159,
+        "deltaMs": 16.69999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5360
       },
       {
-        "at": 9655.20000000298,
-        "deltaMs": 17.80000000447035,
+        "at": 21177.5,
+        "deltaMs": 18.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5280
       },
       {
-        "at": 9671,
-        "deltaMs": 15.799999997019768,
+        "at": 21194.80000000447,
+        "deltaMs": 17.30000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5200
       },
       {
-        "at": 9687.89999999851,
-        "deltaMs": 16.899999998509884,
+        "at": 21212.20000000298,
+        "deltaMs": 17.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5120
       },
       {
-        "at": 9703.39999999851,
-        "deltaMs": 15.5,
+        "at": 21228.20000000298,
+        "deltaMs": 16,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 5040
       },
       {
-        "at": 9722,
-        "deltaMs": 18.600000001490116,
+        "at": 21247.80000000447,
+        "deltaMs": 19.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4960
       },
       {
-        "at": 9737.20000000298,
-        "deltaMs": 15.200000002980232,
+        "at": 21263.20000000298,
+        "deltaMs": 15.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4880
       },
       {
-        "at": 9755.30000000447,
-        "deltaMs": 18.100000001490116,
+        "at": 21282.10000000149,
+        "deltaMs": 18.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4800
       },
       {
-        "at": 9770.20000000298,
-        "deltaMs": 14.899999998509884,
+        "at": 21297.30000000447,
+        "deltaMs": 15.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4720
       },
       {
-        "at": 9788.80000000447,
-        "deltaMs": 18.600000001490116,
+        "at": 21316.90000000596,
+        "deltaMs": 19.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4640
       },
       {
-        "at": 9803.5,
-        "deltaMs": 14.699999995529652,
+        "at": 21332.90000000596,
+        "deltaMs": 16,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4560
       },
       {
-        "at": 9821.20000000298,
-        "deltaMs": 17.700000002980232,
+        "at": 21351.90000000596,
+        "deltaMs": 19,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4480
       },
       {
-        "at": 9838.20000000298,
-        "deltaMs": 17,
+        "at": 21370.70000000298,
+        "deltaMs": 18.799999997019768,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4400
       },
       {
-        "at": 9854.10000000149,
-        "deltaMs": 15.899999998509884,
+        "at": 21387.70000000298,
+        "deltaMs": 17,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4320
       },
       {
-        "at": 9871.70000000298,
-        "deltaMs": 17.600000001490116,
+        "at": 21405.5,
+        "deltaMs": 17.799999997019768,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4240
       },
       {
-        "at": 9887.80000000447,
-        "deltaMs": 16.100000001490116,
+        "at": 21423.10000000149,
+        "deltaMs": 17.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4160
       },
       {
-        "at": 9904.80000000447,
-        "deltaMs": 17,
+        "at": 21441.10000000149,
+        "deltaMs": 18,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 4080
       },
       {
-        "at": 9921.20000000298,
-        "deltaMs": 16.399999998509884,
+        "at": 21458.70000000298,
+        "deltaMs": 17.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 4000
       },
       {
-        "at": 9938.60000000149,
-        "deltaMs": 17.399999998509884,
+        "at": 21476.20000000298,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3920
       },
       {
-        "at": 9954.5,
-        "deltaMs": 15.899999998509884,
+        "at": 21494,
+        "deltaMs": 17.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3840
       },
       {
-        "at": 9971.5,
+        "at": 21511,
         "deltaMs": 17,
         "visible": 4,
         "loaded": 4,
@@ -4889,360 +6859,360 @@
         "scrollLeft": 3760
       },
       {
-        "at": 9987,
-        "deltaMs": 15.5,
+        "at": 21527.20000000298,
+        "deltaMs": 16.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3680
       },
       {
-        "at": 10007.39999999851,
-        "deltaMs": 20.399999998509884,
+        "at": 21546,
+        "deltaMs": 18.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3600
       },
       {
-        "at": 10020.5,
-        "deltaMs": 13.100000001490116,
+        "at": 21561.40000000596,
+        "deltaMs": 15.400000005960464,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3520
       },
       {
-        "at": 10039,
-        "deltaMs": 18.5,
+        "at": 21581.10000000149,
+        "deltaMs": 19.69999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3440
       },
       {
-        "at": 10053.80000000447,
-        "deltaMs": 14.800000004470348,
+        "at": 21597.20000000298,
+        "deltaMs": 16.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3360
       },
       {
-        "at": 10071.89999999851,
-        "deltaMs": 18.099999994039536,
+        "at": 21615.90000000596,
+        "deltaMs": 18.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3280
       },
       {
-        "at": 10087.70000000298,
-        "deltaMs": 15.800000004470348,
+        "at": 21632.5,
+        "deltaMs": 16.599999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3200
       },
       {
-        "at": 10104.70000000298,
-        "deltaMs": 17,
+        "at": 21649.70000000298,
+        "deltaMs": 17.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 3120
       },
       {
-        "at": 10121.60000000149,
-        "deltaMs": 16.899999998509884,
+        "at": 21667.20000000298,
+        "deltaMs": 17.5,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 3040
       },
       {
-        "at": 10137.89999999851,
-        "deltaMs": 16.299999997019768,
+        "at": 21683.70000000298,
+        "deltaMs": 16.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2960
       },
       {
-        "at": 10154.89999999851,
-        "deltaMs": 17,
+        "at": 21702.5,
+        "deltaMs": 18.799999997019768,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 2880
       },
       {
-        "at": 10171.5,
-        "deltaMs": 16.600000001490116,
+        "at": 21719.5,
+        "deltaMs": 17,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2800
       },
       {
-        "at": 10188.30000000447,
-        "deltaMs": 16.80000000447035,
+        "at": 21737.70000000298,
+        "deltaMs": 18.200000002980232,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 2720
       },
       {
-        "at": 10203.5,
-        "deltaMs": 15.199999995529652,
+        "at": 21753.80000000447,
+        "deltaMs": 16.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2640
       },
       {
-        "at": 10222,
-        "deltaMs": 18.5,
+        "at": 21772.5,
+        "deltaMs": 18.69999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2560
       },
       {
-        "at": 10237.5,
-        "deltaMs": 15.5,
+        "at": 21788.60000000149,
+        "deltaMs": 16.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2480
       },
       {
-        "at": 10255.20000000298,
-        "deltaMs": 17.700000002980232,
+        "at": 21807.20000000298,
+        "deltaMs": 18.600000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2400
       },
       {
-        "at": 10270.60000000149,
-        "deltaMs": 15.399999998509884,
+        "at": 21824.10000000149,
+        "deltaMs": 16.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2320
       },
       {
-        "at": 10289.10000000149,
-        "deltaMs": 18.5,
+        "at": 21842.40000000596,
+        "deltaMs": 18.30000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2240
       },
       {
-        "at": 10304.20000000298,
-        "deltaMs": 15.100000001490116,
+        "at": 21858.60000000149,
+        "deltaMs": 16.19999999552965,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2160
       },
       {
-        "at": 10321.80000000447,
-        "deltaMs": 17.600000001490116,
+        "at": 21877.30000000447,
+        "deltaMs": 18.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2080
       },
       {
-        "at": 10337.30000000447,
-        "deltaMs": 15.5,
+        "at": 21894.30000000447,
+        "deltaMs": 17,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 2000
       },
       {
-        "at": 10354.30000000447,
-        "deltaMs": 17,
+        "at": 21911.70000000298,
+        "deltaMs": 17.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1920
       },
       {
-        "at": 10371.10000000149,
-        "deltaMs": 16.799999997019768,
+        "at": 21928.60000000149,
+        "deltaMs": 16.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1840
       },
       {
-        "at": 10388.20000000298,
-        "deltaMs": 17.100000001490116,
+        "at": 21946.70000000298,
+        "deltaMs": 18.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1760
       },
       {
-        "at": 10404.89999999851,
-        "deltaMs": 16.69999999552965,
+        "at": 21964.90000000596,
+        "deltaMs": 18.200000002980232,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 1680
       },
       {
-        "at": 10421,
-        "deltaMs": 16.100000001490116,
+        "at": 21981.5,
+        "deltaMs": 16.599999994039536,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1600
       },
       {
-        "at": 10438.60000000149,
-        "deltaMs": 17.600000001490116,
+        "at": 21999,
+        "deltaMs": 17.5,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 1520
       },
       {
-        "at": 10454.30000000447,
-        "deltaMs": 15.700000002980232,
+        "at": 22016.5,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1440
       },
       {
-        "at": 10471.60000000149,
-        "deltaMs": 17.299999997019768,
+        "at": 22034.5,
+        "deltaMs": 18,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1360
       },
       {
-        "at": 10487.80000000447,
-        "deltaMs": 16.200000002980232,
+        "at": 22052.20000000298,
+        "deltaMs": 17.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1280
       },
       {
-        "at": 10505.39999999851,
-        "deltaMs": 17.599999994039536,
+        "at": 22069.70000000298,
+        "deltaMs": 17.5,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1200
       },
       {
-        "at": 10520.89999999851,
-        "deltaMs": 15.5,
+        "at": 22085.60000000149,
+        "deltaMs": 15.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1120
       },
       {
-        "at": 10538.89999999851,
-        "deltaMs": 18,
+        "at": 22104,
+        "deltaMs": 18.399999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 1040
       },
       {
-        "at": 10554.5,
-        "deltaMs": 15.600000001490116,
+        "at": 22120.20000000298,
+        "deltaMs": 16.200000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 960
       },
       {
-        "at": 10571.89999999851,
-        "deltaMs": 17.399999998509884,
+        "at": 22138,
+        "deltaMs": 17.799999997019768,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 880
       },
       {
-        "at": 10587.60000000149,
-        "deltaMs": 15.700000002980232,
+        "at": 22154,
+        "deltaMs": 16,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 800
       },
       {
-        "at": 10605.70000000298,
-        "deltaMs": 18.100000001490116,
+        "at": 22172.70000000298,
+        "deltaMs": 18.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 720
       },
       {
-        "at": 10621.20000000298,
-        "deltaMs": 15.5,
+        "at": 22189.60000000149,
+        "deltaMs": 16.899999998509884,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 640
       },
       {
-        "at": 10637.60000000149,
-        "deltaMs": 16.399999998509884,
+        "at": 22206.90000000596,
+        "deltaMs": 17.30000000447035,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 560
       },
       {
-        "at": 10655.30000000447,
-        "deltaMs": 17.700000002980232,
+        "at": 22225.20000000298,
+        "deltaMs": 18.299999997019768,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 480
       },
       {
-        "at": 10670.60000000149,
-        "deltaMs": 15.299999997019768,
+        "at": 22240.90000000596,
+        "deltaMs": 15.700000002980232,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 400
       },
       {
-        "at": 10689,
-        "deltaMs": 18.399999998509884,
+        "at": 22260.30000000447,
+        "deltaMs": 19.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
         "scrollLeft": 320
       },
       {
-        "at": 10704.89999999851,
-        "deltaMs": 15.899999998509884,
+        "at": 22276.40000000596,
+        "deltaMs": 16.100000001490116,
         "visible": 4,
         "loaded": 4,
         "missing": 0,
         "scrollLeft": 240
       },
       {
-        "at": 10721.60000000149,
-        "deltaMs": 16.700000002980232,
+        "at": 22293.80000000447,
+        "deltaMs": 17.399999998509884,
         "visible": 5,
         "loaded": 5,
         "missing": 0,
@@ -5252,7 +7222,7 @@
   },
   "upstreamReplay": {
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
-    "recordedAt": "2026-11-07T02:50:19.225Z",
+    "recordedAt": "2026-11-07T05:03:15.892Z",
     "viewport": {
       "width": 1280,
       "height": 720,
@@ -5268,10 +7238,10 @@
         "warmup": true,
         "phases": {
           "scroll": {
-            "durationMs": 511.5,
-            "frameCount": 30,
-            "avgFps": 59.952038369304596,
-            "worstFrameMs": 16.899999999999636,
+            "durationMs": 507.90000000596046,
+            "frameCount": 28,
+            "avgFps": 56.100981767180684,
+            "worstFrameMs": 18.100000000002183,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
@@ -5284,12 +7254,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1479,
-            "frameCount": 88,
-            "avgFps": 59.271233245773594,
-            "worstFrameMs": 33.599999999998545,
-            "droppedFrameCount": 1,
-            "droppedFrameTimeMs": 33.599999999998545
+            "durationMs": 1376.5,
+            "frameCount": 77,
+            "avgFps": 55.599682287529724,
+            "worstFrameMs": 18.200000000000728,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5298,15 +7268,15 @@
         "warmup": true,
         "phases": {
           "scroll": {
-            "durationMs": 500.19999999552965,
+            "durationMs": 526.8999999985099,
             "frameCount": 30,
-            "avgFps": 59.952038369304596,
-            "worstFrameMs": 16.799999999999272,
+            "avgFps": 56.9368001518317,
+            "worstFrameMs": 18.100000000002183,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.6000000014901161,
+            "durationMs": 0.09999999403953552,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5314,10 +7284,10 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1459.1000000014901,
-            "frameCount": 88,
-            "avgFps": 59.953672162419906,
-            "worstFrameMs": 17.100000000000364,
+            "durationMs": 1324.2999999970198,
+            "frameCount": 76,
+            "avgFps": 57.250470809792844,
+            "worstFrameMs": 18.200000000000728,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           }
@@ -5328,15 +7298,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 502.80000000447035,
-            "frameCount": 31,
-            "avgFps": 59.96131528046422,
-            "worstFrameMs": 16.80000000000291,
+            "durationMs": 521.8999999985099,
+            "frameCount": 30,
+            "avgFps": 57.48227629814165,
+            "worstFrameMs": 18,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.3999999985098839,
+            "durationMs": 0.20000000298023224,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5344,12 +7314,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1456,
-            "frameCount": 84,
-            "avgFps": 57.887120115774295,
-            "worstFrameMs": 33.5,
-            "droppedFrameCount": 3,
-            "droppedFrameTimeMs": 99.79999999999927
+            "durationMs": 1326.6999999955297,
+            "frameCount": 76,
+            "avgFps": 56.89900426742529,
+            "worstFrameMs": 18.100000000002183,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5358,15 +7328,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 507.09999999403954,
+            "durationMs": 525.7999999970198,
             "frameCount": 30,
-            "avgFps": 59.952038369304375,
-            "worstFrameMs": 16.80000000000291,
+            "avgFps": 57.05591479650104,
+            "worstFrameMs": 18.10000000000582,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.6000000014901161,
+            "durationMs": 0.10000000149011612,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5374,12 +7344,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1422,
-            "frameCount": 81,
-            "avgFps": 57.130765975454956,
-            "worstFrameMs": 33.69999999999709,
-            "droppedFrameCount": 4,
-            "droppedFrameTimeMs": 133.6999999999971
+            "durationMs": 1330.7999999970198,
+            "frameCount": 76,
+            "avgFps": 57.14715392134772,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5388,15 +7358,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 509,
+            "durationMs": 525.4000000059605,
             "frameCount": 30,
-            "avgFps": 59.94005994005994,
-            "worstFrameMs": 17,
+            "avgFps": 57.08848715509039,
+            "worstFrameMs": 18.10000000000582,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.6000000014901161,
+            "durationMs": 0.19999999552965164,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5404,12 +7374,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1496,
-            "frameCount": 88,
-            "avgFps": 58.61977084998666,
-            "worstFrameMs": 33.60000000000218,
-            "droppedFrameCount": 2,
-            "droppedFrameTimeMs": 66.70000000000437
+            "durationMs": 1316.7999999970198,
+            "frameCount": 75,
+            "avgFps": 56.865569793009264,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5418,15 +7388,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 500.6000000014901,
+            "durationMs": 528.7999999970198,
             "frameCount": 30,
-            "avgFps": 59.952038369304375,
-            "worstFrameMs": 16.900000000001455,
+            "avgFps": 56.72149744753246,
+            "worstFrameMs": 18.10000000000582,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.5,
+            "durationMs": 0.20000000298023224,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5434,10 +7404,10 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1358.3999999985099,
-            "frameCount": 81,
-            "avgFps": 59.95115091406992,
-            "worstFrameMs": 17.299999999999272,
+            "durationMs": 1331.2000000029802,
+            "frameCount": 76,
+            "avgFps": 57.30659025787947,
+            "worstFrameMs": 18.10000000000582,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           }
@@ -5448,15 +7418,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 508.59999999403954,
+            "durationMs": 525.8999999985099,
             "frameCount": 30,
-            "avgFps": 59.952038369304375,
-            "worstFrameMs": 16.799999999999272,
+            "avgFps": 57.03422053231939,
+            "worstFrameMs": 18.10000000000582,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.8000000044703484,
+            "durationMs": 0.20000000298023224,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5464,12 +7434,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1443.2999999970198,
-            "frameCount": 86,
-            "avgFps": 59.2653848804356,
-            "worstFrameMs": 33.400000000001455,
-            "droppedFrameCount": 1,
-            "droppedFrameTimeMs": 33.400000000001455
+            "durationMs": 1310,
+            "frameCount": 75,
+            "avgFps": 57.38771137807018,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5478,15 +7448,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 503.80000000447035,
-            "frameCount": 31,
-            "avgFps": 59.93812838360436,
-            "worstFrameMs": 16.900000000001455,
+            "durationMs": 539.7000000029802,
+            "frameCount": 30,
+            "avgFps": 55.55555555555556,
+            "worstFrameMs": 18.099999999998545,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.5,
+            "durationMs": 0.20000000298023224,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5494,12 +7464,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1451.3999999985099,
-            "frameCount": 85,
-            "avgFps": 58.56414496348348,
-            "worstFrameMs": 33.39999999999418,
-            "droppedFrameCount": 2,
-            "droppedFrameTimeMs": 66.29999999999563
+            "durationMs": 1333.1000000014901,
+            "frameCount": 76,
+            "avgFps": 57.05277381577966,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5508,15 +7478,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 505.5,
-            "frameCount": 31,
-            "avgFps": 59.96131528046422,
-            "worstFrameMs": 16.80000000000291,
+            "durationMs": 526.2000000029802,
+            "frameCount": 30,
+            "avgFps": 57.01254275940738,
+            "worstFrameMs": 18.099999999998545,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.6000000014901161,
+            "durationMs": 0.30000000447034836,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5524,12 +7494,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1438.6000000014901,
-            "frameCount": 85,
-            "avgFps": 59.249965147079386,
-            "worstFrameMs": 33.30000000000291,
-            "droppedFrameCount": 1,
-            "droppedFrameTimeMs": 33.30000000000291
+            "durationMs": 1311.5,
+            "frameCount": 75,
+            "avgFps": 56.83109797681273,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       },
@@ -5538,15 +7508,15 @@
         "warmup": false,
         "phases": {
           "scroll": {
-            "durationMs": 509,
-            "frameCount": 31,
-            "avgFps": 59.949719590021445,
-            "worstFrameMs": 16.80000000000291,
+            "durationMs": 529.6999999955297,
+            "frameCount": 30,
+            "avgFps": 56.61445555765301,
+            "worstFrameMs": 18.099999999998545,
             "droppedFrameCount": 0,
             "droppedFrameTimeMs": 0
           },
           "open": {
-            "durationMs": 0.5,
+            "durationMs": 0.20000000298023224,
             "frameCount": 0,
             "avgFps": 0,
             "worstFrameMs": 0,
@@ -5554,12 +7524,12 @@
             "droppedFrameTimeMs": 0
           },
           "edit": {
-            "durationMs": 1433.6000000014901,
-            "frameCount": 85,
-            "avgFps": 59.25409550365982,
-            "worstFrameMs": 33.30000000000291,
-            "droppedFrameCount": 1,
-            "droppedFrameTimeMs": 33.30000000000291
+            "durationMs": 1337.2000000029802,
+            "frameCount": 76,
+            "avgFps": 56.886227544910184,
+            "worstFrameMs": 18.10000000000582,
+            "droppedFrameCount": 0,
+            "droppedFrameTimeMs": 0
           }
         }
       }
@@ -5567,19 +7537,19 @@
     "summary": {
       "scroll": {
         "durationMs": {
-          "median": 506.29999999701977,
-          "p95": 509,
-          "stdev": 2.9609964515962255
+          "median": 526.0500000007451,
+          "p95": 539.7000000029802,
+          "stdev": 4.960279730586951
         },
         "avgFps": {
-          "median": 59.952038369304375,
-          "p95": 59.96131528046422,
-          "stdev": 0.007927964109627724
+          "median": 57.02338164586338,
+          "p95": 57.48227629814165,
+          "stdev": 0.5361998403317174
         },
         "worstFrameMs": {
-          "median": 16.80000000000291,
-          "p95": 17,
-          "stdev": 0.07071067811794732
+          "median": 18.100000000002183,
+          "p95": 18.10000000000582,
+          "stdev": 0.03307189138920115
         },
         "droppedFrameCount": {
           "median": 0,
@@ -5594,9 +7564,9 @@
       },
       "open": {
         "durationMs": {
-          "median": 0.5500000007450581,
-          "p95": 0.8000000044703484,
-          "stdev": 0.11110243187200008
+          "median": 0.20000000298023224,
+          "p95": 0.30000000447034836,
+          "stdev": 0.05000000074505811
         },
         "avgFps": {
           "median": 0,
@@ -5621,29 +7591,29 @@
       },
       "edit": {
         "durationMs": {
-          "median": 1440.949999999255,
-          "p95": 1496,
-          "stdev": 36.23666780719302
+          "median": 1328.7499999962747,
+          "p95": 1337.2000000029802,
+          "stdev": 9.76600449346422
         },
         "avgFps": {
-          "median": 58.93486799853302,
-          "p95": 59.95115091406992,
-          "stdev": 0.8388751406945804
+          "median": 56.97588904160247,
+          "p95": 57.38771137807018,
+          "stdev": 0.2002550282654291
         },
         "worstFrameMs": {
-          "median": 33.39999999999782,
-          "p95": 33.69999999999709,
-          "stdev": 5.345076589722796
+          "median": 18.10000000000582,
+          "p95": 18.10000000000582,
+          "stdev": 1.203148399811012e-12
         },
         "droppedFrameCount": {
-          "median": 1.5,
-          "p95": 4,
-          "stdev": 1.1989578808281798
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
         },
         "droppedFrameTimeMs": {
-          "median": 49.849999999998545,
-          "p95": 133.6999999999971,
-          "stdev": 40.01697881837024
+          "median": 0,
+          "p95": 0,
+          "stdev": 0
         }
       }
     }
@@ -5660,78 +7630,78 @@
       {
         "type": "mousedown",
         "trusted": true,
-        "at": 2073.7999999970198
+        "at": 1997.7000000029802
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2112.7999999970198
+        "at": 2023.3999999985099
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2173.60000000149
+        "at": 2084.3000000044703
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2235.39999999851
+        "at": 2127.2000000029802
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2275
+        "at": 2194.7000000029802
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2326.7999999970198
+        "at": 2245.60000000149
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2360.2000000029802
+        "at": 2281.60000000149
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2393
+        "at": 2317.60000000149
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2460
+        "at": 2352.60000000149
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2557
+        "at": 2443.89999999851
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2591.10000000149
+        "at": 2478.3000000044703
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2624.39999999851
+        "at": 2514.10000000149
       },
       {
         "type": "mousemove",
         "trusted": true,
-        "at": 2658.89999999851
+        "at": 2550.39999999851
       },
       {
         "type": "mouseup",
         "trusted": true,
-        "at": 2682.2000000029802
+        "at": 2588.2000000029802
       }
     ],
-    "start": 2049,
+    "start": 1976.2000000029802,
     "after": "-1.77",
     "finalPath": "E:\\projects\\tbt\\rapidraw-baseline\\fixtures\\set-a\\photo-000.NEF",
-    "end": 2708.39999999851,
+    "end": 2622.39999999851,
     "assertions": {
       "valueChanged": true,
       "editedTarget": true,
@@ -5740,8 +7710,8 @@
       "isolated": true,
       "elementConnected": true
     },
-    "pid": 33700,
-    "startupPids": [20336, 34796, 15940, 35196, 23672, 19804],
+    "pid": 12948,
+    "startupPids": [27360, 31844, 24212, 2556, 37672, 19040],
     "page": {
       "viewport": {
         "width": 1280,
@@ -5749,6 +7719,140 @@
         "dpr": 1
       },
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+    },
+    "presetPanel": {
+      "at": 1974.7000000029802,
+      "visible": true,
+      "panelRect": {
+        "left": 9,
+        "top": 285,
+        "right": 349,
+        "bottom": 662
+      },
+      "mountedCardCount": 20,
+      "visibleCardCount": 4,
+      "cards": [
+        {
+          "id": "task1-00",
+          "name": "Task1 exposure 00",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-01",
+          "name": "Task1 exposure 01",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-02",
+          "name": "Task1 exposure 02",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-03",
+          "name": "Task1 exposure 03",
+          "inPanel": true,
+          "visible": true
+        },
+        {
+          "id": "task1-04",
+          "name": "Task1 exposure 04",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-05",
+          "name": "Task1 exposure 05",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-06",
+          "name": "Task1 exposure 06",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-07",
+          "name": "Task1 exposure 07",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-08",
+          "name": "Task1 exposure 08",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-09",
+          "name": "Task1 exposure 09",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-10",
+          "name": "Task1 exposure 10",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-11",
+          "name": "Task1 exposure 11",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-12",
+          "name": "Task1 exposure 12",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-13",
+          "name": "Task1 exposure 13",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-14",
+          "name": "Task1 exposure 14",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-15",
+          "name": "Task1 exposure 15",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-16",
+          "name": "Task1 exposure 16",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-17",
+          "name": "Task1 exposure 17",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-18",
+          "name": "Task1 exposure 18",
+          "inPanel": true,
+          "visible": false
+        },
+        {
+          "id": "task1-19",
+          "name": "Task1 exposure 19",
+          "inPanel": true,
+          "visible": false
+        }
+      ]
     },
     "inputMethod": "CDP Input.dispatchMouseEvent",
     "points": {
@@ -5765,5 +7869,5 @@
     "keyboardFree": true,
     "targetPathsVerified": true
   },
-  "finished": "2026-11-07T10:50:23+0800"
+  "finished": "2026-11-07T13:03:20+0800"
 }

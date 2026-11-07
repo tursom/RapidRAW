@@ -66,7 +66,7 @@ class CDP:
         self.ws.close()
 
 
-def launch(*args):
+def launch(*args, reset_window_state=True):
     # Existing outer-size save / inner-size restore grows the window each run.
     # Reset only this task's fork configuration, outside the timing window.
     config = Path(os.environ["APPDATA"]) / "io.github.tursom.RapidRAW"
@@ -76,7 +76,11 @@ def launch(*args):
     # measurement still checks the actual visible CSS viewport, not this seed.
     window_state = {"width": 1280, "height": 689, "x": 100, "y": 100,
                     "maximized": False, "fullscreen": False}
-    (config / "window_state.json").write_text(json.dumps(window_state), encoding="utf-8")
+    state_file = config / "window_state.json"
+    if reset_window_state:
+        state_file.write_text(json.dumps(window_state), encoding="utf-8")
+    else:
+        window_state = json.loads(state_file.read_text(encoding="utf-8"))
     env = os.environ.copy()
     env["WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS"] = f"--remote-debugging-port={PORT}"
     started = time.perf_counter()

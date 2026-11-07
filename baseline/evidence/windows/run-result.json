@@ -1,8 +1,13 @@
 {
-  "analysisExit": 0,
-  "baseExit": 0,
-  "identityExit": 0,
+  "started": "2026-11-07T13:00:40.4672423+08:00",
+  "windowProbe": 0,
   "sessionId": 1,
-  "finished": "2026-11-07T10:50:24.2074248+08:00",
-  "presets20Exit": 0
+  "exeSha256After": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "reports": {
+    "measurements": 0,
+    "presets20": 0
+  },
+  "finished": "2026-11-07T13:03:31.7724317+08:00",
+  "analysisExit": 0,
+  "analysisFinished": "2026-11-07T13:09:20.7305672+08:00"
 }

@@ -1,0 +1,128 @@
+{
+  "schema": "rapidraw-task1-window-state",
+  "launches": [
+    {
+      "index": 0,
+      "timing": {
+        "pid": 11032,
+        "attachMs": 586.2784999990254,
+        "nativeVisibleUpperMs": 1348.6559000011766,
+        "initialWindowState": {
+          "width": 1280,
+          "height": 689,
+          "x": 100,
+          "y": 100,
+          "maximized": false,
+          "fullscreen": false
+        },
+        "launchPerfCounter": 58344.145419
+      },
+      "outerRect": [100, 100, 1396, 828],
+      "clientRect": [0, 0, 1280, 720],
+      "page": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "savedWhileVisible": {
+        "width": 1296,
+        "height": 728,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "savedAfterClose": {
+        "width": 1296,
+        "height": 728,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      }
+    },
+    {
+      "index": 1,
+      "timing": {
+        "pid": 2880,
+        "attachMs": 599.7922000024118,
+        "nativeVisibleUpperMs": 1346.2891000017407,
+        "initialWindowState": {
+          "width": 1296,
+          "height": 728,
+          "x": 100,
+          "y": 100,
+          "maximized": false,
+          "fullscreen": false
+        },
+        "launchPerfCounter": 58347.7758443
+      },
+      "outerRect": [100, 100, 1412, 867],
+      "clientRect": [0, 0, 1296, 759],
+      "page": {
+        "width": 1296,
+        "height": 759,
+        "dpr": 1
+      },
+      "savedWhileVisible": {
+        "width": 1312,
+        "height": 767,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "savedAfterClose": {
+        "width": 1312,
+        "height": 767,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      }
+    },
+    {
+      "index": 2,
+      "timing": {
+        "pid": 3824,
+        "attachMs": 589.8851999954786,
+        "nativeVisibleUpperMs": 1346.608699997887,
+        "initialWindowState": {
+          "width": 1312,
+          "height": 767,
+          "x": 100,
+          "y": 100,
+          "maximized": false,
+          "fullscreen": false
+        },
+        "launchPerfCounter": 58351.3502182
+      },
+      "outerRect": [100, 100, 1428, 906],
+      "clientRect": [0, 0, 1312, 798],
+      "page": {
+        "width": 1312,
+        "height": 798,
+        "dpr": 1
+      },
+      "savedWhileVisible": {
+        "width": 1328,
+        "height": 806,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      },
+      "savedAfterClose": {
+        "width": 1328,
+        "height": 806,
+        "x": 100,
+        "y": 100,
+        "maximized": false,
+        "fullscreen": false
+      }
+    }
+  ],
+  "exeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "method": "Seed once; launch three times; wait 2 seconds for the 500ms saver; close native window; no injected resize/move",
+  "finished": "2026-11-07T13:03:31+0800"
+}

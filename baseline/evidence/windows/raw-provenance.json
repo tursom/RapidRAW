@@ -1,0 +1,24 @@
+{
+  "exeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "captured": "2026-11-07T13:03:31.7012635+08:00",
+  "files": {
+    "presets20.json": {
+      "bytes": 257491,
+      "sha256": "65ec82f60c4dde9bee04bc71a2f7c33ddfc2ae1a6a61818fadc7ecc153228afc",
+      "archive": "raw/presets20.json.gz",
+      "archiveSha256": "73cde137f6f6ab2719d45399978febe304b1b70a59a722c5c73da99471c4ac04"
+    },
+    "window-state-probe.json": {
+      "bytes": 3485,
+      "sha256": "c526256c85eb23e79b1537d6bb61981c7cdf07589df284a2a04ae91dc78131c9",
+      "archive": "raw/window-state-probe.json.gz",
+      "archiveSha256": "f1e3f0fcdea9b5c7a4db9a9fc25597d57d39471911908ecc7f736ed707bd74d6"
+    },
+    "measurements.json": {
+      "bytes": 226669,
+      "sha256": "8fa79fffe3650a92c92dc07ac0789109697a57db6d2d52561a39e4d799a67f5c",
+      "archive": "raw/measurements.json.gz",
+      "archiveSha256": "24dc3b69ee7120cac83c9e16edf0cde1f2ae089cdcffeb36d4681180b6104bb0"
+    }
+  }
+}

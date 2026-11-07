@@ -1,4 +1,4 @@
-"""Validate BOTH complete v2 conditions before writing any summary.
+"""Validate BOTH complete v3 conditions before writing any summary.
 
 Usage: python analyze.py EVIDENCE_DIR
 No Windows dependency. Invalid evidence exits nonzero; never salvage partial
@@ -13,9 +13,14 @@ import statistics
 import sys
 
 SCHEMA = "rapidraw-task1-baseline"
-VERSION = 2
+VERSION = 3
 VIEWPORT = {"width": 1280, "height": 720, "dpr": 1}
 SELECTIONS = ("first-selection", "repeated-selection")
+EDIT_STATES = (True, False)
+FORMATS = ("RAW", "JPEG")
+SAMPLES_PER_CELL = 5
+FIRST_SELECTION_COUNT = len(EDIT_STATES) * len(FORMATS) * SAMPLES_PER_CELL
+SWITCH_COUNT = FIRST_SELECTION_COUNT * len(SELECTIONS)
 SWITCH_ASSERTIONS = ("targetMatched", "selectionStable", "keyboardFree")
 DRAG_ASSERTIONS = ("valueChanged", "editedTarget", "pathUnchanged", "trustedMouse", "isolated", "elementConnected")
 FINAL_ASSERTIONS = ("switchesComplete", "startupComplete", "isolatedMouseDrag", "keyboardFree", "targetPathsVerified")
@@ -59,9 +64,45 @@ def stats(values):
             "p95": values[math.ceil(len(values) * 0.95) - 1], "min": values[0], "max": values[-1]}
 
 
+def validate_preset_panel(panel, condition, location):
+    require(isinstance(panel, dict), f"{location}: Missing preset panel DOM evidence")
+    require(number(panel.get("at")), f"{location}: Invalid preset panel timestamp")
+    require(type(panel.get("visible")) is bool, f"{location}: Missing panel visibility")
+    require("panelRect" in panel and (panel["panelRect"] is None or isinstance(panel["panelRect"], dict)),
+            f"{location}: Invalid panel rectangle")
+    expected_count = 20 if condition == "presets20" else 0
+    require(type(panel.get("mountedCardCount")) is int and panel["mountedCardCount"] == expected_count,
+            f"{location}: Expected {expected_count} mounted preset cards")
+    cards = panel.get("cards")
+    require(isinstance(cards, list) and len(cards) == expected_count,
+            f"{location}: Missing per-card DOM evidence; expected {expected_count} cards")
+    require(all(isinstance(card, dict) and isinstance(card.get("id"), str) and isinstance(card.get("name"), str)
+                and type(card.get("inPanel")) is bool and type(card.get("visible")) is bool for card in cards),
+            f"{location}: Invalid per-card DOM evidence")
+    require(type(panel.get("visibleCardCount")) is int
+            and panel["visibleCardCount"] == sum(card["visible"] and card["inPanel"] for card in cards),
+            f"{location}: Incorrect visible preset card count")
+    if condition == "presets20":
+        require(panel["visible"] is True, f"{location}: Preset panel is not visible")
+        rect = panel["panelRect"]
+        require(isinstance(rect, dict)
+                and all(type(rect.get(key)) in (int, float) and math.isfinite(rect[key])
+                        for key in ("left", "top", "right", "bottom"))
+                and rect["right"] > rect["left"] and rect["bottom"] > rect["top"],
+                f"{location}: Preset panel must have a positive-area DOM rectangle")
+        expected_names = {f"task1-{index:02d}": f"Task1 exposure {index:02d}" for index in range(20)}
+        require({card["id"] for card in cards} == set(expected_names),
+                f"{location}: Expected unique preset IDs task1-00 through task1-19")
+        require(all(card["name"] == expected_names[card["id"]] for card in cards),
+                f"{location}: Preset card names do not match their IDs")
+        require(all(card["inPanel"] is True for card in cards), f"{location}: Preset card outside the panel")
+        # All 20 cards must be mounted; scrolling can leave most outside the viewport.
+        require(panel["visibleCardCount"] > 0, f"{location}: No preset cards visible in the panel")
+
+
 def validate(data, expected_condition):
     require(data.get("schema") == SCHEMA and type(data.get("measurementVersion")) is int and data["measurementVersion"] == VERSION,
-            "Unsupported/missing schema or measurementVersion; remeasure with v2 (old keyboard evidence is invalid)")
+            "Unsupported/missing schema or measurementVersion; remeasure with v3 (v2 and old keyboard evidence are invalid)")
     reject_legacy(data)
     require(data.get("condition") == expected_condition, "Wrong condition/file")
     require(bool(data.get("started")) and bool(data.get("finished")) and not data.get("error"), "Unfinished or failed measurement")
@@ -81,6 +122,7 @@ def validate(data, expected_condition):
     startup = data["startup"]
     require(len(startup) == 6, "Expected one warmup and five startup measurements")
     for index, row in enumerate(startup):
+        validate_preset_panel(row.get("presetPanel"), expected_condition, f"startup[{index}].presetPanel")
         require(row["index"] == index and row["warmup"] is (index == 0), "Wrong startup order/warmup")
         require(row["page"]["viewport"] == VIEWPORT, "Uncontrolled startup viewport")
         times = [timestamp(row, key) for key in ("nativeVisibleUpperMs", "landingReadyUpperMs", "libraryThumbsUpperMs", "automatedEditorReadyUpperMs")]
@@ -94,6 +136,8 @@ def validate(data, expected_condition):
                 "Incomplete startup editor selection")
         require(type(row["pid"]) is int and row["pid"] > 0, "Missing startup process identity")
     phase = data["switchPhase"]
+    for key in ("presetPanelBefore", "presetPanelAfter"):
+        validate_preset_panel(phase.get(key), expected_condition, f"switchPhase.{key}")
     require(phase["pid"] == startup[-1]["pid"] and phase["initialPath"] == startup[-1]["status"]["selected"]["path"], "Wrong switch process/initial path")
     require(phase["errors"] == [] and phase["keyboardEvents"] == 0, "Switches contain observer errors/keyboard input")
     require(timestamp(phase, "start") < timestamp(phase, "end"), "Invalid switch phase interval")
@@ -103,7 +147,8 @@ def validate(data, expected_condition):
     seen = set(phase["seenPaths"])
     require(seen == {e["path"] for e in history if e["at"] <= phase["start"]} and phase["initialPath"] in seen, "First-selection history is incomplete")
     rows, plan = data["switches"], data["switchPlan"]
-    require(len(rows) == len(plan) == 16, "Expected 16 switches, including eight first and eight repeated selections")
+    require(len(rows) == len(plan) == SWITCH_COUNT,
+            f"Expected {SWITCH_COUNT} switches, including {FIRST_SELECTION_COUNT} distinct first and the same repeated selections")
     cells = Counter()
     previous, previous_end = phase["initialPath"], phase["start"]
     first_paths, repeated_paths = [], []
@@ -129,15 +174,17 @@ def validate(data, expected_condition):
             require(isinstance(row["previewHref"], str) and bool(row["previewHref"]), "Missing SVG preview source")
         else:
             require(start <= timestamp(row, "gpuFrameAt") <= preview and any(f["path"] == path and f["at"] == row["gpuFrameAt"] for f in row["gpuFrames"]), "Missing path-matched GPU frame")
-        expected_selection = SELECTIONS[index // 8]
+        expected_selection = SELECTIONS[index // FIRST_SELECTION_COUNT]
         require(row["selection"] == expected_selection, "First/repeated selection phases interleaved")
         require((path not in seen) if expected_selection == "first-selection" else (path in first_paths), "False first/repeated selection label")
         (first_paths if expected_selection == "first-selection" else repeated_paths).append(path)
         seen.add(path)
         cells[(row["edited"], row["kind"], row["selection"])] += 1
         previous, previous_end = path, end
-    require(len(set(first_paths)) == 8 and repeated_paths == first_paths, "Wrong distinct/repeated paths")
-    require(cells == Counter({(edited, kind, selection): 2 for edited in (True, False) for kind in ("RAW", "JPEG") for selection in SELECTIONS}), "Unbalanced edit/format/selection cells")
+    require(len(set(first_paths)) == FIRST_SELECTION_COUNT and repeated_paths == first_paths, "Wrong distinct/repeated paths")
+    require(cells == Counter({(edited, kind, selection): SAMPLES_PER_CELL
+                              for edited in EDIT_STATES for kind in FORMATS for selection in SELECTIONS}),
+            f"Unbalanced edit/format/selection cells; expected {SAMPLES_PER_CELL} samples in each of eight groups")
     require([e["path"] for e in history if phase["start"] < e["at"] <= phase["end"]] == [r["targetPath"] for r in rows], "Unexpected selection outside/between click samples")
     scroll = data["filmstripScroll"]
     frames = scroll["frames"]
@@ -150,6 +197,7 @@ def validate(data, expected_condition):
         last_at = frame["at"]
     require(max(f["scrollLeft"] for f in frames) > 0, "Filmstrip did not scroll")
     drag = data["sliderDrag"]
+    validate_preset_panel(drag.get("presetPanel"), expected_condition, "sliderDrag.presetPanel")
     assertions(drag, DRAG_ASSERTIONS)
     require(drag["targetPath"] in fixture["editedPaths"] and drag["initialPath"] == drag["targetPath"] and drag["initialEdited"] is True,
             "Slider drag must explicitly target an editedPaths member; unedited-group fixtures must not be edited")
@@ -180,6 +228,9 @@ def summarize(data):
     rows, frames = data["switches"], data["filmstripScroll"]["frames"]
     return {
         "condition": data["condition"], "finished": data["finished"], "presetCount": data["presetLibrary"]["count"],
+        "presetPanel": {"startup": [row["presetPanel"] for row in data["startup"]],
+                        "switchPhase": {key: data["switchPhase"][key] for key in ("presetPanelBefore", "presetPanelAfter")},
+                        "sliderDrag": data["sliderDrag"]["presetPanel"]},
         "sourceIO": data["sourceIO"], "backendCache": data["backendCache"],
         "viewports": [r["page"]["viewport"] for r in data["startup"]],
         "imageCounts": [r["status"]["imageCount"] for r in data["startup"]],
@@ -188,7 +239,7 @@ def summarize(data):
         "startup": {key: stats([r[key] for r in startup]) for key in ("nativeVisibleUpperMs", "landingReadyUpperMs", "libraryThumbsUpperMs", "automatedEditorReadyUpperMs")},
         "switchesByGroup": [{"edited": edited, "kind": kind, "selection": selection,
                              **click_stats([r for r in rows if r["edited"] == edited and r["kind"] == kind and r["selection"] == selection])}
-                            for edited in (True, False) for kind in ("RAW", "JPEG") for selection in SELECTIONS],
+                            for edited in EDIT_STATES for kind in FORMATS for selection in SELECTIONS],
         "sliderDrag": {"assertions": data["sliderDrag"]["assertions"], "before": data["sliderDrag"]["before"],
                        "after": data["sliderDrag"]["after"], "path": data["sliderDrag"]["initialPath"],
                        "note": "Separate process functional check; not a click-to-ready latency sample"},

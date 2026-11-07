@@ -1,8 +1,8 @@
-# Task 1 baseline measurement protocol (v2)
+# Task 1 baseline measurement protocol (v3)
 
-[../BASELINE.md](../BASELINE.md) records the Windows v2 results and remaining
+[../BASELINE.md](../BASELINE.md) records the Windows v3 results and remaining
 acceptance gaps. Both conditions completed on 2026-11-07; the committed
-[final evidence](evidence/windows/) contains six startups and sixteen balanced
+[final evidence](evidence/windows/) contains six startups and forty balanced
 switches per condition, plus isolated mouse-drag checks. macOS, removable-drive
 and human visual checks remain pending. These scripts observe the full release
 application and are never bundled into it. Stage 1 acceptance remains pending;
@@ -90,11 +90,16 @@ No other measurement arguments are accepted. Outputs are `measurements.json`
 move prior files and any stale summary to an attempts directory in the Windows
 workspace outside final `evidence`. Keep old keyboard-contaminated and failed
 attempts there, **not in Git**. Never add version fields to rehabilitate old
-records. Only final complete v2 raw records and their matching summary are
+records. Only final complete v3 raw records and their matching summary are
 eligible evidence. A failed analysis does not refresh an existing summary.
 Final JSON is normalized to UTF-8/LF and repository formatting without changing
 field values. Recomputed summary JSON values must agree; formatter whitespace
-need not match the Python output byte for byte.
+need not match the Python output byte for byte. For the v3 rerun, final original
+Windows bytes are also retained as deterministic gzip files under `raw/` in the
+evidence directory. `raw-provenance.json` records their source-side SHA-256 and
+length before transfer; decompression must reproduce those exact bytes and the
+same JSON values as the formatted files. These are final successful records,
+not archives of failed attempts. Version 2 remains available in commit `2d28f7ea`.
 
 Setup changes only the dedicated generated fixture and this fork's settings:
 
@@ -112,6 +117,15 @@ Setup changes only the dedicated generated fixture and this fork's settings:
    with left top height 220px. This is fixture configuration. It refuses to
    replace non-fixture presets in the 20-preset condition. Default removes
    `task1-*` presets but retains other presets and reports the actual count.
+   After entering the editor, the observer inspects the actual visible English
+   Presets heading and mounted draggable cards using current React props. Every
+   startup, both ends of switching, and the isolated slider run must record a
+   visible panel, exactly 20 unique `task1-00`–`task1-19` cards with matching names
+   inside that panel, and at least one visible card. Cards outside the scrolling
+   viewport count as mounted only. Settings alone cannot satisfy this check.
+   Startup checks occur after the editor-ready timestamp: any extra wait for
+   this condition is not included in that readiness metric. Switching starts
+   only after the actual panel condition passes.
 5. Requires each measured and isolated-drag process to have a 1280×720 CSS
    viewport and DPR 1. The driver's window-state reset compensates for the
    inherited outer-size save / inner-size restore behavior. On this Windows
@@ -140,6 +154,8 @@ DOM controls rendered while the native window is hidden cannot finish startup.
   visibility. Raw `thumbnailCoverage` includes mounted/expected/loaded/missing
   counts and one loaded boolean per expected container; an empty placeholder
   counts as missing, even when another container's image is already loaded.
+  Loaded does not mean fully opaque: a loaded library image can still be inside
+  its 300ms fade-in. This metric does not wait for that transition to finish.
 - `automatedEditorReadyUpperMs`: launch through opening the first library item,
   the editor first-frame marker, and selected-image readiness. Current startup
   requires scripted actions; it does not establish future automatic restore.
@@ -148,18 +164,18 @@ Only the sixth startup process supplies switch samples, before any slider edit
 or upstream replay. `switchPhase` records its PID, initial path, previously
 selected paths, interval, complete observed selection history and input errors.
 The script waits for all 164 actual `imageList.is_edited` flags to match setup.
-It excludes already-selected paths, then chooses two distinct manifest paths
-for each edit/format pair. All eight first selections precede repeat selections
-of the same eight paths in the same order:
+It excludes already-selected paths, then chooses five distinct manifest paths
+for each edit/format pair. All twenty first selections precede repeat selections
+of the same twenty paths in the same order:
 
 | Edit state | Format | First selection | Repeated selection |
 | ---------- | ------ | --------------: | -----------------: |
-| Edited     | RAW    |               2 |                  2 |
-| Edited     | JPEG   |               2 |                  2 |
-| Unedited   | RAW    |               2 |                  2 |
-| Unedited   | JPEG   |               2 |                  2 |
+| Edited     | RAW    |               5 |                  5 |
+| Edited     | JPEG   |               5 |                  5 |
+| Unedited   | RAW    |               5 |                  5 |
+| Unedited   | JPEG   |               5 |                  5 |
 
-There are **16** switches. “First” means first selected in this process, not cold
+There are **40** switches. “First” means first selected in this process, not cold
 OS/backend/GPU caches: the normal preloader remains enabled. “Repeated selection”
 is a selection-history label only. No backend cache hit is established.
 
@@ -188,7 +204,10 @@ Each raw switch has `start`, `selectedAt`, `readyAt`, `readyPath`, `previewAt`,
 
 The proxies do not measure monitor scanout or prove visually correct pixels;
 duplicated source photographs further limit visual distinctions. Human visual
-verification remains necessary.
+verification remains necessary. A `svg-decode-raf` result does not establish
+full-image decoding: inspect its `previewHref`. All 32 v2 results were cached
+images under `thumbnails/`, matching the intended thumbnail-before-decode flow.
+The current report explicitly identifies the v3 sources as well.
 
 After all switches, filmstrip scrolling records 180 real rAF intervals while
 moving its real horizontal scroll container by 80px per frame forward/backward.
@@ -201,6 +220,15 @@ warmups/eight measured) as a supplementary smoothness baseline. Its slider
 inputs use synthetic DOM mouse events, distinct from the trusted CDP drag below.
 Its same-image reopen latency must not be used as the distinct-image preview
 baseline. Replay errors/incomplete results reject the condition.
+
+For task 6 and task 13, compare `upstreamReplay.summary.edit.avgFps`,
+`worstFrameMs`, `droppedFrameCount` and `droppedFrameTimeMs` (median/P95) between
+the same two conditions on this host, alongside switch readiness and scrolling.
+These replay values measure main-thread rAF smoothness during synthetic input.
+At a roughly 60Hz ceiling, FPS cannot detect a slower preview pipeline that
+keeps scheduling frames. The independent trusted drag below verifies input only.
+Neither provides an input-to-updated-preview latency baseline; that still needs
+a separately validated method before making preview-responsiveness claims.
 
 ## Independent slider check
 
@@ -230,21 +258,22 @@ extra latency sample or a measurement of backend processing completion.
 ## Evidence contract and analysis
 
 Both raw files must have `schema: "rapidraw-task1-baseline"` and integer
-`measurementVersion: 2`. `finished` and every required final/sample/drag assertion
+`measurementVersion: 3`. `finished` and every required final/sample/drag assertion
 must exist and pass; any reported error rejects the file. The analyzer validates
 both conditions completely before writing `summary.json`. It rejects older
 schemas, legacy keyboard/range/call-array fields, missing readiness or preview
 metrics, wrong target ownership, unbalanced groups, incomplete startup/container
 counts, unexpected observed selection sequences, missing scroll frames and
-non-isolated/untrusted/ineffective slider drags. It never filters incomplete rows
+non-isolated/untrusted/ineffective slider drags, hidden/missing preset panels or
+incorrect mounted-card sets in any required check. It never filters incomplete rows
 and presents the remainder as a complete run.
 
-Output has schema `rapidraw-task1-baseline-summary`, version 2,
+Output has schema `rapidraw-task1-baseline-summary`, version 3,
 `conditions["measurements.json"]` and `conditions["presets20.json"]`. Each condition
 has `startup` statistics excluding only the first warmup, raw startup thumbnail
 counts, and eight `switchesByGroup` entries keyed by `edited`, `kind`, `selection`.
-Each group has `n: 2`, `clickToUsableReadyMs` and `previewByMethod` statistics.
-Statistics include n, median, nearest-rank p95, min and max; at n=2, p95 is the
+Each group has `n: 5`, `clickToUsableReadyMs` and `previewByMethod` statistics.
+Statistics include n, median, nearest-rank p95, min and max; at n=5, p95 is the
 maximum, not a robust tail estimate. Slider assertions, filmstrip coverage/frame
 statistics and upstream replay summary are separate. No measured results are
 supplied by this README or by local synthetic validation.
@@ -257,11 +286,19 @@ restore flow enumerates folders/loads EXIF; this protocol does not establish
 
 ## Outstanding platform and human work
 
-The committed Windows records establish completion of both v2 conditions,
+The committed Windows records establish completion of both v3 conditions,
 balanced path-checked samples and independent slider checks. Build, identity,
 source/material integrity and remaining acceptance limits are in `BASELINE.md`.
 They do not establish human visual correctness. A failed rerun remains a failed
 attempt in the Windows workspace; it is not a baseline number.
+
+`windows-window-state.py` is a separate diagnostic. It seeds this fork's window
+state once, then launches/closes the same executable three times without any
+intermediate reset or injected resize/move. Each launch waits two seconds for
+the existing 500ms saver and records native outer/client rectangles, CSS size,
+and persisted state before/after native close. It restores the original fork
+state afterward. This probe is outside all timing samples; it records the
+upstream issue for task placement without changing application behavior.
 
 No Mac host is used by these scripts. macOS still needs a real build/run,
 separate fork profile, the same manifest, external-drive coverage, recorded

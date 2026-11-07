@@ -1,19 +1,8 @@
 {
   "attemptsRetainedAt": "E:\\projects\\tbt\\rapidraw-baseline\\attempts",
-  "attemptArchivesMovedOutsideFinalEvidence": 5,
   "otherApplicationsOrServicesStopped": false,
   "remainingBenchmarkApplications": 0,
-  "capturedAt": "2026-11-07T11:14:41.8494692+08:00",
+  "capturedAt": "2026-11-07T13:09:21.9898078+08:00",
   "remainingTaskNames": [],
-  "removedTaskNames": [
-    "RapidRAW-Task1-Build",
-    "RapidRAW-Task1-Final-Measure",
-    "RapidRAW-Task1-Final-Quality",
-    "RapidRAW-Task1-Measure",
-    "RapidRAW-Task1-Audit-Build",
-    "RapidRAW-Task1-Audit-Measure",
-    "RapidRAW-Task1-Audit-Quality",
-    "RapidRAW-Task1-Clippy-Default",
-    "RapidRAW-Task1-Viewport-Diagnostic"
-  ]
+  "removedTaskNames": ["RapidRAW-Task1-V3"]
 }

@@ -2,7 +2,7 @@
 
 Usage: python windows-measure.py [--presets20]
 An existing report is never overwritten. Move prior attempts within the Windows
-workspace before rerunning; only complete v2 evidence is eligible for analysis.
+workspace before rerunning; only complete v3 evidence is eligible for analysis.
 """
 
 import importlib.util
@@ -20,7 +20,7 @@ FIXTURE = ROOT / "fixtures"
 PRESETS20 = "--presets20" in sys.argv
 REPORT_FILE = OUT / ("presets20.json" if PRESETS20 else "measurements.json")
 REPORT = {
-    "schema": "rapidraw-task1-baseline", "measurementVersion": 2,
+    "schema": "rapidraw-task1-baseline", "measurementVersion": 3,
     "method": "Unmodified release; WebView2 CDP; page performance.now/rAF; startup polled every 20ms",
     "started": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "startup": [], "switches": [],
     "sourceIO": {"status": "unknown", "traced": False},
@@ -66,6 +66,17 @@ def viewport(cdp):
     if page["viewport"] != {"width": 1280, "height": 720, "dpr": 1}:
         raise RuntimeError(f"Uncontrolled viewport: {page['viewport']}")
     return page
+
+
+def preset_panel(cdp):
+    expected = 20 if PRESETS20 else 0
+    expression = """(()=>{const p=baseline.presetPanel();const expected=""" + str(expected) + """;
+      const ids=p.cards.map(c=>c.id).sort();
+      if(expected===0)return p.mountedCardCount===0?p:false;
+      return p.visible&&p.visibleCardCount>0&&p.mountedCardCount===20&&p.cards.every(c=>c.inPanel)
+        &&ids.every((id,i)=>id==='task1-'+String(i).padStart(2,'0'))?p:false;
+    })()"""
+    return driver.wait_js(cdp, expression)
 
 
 def setup():
@@ -151,6 +162,7 @@ def measure():
             open_first(cdp)
             timing["automatedEditorReadyUpperMs"] = (time.perf_counter() - timing["launchPerfCounter"]) * 1000
             timing["status"] = cdp.js("baseline.status()")
+            timing["presetPanel"] = preset_panel(cdp)
             REPORT["startup"].append(timing)
             save()
             if index == 5:
@@ -174,17 +186,18 @@ def switch_and_scroll(cdp, pid):
     driver.wait_js(cdp, "(()=>{const list=baseline.filmstrip()?.imageList;const expected=" + json.dumps(expected) + ";return list?.length===164&&list.every(e=>Object.hasOwn(expected,e.path)&&e.is_edited===expected[e.path])})()", timeout=120)
     phase = cdp.js("baseline.startSwitches()")
     phase["pid"] = pid
+    phase["presetPanelBefore"] = preset_panel(cdp)
     REPORT["switchPhase"] = phase
     seen = set(phase["seenPaths"])
     targets = []
-    # Each of four edit/format cells has two distinct paths, then each path is
+    # Each of four edit/format cells has five distinct paths, then each path is
     # selected again. First means first selected in this process, not cold IO.
     for edited in (True, False):
         for kind in ("RAW", "JPEG"):
             candidates = [e for e in entries if e["edited"] == edited and e["kind"] == kind and e["path"] not in seen]
-            if len(candidates) < 2:
+            if len(candidates) < 5:
                 raise RuntimeError(f"Insufficient first-selection targets for {edited}/{kind}")
-            targets.extend(candidates[:2])
+            targets.extend(candidates[:5])
     plan = [{"targetPath": e["path"], "edited": e["edited"], "kind": e["kind"], "selection": selection}
             for selection in ("first-selection", "repeated-selection") for e in targets]
     REPORT["switchPlan"] = plan
@@ -201,6 +214,7 @@ def switch_and_scroll(cdp, pid):
         REPORT["switches"].append(row)
         save()
     REPORT["switchPhase"].update(cdp.js("baseline.endSwitches()"))
+    REPORT["switchPhase"]["presetPanelAfter"] = preset_panel(cdp)
     REPORT["filmstripScroll"] = cdp.js("""(async()=>{
       const scroller=baseline.scroller();scroller.scrollLeft=0;
       await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
@@ -235,6 +249,7 @@ def measure_slider():
             for event in ("mousePressed", "mouseReleased"):
                 cdp.call("Input.dispatchMouseEvent", {"type": event, "button": "left", "buttons": 1 if event == "mousePressed" else 0, "clickCount": 1, **target_point})
         driver.wait_js(cdp, "(()=>{const s=baseline.filmstrip()?.selectedImage;return s?.path===" + json.dumps(target_path) + "&&s.isReady})()", timeout=120)
+        panel = preset_panel(cdp)
         point = cdp.js("""(()=>{
           const e=[...document.querySelectorAll('input.slider-input')].find(e=>{
             const r=e.getBoundingClientRect();return !e.disabled&&r.width>60&&r.height>0&&r.x>innerWidth/2&&r.y>0&&r.bottom<innerHeight;
@@ -255,7 +270,7 @@ def measure_slider():
             cdp.call("Input.dispatchMouseEvent", {"type": "mouseReleased", "x": point["endX"], "y": point["y"], "button": "left", "buttons": 0, "clickCount": 1})
         result = cdp.js("baseline.finishDrag()")
         result.update({"pid": process.pid, "startupPids": [r["pid"] for r in REPORT["startup"]],
-                       "page": page, "inputMethod": "CDP Input.dispatchMouseEvent", "points": point,
+                       "page": page, "presetPanel": panel, "inputMethod": "CDP Input.dispatchMouseEvent", "points": point,
                        "switchSamplesInProcess": cdp.js("baseline.clicks.length")})
         REPORT["sliderDrag"] = result
         save()
@@ -274,7 +289,7 @@ if __name__ == "__main__":
         setup()
         measure()
         measure_slider()
-        REPORT["assertions"] = {"switchesComplete": len(REPORT["switches"]) == 16,
+        REPORT["assertions"] = {"switchesComplete": len(REPORT["switches"]) == 40,
                                 "startupComplete": len(REPORT["startup"]) == 6,
                                 "isolatedMouseDrag": all(REPORT["sliderDrag"]["assertions"].values()),
                                 "keyboardFree": REPORT["switchPhase"]["keyboardEvents"] == 0,
