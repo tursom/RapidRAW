@@ -1,0 +1,89 @@
+name: Build intake test clients
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, ci/intake-clients]
+    paths:
+      - .github/workflows/intake-clients.yml
+      - spike/intake/**
+      - '!spike/intake/evidence/**'
+      - src-tauri/icons/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: intake-clients-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows x64
+            runner: windows-latest
+            target: x86_64-pc-windows-msvc
+            artifact: intake-windows-x64
+          - name: macOS Apple Silicon
+            runner: macos-15
+            target: aarch64-apple-darwin
+            artifact: intake-macos-arm64
+          - name: macOS Intel
+            runner: macos-15-intel
+            target: x86_64-apple-darwin
+            artifact: intake-macos-x64
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: spike/intake/package-lock.json
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          target: ${{ matrix.target }}
+          rustflags: ''
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: spike/intake/src-tauri -> target
+          key: intake-${{ matrix.target }}
+
+      - name: Install locked probe dependencies
+        working-directory: spike/intake
+        run: npm ci
+
+      - name: Check probe JavaScript
+        working-directory: spike/intake
+        run: npm run check
+
+      - name: Build and package both release clients
+        run: >-
+          python spike/intake/scripts/package-clients.py
+          --target ${{ matrix.target }}
+          --output "${{ runner.temp }}/intake-clients"
+
+      - name: Upload test clients
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ matrix.artifact }}
+          path: |
+            ${{ runner.temp }}/intake-clients/*.zip
+            ${{ runner.temp }}/intake-clients/*.sha256
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
