@@ -22,10 +22,12 @@ import SettingsPanel from './components/panel/SettingsPanel';
 import ExportPanel from './components/panel/right/ExportPanel';
 import GlobalTooltip from './components/ui/GlobalTooltip';
 import AppModals from './components/modals/AppModals';
+import AppPanelModal from './components/modals/AppPanelModal';
 
 import SidePanelArea from './components/panel/SidePanelArea';
 import { PANEL_ICONS } from './components/panel/PanelSwitcher';
 import Controls from './components/panel/right/ControlsPanel';
+import CurvesPanel from './components/panel/right/CurvesPanel';
 import MetadataPanel from './components/panel/right/MetadataPanel';
 import CropPanel from './components/panel/right/CropPanel';
 import MasksPanel from './components/panel/right/MasksPanel';
@@ -40,6 +42,8 @@ import { ContextMenuProvider } from './context/ContextMenuContext';
 import { useSettingsStore } from './store/useSettingsStore';
 import {
   DEFAULT_BOTTOM_PANEL_HEIGHT,
+  DEFAULT_LEFT_PANEL_WIDTH,
+  DEFAULT_RIGHT_PANEL_WIDTH,
   DEFAULT_PANEL_WIDTH,
   getReopenedPanelWidth,
   useUIStore,
@@ -84,6 +88,7 @@ import {
 import ImageProcessingManager from './components/managers/ImageProcessingManager';
 import ImageLoaderManager from './components/managers/ImageLoaderManager';
 import { isImmichAlbumId } from './components/immich/immichApi';
+import { isHistoryMode } from './utils/appMode';
 import { useImmichEvents } from './components/immich/useImmichEvents';
 
 const DND_MEASURING = { droppable: { strategy: MeasuringStrategy.Always } };
@@ -173,6 +178,7 @@ function App() {
     activePanel,
     activeLayoutDragItem,
     isSettingsOpen,
+    panelModal,
     setUI,
     setPanel,
     setLayoutDragItem,
@@ -191,6 +197,7 @@ function App() {
       activePanel: state.activePanel,
       activeLayoutDragItem: state.activeLayoutDragItem,
       isSettingsOpen: state.isSettingsOpen,
+      panelModal: state.panelModal,
       setUI: state.setUI,
       setPanel: state.setPanel,
       setLayoutDragItem: state.setLayoutDragItem,
@@ -298,6 +305,14 @@ function App() {
 
   const useCompactPanels = layoutMode === 'compact';
   const useWidePanels = layoutMode === 'wide';
+  useEffect(() => {
+    const full = layoutMode === 'full';
+    setUI((state) => {
+      const modal = full && isHistoryMode(osPlatform) ? state.panelModal : null;
+      if (state.isFullLayout === full && state.panelModal === modal) return state;
+      return { isFullLayout: full, panelModal: modal };
+    });
+  }, [layoutMode, osPlatform, setUI]);
   const compactEditorPanelMinHeight = 220;
   const compactEditorPanelMaxHeight =
     viewportSize.height > 0
@@ -650,12 +665,12 @@ function App() {
   const createResizeResetHandler = (stateKey: string) => () => {
     if (stateKey === 'left') {
       setUI((state) => ({
-        leftPanelWidth: DEFAULT_PANEL_WIDTH,
+        leftPanelWidth: isHistoryMode(osPlatform) ? DEFAULT_LEFT_PANEL_WIDTH : DEFAULT_PANEL_WIDTH,
         uiVisibility: { ...state.uiVisibility, leftPanel: true },
       }));
     } else if (stateKey === 'right') {
       setUI((state) => ({
-        rightPanelWidth: DEFAULT_PANEL_WIDTH,
+        rightPanelWidth: isHistoryMode(osPlatform) ? DEFAULT_RIGHT_PANEL_WIDTH : DEFAULT_PANEL_WIDTH,
         uiVisibility: { ...state.uiVisibility, rightPanel: true },
       }));
     } else if (stateKey === 'bottom') {
@@ -719,8 +734,10 @@ function App() {
     [expandedFolders, appSettings?.enableFolderImageCounts, setLibrary],
   );
 
+  const closePanelModal = useCallback(() => setUI({ panelModal: null }), [setUI]);
+
   const renderAppPanel = useCallback(
-    (panelId: Panel) => {
+    (panelId: Panel, asModal = false) => {
       switch (panelId) {
         case Panel.FolderTree:
           return (
@@ -751,11 +768,19 @@ function App() {
               onSettingsChange={handleSettingsChange}
               rootPaths={rootPaths}
               isVisible={true}
-              onClose={() => setUI({ isLibraryExportPanelVisible: false })}
+              onClose={
+                asModal
+                  ? activeView === 'library'
+                    ? () => setUI({ panelModal: null })
+                    : undefined
+                  : () => setUI({ isLibraryExportPanelVisible: false })
+              }
             />
           );
         case Panel.Adjustments:
           return <Controls />;
+        case Panel.Curves:
+          return <CurvesPanel />;
         case Panel.Metadata:
           return <MetadataPanel />;
         case Panel.Crop:
@@ -791,6 +816,7 @@ function App() {
       appSettings,
       handleSettingsChange,
       rootPaths,
+      activeView,
     ],
   );
 
@@ -821,12 +847,12 @@ function App() {
     if (region.startsWith('left') && !uiVisibility.leftPanel) {
       setUI((state) => ({
         uiVisibility: { ...state.uiVisibility, leftPanel: true },
-        leftPanelWidth: getReopenedPanelWidth(state.leftPanelWidth),
+        leftPanelWidth: getReopenedPanelWidth(state.leftPanelWidth, 'left'),
       }));
     } else if (region.startsWith('right') && !uiVisibility.rightPanel) {
       setUI((state) => ({
         uiVisibility: { ...state.uiVisibility, rightPanel: true },
-        rightPanelWidth: getReopenedPanelWidth(state.rightPanelWidth),
+        rightPanelWidth: getReopenedPanelWidth(state.rightPanelWidth, 'right'),
       }));
     }
   };
@@ -1053,6 +1079,11 @@ function App() {
             </DragOverlay>
           </DndContext>
         </div>
+        <AppPanelModal
+          panel={isHistoryMode(osPlatform) && layoutMode === 'full' ? panelModal : null}
+          onClose={closePanelModal}
+          renderPanel={renderAppPanel}
+        />
         <AppModals
           handleImageSelect={handleImageSelect}
           handleSavePanorama={handleSavePanorama}

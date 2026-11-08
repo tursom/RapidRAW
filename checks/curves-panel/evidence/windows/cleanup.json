@@ -1,0 +1,18 @@
+{
+  "finished": "2026-11-08T08:19:53.3057274+08:00",
+  "removedTasks": ["RapidRAW-Curves-Build", "RapidRAW-Curves-Smoke"],
+  "remainingOwnedProcesses": 0,
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "task3ExeSha256": "477a9583f16b43182c2627a3a35d045b79e805e0e6313d7ef9f1e712cdc7307c",
+  "controllerSha256": "d520a15b5bc5f1d28df60debfc742382aaa952deeda93bf0aad787055edf67de",
+  "fixtureSha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+  "profileRestored": true,
+  "rawBytesUnchanged": true,
+  "inputsRestored": true,
+  "releaseExit": 0,
+  "rustfmtExit": 0,
+  "clippyExit": 0,
+  "smokeExit": 0,
+  "cases": 44,
+  "coverageComplete": true
+}

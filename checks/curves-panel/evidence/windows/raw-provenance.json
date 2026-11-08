@@ -1,0 +1,94 @@
+{
+  "source": "Get-FileHash SHA-256 and lengths recorded on Windows before SCP. Raw JSON/log gzip preserves original bytes including BOM/newlines; the PNG is preserved directly. Readable JSON is semantically identical; readable build logs are normalized as described.",
+  "files": [
+    {
+      "file": "build.json",
+      "bytes": 7864,
+      "sha256": "1fe65cb2a5193d25bc87a39f329f6aa5b304a71f6a2f2aaaabd9fec5b3cbd2c1",
+      "rawFile": "raw/build.json.gz",
+      "gzipSha256": "7de7c95a83ac81860a169081f9e032501e6af864b1bc2315a29cae41bc353b46",
+      "readableFile": "build.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "source-inputs.json",
+      "bytes": 63563,
+      "sha256": "e586e847bc66d9acff4de6fa9ad1d9471b88a31d4f8452f6db741f3e3eca1b55",
+      "rawFile": "raw/source-inputs.json.gz",
+      "gzipSha256": "4e189128fcf45f1ef51fd3e9f81c97c44cce13f7ed303e8853f4fdb18c53eb18",
+      "readableFile": "source-inputs.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "fixture.json",
+      "bytes": 274,
+      "sha256": "6644158e14becb0aeb118c55ec8c68de7f282adf09660469d9dc5fd7f6e791e5",
+      "rawFile": "raw/fixture.json.gz",
+      "gzipSha256": "0c2ecdf7878a29a88c002f60461c7da43208060fb31f8e9a4bc8a96521806596",
+      "readableFile": "fixture.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "windows-smoke.json",
+      "bytes": 987208,
+      "sha256": "fbf29a479b644b6ba521d69623780a15db5897431df5b8fc8aff38e1aebb6299",
+      "rawFile": "raw/windows-smoke.json.gz",
+      "gzipSha256": "330cdb7e8794049fd0cfcd9ee273d1a24ba762f0e985f69b4c5745a2cd2ac83e",
+      "readableFile": "windows-smoke.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "run-result.json",
+      "bytes": 161,
+      "sha256": "ceec9f15ade7354ec169ec78a1d0818e1d6bf2001a65b7d4489a846099a34eed",
+      "rawFile": "raw/run-result.json.gz",
+      "gzipSha256": "c7923c68537699bcc6af8939cb0b8d637e35d60a226eade31705d1c17cf02f26",
+      "readableFile": "run-result.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "cleanup.json",
+      "bytes": 859,
+      "sha256": "535aee8b4fe1c8d08f9380f45506731597b11d810707d1968797b49cb744cba4",
+      "rawFile": "raw/cleanup.json.gz",
+      "gzipSha256": "2185f5a7d508669a9b6cedbd85febdba618af2b28a7b93eca39cb58a9c614a7a",
+      "readableFile": "cleanup.json",
+      "canonicalJsonSemanticMatch": true
+    },
+    {
+      "file": "logs/release.log",
+      "bytes": 1376,
+      "sha256": "b69d3aa0160bbb9720508f88352d2be368ef75f1ed163aa9e08d7f1785db66ce",
+      "rawFile": "raw/logs/release.log.gz",
+      "gzipSha256": "67c18d9dc3f3fc985be80e07ffd5504863a0527b3494c92e72ab2c738e91775c",
+      "readableFile": "build-records/release.txt",
+      "normalization": "UTF-8/LF; ANSI escape codes and trailing whitespace removed"
+    },
+    {
+      "file": "logs/rustfmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawFile": "raw/logs/rustfmt.log.gz",
+      "gzipSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "readableFile": "build-records/rustfmt.txt",
+      "normalization": "UTF-8/LF; ANSI escape codes and trailing whitespace removed"
+    },
+    {
+      "file": "logs/clippy.log",
+      "bytes": 317,
+      "sha256": "5ec9c761e0d6ece1a16063d93b99e9c72db7a61889452987fcc58f357a6bac42",
+      "rawFile": "raw/logs/clippy.log.gz",
+      "gzipSha256": "d8bed18d791c81b1ed9cd649093a8428254a7986146ab42db43728317f23e71b",
+      "readableFile": "build-records/clippy.txt",
+      "normalization": "UTF-8/LF; ANSI escape codes and trailing whitespace removed"
+    },
+    {
+      "file": "curves-smoke-watermark.png",
+      "bytes": 95,
+      "sha256": "0b1dc63086bdcd7a6aea2492f078f6613a3d55297b990fda762e0f0085b54ef1",
+      "rawFile": "curves-smoke-watermark.png",
+      "readableFile": "curves-smoke-watermark.png",
+      "preservedByteForByte": true
+    }
+  ]
+}

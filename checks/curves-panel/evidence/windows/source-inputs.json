@@ -1,0 +1,1670 @@
+{
+  "sourceBase": "9ec8b331e38e32ed5958c7a3725566f2b06488c7",
+  "scope": "All previous verified application/build inputs plus new task3 production source modules; tests/evidence excluded.",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "e2985a730c78ac7ab4895051d241e52f03cee99e27f5c8a9d5ba166d036d14d4"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "4e612a5639e68871d9fc6f8e92286eaa61d6c100d3e91154cfeef2d23f569811"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fb4c7f12f46a08e14dc7a1a3d402fd5344fca64e51ce4561cb0a8972639725a1"
+    },
+    {
+      "path": "public/splash-dark.jpg",
+      "sha256": "c1fb1463ea278be61e65fd804e85be42872fb90fb3505cce1626b9e15818e8e8"
+    },
+    {
+      "path": "public/splash-grey.jpg",
+      "sha256": "7385eeb7a9bf90436262def4c4498583877a96610b1019db03351e6e6bc807ad"
+    },
+    {
+      "path": "public/splash-light.jpg",
+      "sha256": "07d82eacd0810aa4d344a303fb17dbaf425829250cc52aba3398f75718669460"
+    },
+    {
+      "path": "public/tauri.svg",
+      "sha256": "e5d2738bbaa5543c4684001a558dc53165da9b636144827b28db1dcfacf81aa8"
+    },
+    {
+      "path": "public/vite.svg",
+      "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+    },
+    {
+      "path": "src-tauri/.gitignore",
+      "sha256": "42fe9c191be66752c9452efae65654e10d9b59524ff9995659823ca2bc880b88"
+    },
+    {
+      "path": "src-tauri/Cargo.lock",
+      "sha256": "ee20aff56f6777f9cfa6c7404a84bcc46c2f5e5548d8f65b6d7e27043ec13de0"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "sha256": "f15b6603c1df7448a4f775f4b1fd8f63abbbe1f23bf2119e3a773de9b56522f4"
+    },
+    {
+      "path": "src-tauri/Info.plist",
+      "sha256": "b8da0977d2cb11e55b244272fc047db428f9a71c7d7156a179f2ad78d773720d"
+    },
+    {
+      "path": "src-tauri/build.rs",
+      "sha256": "f54bae60b803b109321e4a5cb2f7d0abf65844d90acc46a923af7fb189963d5d"
+    },
+    {
+      "path": "src-tauri/capabilities/default.json",
+      "sha256": "3dfb92bdfeb600749840cf5742b7d02c5ca5b75b89f6711ccf127be136b56c0c"
+    },
+    {
+      "path": "src-tauri/capabilities/desktop.json",
+      "sha256": "c7aabe18a59fc24f37679458710354ca0b22b6bc9625efb44b56f519613ed0bd"
+    },
+    {
+      "path": "src-tauri/capabilities/viewer.json",
+      "sha256": "0b35b52e920293ceda2e201ccbf765d98eea29fa0a7180b236cb02bc61de81ed"
+    },
+    {
+      "path": "src-tauri/icc/README.md",
+      "sha256": "a65172bf44f87c14090b8c6e1f002bb1fca29892867843a615c227c854c859cc"
+    },
+    {
+      "path": "src-tauri/icc/sRGB-v2-magic.icc",
+      "sha256": "af4efe28f6d311799865f325ba39184a2e978b113ca74124d60af7de22b105f4"
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "sha256": "24488961e3e71db6a04d0d550dd6eacfd8a8c54b2b3c2662d229bfa3b9856f4d"
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "sha256": "45a51dda1118aff0a95968bea4174ceabbe7b78e83c6f0ca39555f13ede5b2c8"
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "sha256": "d3c87fda81a61ddd77dbdaa342f79b5bf6f284a03357db9e4f0f437fa1659716"
+    },
+    {
+      "path": "src-tauri/icons/64x64.png",
+      "sha256": "2dfbf9a5550f3c321487818babb0d0c55a847762e1dd23361dc9e69e93e163c7"
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "sha256": "5ffa514e4f5a561d1d5c1d0e3685e9e7e4cfa3871cddaf520b38e57b3b739dfd"
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "sha256": "e942c314e37f6ff942341b9f31811763ac5bd2a9a56b80b618eca31cd93586db"
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "sha256": "81ef3b647a64da022b756dcdf673fb8b84dfb2daaa43d29a687a6d046a10a443"
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "sha256": "11a009ff6e6a21351275f09a13583ced09e3d7020c97395234f0f5b4b57f1890"
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "sha256": "5a96c4dffd8bf587aec103139a7e41fff996aa9df858b965e88a6a80cca58a94"
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "sha256": "5134e4dbbef81ce00d835db2ffbdc56cfa0a0e6462afb964228bfcb4a483b790"
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "sha256": "13479e63bec9b0e1ba00b3893f548fd4b8dd95463d53294a13a5c1e34c85049e"
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "sha256": "a06c7d90866ec8ceab88161b0dab4c66695000b7e2f8f12a11cd8e80689f1407"
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "sha256": "c6f26ff1202eb2f8ddcbde3e28797c0b146c4eec0d4e152c5ac2f02503eeb163"
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "sha256": "e54b870ce7b2b28665c0c5634926caecc3aa8a3381cca745d16202766a9618ad"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher.png",
+      "sha256": "bb099ac93fb735979d7236c68782b33673a6e5de7124f4a2dbf5f1d7aa61ded2"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "21bb91189d0be4c2dc127c8e75a49cea28b86ea64d420ada15e080abdc86c3e9"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "bb099ac93fb735979d7236c68782b33673a6e5de7124f4a2dbf5f1d7aa61ded2"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher.png",
+      "sha256": "40db6f60743ad12fbd14e9769fade38b9eacdc5082a523f48bb5f16e6426d7d1"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "0cce90473daee92821bc7568000b02715690bd2c97eeae8225f41afc21596d5b"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "40db6f60743ad12fbd14e9769fade38b9eacdc5082a523f48bb5f16e6426d7d1"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "a1cb1a023a09696b198bc17759aa45e96176069cb4405cf0d4bdd06593e373bc"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "b348e8b3b4c48672744f15b0b52bc35f354211c87813f04e7f08f292c2d8fc87"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "a1cb1a023a09696b198bc17759aa45e96176069cb4405cf0d4bdd06593e373bc"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "54a3084671c96c0bd4f508517339ad678ca02d361fcb2b85a32dd1a651273f11"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "27bcf2767cbc061b2735e63bf8e68eb763b1bdaab2a570296536ada9b7d0a8b6"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "54a3084671c96c0bd4f508517339ad678ca02d361fcb2b85a32dd1a651273f11"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "89260faaa213e40db742909f15a01bffc814822c9394c9bf9da09801777a83ac"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "447d738fd0960e8cbfd17f4261b0740712c83d203b0e66ef724476baf73961c2"
+    },
+    {
+      "path": "src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "89260faaa213e40db742909f15a01bffc814822c9394c9bf9da09801777a83ac"
+    },
+    {
+      "path": "src-tauri/icons/docs.png",
+      "sha256": "53f1951d109eb03d81512ce0975db7743c88d08738dd68086a738c39ae7d924e"
+    },
+    {
+      "path": "src-tauri/icons/full_res_original.png",
+      "sha256": "4bc1a5d7cde121edb0ad85459c3155130a6165d2fdc805a7050b3fdfaecf5419"
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "sha256": "f3e865cb800fe7b85d3c3f1d73e5610c5fd6af374a1357d1e449fa69f5ba3d2e"
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "sha256": "775e7f2593bf66b6f83a9c51a3555f6e461aa711208135f36a9575a854d5274a"
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "sha256": "730e776ebb2214a1f8f2240a2e2b25091b5a116a55f2edc55f68340b32a291e9"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "sha256": "61e992bd5eb2bbe2174dd4054a9676e9e429c1d7d9af0bdb6876f206e52dcda3"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "sha256": "04bcb7c6e5895754f1481309ad96d757e35bcb9498f0da05b68ed1a2efa47fcf"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "sha256": "04bcb7c6e5895754f1481309ad96d757e35bcb9498f0da05b68ed1a2efa47fcf"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "sha256": "cc4f88f5be8ecb9f1a2ac304ba793529d42d545a919b3963239394e13c26c941"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "sha256": "38b3cdd77ee9ddfdb627aad02cc5d606d4a45ba9748e63cb671ac368dd5774fa"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "sha256": "3156ebb9a22a5b51b9824634d17fb13f51fca5f3ceff0d71ee5520b360f77157"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "sha256": "3156ebb9a22a5b51b9824634d17fb13f51fca5f3ceff0d71ee5520b360f77157"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "sha256": "53f24f24d4144b44267e9b72c3a9352cc4d180a8686cf1961da9980d2b37ef17"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "sha256": "04bcb7c6e5895754f1481309ad96d757e35bcb9498f0da05b68ed1a2efa47fcf"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "sha256": "2965627a4cccbc87c1449fc019790ad268e41f9b2a02fffd1fb5324565c61caf"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "sha256": "2965627a4cccbc87c1449fc019790ad268e41f9b2a02fffd1fb5324565c61caf"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "sha256": "194ad481c1da7e49b8c2a53562dd95ff55e33b762f7f699d384cce452b31a11c"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "sha256": "f20e786ba0ed39334e5ca452d7811305f7c4423b92268849c8df3148d04c1a6b"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "sha256": "194ad481c1da7e49b8c2a53562dd95ff55e33b762f7f699d384cce452b31a11c"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "sha256": "b1ac069ce64386c700939cf92b97a0fc028e7b158fb9ccea6c8995e88a26707b"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "sha256": "d61ec31672b25866bf32cce8f29620f34f0117181c5c3a30f9714160d2501853"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "sha256": "3fecc0f972c370965d5d46d38dd90d70c0dc34ea152125dfd1bf239df0c33bb8"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "sha256": "b7685c5c6f2880b72c1129421b731d1b298ee6a36cf3993fd65592057e2423b5"
+    },
+    {
+      "path": "src-tauri/lensfun_db/6x6.xml",
+      "sha256": "ca13c2756b32d728675372695c072517a0e38af5eff2ecd3e17599dee7fc58b3"
+    },
+    {
+      "path": "src-tauri/lensfun_db/actioncams.xml",
+      "sha256": "79a5da0322574b95690464444c9d9ba1da0e1f827da44fd6bff120a0ec10e4b4"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-canon.xml",
+      "sha256": "bae47e4b3a0f8852641038ae2dcca5b28ed7965e65ca795fd676f9de857c4670"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-casio.xml",
+      "sha256": "ab35433879c4574ef8f97cd4e3d114d7ff8db4e7279da9d502fc9e911b51ee27"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-fujifilm.xml",
+      "sha256": "58af9ebef2410c428ae2c5d01003d2247330d47d918823e63522b4d897a997d1"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-kodak.xml",
+      "sha256": "377018ccd74f58e966b37a11e5a8689be4268153bebece9f1f2a0dbfa8234845"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-konica-minolta.xml",
+      "sha256": "832a7473951ab625e10c48af6cf60f89b57280016d45729e2584cf9e41ad3cc7"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-leica.xml",
+      "sha256": "8e4676679377576dc19e7900ce86fc69b0248ea1d4538aa22ee1ee09431a3be3"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-nikon.xml",
+      "sha256": "5393bdb8223e13d21b85818e96571e97c035470b49b0452dfcedc2e1ff512d3b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-olympus.xml",
+      "sha256": "7637d469ad54a02ebce9492a9aa9424a2ff1ec07b0398158076f762fdc08389b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-panasonic.xml",
+      "sha256": "f191fc2a5d49fb50c06f4c399ee8c1a83a05f93a0efaecd352ec5c1479b8e60b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-pentax.xml",
+      "sha256": "596fae3edaadcf2d90ae930fc1bec42597ca0b2bd11842e686e1b915f3736390"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-ricoh.xml",
+      "sha256": "46df96ebc367d5170cb6b7dfc3742093f0ad946264518fc5488573ba052f29d7"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-samsung.xml",
+      "sha256": "36e3a778046d56385c387d48474cd32a89a5da94d99e640b5ce716ce747f898d"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-sigma.xml",
+      "sha256": "0ddc265e3e580da05dcd4664d1b9c2464838d74dd02519c826520950c8f1759e"
+    },
+    {
+      "path": "src-tauri/lensfun_db/compact-sony.xml",
+      "sha256": "be146388b4f6f7bf0d73394e20386ce6ccef3559ab39f1268ba3c14aaef03207"
+    },
+    {
+      "path": "src-tauri/lensfun_db/contax.xml",
+      "sha256": "5eba12e6fd4913470afb6fe25fee47a263084b6cec830297273909872f47669a"
+    },
+    {
+      "path": "src-tauri/lensfun_db/generic.xml",
+      "sha256": "cd572d4110981546b2c4cd296c2ff16755b30063fa136d8b06ad2ca13ab4c59f"
+    },
+    {
+      "path": "src-tauri/lensfun_db/lensfun-database.dtd",
+      "sha256": "532bb9a7232eaf372baa70afb552712dc699dbacf8b5a408ec4b670a87ffb3e5"
+    },
+    {
+      "path": "src-tauri/lensfun_db/lensfun-database.xsd",
+      "sha256": "6a0a0882ac583113fb3b2896ad89d2da9ca531ac536f1638131c7732d3d1bd7b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-canon.xml",
+      "sha256": "2de8e9467a6af6f83cc9da834d3d3b94d1aaf54519f60c68ac6bc02780a77516"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-fujifilm.xml",
+      "sha256": "64586336153b948fe2325f6c46679149a4e3c114a70bee4bd1de88721cb4de72"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-hasselblad.xml",
+      "sha256": "13e1fa55d36c2ed7d22964c21ce6c21d887bfe4506e840e425da1ce4157c3756"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-leica.xml",
+      "sha256": "c691037e2e0743388473c2a0545e340462c412b7e3b57e451f4f9c89dde2388a"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-nikon.xml",
+      "sha256": "dcae5ec2e505411a7f00b6b8dd03825e55620403b558b156be15e9ddfbeaf159"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-olympus.xml",
+      "sha256": "989a3d88ef07a286efc2755df214792fdf71d60366932a1b369a77ad39cf2abb"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-panasonic.xml",
+      "sha256": "eb5f01f33e65721f3900786d5970c7e220dd042aaa56968be33c009a358ff3c5"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-pentax.xml",
+      "sha256": "675a94f52794868ad9f1d79e17b7128783c34b3db23e9eac346c5963812a16e5"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-samsung.xml",
+      "sha256": "10130e9e125e0882a16fd3033cfed0175e9c14cb7d35e630cdb94736f27e5dc3"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-samyang.xml",
+      "sha256": "ae3bf262f12facdc6f81b837cf6d36fdde2a930d2bfb0918d5abaa47fcfea3ab"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-sigma.xml",
+      "sha256": "5f39b232efba5c208e5a98d8afe92cb2eee879213322d47827fcc6f0dc3a06f9"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-sony.xml",
+      "sha256": "f9f7e5d7461ac58f76eb55dcc5b211f2e9a451402ddb4a9ecb12d1e4dc04f2b8"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-tamron.xml",
+      "sha256": "2f0c9c4dfb9b0419ba0fac2e618bc251c2e71e068b6e09a23d7994b0ff62db0a"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-tokina.xml",
+      "sha256": "addb27bd82b0d729644b9da1342f92401f63cc5945309ed17f38f4b7af1649e3"
+    },
+    {
+      "path": "src-tauri/lensfun_db/mil-zeiss.xml",
+      "sha256": "ef8a238904fc9ea6fdb6171863dfd70cd94814af19ecd8c31ee000ca1864589d"
+    },
+    {
+      "path": "src-tauri/lensfun_db/misc.xml",
+      "sha256": "2000a347d9dc37d908ea5b56c760de5b2b4ab475857959ae2e901c31339b01bb"
+    },
+    {
+      "path": "src-tauri/lensfun_db/om-system.xml",
+      "sha256": "a53a627e6ba79fbabb0fa7552ce2b6e56e206425d2eaf0e8ccdb6b8c40c20755"
+    },
+    {
+      "path": "src-tauri/lensfun_db/rf-leica.xml",
+      "sha256": "f93636e1980ad308d1873cc3ac078cdc77c0d529d777cd45c5c8d0e4781981e3"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-canon.xml",
+      "sha256": "5244e6df8f2522f829c57e2073313ce31a624e9ed9605310fe43613b9d588c99"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-hasselblad.xml",
+      "sha256": "97602c467699904bf101179ea2fa24f05f3e1879250498a6ba306cd95a3b7a6b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-konica-minolta.xml",
+      "sha256": "5639ca94f121f609247c2c120b65830b3ef7784db6ecfa7e8eb3d29ff5046c1b"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-leica.xml",
+      "sha256": "c5e74cb511712e99ed60a066e85c842fea58f693c5039c3819485619f5293d0e"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-nikon.xml",
+      "sha256": "5e591e8b1032203cce4c822f1da3d49524a78e7d71c594ea5a4533f2e57aacdf"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-olympus.xml",
+      "sha256": "f7693b6779edd8ed10d7dc23113669255bfa4987cea7db0e843f7f5f2bbbe615"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-panasonic.xml",
+      "sha256": "cd79acb49d9ce5f2a4cecc572b3e117f03da380bed2dcbfd52327192d8ce2381"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-pentax.xml",
+      "sha256": "2fba773e41a1cfb70f0c85efdab6d78944bf80ddf89bc2035ef6db39da352f29"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-ricoh.xml",
+      "sha256": "c835798136a53535fdf4f81312ac9aad0ea3de3ef732c183d8cc4d2f432011d9"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-samsung.xml",
+      "sha256": "dc0a29e424ff96e4316ddeb76126fa6f6c73a8836905a3e1f56f0c493826148f"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-samyang.xml",
+      "sha256": "fb1585bea91f5f59e1fae8811dd76c92252ee5d52e3647df2aff4695048443b5"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-schneider.xml",
+      "sha256": "de607cfe4ba6e7debc61e282ce39b72825c07601572e14af2bc9108ba67faf81"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-sigma.xml",
+      "sha256": "f55f41c144fbb72e3c51d2dfef40e918930d37db1b4150bd02bd746406c036d2"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-soligor.xml",
+      "sha256": "1aba0aab19bce87ea86175b6551cb5306a512eb54be1698b89991b86008f6a04"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-sony.xml",
+      "sha256": "e5ca7f532afe23ff380bf2f9e5458f687bed603355d73a254d85c4e692942fdc"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-tamron.xml",
+      "sha256": "c62090789cebe6bbb663111c6e97beeb1111852bb735088e29cf8782df4bab45"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-tokina.xml",
+      "sha256": "b1213eda81a613bc3976340398c6b8ce8b7dc29423476fc565d5f8e5cf612ecf"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-ussr.xml",
+      "sha256": "1fd6acc8a8f40373379bea2899ffd96fc34b22d9b044d0474dabd4c89af44efb"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-vivitar.xml",
+      "sha256": "c5c67e3fe38e8fa19044acadc7730047690435f66aac563f55ffe04997a88111"
+    },
+    {
+      "path": "src-tauri/lensfun_db/slr-zeiss.xml",
+      "sha256": "49aa211a41fd5fe391d26af5fa65bdf9428d60863ffff15d3916fa1c520dc101"
+    },
+    {
+      "path": "src-tauri/lensfun_db/timestamp.txt",
+      "sha256": "a846300caf01e0bf1372a37e57b945579b43da6a4dead7e3fb1bfca23526a015"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/F-Pro 400H.cube",
+      "sha256": "467343b0a9b935daa6973557d37ed644ed754c89b77eafd72bed104bfc031edb"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/K-Ektar 100.cube",
+      "sha256": "cdc0bfd05d31a26a7295a7e5f2e16095dae27f03c3483d4ba0ebb301b6f705ae"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/K-Gold 200.cube",
+      "sha256": "2ae72e6f1d9d38e73ba408f3f2e208f4b5f388f8a2824d70c2b2d177772f98fd"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/K-Portra 400.cube",
+      "sha256": "270a33eb687bdfe59a17b9d492981d8e7802ddd3d8f9c4d51fadf77b5258c48d"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/K-Vision 250D Cinematic.cube",
+      "sha256": "a37f86156445400be06ed67295c7ff5ed6d40360ac53881c738cf1328077919f"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/K-Vision 500T Cinematic.cube",
+      "sha256": "d7521d74b5394ab584c988b239dac178cee899a826ca680240d597c1a274b72e"
+    },
+    {
+      "path": "src-tauri/resources/film_luts/SPEKTRAFILM_LICENSE.txt",
+      "sha256": "76d629501783ae52e8d63aee1e054c1e1a9713b9fe7d36fb306e25b1d14b24e9"
+    },
+    {
+      "path": "src-tauri/resources/licenses/AGPL-3.0.txt",
+      "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b"
+    },
+    {
+      "path": "src-tauri/resources/licenses/LGPL-2.1.txt",
+      "sha256": "dcbea5e0d91fbe14fbdfcba9a478013d346a1bb8fb0007df87bfe0f14ef09b88"
+    },
+    {
+      "path": "src-tauri/resources/licenses/LGPL-3.0.txt",
+      "sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b"
+    },
+    {
+      "path": "src-tauri/resources/licenses/directml-LICENSE.txt",
+      "sha256": "5ebf0876ab82ebe7cbdd34c4bd89f9fd2adf65ec8ba3236066f85b281ae8ea2c"
+    },
+    {
+      "path": "src-tauri/rust-toolchain.toml",
+      "sha256": "81c892f7a7f1ea34e0152fcd42256b53233e0c546923f4c34fa4e3ee460803e2"
+    },
+    {
+      "path": "src-tauri/src/adjustment_utils.rs",
+      "sha256": "8debbaa4e3965d992314a6ec6136644426f4c658b292f2d41f213570802eb261"
+    },
+    {
+      "path": "src-tauri/src/ai_commands.rs",
+      "sha256": "e621aa328440cd81ffb57df23872da18f9b8bf9f0d93d3aee08f51b5355a3240"
+    },
+    {
+      "path": "src-tauri/src/ai_connector.rs",
+      "sha256": "f90878f5c1392b50f99cc29ceae562d13287f377c619118ec8d4e97cdcdf30fa"
+    },
+    {
+      "path": "src-tauri/src/ai_denoise.rs",
+      "sha256": "8ae995a6ec484556879c63246a65c7e84577aa9de023743341e6e8bb27310608"
+    },
+    {
+      "path": "src-tauri/src/ai_jobs.rs",
+      "sha256": "00f7d9a6f9183f572519f3ed43b2d2874b4f208c2a84551e6a82412f9ef4599c"
+    },
+    {
+      "path": "src-tauri/src/ai_processing.rs",
+      "sha256": "ede36eda7b422e45a6bb466deba510bc3f080d6d4c302a38b5529f5c91d39e77"
+    },
+    {
+      "path": "src-tauri/src/android_integration.rs",
+      "sha256": "a1daa6048d9fe067d76e1fbc52a38e7d6f9d71218052a7b460238edbc651e606"
+    },
+    {
+      "path": "src-tauri/src/app_settings.rs",
+      "sha256": "90cfe3b95631580296f1a0236ccf12fc244304797376604fcd0a77367c1cb117"
+    },
+    {
+      "path": "src-tauri/src/app_state.rs",
+      "sha256": "de5d2bee7bb44ac7b8b7749865d2ac37cf0937932a06460fa9a1c5e7421941de"
+    },
+    {
+      "path": "src-tauri/src/apple_raw.rs",
+      "sha256": "c5843dfc828fa808a9a0324193f30c411a06e19d1e58cbec587e4b66b65534f4"
+    },
+    {
+      "path": "src-tauri/src/as_shot.rs",
+      "sha256": "e048d972dbf218e1a1a64ddc9f27d2fd168e8a8390bfadca1ac65b782c5d6a89"
+    },
+    {
+      "path": "src-tauri/src/auto_straighten.rs",
+      "sha256": "7ba902e8f58a364a5f5faf99fb65fbd16af9bde52c81312a5d567c67c864b238"
+    },
+    {
+      "path": "src-tauri/src/baseline_exposure.rs",
+      "sha256": "9e89674f0825faac3161efaedf752d0459207413e2c7c7e1f76a31c18c144066"
+    },
+    {
+      "path": "src-tauri/src/bm3d.rs",
+      "sha256": "8506f039a9466da2768d82ea860192798dd6594c6a69cb6779c7a91b877fd11c"
+    },
+    {
+      "path": "src-tauri/src/cache_utils.rs",
+      "sha256": "c3a8c04800ce4556123e357c0183b2348e68f68e825c9f6bef7b85c9c9d309d3"
+    },
+    {
+      "path": "src-tauri/src/camera_tethering.rs",
+      "sha256": "5e687fc8ad5efa87b42abd2f2848ed8a64218eb51c19f92ff32fdc7b0aa5d3e6"
+    },
+    {
+      "path": "src-tauri/src/clone_heal.rs",
+      "sha256": "c96412f8a70ae5f0cbf9a5b63475c50c2295b55f22a3ac6df5aef19d1d94033c"
+    },
+    {
+      "path": "src-tauri/src/culling.rs",
+      "sha256": "9669b177705a3b18dcaa9b283a0d94869d2e5ac11af8e02aeb1c32883f2f9ee2"
+    },
+    {
+      "path": "src-tauri/src/edit_in.rs",
+      "sha256": "6a1faa1498ca1c9688613ac55607d610df82cfc1aa59b8950bfe4bc2c4de3ea1"
+    },
+    {
+      "path": "src-tauri/src/effect_maps.rs",
+      "sha256": "e6e050e2ddd6887bd5f9b25f4dc8e040e0d3592daef29f997b62d12226c65ecd"
+    },
+    {
+      "path": "src-tauri/src/exif_processing.rs",
+      "sha256": "cf2950dc5c92f132f9f1823f9af3941413c84835b8886bb9cc94b12ff1f4c3ed"
+    },
+    {
+      "path": "src-tauri/src/export_processing.rs",
+      "sha256": "f477518c78bc92549e4ccb338398ce76aacec302cf73da2d64518115d1c2818c"
+    },
+    {
+      "path": "src-tauri/src/face_masking.rs",
+      "sha256": "32443f7c5831f04b7e3f8edafe70acf3e72242386a91dd50a56f62865d6ddf93"
+    },
+    {
+      "path": "src-tauri/src/file_management.rs",
+      "sha256": "be14568079b28748da8f38c5ac89260cdeed6116eb93cd4082ded34aa78f1f38"
+    },
+    {
+      "path": "src-tauri/src/focus_stacking.rs",
+      "sha256": "21176eda765584b53a4bef01c0ff789263b362d56cb1bf1440b88e157f253997"
+    },
+    {
+      "path": "src-tauri/src/fog.rs",
+      "sha256": "e6c05f9be98ec773f2324c5333ed30059bdd1c3e3b33daf6f641f8f0b20ec77c"
+    },
+    {
+      "path": "src-tauri/src/formats.rs",
+      "sha256": "8f30478cf51e1f800b97ab926c36ad42124a93b0501fb78a2556775a793ffb17"
+    },
+    {
+      "path": "src-tauri/src/gpu_compute.rs",
+      "sha256": "ee6e41d92702447a9da3c9190f526a2285d7fd3f1bff6f2feac2b6aeeadd3c98"
+    },
+    {
+      "path": "src-tauri/src/gpu_processing.rs",
+      "sha256": "60c065fe0ed8f9b24a362309c29f27d52468e96b4008bdbe5d28d25110debc96"
+    },
+    {
+      "path": "src-tauri/src/guided_perspective.rs",
+      "sha256": "1c14d911b2038382571a52b582a66ca7e3e31821a58b099bdeb15cf21a322b4e"
+    },
+    {
+      "path": "src-tauri/src/hdr_deghosting.rs",
+      "sha256": "a9a40bd29d849669696aab55274184133a554294484c992f903fb5e43b9f5db4"
+    },
+    {
+      "path": "src-tauri/src/highlight_reconstruction.rs",
+      "sha256": "53c19a7597717708d345edf21df94c007112174f03753086ee9a51667b725c4d"
+    },
+    {
+      "path": "src-tauri/src/image_loader.rs",
+      "sha256": "e8fecf94c5d9b4728a3dff59bae749ab427e130acd81eea98865830c6b42ec7b"
+    },
+    {
+      "path": "src-tauri/src/image_preload.rs",
+      "sha256": "1961ab0ff281041164f6b164474de1bef711345a610390e1ee0016c593fbc18d"
+    },
+    {
+      "path": "src-tauri/src/image_processing.rs",
+      "sha256": "f7d42fecc6a668e47f184f0fe010a2cc2bfde3ab1914fa4c3721e076d341ea4a"
+    },
+    {
+      "path": "src-tauri/src/immich/client.rs",
+      "sha256": "83baa4d915a85c3d8a498c17f4997eaccdbfe125aaaf56a8945e589c8d811b8e"
+    },
+    {
+      "path": "src-tauri/src/immich/commands.rs",
+      "sha256": "952b1ebf140544f7baeb651b107395cabd8a4673abf98231a378e52f52994d3d"
+    },
+    {
+      "path": "src-tauri/src/immich/config.rs",
+      "sha256": "48bf8f92ed0c44bafd80e3cf029e1e174de788a523cb1d3e8b20cd1985c641ee"
+    },
+    {
+      "path": "src-tauri/src/immich/files.rs",
+      "sha256": "3318e3444c1fae45e8481f4d626f6e0556086810e02fb20631a7171cd165acc7"
+    },
+    {
+      "path": "src-tauri/src/immich/mod.rs",
+      "sha256": "fe3d84ccaed69a828cb54642165fc0d068c642f10a2b6d59f4f1c9d86990712d"
+    },
+    {
+      "path": "src-tauri/src/immich/registry.rs",
+      "sha256": "6e537c512018974437f5591f54a2c44cb72c8db31a15c057c8f0272b53dc04fb"
+    },
+    {
+      "path": "src-tauri/src/immich/resolve.rs",
+      "sha256": "d824c88814009c4901d2b7f1fc188cf71248466e0921a1cbd5be20d667f627bd"
+    },
+    {
+      "path": "src-tauri/src/immich/secrets.rs",
+      "sha256": "2b94cd7970fbb7c163b78d3e670537eae1f43b6dff56af04be04add5ce988d05"
+    },
+    {
+      "path": "src-tauri/src/immich/sync.rs",
+      "sha256": "118072bcd210faea2b1e0e52ee38b08055172d58320b7f86dd64c956e0ba0148"
+    },
+    {
+      "path": "src-tauri/src/immich/thumbnails.rs",
+      "sha256": "5cfdcdd4eb3abcd0d41dfeae861df9d1ff1675c18416d0e75bb1260ea1efc363"
+    },
+    {
+      "path": "src-tauri/src/immich/trash.rs",
+      "sha256": "160db21c769bd7658e0e454d00e409b83e9c4d3fb7f103448502f22e02519213"
+    },
+    {
+      "path": "src-tauri/src/immich/uploads.rs",
+      "sha256": "0fa73aedfe99b6d24ae9c2f0211da9234f54c884054ee3e0422001b5e1c0616d"
+    },
+    {
+      "path": "src-tauri/src/inpainting.rs",
+      "sha256": "8d89f3ccccac40f5f728d2488d3196afb8c8f54a709063dffcc8d5325c256d9d"
+    },
+    {
+      "path": "src-tauri/src/launch_request.rs",
+      "sha256": "c1ccc14c717a82e4c38e6ad75f55e3bf64048b5a41ba6d2b90f0cb379eb6dc46"
+    },
+    {
+      "path": "src-tauri/src/lens_blur.rs",
+      "sha256": "98f63a39897a8332b3e866da7b39823200223872222bc41454d5a3ad86b809d9"
+    },
+    {
+      "path": "src-tauri/src/lens_correction.rs",
+      "sha256": "b213fb3b358485c427ef6f5055126436868bf5d8b38347cbec148f61ba879808"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "sha256": "c8798a1f52847c9734a4b6780eb49c686cfa9cc21ba4d484fd010fd48f59fb85"
+    },
+    {
+      "path": "src-tauri/src/lut_processing.rs",
+      "sha256": "c247312e429e43c5b413c3510aa8c16befb77fcb7eaeb4f7fe1b93c9489cad5c"
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "sha256": "0f6ee20cb20c4fd91a6bc95b7490aa191e2d7090f2710abe3c29f284e1d23b7d"
+    },
+    {
+      "path": "src-tauri/src/mask_generation.rs",
+      "sha256": "1a6d50d5fd2b2269b159707d7dd0f009f98fa0ef6e20a2096f234d05aeb3ed27"
+    },
+    {
+      "path": "src-tauri/src/memory_budget.rs",
+      "sha256": "ad957957aa8e2ed1f8c90c00a36b9642b543c329ed49d70a1fa02875c9ebf53e"
+    },
+    {
+      "path": "src-tauri/src/motion_blur.rs",
+      "sha256": "e22c12ddc17c5b568b2c9f9e3f66dee3de020ca4dfc0901c9f4e212e507eec38"
+    },
+    {
+      "path": "src-tauri/src/multi_exposure.rs",
+      "sha256": "a613d33be1a2f40db28f8a33bf87e67c0748007914328214ce67602a28ef4901"
+    },
+    {
+      "path": "src-tauri/src/negative_conversion.rs",
+      "sha256": "d400043b6c905c08c1bf5812e695d8be317ae30144efec19d069541f179da0db"
+    },
+    {
+      "path": "src-tauri/src/panorama_stitching.rs",
+      "sha256": "247366cc5cd19d8bab89900643997c10bc65695f5d585b3feab8c13bddefeeb3"
+    },
+    {
+      "path": "src-tauri/src/panorama_utils/mod.rs",
+      "sha256": "50f7e3dcf8e4bf94b9154a192ecfd6379dc696060d5cd1b8fed754b3032934b2"
+    },
+    {
+      "path": "src-tauri/src/panorama_utils/processing.rs",
+      "sha256": "dbed1c4826c01e91535e92aea819ba9d56af11d5ce63dbf16c61ef4abaf69e09"
+    },
+    {
+      "path": "src-tauri/src/panorama_utils/stitching.rs",
+      "sha256": "d56c0baceafa7d56cd6dde837d47b762991e244cfee7391cb88193fbc119c5cc"
+    },
+    {
+      "path": "src-tauri/src/preset_converter.rs",
+      "sha256": "490799a9846335edd228b190402309b8a3a80e9d8268698334947f12a743883e"
+    },
+    {
+      "path": "src-tauri/src/preview_jpeg.rs",
+      "sha256": "f094224c5bab4fa34de3d93d50047854a7a9476173c83fd1fdfe523ea2f08c53"
+    },
+    {
+      "path": "src-tauri/src/raw_processing.rs",
+      "sha256": "c69bebc3a65c64928845f6fe8abc5b85aca9db99dd7aa6f81c6ac43990162012"
+    },
+    {
+      "path": "src-tauri/src/relight.rs",
+      "sha256": "493013ddc326bcc5af8e62934edb5cbd50a622a874b776876c87dd4856b85cd4"
+    },
+    {
+      "path": "src-tauri/src/render_source.rs",
+      "sha256": "c34b39e4c4c5b4ac849ee0e638b82cffb80ee0d43c3ab16e0db603ef501a6d4d"
+    },
+    {
+      "path": "src-tauri/src/shaders/blur.wgsl",
+      "sha256": "362a2e6e9f54c0889c77bcab252d6f04d1a4a680c496470af85509b42a1a8e70"
+    },
+    {
+      "path": "src-tauri/src/shaders/compute_common.wgsl",
+      "sha256": "1fd76a458704fb93d564986da9dd536a3c128ad195bc25a3ebdbac1990ce19bc"
+    },
+    {
+      "path": "src-tauri/src/shaders/display.wgsl",
+      "sha256": "a4ae81bc7d5a58848ad2a91c61fb57657d3b164361acd91df96c63fa42fcb783"
+    },
+    {
+      "path": "src-tauri/src/shaders/flare.wgsl",
+      "sha256": "f5ce1f83e4e954a7c0cf0f59951f3401ca2937def6f032d8f7666642ddf91ad8"
+    },
+    {
+      "path": "src-tauri/src/shaders/fog.wgsl",
+      "sha256": "a735e2d7fc7cbc152452de77cad88abbfe677578adca14236c0156e002aa5e0a"
+    },
+    {
+      "path": "src-tauri/src/shaders/guided.wgsl",
+      "sha256": "23ec08d6a73f0e6f7f80b650f53c12ad981c6ea34c04e232fbab63ffc41f004c"
+    },
+    {
+      "path": "src-tauri/src/shaders/lens_blur.wgsl",
+      "sha256": "6e57064b847492c1619ec5682720abb301d060b70ab3406cdabf99de724499bb"
+    },
+    {
+      "path": "src-tauri/src/shaders/motion_blur.wgsl",
+      "sha256": "fc28384f0520a1136698c1489bb7d376f96728085a22db98cedf27786a4e5888"
+    },
+    {
+      "path": "src-tauri/src/shaders/relight.wgsl",
+      "sha256": "fbecae225a3be65ce3584c361317a2f762efd20453bddb2fbd0814dd1458de07"
+    },
+    {
+      "path": "src-tauri/src/shaders/shader.wgsl",
+      "sha256": "4d86f932d0c4b4906783fbe98ae0fc2a5899a45f73dbe80b68cf367a3e54be58"
+    },
+    {
+      "path": "src-tauri/src/shaders/transform.wgsl",
+      "sha256": "3165c343a7ebd45fbc0b38a17bb51c5512295dd459c699d199b7b19debc4f13f"
+    },
+    {
+      "path": "src-tauri/src/storage.rs",
+      "sha256": "c17a56d426b5446cdf995408bcb4bc38d6d4f4646257d4e6fa312730f3cbb1e9"
+    },
+    {
+      "path": "src-tauri/src/tagging.rs",
+      "sha256": "fd6c5f1c5e2a783d05baa1b00a61cef79fcb4940e2d42a9680e1deeba9c41de0"
+    },
+    {
+      "path": "src-tauri/src/tagging_utils/candidates.rs",
+      "sha256": "8b4ff9746299dca8458bbf5ebf1322575d39d4cedb4a25411e09daacef8fe0a1"
+    },
+    {
+      "path": "src-tauri/src/tagging_utils/hierarchy.rs",
+      "sha256": "f5c4907e193f4fee934788401181856e4628620dd14585b9a580abc5928016a3"
+    },
+    {
+      "path": "src-tauri/src/tagging_utils/mod.rs",
+      "sha256": "277ffedc293ce4930af02451fcfa0e26df4f2e9770da30bc4e0c0a82ac9082b2"
+    },
+    {
+      "path": "src-tauri/src/tiff_metadata.rs",
+      "sha256": "33526c99152d3806cae05e77429e63849220e28f00c24fc631ca4e8ef1a1827f"
+    },
+    {
+      "path": "src-tauri/src/touch_up.rs",
+      "sha256": "0c2e6ba5cb7b4ad467a877cb13d3ed19b5d57c1b2b8d1ad02f0f6a4c27796205"
+    },
+    {
+      "path": "src-tauri/src/viewer_window.rs",
+      "sha256": "69f2fe5693b18f0c2250591df799a41d1a751c4d1118ea53287471f2721e1d2b"
+    },
+    {
+      "path": "src-tauri/src/wayland_subsurface.rs",
+      "sha256": "a29d060d72bafe3519e3cb35846ddea925681cded13b0858cc4885a2432722ec"
+    },
+    {
+      "path": "src-tauri/src/white_balance.rs",
+      "sha256": "0a5d8bb1733729e1fd23df2f4be11b4227ba9f2d8f2391d296ddf6ddfe1e4519"
+    },
+    {
+      "path": "src-tauri/src/window_customizer.rs",
+      "sha256": "1269cb9a46745aab44d75e8b1df38e1016f2d8baf3cfde33453d675fe2b3ff2d"
+    },
+    {
+      "path": "src-tauri/tauri.android.conf.json",
+      "sha256": "ff91e7bc861a446996a5c857b76280f5e8bdf39a03562b7ede4b7580610af1a7"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "sha256": "1a6eb16f04ab41a653042bbd9b287c9870dc5741b0563618d123f9c3db996fbd"
+    },
+    {
+      "path": "src-tauri/tauri.linux.conf.json",
+      "sha256": "e4ba874198b07b92b3fa9dda2ad3fd24876a728d1964c848879e14350d5cdae2"
+    },
+    {
+      "path": "src-tauri/tauri.macos.conf.json",
+      "sha256": "2efc9d10e7ae89f5a31a3273ac917f255b1a361ee4c48df60b1c5fd624163252"
+    },
+    {
+      "path": "src/@types/i18next.d.ts",
+      "sha256": "fa53985e3eab67861f1d42a52d57fccf5d34f7723c95f4d1b02dec0be2c062b5"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "d6b27b3f63429dccb0f4c155271d4517c7da35bcad89dea50cff675aa54b9a7d"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/adjustments/AdjustmentSection.tsx",
+      "sha256": "c56b2dc377d7bb901886c917f364e1344b6ffe3a955d7abad98478f645081fbe"
+    },
+    {
+      "path": "src/components/adjustments/AdjustmentSubSection.tsx",
+      "sha256": "80ff9791d3f747dcc2ca58c5193862a54c063a218dc9087de846cd7f11d113a3"
+    },
+    {
+      "path": "src/components/adjustments/Basic.tsx",
+      "sha256": "cecaed6adc4cfd63058ac0055401a681afd810240709b56b40efac187c65a8b2"
+    },
+    {
+      "path": "src/components/adjustments/Color.tsx",
+      "sha256": "638f6f3458041aead469c81ab9636529a0a4991f7cbfbf30006fdb2b18a35be0"
+    },
+    {
+      "path": "src/components/adjustments/Curves.tsx",
+      "sha256": "21031720975953330790e48aebc3b2cb6a8e4b081e68d54455139ccbc5fddd54"
+    },
+    {
+      "path": "src/components/adjustments/Details.tsx",
+      "sha256": "b781288eb9e1c0650bb5c04beab9678f96d048b9ed61a410efc307b0f69891ba"
+    },
+    {
+      "path": "src/components/adjustments/Effects.tsx",
+      "sha256": "297dfb500c8a106494fda60462dd2e2b3de70e26ba53ef0536d49fab49044554"
+    },
+    {
+      "path": "src/components/immich/ImmichExportOptions.tsx",
+      "sha256": "bfd9504bc1cc4f813ed7e6fc38d65870d31f5b849e7510850d4888e3d784c176"
+    },
+    {
+      "path": "src/components/immich/ImmichRow.tsx",
+      "sha256": "e61e77844bf8bdce1b9ef14ed92a7886b6e2d382905135a5efbde32ab0a86dff"
+    },
+    {
+      "path": "src/components/immich/ImmichSection.tsx",
+      "sha256": "0e7932c4670c0be21a2c6bb99e7d8d23374ec3842a1aa3f1b625feff466316ca"
+    },
+    {
+      "path": "src/components/immich/ImmichSettings.tsx",
+      "sha256": "f116cc83e8fdaf940bb02ce3cc4d9b4faaced690e8d22bf1cb7b0994790fc4f0"
+    },
+    {
+      "path": "src/components/immich/ImmichTimeline.tsx",
+      "sha256": "aa2e35baa58d35b7f93ba23abe7f12d01ef8ab4070fce8bfd975d9d376445a3a"
+    },
+    {
+      "path": "src/components/immich/immichApi.ts",
+      "sha256": "425940dbb43884e65bee7f3278fdb5be774040aec46a016e741fb079c288ab95"
+    },
+    {
+      "path": "src/components/immich/useImmichEvents.ts",
+      "sha256": "010a9134861f78ef2eca562eeed5700f0c8f05500c5c234d956aef43ebf679df"
+    },
+    {
+      "path": "src/components/immich/useImmichStore.ts",
+      "sha256": "7d57bcc3e80c3bafc6eea2c1683234bf808db5bbab2f537f966e2734de262d79"
+    },
+    {
+      "path": "src/components/managers/ImageLoaderManager.tsx",
+      "sha256": "12d30b47274190ced0862062b0f4bb291a8c8415925317a2d729f3810b895770"
+    },
+    {
+      "path": "src/components/managers/ImageProcessingManager.tsx",
+      "sha256": "c64f1638ed29c346838ad195b31e1b084a9a2fe6eb68af96a87c0357cb0e2814"
+    },
+    {
+      "path": "src/components/modals/AppModals.tsx",
+      "sha256": "9cc715edf2de88f838a7a21baacc7defe43bf7a5a23e8f26c7e63d9e87969dfb"
+    },
+    {
+      "path": "src/components/modals/AppPanelModal.tsx",
+      "sha256": "20dbbeff72fafb2422f66175f701b6466fe1459d3d43aecd084219612ca3a4d3"
+    },
+    {
+      "path": "src/components/modals/CollageModal.tsx",
+      "sha256": "d0a8657189943d74d582b8bd9cf14baafd986666c9086e03d7a08519308bdc5c"
+    },
+    {
+      "path": "src/components/modals/ConfigurePresetModal.tsx",
+      "sha256": "090545bc74c1c75342a958b503e26d64ad890024e14f3a722f2ceb176fdfdf8b"
+    },
+    {
+      "path": "src/components/modals/ConfirmModal.tsx",
+      "sha256": "a398c13435e767b17200a09bc5cc3eca9920a08c7018ff6fe03941798a0f0372"
+    },
+    {
+      "path": "src/components/modals/CopyPasteSettingsModal.tsx",
+      "sha256": "690d98ea3300cd25b56bff42563ac73e307975894419aae1c4a7a4b36c3cd48d"
+    },
+    {
+      "path": "src/components/modals/CreateFolderModal.tsx",
+      "sha256": "ff16869f30d45b6e0c96dc647314027a5828814ce0d62d0fc90840ecfd07a29a"
+    },
+    {
+      "path": "src/components/modals/CullingModal.tsx",
+      "sha256": "9cd23738f48ae4742ac1cad4f91c7d8ca41f8e0607734aa5df6a237850bb9e24"
+    },
+    {
+      "path": "src/components/modals/FocusStackModal.tsx",
+      "sha256": "008758d968d419c753879bcdc6aae08efc56406d35d9f032e39e6c1d82787732"
+    },
+    {
+      "path": "src/components/modals/HdrModal.tsx",
+      "sha256": "e6fcc2374d55fc8fe38012c74fa395c1b75281788653906a8e95efcffe907c69"
+    },
+    {
+      "path": "src/components/modals/ImportSettingsModal.tsx",
+      "sha256": "278f59fccdf91141eb6e48d652b7681f310b38d334b45ce6a981613591e4bc43"
+    },
+    {
+      "path": "src/components/modals/PanoramaModal.tsx",
+      "sha256": "bc1f9a29118377b0a202924c66d659014ed8ad107a1939795ed39d282a9770c2"
+    },
+    {
+      "path": "src/components/modals/RenameFileModal.tsx",
+      "sha256": "768704f7f3edeb8cbfd24fb2e7dbb9288858827953adb381d6d9e8807f60dcb1"
+    },
+    {
+      "path": "src/components/modals/RenameFolderModal.tsx",
+      "sha256": "623d7854c69ade59dec72b4640e87cc6f053ccedbcc6e99510dfaa86c422636d"
+    },
+    {
+      "path": "src/components/panel/BottomBar.tsx",
+      "sha256": "6fad76253c69cd87817fe9d0b8abf9975dd6d2f3dcc2a35da117152e52f137ed"
+    },
+    {
+      "path": "src/components/panel/CommunityPage.tsx",
+      "sha256": "25003b2c3bbb3080529d52d1c72ad36a9db4056f33dddce622217dbabc42313c"
+    },
+    {
+      "path": "src/components/panel/Editor.tsx",
+      "sha256": "10a7478b573652b31a03e086d8cc7a6d5c1087f21368c31404b80da6424b0e5e"
+    },
+    {
+      "path": "src/components/panel/Filmstrip.tsx",
+      "sha256": "511339f92a2338f4fc95457ab1e70aaaedbbc6b290abef2cf83e531ead223509"
+    },
+    {
+      "path": "src/components/panel/MainLibrary.tsx",
+      "sha256": "bf79d5e543359c1f26de90ccc9e8077ed660f3bc62e71bb9d29213976e0a645c"
+    },
+    {
+      "path": "src/components/panel/PanelSwitcher.tsx",
+      "sha256": "475f5b6830e5fb6cd578ab77886f0c6cf4cc4d7f47a6b3ca17a67a164259a83b"
+    },
+    {
+      "path": "src/components/panel/SettingsPanel.tsx",
+      "sha256": "f2d1419d14739a1ad88db77f88a9e2c7a0c8b01322e3ef3c50409aa4e71403ae"
+    },
+    {
+      "path": "src/components/panel/SidePanelArea.tsx",
+      "sha256": "c66c1158a2a9275cc1e752cca3d7ccd2c15670dddc98b0f9339f71b02b389e7e"
+    },
+    {
+      "path": "src/components/panel/editor/ConnectedWaveform.tsx",
+      "sha256": "21253319dd1ef3c37ff009491779dea629523c908f90f2d4c2d887435804c3b5"
+    },
+    {
+      "path": "src/components/panel/editor/EditorToolbar.tsx",
+      "sha256": "21233998656db901dbd14f430b60592dee9fe1c5dc0cefdc308dd677899b9ac3"
+    },
+    {
+      "path": "src/components/panel/editor/ExifIcons.tsx",
+      "sha256": "f66a45923668f9877af1d08756188ae617a97dff07ef069c44379bba07ae51a3"
+    },
+    {
+      "path": "src/components/panel/editor/ImageCanvas.tsx",
+      "sha256": "6b61f41f9257b302f2a75c54ff24624646af4fc887c04a5e28f0b529182ab524"
+    },
+    {
+      "path": "src/components/panel/editor/ToolbarMenu.tsx",
+      "sha256": "99c45c83c216c7183d011697c924512cc9ef3887e0c55f75fc96bc0bc4c07540"
+    },
+    {
+      "path": "src/components/panel/editor/Waveform.tsx",
+      "sha256": "69f51bc66bea5266d8a5a4ab87594db1aba29e0558c0e5e8b329a008bac0b519"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/CenterMarkerShape.tsx",
+      "sha256": "c854453c350a3bab124b1f5c900d453c901f88cbed16067890e496e09ca1557f"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/CloneSourceOverlay.tsx",
+      "sha256": "0854b1ca601fd8761e1c469943353c6ad396fbffb947bc6283336c76377a904a"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/CompositionOverlays.tsx",
+      "sha256": "885b3fea22cce017ba0fc1692309c38434e3b60b127efab4a6569d8e33413a2c"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/RelightLightShape.tsx",
+      "sha256": "9f15ec2da0c69550613e2bc0a79cec46369cce4a461a4cc9f326088fc50ee140"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/SpeedEditOverlay.tsx",
+      "sha256": "94de490aa46a430347fdd599ecc4002c2c0059109e206ecaf135216c4ed050ac"
+    },
+    {
+      "path": "src/components/panel/library/CullingView.tsx",
+      "sha256": "9ecd037fcd19283c3fc3339c0a73ad2c47d9a68ae3e14064feac41a2581b5694"
+    },
+    {
+      "path": "src/components/panel/library/LibraryGrid.tsx",
+      "sha256": "e72143d685e13d93e0480358c4b60cd31ffc018c2a745ac9add075314f9e95b7"
+    },
+    {
+      "path": "src/components/panel/library/LibraryHeader.tsx",
+      "sha256": "3e89274725f71a84cb802bf4725eb262f90301387d7c76abe60701247575d513"
+    },
+    {
+      "path": "src/components/panel/library/LibraryItems.tsx",
+      "sha256": "cd98e97ad4b9ce15511349a5bd7e881340419082f7d14d12b01050ddb3b5cfc9"
+    },
+    {
+      "path": "src/components/panel/right/AIPanel.tsx",
+      "sha256": "bf8b6ece0f9f02eeef6a8bc3418b61a9e8a4a1a2225b510bcbde966eb1abb7f7"
+    },
+    {
+      "path": "src/components/panel/right/AdjustmentSectionsSubMenu.tsx",
+      "sha256": "5a30ab4bbc83103064f074cb6e87a775a44acb23596fd218fcb3941d894c182b"
+    },
+    {
+      "path": "src/components/panel/right/ControlsPanel.tsx",
+      "sha256": "bc75287a1cb3b3040f2b5d449779d260f7fc10cc1300972927a18191b19eb2e6"
+    },
+    {
+      "path": "src/components/panel/right/CropPanel.tsx",
+      "sha256": "6c642db6ed4e264937307693b396d55d6e221698f5733974bdee141e11ab6d28"
+    },
+    {
+      "path": "src/components/panel/right/CurvesPanel.tsx",
+      "sha256": "51dc5411c23fa23df4a4ea3561751ea48c80d4ee4691d19ef84c7d5117f1a06d"
+    },
+    {
+      "path": "src/components/panel/right/ExportPanel.tsx",
+      "sha256": "f8148d46b03f528190853937bd28815346cabcd02c03278a61d1a60c5051ec65"
+    },
+    {
+      "path": "src/components/panel/right/FacePartsIllustration.tsx",
+      "sha256": "a25be6d25b9659a2d3cfb515af86d7b9a24d761c56e16c4a0b63680ef971f4a2"
+    },
+    {
+      "path": "src/components/panel/right/FolderTree.tsx",
+      "sha256": "c54b0c53041a7e08bd45d88cf75e84be189a43e6e39e5923626e116fcf790fff"
+    },
+    {
+      "path": "src/components/panel/right/Masks.tsx",
+      "sha256": "4f6f3304a64eaacd392db0f80e1bcf3012b2efbaf51ae08be4997f7f18662b9f"
+    },
+    {
+      "path": "src/components/panel/right/MasksPanel.tsx",
+      "sha256": "cd68a7f7da4de70eb3265ba30fbff8a8883a5e84a164f1d828ce0f3776160e30"
+    },
+    {
+      "path": "src/components/panel/right/MetadataPanel.tsx",
+      "sha256": "ae6003b0d06483072825922a4c1a408f9aaf0d7718c64e83bbb79bd8accbb064"
+    },
+    {
+      "path": "src/components/panel/right/PresetsPanel.tsx",
+      "sha256": "b0292bdab032f8f0b9e98e254368cebebc74acc0e1918a3491522d2d73769ed1"
+    },
+    {
+      "path": "src/components/panel/right/TetheringPanel.tsx",
+      "sha256": "3dba700fa543cb04d4879ac777e5882945d219ac39977f53bc3048ea249c19d8"
+    },
+    {
+      "path": "src/components/panel/settings/DataManagementSettings.tsx",
+      "sha256": "b277f0239ac81cb14dd02af8aa9c54ce5dc2f6223621d28e5e013af04ad7401b"
+    },
+    {
+      "path": "src/components/panel/settings/EditInAppsSettings.tsx",
+      "sha256": "24602e43056eafbf42ba2ef6fe35218e53b4bc5a93ce7da8c4f63039329b39fa"
+    },
+    {
+      "path": "src/components/ui/AppProperties.tsx",
+      "sha256": "73fcdf7c6f23eed221cbaf68980564450eecfb75e2116e0beefa5e433bd115ed"
+    },
+    {
+      "path": "src/components/ui/Button.tsx",
+      "sha256": "e6b6606fc8a35b7219367c57cd6d22d6c422c1f112534da3602d2e7f02aec2a8"
+    },
+    {
+      "path": "src/components/ui/CollapsibleSection.tsx",
+      "sha256": "24bf517bca215e6d11c0732d04e50d68d62301b53d6b1b376ec5218747194c2d"
+    },
+    {
+      "path": "src/components/ui/ColorField.tsx",
+      "sha256": "aba8a36247c5745d8426c9e5b101d02b8a3446a329f86e161d70782d897409ce"
+    },
+    {
+      "path": "src/components/ui/ColorWheel.tsx",
+      "sha256": "8228a2bb989ab863604cdd6486bee46b043ebee0c988ff017a970f65e5748baf"
+    },
+    {
+      "path": "src/components/ui/DepthRangePicker.tsx",
+      "sha256": "1225e1491f9c0e85fc7dca65fa6f3260c3a2ef91081de236c1e9e040aee783b4"
+    },
+    {
+      "path": "src/components/ui/Dropdown.tsx",
+      "sha256": "51316618ec44bbcc9b68cf1551f5fd4d3ecf8a525423cfb33e5af35f402fd84b"
+    },
+    {
+      "path": "src/components/ui/ExportImportProperties.tsx",
+      "sha256": "cb0aeb93c162c7389b5346290bd323daaf04e333f026dfc5ddca8d5589b93ce6"
+    },
+    {
+      "path": "src/components/ui/ExportPresetsList.tsx",
+      "sha256": "7603df14bae4835b27c135c1d5dbc41de988621c8599291d97c6fe9440c4bf60"
+    },
+    {
+      "path": "src/components/ui/ExternalEditBar.tsx",
+      "sha256": "e478ae1892ddd3e719faba8df100f99e183ccf7f6e798a3c29ea97e6d404bc5c"
+    },
+    {
+      "path": "src/components/ui/FilterExitToast.tsx",
+      "sha256": "f6951952e46e86d35e11da5723c4c0db7830b9ca93926abfdfc8cd0577120d0f"
+    },
+    {
+      "path": "src/components/ui/FlagBadges.tsx",
+      "sha256": "3365ccf64cf7b8f715db094d652ad9c77fc4df57ef3417452ebbfffb5ff23660"
+    },
+    {
+      "path": "src/components/ui/FlagToggles.tsx",
+      "sha256": "aba87e631479080b4aa4b39d198ce169df0553db5526eef94564425093116c86"
+    },
+    {
+      "path": "src/components/ui/GlobalTooltip.tsx",
+      "sha256": "71f1456ca5fcae3dd485729cff4214a10ddb710aa66267162f3004e6bdb3b677"
+    },
+    {
+      "path": "src/components/ui/ImagePicker.tsx",
+      "sha256": "f87b7bd39fc573442cb427ff5b4f62fd1a42f87f92e51e9f9e198373502c6ad1"
+    },
+    {
+      "path": "src/components/ui/Input.tsx",
+      "sha256": "c344adb0a6bae42e5c687406cc82e84040266e09cd9be2306809991b0aa309c4"
+    },
+    {
+      "path": "src/components/ui/LUTControl.tsx",
+      "sha256": "93771912d26c1ca130eeef65d58ff552359e65c42cc14c167d3b4131294be094"
+    },
+    {
+      "path": "src/components/ui/Resizer.tsx",
+      "sha256": "4b9b8bc4bc92356a76ef85644b37ba5318e96867187d712d81996051ef54e3a6"
+    },
+    {
+      "path": "src/components/ui/Slider.tsx",
+      "sha256": "8f2cd6aad449ac4712fc905c9a4804cc0210b92092f44e6ed9ac0c3c047aef04"
+    },
+    {
+      "path": "src/components/ui/Switch.tsx",
+      "sha256": "4371dc5b5d129c79723aebd2543def4bdc498ac5acc11120b77ac41b796e80ed"
+    },
+    {
+      "path": "src/components/ui/Text.tsx",
+      "sha256": "8dafde628501f507f5c04f312f961d6835920411966bfb60d6fe887e63cdbe0d"
+    },
+    {
+      "path": "src/components/ui/VisibilityToggle.tsx",
+      "sha256": "01964e10823e7a9510269c41c64561dcbe007553472de9c7b12859c0b6ee7c26"
+    },
+    {
+      "path": "src/components/ui/depthScope/DepthScope.tsx",
+      "sha256": "e239f03483b8e9da241760bd6886bc5151aab31bf7117db976d2676fd9bdd273"
+    },
+    {
+      "path": "src/components/ui/depthScope/renderer.ts",
+      "sha256": "81b2e1a8d65a9653657ac7cb8e66c4cb15e1e8ebe3d784631a10c0250c94fbc0"
+    },
+    {
+      "path": "src/components/ui/depthScope/scene.ts",
+      "sha256": "6ea7493ed9ea1a2b6a2c59a005d921f34efaa25b2711b9ba0d02d61a761781e1"
+    },
+    {
+      "path": "src/components/views/EditorView.tsx",
+      "sha256": "80c2ef1fc54e27e82f3b247e09256bdc85f91290f78f6e151be8c87860752480"
+    },
+    {
+      "path": "src/components/views/LibraryView.tsx",
+      "sha256": "8ceee8cbc14b5b584e8156813248a1641df3a50c01405c78898ee8dfd00546fa"
+    },
+    {
+      "path": "src/context/ContextMenuContext.tsx",
+      "sha256": "217183adba0229ab5ff4a42ec22e4db8583ed14a4d52a79b1880002e1b29fddb"
+    },
+    {
+      "path": "src/context/TaggingSubMenu.tsx",
+      "sha256": "2ec2b5f85e4dc343d13dc2a203b3fed9fc1d011f9508a0cd9630389803906c79"
+    },
+    {
+      "path": "src/context/ToolVisibilityContext.ts",
+      "sha256": "8361e0fe6439f5a6dc92b9871eb68fd968a2d260a037615d0a51767ee33bc476"
+    },
+    {
+      "path": "src/hooks/useAdjustmentSectionActions.ts",
+      "sha256": "7777ca605aa2274811b0d6f358a03c26dd9f8a0a7f2602c259f1e2c083a0674d"
+    },
+    {
+      "path": "src/hooks/useAiMasking.ts",
+      "sha256": "3951d67dd14586a0001bd6e9feb318aabddc799cebc3bee7bcc19ad29b066808"
+    },
+    {
+      "path": "src/hooks/useAndroidBackHandler.ts",
+      "sha256": "ccf111d7415a6b3b088206d0036074cbb3f6b8cea5b4cdef11c2f62c737a8509"
+    },
+    {
+      "path": "src/hooks/useAppContextMenus.ts",
+      "sha256": "397025819c6c1950b4da7c2e30dab7d09061399b3aa0ccd4f37844a44bacb8cb"
+    },
+    {
+      "path": "src/hooks/useAppInitialization.ts",
+      "sha256": "7ae23d88ec26d8a9fbaf95fbb271a3ccdaf925640b35612e35b96249abef8935"
+    },
+    {
+      "path": "src/hooks/useAppNavigation.ts",
+      "sha256": "4c53e16d3d6d530a59a40c67e35851b4bf9510b806748cc16bd2cfa27980c73f"
+    },
+    {
+      "path": "src/hooks/useCloudUsage.ts",
+      "sha256": "7dd4570b6c5ae9201a1d9e4c6565e87ca7e21916c0f9f35d6b1b6cbf0f23f7e6"
+    },
+    {
+      "path": "src/hooks/useCollapsibleHeight.ts",
+      "sha256": "eb80bf7c3d30cc714303d8e86805ff78cae5e3ff787b8f7a62d1fb8fc7732170"
+    },
+    {
+      "path": "src/hooks/useDelayedLoading.ts",
+      "sha256": "176b87fe9a74686644d46043c51275b7a9a41960933b0d17bd21d02c552c31f7"
+    },
+    {
+      "path": "src/hooks/useEditorActions.ts",
+      "sha256": "4fddd58da45f6a41f3c40064598fe7b15b3ca22fee17ef01853378dc773218a6"
+    },
+    {
+      "path": "src/hooks/useExportSettings.ts",
+      "sha256": "a60c75f51f4256f87b1a71770570c936cdd341c114882c2aec0259ce104b0bf2"
+    },
+    {
+      "path": "src/hooks/useExternalEditSession.ts",
+      "sha256": "539ee082cb5ef86e2ecf7e1f598c11ca756aa91f6135fd7f1f0a75f8e5f04e3a"
+    },
+    {
+      "path": "src/hooks/useFileOperations.ts",
+      "sha256": "facd27af9906354dab522294dfa370418e3edf283b87cf63a1e1789a5957c39b"
+    },
+    {
+      "path": "src/hooks/useHslMixerPicker.ts",
+      "sha256": "bd73aed74d3760fb72d0f161573a4ab95beccd67c90efa9c2e527e6540f8bf8b"
+    },
+    {
+      "path": "src/hooks/useImageLoader.ts",
+      "sha256": "6e8cbf9c08b8b09438193e345d22bc000a086a1fd6424a2dfe928ad8f21bed30"
+    },
+    {
+      "path": "src/hooks/useImagePreloader.ts",
+      "sha256": "58d1115e1516cd5733a83ea3c94aa396ad9f82da28378e1746c9a3bf539963af"
+    },
+    {
+      "path": "src/hooks/useImageProcessing.ts",
+      "sha256": "c60ec438e466662f44be3ab9affd574bf29485cdb429161058f9b7596d1f3a5d"
+    },
+    {
+      "path": "src/hooks/useImageRenderSize.ts",
+      "sha256": "5dda8ec7d7240900fac916add0d5d6e7f879708da66b4a6a09a935779495c829"
+    },
+    {
+      "path": "src/hooks/useKeyboardShortcuts.ts",
+      "sha256": "2ce405d76cdb86102a7513e2bcb13355ec6f8e2a3f4501b2409477e95d6ac4bd"
+    },
+    {
+      "path": "src/hooks/useLibraryActions.ts",
+      "sha256": "0549b9b848f7f357f463be1cc13f9c03834759974ca036f302e936dc8cccbc8b"
+    },
+    {
+      "path": "src/hooks/useOsPlatform.ts",
+      "sha256": "4037e7dc75d3a322f15f00e5536413293f07c262d5e0b0bb03ed7eddedb563a4"
+    },
+    {
+      "path": "src/hooks/usePresets.ts",
+      "sha256": "0b545710738a886df5a6946723e0e4e580027d98cc7a92f9bacd777bc7cf6258"
+    },
+    {
+      "path": "src/hooks/useProductivityActions.ts",
+      "sha256": "b3b43858fc159f665d9cee6897931e45031f2244d81cde0063f61c6444323e35"
+    },
+    {
+      "path": "src/hooks/useSortedLibrary.ts",
+      "sha256": "d671794cd635795e65870b8ac494cff9d975e600fe07e731782250a58965cc06"
+    },
+    {
+      "path": "src/hooks/useTauriListeners.ts",
+      "sha256": "7d61c878d793a72ef34695dc785dcebfd2439eaf235d41f7899a19877240ca69"
+    },
+    {
+      "path": "src/hooks/useThumbnails.ts",
+      "sha256": "1655e0fd2ed026a10c39593d57b350ae0a962ed8907a0b19508452272f32d3c4"
+    },
+    {
+      "path": "src/hooks/useWaveformControls.ts",
+      "sha256": "3966d99560b594a55742c2564274f5ed09769c2a4881455bd747056bed0e09fb"
+    },
+    {
+      "path": "src/i18n/check-runtime.mjs",
+      "sha256": "372ff3d71934a6f1774abae6dd96da23a22361755e7536e5da588b046b897437"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "sha256": "428d7daf791adc3db66475ac418d18431e6d87634e03e014239bbb58752423f3"
+    },
+    {
+      "path": "src/i18n/locales/ca.json",
+      "sha256": "bef6bd9321f4748018fde369798d1e37169a446dfaf74c4b401aa563fd503e78"
+    },
+    {
+      "path": "src/i18n/locales/cs.json",
+      "sha256": "78f417397f1d8eec097b573564557d4cbdbab7a48887b07cf5a44be2a0972484"
+    },
+    {
+      "path": "src/i18n/locales/de.json",
+      "sha256": "1e6b8058aebe99e69d45fc5fbd0892c3dcfda8c5e508993ee4ce44b627244752"
+    },
+    {
+      "path": "src/i18n/locales/en.json",
+      "sha256": "bf1c1719ecdbfb2fe11c386e9b1cfb1911c8a07c39b8d9576699b869aeb29a55"
+    },
+    {
+      "path": "src/i18n/locales/es.json",
+      "sha256": "e5788953cefcf3568c196b5fc169c1144c41b3f23aef44c3dfee34b55ecfa4c3"
+    },
+    {
+      "path": "src/i18n/locales/fr.json",
+      "sha256": "d686c9e91569769221a18af3d4402d1802422791cf8778c144be4ec5437448de"
+    },
+    {
+      "path": "src/i18n/locales/it.json",
+      "sha256": "8e3328a2639080bd7f775c98550e9855e0baa817c00c82b55e7c4b9c591dc2cd"
+    },
+    {
+      "path": "src/i18n/locales/ja.json",
+      "sha256": "7c8349c1f88ebfe1b67e17bf873b6b8cb20ce5cb468d4e9fc709b58414207aec"
+    },
+    {
+      "path": "src/i18n/locales/ko.json",
+      "sha256": "148d41a3e3c41b5df67884e49149e3d7cb05243e5bf6c50ae3d91c1c827cb866"
+    },
+    {
+      "path": "src/i18n/locales/lt.json",
+      "sha256": "871bbe41dcb7b77d8f944d7dbeec36cc96c63cc73a349dc78590c796215ecc4a"
+    },
+    {
+      "path": "src/i18n/locales/nl.json",
+      "sha256": "5d8cdf455f7c16821e82323e8f415a30ef875e784ce5aa1cbad7842593a12777"
+    },
+    {
+      "path": "src/i18n/locales/pl.json",
+      "sha256": "dc530645670969a492195cd7cae8890d200cc2ea1f48e7807e852355500b2e98"
+    },
+    {
+      "path": "src/i18n/locales/pt.json",
+      "sha256": "3f9515b9da562f97d707ec84e305b64466ebfff69b22155a2d9d0baeebd812cc"
+    },
+    {
+      "path": "src/i18n/locales/ru.json",
+      "sha256": "4578eab6a5ed61cd9df54f935076348c26d15a1d85f69b6a870a2873108de020"
+    },
+    {
+      "path": "src/i18n/locales/uk.json",
+      "sha256": "45985280915482cc4982700ce83e2e5259dcd3bbaca072a30562aafbb6199533"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN.json",
+      "sha256": "344ee212626323784c96360b82e4a73113e007a9df7727e93f9cd6c764fc822e"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW.json",
+      "sha256": "614889208acd4ceb2f692cbcda56e5295d3e5a3068bbab5f5c1dbbb981976ca6"
+    },
+    {
+      "path": "src/i18n/update_translations.py",
+      "sha256": "358a2702c0081b827f8713abf67bb2c1b9631cce5598af77384f0a2a23dde5c8"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "d1fe7028349dca13275f067b97694fca09f658e7638d396d6dfaf8092072c14d"
+    },
+    {
+      "path": "src/store/useCloudStore.ts",
+      "sha256": "6dd911ef513e5d4ece75c2ff2f37c5b032e278eb5cdde7273a011e89ca803a5a"
+    },
+    {
+      "path": "src/store/useEditorStore.ts",
+      "sha256": "e976861bf8075424493e71bd2a14d03f765fd538ca754c3e2e0b370856ebeee3"
+    },
+    {
+      "path": "src/store/useLibraryStore.ts",
+      "sha256": "3bd4a58dd9b2b4fc9ff3e730b4d2b605834bd9226977223c08dc1ebacb2eb29a"
+    },
+    {
+      "path": "src/store/useProcessStore.ts",
+      "sha256": "4079b36d40d3bb6549bc556fbe211e8a5625c95f6e2fef26cc83b094ee696750"
+    },
+    {
+      "path": "src/store/useSettingsStore.ts",
+      "sha256": "9e5b295cfea558565bc9b55be918c5f71ef4469d8a9de2b8d7fac80fc37468e2"
+    },
+    {
+      "path": "src/store/useTetheringStore.ts",
+      "sha256": "cb8a2cf9226d4e88e15385eb6d87e4eaaf45a6a86c7622069ef9addb01bfd261"
+    },
+    {
+      "path": "src/store/useUIStore.ts",
+      "sha256": "fb655051e9a77926c57bfc3752fc923fa32126020959b7b53be0df9791caef26"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "e5959c4da9d37bbd3fc920e6c209799d53ad9f4321b6d84115134251e357e1a9"
+    },
+    {
+      "path": "src/types/typography.ts",
+      "sha256": "461ab614b9d31c25789658b3d449a44f0a5478aa419f555427255978bd855777"
+    },
+    {
+      "path": "src/utils/CollageVariants.tsx",
+      "sha256": "b1e7cf21fe88f8bb4903e316ada6830178e8558c1aa7e5f0176f6ff2c09a32d1"
+    },
+    {
+      "path": "src/utils/ImageLRUCache.ts",
+      "sha256": "6292aa3690de6f05405688672388a5a9489a3d71103e0853cb0dfc63f23d826a"
+    },
+    {
+      "path": "src/utils/adjustments.ts",
+      "sha256": "e35c85b8d10a93e9d3be80727d0d9c4494432c44fb678cfa65a80520bd39c33d"
+    },
+    {
+      "path": "src/utils/appMode.ts",
+      "sha256": "e815fd1f20533d730bdbcf8b74425f35399179a5c3496bff84b5c21c51dc9a1e"
+    },
+    {
+      "path": "src/utils/backendPayload.ts",
+      "sha256": "007b0bee4bf1822becab7a29a2d9d213c69eb29d3e977f6610733461bd2dc619"
+    },
+    {
+      "path": "src/utils/canvasControls.ts",
+      "sha256": "eafa9d8e6004d0801fbb737ab8849078c8ba55442c19d4765cd3cbfd38b434ec"
+    },
+    {
+      "path": "src/utils/cropUtils.ts",
+      "sha256": "f8db8c6fcf86a6d44c25b5f72233d40f4d5df2a0733d346b76ea6836c6fd24d1"
+    },
+    {
+      "path": "src/utils/defaultAdjustments.json",
+      "sha256": "767f2544c05bbefaf8b67096417075cf5d02fc5148c4e8d524d0b9e78701bf8e"
+    },
+    {
+      "path": "src/utils/editHistory.ts",
+      "sha256": "59c980f25b7ad9cd108d4b22cf92da4b0f9cab619b7e9f1a553cb96164927710"
+    },
+    {
+      "path": "src/utils/formatBytes.ts",
+      "sha256": "4f23da44901c3332a3fd635a32b8447fe5dad3083a7ba5c12e323183ccfcb55f"
+    },
+    {
+      "path": "src/utils/frontendLogBridge.ts",
+      "sha256": "09878ef484802d5ed539c37c6adcf3352b58de82531ef345e18210a1c500eb46"
+    },
+    {
+      "path": "src/utils/hslMixer.ts",
+      "sha256": "b93be581fe5b3df9e736b0bfa46075b6f34b98c7128d705bb0f4cf280f743fd0"
+    },
+    {
+      "path": "src/utils/imageFlags.ts",
+      "sha256": "a64f0b1d112bcdcebd324bfddd52497d21f92630c49dc7fdaed720af16607b9b"
+    },
+    {
+      "path": "src/utils/imageGrouping.ts",
+      "sha256": "cbe29843b477f62a11fd9c02d575bb63716c5ae9ed9c3f6eaa8aa83593984dde"
+    },
+    {
+      "path": "src/utils/keyboardUtils.ts",
+      "sha256": "8e4b6a7f2fdd417158ecd7f5bc83e7b6e3141c188bb1bea2468f1aa29e6d6077"
+    },
+    {
+      "path": "src/utils/maskUtils.ts",
+      "sha256": "e3403b9a597a8c434586ad305400ee0ad795954e68d22c247d6752de8650f461"
+    },
+    {
+      "path": "src/utils/previewResolution.ts",
+      "sha256": "d81038116e3bc6f563283e986b864725c1d3559d73d29ee2e27b2e16e6ca074d"
+    },
+    {
+      "path": "src/utils/themes.ts",
+      "sha256": "e05a091ad0c7a2b05f7bb29232de026d38bd6af4e5d113dedaaa01cc12f87884"
+    },
+    {
+      "path": "src/utils/whiteBalance.ts",
+      "sha256": "ad98e7c08100d2adf88aff5e356f9bd306cdba6683b8b51a559f90fd78f5e680"
+    },
+    {
+      "path": "src/window/TitleBar.tsx",
+      "sha256": "5689ee9663a48de0910d63c37869c54215167b8a74008feee2665ae1f0b6506b"
+    },
+    {
+      "path": "src/window/ViewerWindow.tsx",
+      "sha256": "e081a87eb913180b54a1adb037fc68bf8a3f45cf234ab0061ec341403e3059d4"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "74f62de25084a437f2edb67c652ad2c2d68e2a427b0a82acc117c37feac470b4"
+    }
+  ]
+}

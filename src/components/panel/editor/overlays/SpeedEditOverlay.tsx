@@ -60,9 +60,15 @@ interface SpeedEditDrag {
 }
 
 const canSpeedEdit = () => {
-  const { activeView, isSettingsOpen } = useUIStore.getState();
+  const { activeView, isSettingsOpen, panelModal } = useUIStore.getState();
   const focusedTag = document.activeElement?.tagName;
-  return activeView === 'editor' && !isSettingsOpen && focusedTag !== 'INPUT' && focusedTag !== 'TEXTAREA';
+  return (
+    activeView === 'editor' &&
+    !isSettingsOpen &&
+    panelModal === null &&
+    focusedTag !== 'INPUT' &&
+    focusedTag !== 'TEXTAREA'
+  );
 };
 
 const toLocalPoint = (element: HTMLElement | null, client: Coord | null): Coord | null => {
@@ -180,6 +186,17 @@ export default function SpeedEditOverlay() {
     nudgeRef.current?.onDragStateChange(false);
     nudgeRef.current = null;
   };
+
+  useEffect(
+    () =>
+      useUIStore.subscribe((state, previous) => {
+        if (state.panelModal === null || state.panelModal === previous.panelModal) return;
+        endDrag();
+        endNudge();
+        exitSpeedEdit();
+      }),
+    [],
+  );
 
   const measureHud = useCallback((element: HTMLDivElement | null) => {
     if (!element) return;

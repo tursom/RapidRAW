@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { RotateCcw, Copy, ClipboardPaste, PencilSparkles, ChartArea, LayoutList } from 'lucide-react';
+import { RotateCcw, PencilSparkles, ChartArea } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +7,6 @@ import CollapsibleSection from '../../ui/CollapsibleSection';
 import AdjustmentSection from '../../adjustments/AdjustmentSection';
 import ConnectedWaveform from '../editor/ConnectedWaveform';
 import Resizer from '../../ui/Resizer';
-import AdjustmentSectionsSubMenu from './AdjustmentSectionsSubMenu';
 import {
   ActiveTools,
   Adjustments,
@@ -16,17 +15,16 @@ import {
   getActiveTools,
   getVisibleAdjustmentSections,
   isToolActive,
-  setToolActive,
-  toggleToolActive,
 } from '../../../utils/adjustments';
 import { useContextMenu } from '../../../context/ContextMenuContext';
-import { OPTION_SEPARATOR, Orientation } from '../../ui/AppProperties';
+import { Orientation } from '../../ui/AppProperties';
 import Text from '../../ui/Text';
 import { TextVariants, TextColors, TextWeights } from '../../../types/typography';
 import { useShallow } from 'zustand/react/shallow';
 import { canvasToolState, useEditorStore } from '../../../store/useEditorStore';
 import { useSettingsStore } from '../../../store/useSettingsStore';
-import { useUIStore } from '../../../store/useUIStore';
+import { isStandaloneCurvesVisible, useUIStore } from '../../../store/useUIStore';
+import { useAdjustmentSectionActions } from '../../../hooks/useAdjustmentSectionActions';
 import { buildAutoAdjustModeOptions, useEditorActions } from '../../../hooks/useEditorActions';
 import { useWaveformControls } from '../../../hooks/useWaveformControls';
 
@@ -46,6 +44,8 @@ export default function Controls() {
   const { isResizingWaveform, onToggleWaveform, setActiveWaveformChannel, handleWaveformResize } =
     useWaveformControls();
   const { setAdjustments, handleAutoAdjustments, handleLutSelect, setLutPreviewOverride } = useEditorActions();
+  const { handleSectionContextMenu, handleToggleVisibility } = useAdjustmentSectionActions(setAdjustments);
+  const hasStandaloneCurves = useUIStore(isStandaloneCurvesVisible);
 
   const { appSettings, theme } = useSettingsStore(
     useShallow((state) => ({
@@ -54,7 +54,9 @@ export default function Controls() {
     })),
   );
 
-  const visibleSections = getVisibleAdjustmentSections(appSettings?.adjustmentLayout);
+  const visibleSections = getVisibleAdjustmentSections(appSettings?.adjustmentLayout).filter(
+    (section) => section !== 'curves' || !hasStandaloneCurves,
+  );
 
   const { collapsibleSectionsState, setUI } = useUIStore(
     useShallow((state) => ({
@@ -66,7 +68,6 @@ export default function Controls() {
   const {
     activeToolsState,
     sectionVisibility,
-    copiedSectionAdjustments,
     selectedImage,
     isWbPickerActive,
     isWaveformVisible,
@@ -76,7 +77,6 @@ export default function Controls() {
     useShallow((state) => ({
       activeToolsState: state.adjustments.activeTools,
       sectionVisibility: state.adjustments.sectionVisibility,
-      copiedSectionAdjustments: state.copiedSectionAdjustments,
       selectedImage: state.selectedImage,
       isWbPickerActive: state.isWbPickerActive,
       isWaveformVisible: state.isWaveformVisible,
@@ -88,11 +88,6 @@ export default function Controls() {
   const activeTools = useMemo(
     () => getActiveTools({ activeTools: activeToolsState, sectionVisibility }),
     [activeToolsState, sectionVisibility],
-  );
-
-  const setCopiedSectionAdjustments = useCallback(
-    (val: any) => setEditor({ copiedSectionAdjustments: val }),
-    [setEditor],
   );
 
   const toggleWbPicker = useCallback(
@@ -111,16 +106,6 @@ export default function Controls() {
         collapsibleSectionsState: typeof updater === 'function' ? updater(state.collapsibleSectionsState) : updater,
       })),
     [setUI],
-  );
-
-  const handleToggleVisibility = useCallback(
-    (id: string) => {
-      setAdjustments((prev: Adjustments) => ({
-        ...prev,
-        activeTools: toggleToolActive(getActiveTools(prev), id),
-      }));
-    },
-    [setAdjustments],
   );
 
   const handleResetAdjustments = () => {
@@ -158,80 +143,6 @@ export default function Controls() {
       }
       return { ...prev, [section]: !prev[section] };
     });
-  };
-
-  const handleSectionContextMenu = (event: any, sectionName: string) => {
-    event.preventDefault();
-    event.stopPropagation();
-
-    const sectionKeys = ADJUSTMENT_SECTIONS[sectionName];
-    if (!sectionKeys) {
-      return;
-    }
-
-    const handleCopy = () => {
-      const { adjustments } = useEditorStore.getState();
-      const adjustmentsToCopy: any = {};
-      for (const key of sectionKeys) {
-        if (Object.prototype.hasOwnProperty.call(adjustments, key)) {
-          adjustmentsToCopy[key] = JSON.parse(JSON.stringify(adjustments[key as keyof Adjustments]));
-        }
-      }
-      setCopiedSectionAdjustments({ section: sectionName, values: adjustmentsToCopy });
-    };
-
-    const handlePaste = () => {
-      if (!copiedSectionAdjustments || copiedSectionAdjustments.section !== sectionName) {
-        return;
-      }
-      setAdjustments((prev: Adjustments) => ({
-        ...prev,
-        ...copiedSectionAdjustments.values,
-        activeTools: setToolActive(getActiveTools(prev), sectionName, true),
-      }));
-    };
-
-    const handleReset = () => {
-      const resetValues: any = {};
-      for (const key of sectionKeys) {
-        resetValues[key] = JSON.parse(JSON.stringify(INITIAL_ADJUSTMENTS[key as keyof Adjustments]));
-      }
-      setAdjustments((prev: Adjustments) => ({
-        ...prev,
-        ...resetValues,
-        activeTools: setToolActive(getActiveTools(prev), sectionName, true),
-      }));
-    };
-
-    const isPasteAllowed = copiedSectionAdjustments && copiedSectionAdjustments.section === sectionName;
-    const translatedSection = t(`editor.adjustments.sections.${sectionName}`);
-
-    const pasteLabel = copiedSectionAdjustments
-      ? t('editor.adjustments.actions.pasteLabel', { section: translatedSection })
-      : t('editor.adjustments.actions.pasteSettings');
-
-    const options: any = [
-      {
-        label: t('editor.adjustments.actions.copySectionSettings', { section: translatedSection }),
-        icon: Copy,
-        onClick: handleCopy,
-      },
-      { label: pasteLabel, icon: ClipboardPaste, onClick: handlePaste, disabled: !isPasteAllowed },
-      { type: OPTION_SEPARATOR },
-      {
-        label: t('editor.adjustments.actions.resetSectionSettings', { section: translatedSection }),
-        icon: RotateCcw,
-        onClick: handleReset,
-      },
-      { type: OPTION_SEPARATOR },
-      {
-        label: t('editor.adjustments.actions.customizePanels'),
-        icon: LayoutList,
-        submenu: [{ customComponent: AdjustmentSectionsSubMenu }],
-      },
-    ];
-
-    showContextMenu(event.clientX, event.clientY, options);
   };
 
   return (
@@ -300,7 +211,7 @@ export default function Controls() {
                 <CollapsibleSection
                   isContentVisible={isToolActive(activeTools, sectionName)}
                   isOpen={collapsibleSectionsState[sectionName as keyof typeof collapsibleSectionsState]}
-                  onContextMenu={(e: any) => handleSectionContextMenu(e, sectionName)}
+                  onContextMenu={(e) => handleSectionContextMenu(e, sectionName)}
                   onToggle={() => handleToggleSection(sectionName)}
                   onToggleVisibility={() => handleToggleVisibility(sectionName)}
                   title={title}

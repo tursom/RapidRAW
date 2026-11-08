@@ -1,0 +1,70 @@
+{
+  "sourceBase": "9ec8b331e38e32ed5958c7a3725566f2b06488c7",
+  "inputCount": 416,
+  "files": [
+    {
+      "path": "src-tauri/src/app_settings.rs",
+      "sha256": "90cfe3b95631580296f1a0236ccf12fc244304797376604fcd0a77367c1cb117"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "d6b27b3f63429dccb0f4c155271d4517c7da35bcad89dea50cff675aa54b9a7d"
+    },
+    {
+      "path": "src/components/modals/AppPanelModal.tsx",
+      "sha256": "20dbbeff72fafb2422f66175f701b6466fe1459d3d43aecd084219612ca3a4d3"
+    },
+    {
+      "path": "src/components/panel/PanelSwitcher.tsx",
+      "sha256": "475f5b6830e5fb6cd578ab77886f0c6cf4cc4d7f47a6b3ca17a67a164259a83b"
+    },
+    {
+      "path": "src/components/panel/SidePanelArea.tsx",
+      "sha256": "c66c1158a2a9275cc1e752cca3d7ccd2c15670dddc98b0f9339f71b02b389e7e"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/SpeedEditOverlay.tsx",
+      "sha256": "94de490aa46a430347fdd599ecc4002c2c0059109e206ecaf135216c4ed050ac"
+    },
+    {
+      "path": "src/components/panel/right/ControlsPanel.tsx",
+      "sha256": "bc75287a1cb3b3040f2b5d449779d260f7fc10cc1300972927a18191b19eb2e6"
+    },
+    {
+      "path": "src/components/panel/right/CurvesPanel.tsx",
+      "sha256": "51dc5411c23fa23df4a4ea3561751ea48c80d4ee4691d19ef84c7d5117f1a06d"
+    },
+    {
+      "path": "src/components/panel/right/ExportPanel.tsx",
+      "sha256": "f8148d46b03f528190853937bd28815346cabcd02c03278a61d1a60c5051ec65"
+    },
+    {
+      "path": "src/components/ui/AppProperties.tsx",
+      "sha256": "73fcdf7c6f23eed221cbaf68980564450eecfb75e2116e0beefa5e433bd115ed"
+    },
+    {
+      "path": "src/components/ui/Dropdown.tsx",
+      "sha256": "51316618ec44bbcc9b68cf1551f5fd4d3ecf8a525423cfb33e5af35f402fd84b"
+    },
+    {
+      "path": "src/hooks/useAdjustmentSectionActions.ts",
+      "sha256": "7777ca605aa2274811b0d6f358a03c26dd9f8a0a7f2602c259f1e2c083a0674d"
+    },
+    {
+      "path": "src/hooks/useAppInitialization.ts",
+      "sha256": "7ae23d88ec26d8a9fbaf95fbb271a3ccdaf925640b35612e35b96249abef8935"
+    },
+    {
+      "path": "src/hooks/useKeyboardShortcuts.ts",
+      "sha256": "2ce405d76cdb86102a7513e2bcb13355ec6f8e2a3f4501b2409477e95d6ac4bd"
+    },
+    {
+      "path": "src/store/useUIStore.ts",
+      "sha256": "fb655051e9a77926c57bfc3752fc923fa32126020959b7b53be0df9791caef26"
+    },
+    {
+      "path": "src/utils/appMode.ts",
+      "sha256": "e815fd1f20533d730bdbcf8b74425f35399179a5c3496bff84b5c21c51dc9a1e"
+    }
+  ]
+}

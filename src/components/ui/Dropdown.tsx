@@ -112,8 +112,11 @@ const Dropdown = <T extends React.Key>({
 
   const handleContainerKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
+      const appPanelModal = dropdownRef.current?.closest('[data-app-panel-modal]');
+      if (appPanelModal && !isOpen) return;
       e.stopPropagation();
       setIsOpen(false);
+      if (appPanelModal) dropdownRef.current?.querySelector('button')?.focus();
       return;
     }
 
@@ -221,7 +224,7 @@ const Dropdown = <T extends React.Key>({
             </motion.div>
           )}
         </AnimatePresence>,
-        document.body,
+        dropdownRef.current?.closest('[data-app-panel-modal]') ?? document.body,
       )}
     </div>
   );

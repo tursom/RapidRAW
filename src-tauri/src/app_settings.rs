@@ -490,9 +490,17 @@ impl Default for WorkspaceState {
         panel_switcher_placement.insert("rightBottom".to_string(), "right".to_string());
 
         Self {
-            left_panel_width: 320,
+            left_panel_width: if cfg!(target_os = "android") {
+                320
+            } else {
+                250
+            },
             right_panel_width: 320,
-            left_top_height: 450,
+            left_top_height: if cfg!(target_os = "android") {
+                450
+            } else {
+                340
+            },
             right_top_height: 450,
             panel_layout,
             active_panels,

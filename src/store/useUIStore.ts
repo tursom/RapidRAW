@@ -13,7 +13,9 @@ import {
   CollapsibleSectionsState,
 } from '../components/ui/AppProperties';
 import { useEditorStore } from './useEditorStore';
+import { useSettingsStore } from './useSettingsStore';
 import { pickCropGeometry } from '../utils/adjustments';
+import { isHistoryMode } from '../utils/appMode';
 
 export type SwitcherPlacement = 'bottom' | 'right' | 'left' | 'top';
 
@@ -73,6 +75,7 @@ interface CullingModalState {
 }
 
 const ALL_PANELS: Panel[] = [
+  Panel.Curves,
   Panel.Metadata,
   Panel.FolderTree,
   Panel.Export,
@@ -85,6 +88,7 @@ const ALL_PANELS: Panel[] = [
 ];
 
 const DEFAULT_PANEL_DEFAULT_REGIONS: Record<Panel, PanelRegion> = {
+  [Panel.Curves]: 'leftTop',
   [Panel.Metadata]: 'leftTop',
   [Panel.FolderTree]: 'leftTop',
   [Panel.Export]: 'leftTop',
@@ -97,32 +101,61 @@ const DEFAULT_PANEL_DEFAULT_REGIONS: Record<Panel, PanelRegion> = {
 };
 
 export const DEFAULT_PANEL_WIDTH = 350;
+export const DEFAULT_LEFT_PANEL_WIDTH = 250;
+export const DEFAULT_RIGHT_PANEL_WIDTH = 320;
 export const DEFAULT_PANEL_SECTION_HEIGHT = 450;
+export const DEFAULT_LEFT_PANEL_SECTION_HEIGHT = 340;
 export const DEFAULT_BOTTOM_PANEL_HEIGHT = 144;
 const MIN_REOPENED_PANEL_WIDTH = 250;
 
-export const getReopenedPanelWidth = (width: number) =>
-  width < MIN_REOPENED_PANEL_WIDTH ? DEFAULT_PANEL_WIDTH : width;
+export const getReopenedPanelWidth = (width: number, side?: 'left' | 'right') => {
+  const defaultWidth =
+    side && isHistoryMode()
+      ? side === 'left'
+        ? DEFAULT_LEFT_PANEL_WIDTH
+        : DEFAULT_RIGHT_PANEL_WIDTH
+      : DEFAULT_PANEL_WIDTH;
+  return width < MIN_REOPENED_PANEL_WIDTH ? defaultWidth : width;
+};
+
+const isModalPanel = (panel: Panel): panel is Panel.Metadata | Panel.Export =>
+  panel === Panel.Metadata || panel === Panel.Export;
+
+const getDockPanels = (panels: Panel[], usePanelModals: boolean) =>
+  usePanelModals ? panels.filter((panel) => !isModalPanel(panel)) : panels;
 
 export function reconcileWorkspace(
   savedWorkspace: WorkspaceState | undefined,
   isTetheringSupported: boolean,
+  osPlatform = useSettingsStore.getState().osPlatform,
+  isFullLayout = true,
 ): WorkspaceState {
-  const allowedPanels = new Set(ALL_PANELS.filter((p) => p !== Panel.Tethering || isTetheringSupported));
+  const historyMode = isHistoryMode(osPlatform);
+  const allowedPanels = new Set(
+    ALL_PANELS.filter(
+      (panel) => (panel !== Panel.Curves || historyMode) && (panel !== Panel.Tethering || isTetheringSupported),
+    ),
+  );
 
   const defaultWorkspace: WorkspaceState = {
-    leftPanelWidth: DEFAULT_PANEL_WIDTH,
-    rightPanelWidth: DEFAULT_PANEL_WIDTH,
-    leftTopHeight: DEFAULT_PANEL_SECTION_HEIGHT,
+    leftPanelWidth: historyMode ? DEFAULT_LEFT_PANEL_WIDTH : DEFAULT_PANEL_WIDTH,
+    rightPanelWidth: historyMode ? DEFAULT_RIGHT_PANEL_WIDTH : DEFAULT_PANEL_WIDTH,
+    leftTopHeight: historyMode ? DEFAULT_LEFT_PANEL_SECTION_HEIGHT : DEFAULT_PANEL_SECTION_HEIGHT,
     rightTopHeight: DEFAULT_PANEL_SECTION_HEIGHT,
     panelLayout: {
-      leftTop: [Panel.Metadata, Panel.FolderTree, Panel.Export, ...(isTetheringSupported ? [Panel.Tethering] : [])],
+      leftTop: [
+        ...(historyMode ? [Panel.Curves] : []),
+        Panel.Metadata,
+        Panel.FolderTree,
+        Panel.Export,
+        ...(isTetheringSupported ? [Panel.Tethering] : []),
+      ],
       leftBottom: [],
       rightTop: [Panel.Adjustments, Panel.Crop, Panel.Masks, Panel.Ai, Panel.Presets],
       rightBottom: [],
     },
     activePanels: {
-      leftTop: Panel.FolderTree,
+      leftTop: historyMode ? Panel.Curves : Panel.FolderTree,
       leftBottom: null,
       rightTop: Panel.Adjustments,
       rightBottom: null,
@@ -157,6 +190,12 @@ export function reconcileWorkspace(
     });
   });
 
+  const needsCurvesMigration = historyMode && !seenPanels.has(Panel.Curves);
+  if (needsCurvesMigration) {
+    sanitizedLayout.leftTop.unshift(Panel.Curves);
+    seenPanels.add(Panel.Curves);
+  }
+
   allowedPanels.forEach((panel) => {
     if (!seenPanels.has(panel)) {
       const targetRegion = DEFAULT_PANEL_DEFAULT_REGIONS[panel] || 'leftTop';
@@ -164,6 +203,14 @@ export function reconcileWorkspace(
       seenPanels.add(panel);
     }
   });
+
+  if (historyMode) {
+    (['leftBottom', 'rightTop', 'rightBottom'] as PanelRegion[]).forEach((region) => {
+      const modalPanels = sanitizedLayout[region].filter(isModalPanel);
+      sanitizedLayout[region] = sanitizedLayout[region].filter((panel) => !isModalPanel(panel));
+      sanitizedLayout.leftTop.push(...modalPanels);
+    });
+  }
 
   const sanitizedActive: Record<PanelRegion, Panel | null> = {
     leftTop: null,
@@ -174,10 +221,13 @@ export function reconcileWorkspace(
 
   (['leftTop', 'leftBottom', 'rightTop', 'rightBottom'] as PanelRegion[]).forEach((region) => {
     const currentActive = savedWorkspace.activePanels?.[region];
-    if (currentActive && sanitizedLayout[region].includes(currentActive)) {
+    const dockPanels = getDockPanels(sanitizedLayout[region], historyMode && isFullLayout);
+    if (needsCurvesMigration && region === 'leftTop') {
+      sanitizedActive[region] = Panel.Curves;
+    } else if (currentActive && dockPanels.includes(currentActive)) {
       sanitizedActive[region] = currentActive;
     } else {
-      sanitizedActive[region] = sanitizedLayout[region].length > 0 ? sanitizedLayout[region][0] : null;
+      sanitizedActive[region] = dockPanels[0] ?? null;
     }
   });
 
@@ -202,8 +252,30 @@ export const isPanelVisible = (state: UIState, panel: Panel) =>
       state.uiVisibility[region.startsWith('left') ? 'leftPanel' : 'rightPanel'],
   );
 
+export const isStandaloneCurvesVisible = (state: UIState) =>
+  isHistoryMode() &&
+  state.isFullLayout &&
+  !state.isFullScreen &&
+  isPanelVisible(state, Panel.Curves) &&
+  (Object.keys(state.activePanels) as PanelRegion[]).some((region) => {
+    const isLeft = region.startsWith('left');
+    return (
+      state.activePanels[region] === Panel.Curves &&
+      state.uiVisibility[isLeft ? 'leftPanel' : 'rightPanel'] &&
+      (isLeft ? state.leftPanelWidth : state.rightPanelWidth) >= 200
+    );
+  });
+
+const getPanelModalUpdate = (state: UIState, panel: Panel): Partial<UIState> | null => {
+  if (!isHistoryMode() || !state.isFullLayout || !isModalPanel(panel)) return null;
+  if (state.activeView === 'editor' && !useEditorStore.getState().selectedImage) return {};
+  return { panelModal: panel };
+};
+
 export interface UIState {
   activeView: string;
+  isFullLayout: boolean;
+  panelModal: Panel.Metadata | Panel.Export | null;
   isFullScreen: boolean;
   isWindowFullScreen: boolean;
   isViewerOpen: boolean;
@@ -276,6 +348,8 @@ export interface UIState {
 
 export const useUIStore = create<UIState>((set, get) => ({
   activeView: 'library',
+  isFullLayout: true,
+  panelModal: null,
   isFullScreen: false,
   isWindowFullScreen: false,
   isViewerOpen: false,
@@ -368,12 +442,24 @@ export const useUIStore = create<UIState>((set, get) => ({
   cullingModalState: { isOpen: false, suggestions: null, progress: null, error: null, pathsToCull: [] },
   collageModalState: { isOpen: false, sourceImages: [] },
 
-  setUI: (updater) => set((state) => (typeof updater === 'function' ? updater(state) : updater)),
+  setUI: (updater) =>
+    set((state) => {
+      const updates = typeof updater === 'function' ? updater(state) : updater;
+      if (!isHistoryMode() || state.isFullLayout || updates.isFullLayout !== true) return updates;
+      const layout = updates.panelLayout ?? state.panelLayout;
+      const activePanels = { ...(updates.activePanels ?? state.activePanels) };
+      (Object.keys(activePanels) as PanelRegion[]).forEach((region) => {
+        const panel = activePanels[region];
+        if (panel && isModalPanel(panel)) activePanels[region] = getDockPanels(layout[region], true)[0] ?? null;
+      });
+      return { ...updates, activePanels };
+    }),
 
   setLayoutDragItem: (panel) => set({ activeLayoutDragItem: panel }),
 
   movePanel: (panel, toRegion) =>
     set((state) => {
+      if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
       const layout = {
         leftTop: [...state.panelLayout.leftTop],
         leftBottom: [...state.panelLayout.leftBottom],
@@ -383,17 +469,17 @@ export const useUIStore = create<UIState>((set, get) => ({
       const active = { ...state.activePanels };
 
       let fromRegion: PanelRegion | null = null;
-      (Object.keys(layout) as PanelRegion[]).forEach((r) => {
+      for (const r of Object.keys(layout) as PanelRegion[]) {
         if (layout[r].includes(panel)) {
           fromRegion = r;
           layout[r] = layout[r].filter((p) => p !== panel);
         }
-      });
+      }
 
       if (!layout[toRegion].includes(panel)) layout[toRegion].push(panel);
 
       if (fromRegion && active[fromRegion] === panel) {
-        active[fromRegion] = layout[fromRegion].length > 0 ? layout[fromRegion][0] : null;
+        active[fromRegion] = getDockPanels(layout[fromRegion], isHistoryMode() && state.isFullLayout)[0] ?? null;
       }
 
       active[toRegion] = panel;
@@ -402,13 +488,13 @@ export const useUIStore = create<UIState>((set, get) => ({
         panelLayout: layout,
         activePanels: active,
         activeLayoutDragItem: null,
-        activePanel: panel,
-        renderedPanel: panel,
+        ...(panel === Panel.Curves ? {} : { activePanel: panel, renderedPanel: panel }),
       };
     }),
 
   movePanelToIndex: (panel, toRegion, index) =>
     set((state) => {
+      if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
       const layout = {
         leftTop: [...state.panelLayout.leftTop],
         leftBottom: [...state.panelLayout.leftBottom],
@@ -418,18 +504,18 @@ export const useUIStore = create<UIState>((set, get) => ({
       const active = { ...state.activePanels };
 
       let fromRegion: PanelRegion | null = null;
-      (Object.keys(layout) as PanelRegion[]).forEach((r) => {
+      for (const r of Object.keys(layout) as PanelRegion[]) {
         if (layout[r].includes(panel)) {
           fromRegion = r;
           layout[r] = layout[r].filter((p) => p !== panel);
         }
-      });
+      }
 
       const clampedIndex = Math.max(0, Math.min(index, layout[toRegion].length));
       layout[toRegion].splice(clampedIndex, 0, panel);
 
       if (fromRegion && active[fromRegion] === panel) {
-        active[fromRegion] = layout[fromRegion].length > 0 ? layout[fromRegion][0] : null;
+        active[fromRegion] = getDockPanels(layout[fromRegion], isHistoryMode() && state.isFullLayout)[0] ?? null;
       }
       active[toRegion] = panel;
 
@@ -437,18 +523,19 @@ export const useUIStore = create<UIState>((set, get) => ({
         panelLayout: layout,
         activePanels: active,
         activeLayoutDragItem: null,
-        activePanel: panel,
-        renderedPanel: panel,
+        ...(panel === Panel.Curves ? {} : { activePanel: panel, renderedPanel: panel }),
       };
     }),
 
   setActivePanel: (region, panel) =>
     set((state) => {
       if (!panel) return state;
+      const modalUpdate = getPanelModalUpdate(state, panel);
+      if (modalUpdate !== null) return modalUpdate;
+      if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
       const updates: Partial<UIState> = {
         activePanels: { ...state.activePanels, [region]: panel },
-        activePanel: panel,
-        renderedPanel: panel,
+        ...(panel === Panel.Curves ? {} : { activePanel: panel, renderedPanel: panel }),
       };
 
       const isLeft = region === 'leftTop' || region === 'leftBottom';
@@ -456,14 +543,18 @@ export const useUIStore = create<UIState>((set, get) => ({
 
       if (isLeft && !state.uiVisibility.leftPanel) {
         updates.uiVisibility = { ...state.uiVisibility, leftPanel: true };
-        if (state.leftPanelWidth < DEFAULT_PANEL_WIDTH) {
+        if (isHistoryMode()) {
+          updates.leftPanelWidth = getReopenedPanelWidth(state.leftPanelWidth, 'left');
+        } else if (state.leftPanelWidth < DEFAULT_PANEL_WIDTH) {
           updates.leftPanelWidth = DEFAULT_PANEL_WIDTH;
         }
       }
 
       if (isRight && !state.uiVisibility.rightPanel) {
         updates.uiVisibility = { ...state.uiVisibility, rightPanel: true };
-        if (state.rightPanelWidth < DEFAULT_PANEL_WIDTH) {
+        if (isHistoryMode()) {
+          updates.rightPanelWidth = getReopenedPanelWidth(state.rightPanelWidth, 'right');
+        } else if (state.rightPanelWidth < DEFAULT_PANEL_WIDTH) {
           updates.rightPanelWidth = DEFAULT_PANEL_WIDTH;
         }
       }
@@ -474,6 +565,11 @@ export const useUIStore = create<UIState>((set, get) => ({
   setPanel: (panelId) => {
     const state = get();
     if (!panelId) return;
+    const modalUpdate = getPanelModalUpdate(state, panelId);
+    if (modalUpdate !== null) {
+      set(modalUpdate);
+      return;
+    }
 
     let targetRegion: PanelRegion | null = null;
     for (const region of Object.keys(state.panelLayout) as PanelRegion[]) {
@@ -516,7 +612,12 @@ export const useUIStore = create<UIState>((set, get) => ({
   },
 
   resetWorkspaceLayout: (isTetheringSupported = false) => {
-    const defaultWorkspace = reconcileWorkspace(undefined, isTetheringSupported);
+    const defaultWorkspace = reconcileWorkspace(
+      undefined,
+      isTetheringSupported,
+      useSettingsStore.getState().osPlatform,
+      get().isFullLayout,
+    );
     set({
       leftPanelWidth: defaultWorkspace.leftPanelWidth,
       rightPanelWidth: defaultWorkspace.rightPanelWidth,

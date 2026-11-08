@@ -13,12 +13,16 @@ import {
   FileInput,
   Camera,
   Folder as FolderIcon,
+  Spline,
   type LucideIcon,
 } from 'lucide-react';
 import { Panel, PanelRegion } from '../ui/AppProperties';
-import { SwitcherPlacement, useUIStore } from '../../store/useUIStore';
+import { getReopenedPanelWidth, SwitcherPlacement, useUIStore } from '../../store/useUIStore';
+import { useSettingsStore } from '../../store/useSettingsStore';
+import { isHistoryMode } from '../../utils/appMode';
 
 export const PANEL_ICONS: Record<Panel, LucideIcon> = {
+  [Panel.Curves]: Spline,
   [Panel.Metadata]: Info,
   [Panel.Adjustments]: SlidersHorizontal,
   [Panel.Crop]: Crop,
@@ -31,6 +35,7 @@ export const PANEL_ICONS: Record<Panel, LucideIcon> = {
 };
 
 const PANEL_TITLES: Record<Panel, string> = {
+  [Panel.Curves]: 'editor.adjustments.sections.curves',
   [Panel.Metadata]: 'editor.switcher.tooltips.info',
   [Panel.Adjustments]: 'editor.switcher.tooltips.adjust',
   [Panel.Crop]: 'editor.switcher.tooltips.crop',
@@ -62,10 +67,10 @@ function PanelTab({ panel, region, side }: { panel: Panel; region: PanelRegion; 
   const handleClick = () => {
     setActivePanel(region, panel);
     if (side === 'left' && leftPanelWidth < 200) {
-      setUI({ leftPanelWidth: 350 });
+      setUI({ leftPanelWidth: getReopenedPanelWidth(leftPanelWidth, 'left') });
     }
     if (side === 'right' && rightPanelWidth < 200) {
-      setUI({ rightPanelWidth: 350 });
+      setUI({ rightPanelWidth: getReopenedPanelWidth(rightPanelWidth, 'right') });
     }
   };
 
@@ -107,7 +112,11 @@ export default function PanelSwitcher({
   placement: SwitcherPlacement;
 }) {
   const panelLayout = useUIStore((s) => s.panelLayout);
-  const panels = panelLayout[region];
+  const historyMode = isHistoryMode(useSettingsStore((s) => s.osPlatform));
+  const isFullLayout = useUIStore((s) => s.isFullLayout);
+  const panels = panelLayout[region].filter(
+    (panel) => !historyMode || !isFullLayout || (panel !== Panel.Metadata && panel !== Panel.Export),
+  );
   const movePanelToIndex = useUIStore((s) => s.movePanelToIndex);
 
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -192,7 +201,10 @@ export default function PanelSwitcher({
       if (event.over?.id === `layout-switcher-${region}`) {
         const activePanel = event.active.data.current?.panel;
         if (activePanel && hoverIndex !== null) {
-          movePanelToIndex(activePanel, region, hoverIndex);
+          const beforePanel = panels.filter((panel) => panel !== activePanel)[hoverIndex];
+          const fullList = panelLayout[region].filter((panel) => panel !== activePanel);
+          const index = beforePanel === undefined ? fullList.length : fullList.indexOf(beforePanel);
+          movePanelToIndex(activePanel, region, index);
         }
       }
       if (hoverIndex !== null) {
@@ -262,10 +274,14 @@ export function MobilePanelSwitcher({
   const isVertical = placement === 'right';
 
   return (
-    <div className={clsx(
-      'flex items-center p-1.5 gap-1 shrink-0 custom-scrollbar',
-      isVertical ? 'flex-col overflow-y-auto h-full border-l border-surface' : 'flex-row overflow-x-auto w-full border-t border-surface',
-    )}>
+    <div
+      className={clsx(
+        'flex items-center p-1.5 gap-1 shrink-0 custom-scrollbar',
+        isVertical
+          ? 'flex-col overflow-y-auto h-full border-l border-surface'
+          : 'flex-row overflow-x-auto w-full border-t border-surface',
+      )}
+    >
       {MOBILE_PANELS.map((id) => {
         const Icon = PANEL_ICONS[id];
         const isActive = activePanel === id;

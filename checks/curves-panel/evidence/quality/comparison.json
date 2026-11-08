@@ -1,0 +1,175 @@
+{
+  "exits": {
+    "tsc": 2,
+    "eslint": 1,
+    "vite": 0,
+    "i18n": 0,
+    "rustfmt": 0
+  },
+  "typescript": {
+    "before": 64,
+    "after": 59,
+    "added": [],
+    "removed": [
+      "src/components/panel/right/ControlsPanel.tsx(LINE,COL): error TS2345: Argument of type '[`editor.adjustments.sections.${string}`]' is not assignable to parameter of type '[key: string | string[], options: TOptionsBase & $Dictionary & { defaultValue: never; }] | [key: string | string[], defaultValue: never, options?: (TOptionsBase & $Dictionary) | undefined] | [key: ...]'.",
+      "src/store/useUIStore.ts(LINE,COL): error TS2322: Type 'null' is not assignable to type 'never'.",
+      "src/store/useUIStore.ts(LINE,COL): error TS2322: Type 'null' is not assignable to type 'never'.",
+      "src/store/useUIStore.ts(LINE,COL): error TS2339: Property 'length' does not exist on type 'never'.",
+      "src/store/useUIStore.ts(LINE,COL): error TS2339: Property 'length' does not exist on type 'never'."
+    ]
+  },
+  "eslint": {
+    "beforeErrors": 835,
+    "afterErrors": 829,
+    "beforeWarnings": 45,
+    "afterWarnings": 45,
+    "added": [],
+    "removed": [
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ]
+    ]
+  },
+  "sourceBase": "9ec8b331e38e32ed5958c7a3725566f2b06488c7",
+  "comparison": "Exact TS diagnostic text with only line/column offsets normalized. ESLint preserves path relative to src, rule, severity, message and multiplicity. No additions; removals belong to refactored sections/types.",
+  "rawFiles": [
+    {
+      "file": "typescript-before.txt.gz",
+      "rawBytes": 31805,
+      "rawSha256": "aeddb212c754ae9d25315034d0b027a05107139bbfb511e3d99924af232fcb4b",
+      "gzipSha256": "8b856db39cef0b2bac3e406f2543c2645b4d3625f8143ca5905ed9b8bd4ba958"
+    },
+    {
+      "file": "typescript-after.txt.gz",
+      "rawBytes": 30232,
+      "rawSha256": "e5056d5253c193aa8756d24f1293566c3c143312bb98668ea4a31ae7b2a0c325",
+      "gzipSha256": "2cb168e4088654a42d325e95f63a0033ca6eeca15b0d138a87ec80b1cd93b82c"
+    },
+    {
+      "file": "eslint-before.json.gz",
+      "rawBytes": 2514169,
+      "rawSha256": "51293a3b04b28fd347ae08f29bff7d4ac0f821c97dc1d94e9b87001b6053527e",
+      "gzipSha256": "a99045ed42c218f154cf92c88ca30060955b150100c6128b3933e45625b70692"
+    },
+    {
+      "file": "eslint-after.json.gz",
+      "rawBytes": 2514096,
+      "rawSha256": "1228e5e227c5dbf0c985df9ec43e2d8285914587a8572eab617991789b7acc32",
+      "gzipSha256": "ea8c4ff896fef919b1be5b2050a64cc535de0a8bdd9d5cd30e3fab5e566a275e"
+    },
+    {
+      "file": "eslint-root-before.json.gz",
+      "rawBytes": 2517421,
+      "rawSha256": "f4f1e7a31f73ae2a448594f2c7695b7c72231b4e70c87e853dc0d0e9b5f817c2",
+      "gzipSha256": "c9de3c0ab9fe763363538e5495af50fa66936a8e30645f74d4b12d13e190f679"
+    },
+    {
+      "file": "eslint-root-after.json.gz",
+      "rawBytes": 2517646,
+      "rawSha256": "328c253128995f4be016bce4bf6bd223d758b667b73bfc30f88232ff96687e83",
+      "gzipSha256": "70a3473635b23d31754b98c4148506f2a465123b0f76f47b96b7adb9fd8a837b"
+    }
+  ],
+  "eslintRoot": {
+    "command": "eslint . --format json",
+    "scope": "Clean source snapshots: all tracked/pending lintable files, original config and same node_modules, without pre-existing ignored build outputs.",
+    "beforeExit": 1,
+    "afterExit": 1,
+    "beforeFiles": 166,
+    "afterFiles": 176,
+    "beforeErrors": 835,
+    "afterErrors": 829,
+    "beforeWarnings": 45,
+    "afterWarnings": 45,
+    "added": [],
+    "removed": [
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ],
+      [
+        "src/components/panel/right/ControlsPanel.tsx",
+        "@typescript-eslint/no-explicit-any",
+        2,
+        "Unexpected any. Specify a different type."
+      ]
+    ],
+    "comparison": "Default repository rules; no overrides or disables. Paths relative to each clean tree; rule, severity, message and multiplicity preserved.",
+    "localWorkingTree": {
+      "errors": 839,
+      "warnings": 45,
+      "preexistingIgnoredBuildOutputErrors": [
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-55827da29bae9e2b/out/tauri-codegen-assets/8c7bac38ff9d5a3751908f9be20b64fee0a689e3519be857f547a8f2672bc3ad.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-55827da29bae9e2b/out/tauri-codegen-assets/f5ec26d042cfb5ce3c9c179084c602eb08b40dfe40fe163eca3faa5c84ae0791.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-af3bca949dcbe355/out/tauri-codegen-assets/a287444b62933dd753bef7405695dab95abca32946e8b436f9a8c96ff1880896.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-af3bca949dcbe355/out/tauri-codegen-assets/f5ec26d042cfb5ce3c9c179084c602eb08b40dfe40fe163eca3faa5c84ae0791.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-ed342b00bd35ba2b/out/tauri-codegen-assets/420367cf2e76042522423cf9990f9d0cce9923773f09cd62d212d4389eb2bef5.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-ed342b00bd35ba2b/out/tauri-codegen-assets/58da7f9f79b54e7c0d80dfde1bcb14fe2406eeb405238fc0a29c90e382c23f9f.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-ed342b00bd35ba2b/out/tauri-codegen-assets/8c7bac38ff9d5a3751908f9be20b64fee0a689e3519be857f547a8f2672bc3ad.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-ed342b00bd35ba2b/out/tauri-codegen-assets/a287444b62933dd753bef7405695dab95abca32946e8b436f9a8c96ff1880896.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-ed342b00bd35ba2b/out/tauri-codegen-assets/f5ec26d042cfb5ce3c9c179084c602eb08b40dfe40fe163eca3faa5c84ae0791.js",
+        "spike/intake/src-tauri/target/debug/build/rapidraw-intake-spike-f01700510de6cad8/out/tauri-codegen-assets/f5ec26d042cfb5ce3c9c179084c602eb08b40dfe40fe163eca3faa5c84ae0791.js"
+      ],
+      "note": "Direct eslint . also scans these old ignored spike target outputs. They are excluded by clean checkout, not by a new lint ignore rule. No generated output is committed."
+    }
+  }
+}

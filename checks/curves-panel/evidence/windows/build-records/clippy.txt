@@ -1,0 +1,4 @@
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+    Checking RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+    Finished `release` profile [optimized] target(s) in 17.05s

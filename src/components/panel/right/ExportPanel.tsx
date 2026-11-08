@@ -393,7 +393,8 @@ export default function ExportPanel({
   const destination = destinationType === 'immich' && !canExportToImmich ? 'customFolder' : destinationType;
   const immichExport = useImmichExportChoice();
   const activePanels = useUIStore((state) => state.activePanels);
-  const isPanelReallyActive = Object.values(activePanels).includes(Panel.Export);
+  const panelModal = useUIStore((state) => state.panelModal);
+  const isPanelReallyActive = panelModal === Panel.Export || Object.values(activePanels).includes(Panel.Export);
 
   const { status, progress, errorMessage } = exportState;
   const isExporting = [Status.Exporting, Status.Cancelling].includes(status);
@@ -427,7 +428,7 @@ export default function ExportPanel({
       }
     };
     fetchDims();
-  }, [pathsToExport, isLibraryContext, selectedImage, enableWatermark, numImages, isVisible]);
+  }, [pathsToExport, isLibraryContext, selectedImage, enableWatermark, numImages, isVisible, isPanelReallyActive]);
 
   useEffect(() => {
     const fetchWatermarkDimensions = async () => {

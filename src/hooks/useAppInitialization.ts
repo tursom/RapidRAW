@@ -149,6 +149,10 @@ export const useAppInitialization = ({
   useEffect(() => {
     Promise.all([invoke(Invokes.LoadSettings), invoke<boolean>(Invokes.IsTetheringSupported).catch(() => false)])
       .then(async ([settings, isTetheringSupported]: [any, boolean]) => {
+        const currentPlatform = useSettingsStore.getState().osPlatform;
+        const currentIsAndroid = currentPlatform === 'android';
+        const currentDefaultThumbnailSize = currentIsAndroid ? ThumbnailSize.Small : ThumbnailSize.Medium;
+        const currentDefaultLibraryViewMode = currentIsAndroid ? LibraryViewMode.Recursive : LibraryViewMode.Flat;
         if (
           !settings.copyPasteSettings ||
           !settings.copyPasteSettings.includedAdjustments ||
@@ -170,7 +174,12 @@ export const useAppInitialization = ({
           handleSettingsChange(settings);
         }
 
-        const reconciledWorkspace = reconcileWorkspace(settings?.workspace, isTetheringSupported);
+        const reconciledWorkspace = reconcileWorkspace(
+          settings?.workspace,
+          isTetheringSupported,
+          currentPlatform,
+          useUIStore.getState().isFullLayout,
+        );
         settings.workspace = reconciledWorkspace;
 
         setAppSettings(settings);
@@ -215,8 +224,8 @@ export const useAppInitialization = ({
         if (settings?.activeWaveformChannel) setEditor({ activeWaveformChannel: settings.activeWaveformChannel });
         if (typeof settings?.waveformHeight === 'number') setEditor({ waveformHeight: settings.waveformHeight });
 
-        setLibraryViewMode(settings?.libraryViewMode ?? defaultLibraryViewMode);
-        setThumbnailSize(settings?.thumbnailSize ?? defaultThumbnailSize);
+        setLibraryViewMode(settings?.libraryViewMode ?? currentDefaultLibraryViewMode);
+        setThumbnailSize(settings?.thumbnailSize ?? currentDefaultThumbnailSize);
         if (settings?.thumbnailAspectRatio) setThumbnailAspectRatio(settings.thumbnailAspectRatio);
 
         if (settings?.pinnedFolders && settings.pinnedFolders.length > 0) {
@@ -238,7 +247,7 @@ export const useAppInitialization = ({
             ? [settings.lastRootPath]
             : [];
 
-        if (!isAndroid && rootFolders.length > 0) {
+        if (!currentIsAndroid && rootFolders.length > 0) {
           const currentPath = settings.lastFolderState?.currentFolderPath || rootFolders[0];
           const isAlbum = currentPath.startsWith('Album: ');
           const command =
@@ -277,11 +286,12 @@ export const useAppInitialization = ({
       })
       .catch((err) => {
         console.error('Failed to load settings:', err);
+        const currentIsAndroid = useSettingsStore.getState().osPlatform === 'android';
         setAppSettings({
           lastRootPath: null,
           theme: DEFAULT_THEME_ID as Theme,
-          thumbnailSize: defaultThumbnailSize,
-          libraryViewMode: defaultLibraryViewMode,
+          thumbnailSize: currentIsAndroid ? ThumbnailSize.Small : ThumbnailSize.Medium,
+          libraryViewMode: currentIsAndroid ? LibraryViewMode.Recursive : LibraryViewMode.Flat,
         });
       })
       .finally(() => {

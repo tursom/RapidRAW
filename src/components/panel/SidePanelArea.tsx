@@ -5,12 +5,17 @@ import clsx from 'clsx';
 import { useDroppable, useDndMonitor } from '@dnd-kit/core';
 import {
   DEFAULT_PANEL_SECTION_HEIGHT,
+  DEFAULT_LEFT_PANEL_SECTION_HEIGHT,
   getReopenedPanelWidth,
   SwitcherPlacement,
   useUIStore,
 } from '../../store/useUIStore';
 import { Panel, PanelRegion } from '../ui/AppProperties';
 import PanelSwitcher, { MobilePanelSwitcher } from './PanelSwitcher';
+import { useSettingsStore } from '../../store/useSettingsStore';
+import { isHistoryMode } from '../../utils/appMode';
+
+const isModalPanel = (panel: Panel) => panel === Panel.Metadata || panel === Panel.Export;
 
 const COLLAPSE_THRESHOLD = 200;
 
@@ -53,7 +58,13 @@ function RegionDroppableContainer({
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const panelsInRegion = panelLayout[region];
-  const activePanel = activePanels[region] ?? (panelsInRegion.length > 0 ? panelsInRegion[0] : null);
+  const historyMode = isHistoryMode(useSettingsStore((s) => s.osPlatform));
+  const isFullLayout = useUIStore((s) => s.isFullLayout);
+  const historyFull = historyMode && isFullLayout;
+  const visiblePanels = historyFull ? panelsInRegion.filter((panel) => !isModalPanel(panel)) : panelsInRegion;
+  const activePanel = visiblePanels.includes(activePanels[region] as Panel)
+    ? activePanels[region]
+    : (visiblePanels[0] ?? null);
 
   const { setNodeRef, isOver, active } = useDroppable({
     id: `layout-region-${region}`,
@@ -333,6 +344,9 @@ export default function SidePanelArea({
   showAdditionalTabs = false,
 }: SidePanelAreaProps) {
   const panelLayout = useUIStore((s) => s.panelLayout);
+  const historyMode = isHistoryMode(useSettingsStore((s) => s.osPlatform));
+  const isFullLayout = useUIStore((s) => s.isFullLayout);
+  const historyFull = historyMode && isFullLayout;
   const isFullScreen = useUIStore((s) => s.isFullScreen);
   const isInstantTransition = useUIStore((s) => s.isInstantTransition);
   const activeLayoutDragItem = useUIStore((s) => s.activeLayoutDragItem);
@@ -378,17 +392,17 @@ export default function SidePanelArea({
 
   const handleVerticalResizeReset = useCallback(() => {
     if (side === 'left') {
-      setUI({ leftTopHeight: DEFAULT_PANEL_SECTION_HEIGHT });
+      setUI({ leftTopHeight: historyFull ? DEFAULT_LEFT_PANEL_SECTION_HEIGHT : DEFAULT_PANEL_SECTION_HEIGHT });
     } else {
       setUI({ rightTopHeight: DEFAULT_PANEL_SECTION_HEIGHT });
     }
-  }, [side, setUI]);
+  }, [side, setUI, historyFull]);
 
-  const topPanels = panelLayout[topRegion];
-  const bottomPanels = panelLayout[bottomRegion];
-
+  const topPanels = panelLayout[topRegion].filter((panel) => !historyFull || !isModalPanel(panel));
+  const bottomPanels = panelLayout[bottomRegion].filter((panel) => !historyFull || !isModalPanel(panel));
   const hasTop = topPanels.length > 0;
   const hasBottom = bottomPanels.length > 0;
+  const useFlexibleLeftSplit = historyFull && side === 'left' && hasTop && hasBottom;
 
   if (!hasTop && !hasBottom && !isDraggingLayout) return null;
 
@@ -436,7 +450,7 @@ export default function SidePanelArea({
               if (isCollapsed) {
                 setUI((s) => ({
                   uiVisibility: { ...s.uiVisibility, rightPanel: true },
-                  rightPanelWidth: getReopenedPanelWidth(s.rightPanelWidth),
+                  rightPanelWidth: getReopenedPanelWidth(s.rightPanelWidth, 'right'),
                 }));
               }
             }}
@@ -464,11 +478,20 @@ export default function SidePanelArea({
         />
       )}
 
-      <div ref={colContainerRef} className="flex flex-col h-full w-full overflow-hidden relative">
+      <div
+        ref={colContainerRef}
+        className={clsx(
+          'flex flex-col h-full w-full relative',
+          useFlexibleLeftSplit ? 'overflow-y-auto custom-scrollbar' : 'overflow-hidden',
+        )}
+      >
         {hasTop && (
           <div
             className="flex-1 overflow-hidden relative"
-            style={{ flex: hasBottom ? `0 0 ${topHeight}px` : '1 1 auto' }}
+            style={{
+              flex: hasBottom ? `0 ${useFlexibleLeftSplit ? 1 : 0} ${topHeight}px` : '1 1 auto',
+              minHeight: useFlexibleLeftSplit ? 250 : undefined,
+            }}
           >
             <RegionDroppableContainer
               region={topRegion}
@@ -496,7 +519,10 @@ export default function SidePanelArea({
         )}
 
         {hasBottom && (
-          <div className="flex-1 overflow-hidden relative">
+          <div
+            className="flex-1 overflow-hidden relative"
+            style={useFlexibleLeftSplit ? { flex: '1 0 250px', minHeight: 250 } : undefined}
+          >
             <AnimatePresence>
               {!hasTop && isDraggingLayout && canSplitBottom && (
                 <SplitOverlayDropzone region={topRegion} side={side} isTop={bottomSplitIsTop} />
