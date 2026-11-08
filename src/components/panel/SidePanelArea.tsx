@@ -69,9 +69,10 @@ function RegionDroppableContainer({
   const { setNodeRef, isOver, active } = useDroppable({
     id: `layout-region-${region}`,
     data: { type: 'layout-region', region },
+    disabled: historyFull,
   });
 
-  const isLayoutDrag = active?.data?.current?.type === 'layout-tab';
+  const isLayoutDrag = !historyFull && active?.data?.current?.type === 'layout-tab';
   const isActualOver = isOver && isLayoutDrag;
 
   const setRefs = useCallback(
@@ -84,6 +85,7 @@ function RegionDroppableContainer({
 
   useDndMonitor({
     onDragMove(event) {
+      if (historyFull) return;
       if (event.active.data.current?.type !== 'layout-tab') return;
 
       if (event.over?.id !== `layout-region-${region}` || !containerRef.current) {
@@ -116,6 +118,7 @@ function RegionDroppableContainer({
       }
     },
     onDragEnd(event) {
+      if (historyFull) return;
       if (event.over?.id === `layout-region-${region}` && hoverPlacementRef.current) {
         setPanelSwitcherPlacement(region, hoverPlacementRef.current);
       }
@@ -350,7 +353,7 @@ export default function SidePanelArea({
   const isFullScreen = useUIStore((s) => s.isFullScreen);
   const isInstantTransition = useUIStore((s) => s.isInstantTransition);
   const activeLayoutDragItem = useUIStore((s) => s.activeLayoutDragItem);
-  const isDraggingLayout = !!activeLayoutDragItem;
+  const isDraggingLayout = !historyFull && !!activeLayoutDragItem;
 
   const topPlacement = useUIStore((s) => s.panelSwitcherPlacement[topRegion]);
   const bottomPlacement = useUIStore((s) => s.panelSwitcherPlacement[bottomRegion]);

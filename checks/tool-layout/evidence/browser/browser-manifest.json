@@ -1,0 +1,760 @@
+{
+  "schema": 2,
+  "status": "passed",
+  "createdAt": "2026-11-08T02:12:30.435Z",
+  "browser": "158.0.8127.18",
+  "hostMock": true,
+  "scope": "Linux Chromium component/store checks; actual tool content, App/ImageCanvas and native host not mounted",
+  "startedAt": "2026-11-08T02:11:02.385Z",
+  "finishedAt": "2026-11-08T02:11:25.982Z",
+  "cases": 19,
+  "steps": 91,
+  "trustedSteps": 64,
+  "traceRetention": {
+    "trustedSteps": 64,
+    "retainedSteps": 64,
+    "complete": true,
+    "independentlyRecomputedFromPersistedStepSlices": true,
+    "formerlyMissingSteps": [
+      {
+        "case": "trusted tab drag rejected and store DnD mutation rejected; Android sensor positive control",
+        "step": "trusted crop tab drag to right region cannot start layout drag",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 19
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      }
+    ],
+    "steps": [
+      {
+        "case": "trusted tab drag rejected and store DnD mutation rejected; Android sensor positive control",
+        "step": "trusted crop tab drag to right region cannot start layout drag",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 19
+      },
+      {
+        "case": "trusted tab drag rejected and store DnD mutation rejected; Android sensor positive control",
+        "step": "same trusted drag activates legacy Android layout DnD sensor",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 25
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted right slider drag changes global adjustment",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 22
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted focus and arrow edit retains mode",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted actual curve point drag changes whole-image curves",
+        "type": "mousedown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 18
+      },
+      {
+        "case": "crop: trusted slider and curve preserve global mode and mask data",
+        "step": "choosing Presets exits to Adjustments and retains edits",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted right slider drag changes global adjustment",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 21
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted focus and arrow edit retains mode",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted actual curve point drag changes whole-image curves",
+        "type": "mousedown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 18
+      },
+      {
+        "case": "masks: trusted slider and curve preserve global mode and mask data",
+        "step": "choosing Presets exits to Adjustments and retains edits",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "enter real tool tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted right slider drag changes global adjustment",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 21
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted focus and arrow edit retains mode",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "trusted actual curve point drag changes whole-image curves",
+        "type": "mousedown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 18
+      },
+      {
+        "case": "ai: trusted slider and curve preserve global mode and mask data",
+        "step": "choosing Presets exits to Adjustments and retains edits",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "crop: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "select global Contrast with trusted pointer then activate real W overlay",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 15
+      },
+      {
+        "case": "crop: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "D/A cycle only global right targets, then arrow edits global value",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 4,
+        "rawEvents": 14
+      },
+      {
+        "case": "crop: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "off-list Whites retains global owner for W then A/D and nudge",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 5,
+        "rawEvents": 28
+      },
+      {
+        "case": "masks: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "select global Contrast with trusted pointer then activate real W overlay",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 15
+      },
+      {
+        "case": "masks: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "D/A cycle only global right targets, then arrow edits global value",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 4,
+        "rawEvents": 14
+      },
+      {
+        "case": "masks: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "off-list Whites retains global owner for W then A/D and nudge",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 5,
+        "rawEvents": 28
+      },
+      {
+        "case": "ai: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "select global Contrast with trusted pointer then activate real W overlay",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 15
+      },
+      {
+        "case": "ai: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "D/A cycle only global right targets, then arrow edits global value",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 4,
+        "rawEvents": 14
+      },
+      {
+        "case": "ai: real SpeedEdit W/D/A stays in selected global Controls",
+        "step": "off-list Whites retains global owner for W then A/D and nudge",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 5,
+        "rawEvents": 28
+      },
+      {
+        "case": "exact Task 3 SpeedEdit negative control detects local/global target mixing",
+        "step": "same trusted pointer/W/D against exact old overlay selects local scope",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 7,
+        "rawEvents": 44
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook r",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook m",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook k",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 3
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook p",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 3
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook r",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "real hook d",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 5
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "hidden left R shortcut reopens",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 5
+      },
+      {
+        "case": "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+        "step": "collapsed left R shortcut reopens",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 4
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "disabled crop trusted click attempt",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 3
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "disabled masks trusted click attempt",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 3
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "disabled ai trusted click attempt",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 3
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "no image hook r rejected",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 2
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "no image hook m rejected",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 2
+      },
+      {
+        "case": "no image native disabled DOM and rejected tab/API/keyboard entry",
+        "step": "no image hook k rejected",
+        "type": "keydown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 2
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile metadata",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile adjustments",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 13
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile crop",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile masks",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile ai",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile presets",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "windows compact mobile paths and round-trip layout",
+        "step": "mobile export",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile metadata",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile adjustments",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 13
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile crop",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile masks",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile ai",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile presets",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "android compact mobile paths and round-trip layout",
+        "step": "mobile export",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original crop tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original masks tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 9
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original ai tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original presets tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original metadata tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "Android full workspace and tool behavior equal Task 3 original paths",
+        "step": "Android original export tab",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 8
+      },
+      {
+        "case": "250px tabs fit, minimum dual-region geometry, scrolling and trusted divider drag",
+        "step": "1280 actual divider drag",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 15
+      },
+      {
+        "case": "250px tabs fit, minimum dual-region geometry, scrolling and trusted divider drag",
+        "step": "800 actual divider drag",
+        "type": "pointerdown",
+        "phaseMatchedTrustedEvents": 1,
+        "rawEvents": 15
+      },
+      {
+        "case": "actual MasksPanel waveform visibility selector follows compact panel with Task 3 negative control",
+        "step": "trusted compact Adjustments then Masks changes selector with actual rendered region",
+        "type": "click",
+        "phaseMatchedTrustedEvents": 2,
+        "rawEvents": 21
+      }
+    ]
+  },
+  "caseNames": [
+    "fixed defaults, hostile saved layout ignored, dimensions retained, Task 3 negative controls",
+    "actual right singleton hidden, ordered left tabs and singleton left strip hidden",
+    "trusted tab drag rejected and store DnD mutation rejected; Android sensor positive control",
+    "crop: trusted slider and curve preserve global mode and mask data",
+    "masks: trusted slider and curve preserve global mode and mask data",
+    "ai: trusted slider and curve preserve global mode and mask data",
+    "crop: real SpeedEdit W/D/A stays in selected global Controls",
+    "masks: real SpeedEdit W/D/A stays in selected global Controls",
+    "ai: real SpeedEdit W/D/A stays in selected global Controls",
+    "exact Task 3 SpeedEdit negative control detects local/global target mixing",
+    "actual keyboard hook R/M/K/P/D and collapsed-left entry reopens correct region",
+    "no image native disabled DOM and rejected tab/API/keyboard entry",
+    "selected image loss resets each tool and crop session",
+    "windows compact mobile paths and round-trip layout",
+    "android compact mobile paths and round-trip layout",
+    "Android full workspace and tool behavior equal Task 3 original paths",
+    "250px tabs fit, minimum dual-region geometry, scrolling and trusted divider drag",
+    "actual MasksPanel waveform visibility selector follows compact panel with Task 3 negative control",
+    "focused actual ImageCanvas selectors exclude tools with positive and Task 3 negative controls"
+  ],
+  "errors": [],
+  "cleanup": {
+    "browserClosed": true,
+    "viteExitCode": 143,
+    "viteSignalCode": null,
+    "viteProcessGone": true,
+    "portReleased": true
+  },
+  "provenance": {
+    "inputDigest": "574c7aa7cd3bd0898017700e27ae7c334ca8ea52c216835b575c013a18613eb6",
+    "inputFileCount": 284,
+    "unchanged": true,
+    "parentFreeze": {
+      "sha256": "0721a9f46d06f96aa520da6ffc44d4b9f17dd6de1102691fcd74fe6a90f2949c",
+      "sourceBase": "33ba1eb7f886a54d51a2922b6848654596da447d",
+      "files": [
+        {
+          "path": "src/App.tsx",
+          "sha256": "f336e30fbc235ccd4b396fd275d2e14443be26dd228ea630b70bbb8e474f8326"
+        },
+        {
+          "path": "src/components/panel/PanelSwitcher.tsx",
+          "sha256": "c98f9dbe664841139a9db730c1e4bdd49b3a1103af2e05276435766da29b0858"
+        },
+        {
+          "path": "src/components/panel/SidePanelArea.tsx",
+          "sha256": "aedccbe50ec41e3757f2e957aff6b7e470862b44c0cfd99eb10596fa8f49fac1"
+        },
+        {
+          "path": "src/components/panel/editor/ImageCanvas.tsx",
+          "sha256": "2e53e45015987c9b62e1a093e7cc6103404fa57a61f1b0e87766702298d27640"
+        },
+        {
+          "path": "src/components/panel/editor/overlays/SpeedEditOverlay.tsx",
+          "sha256": "3975e5e6ed9bc1b7c73795739db9ecd2aa67003f8ee76656b729a811e5efe100"
+        },
+        {
+          "path": "src/store/useUIStore.ts",
+          "sha256": "5018ed9a694418ea4fd5969dd2de6a0852f267e2d2720dfb1bfc877b7912202d"
+        }
+      ],
+      "matched": true
+    },
+    "gitHead": "33ba1eb7f886a54d51a2922b6848654596da447d",
+    "negativeBase": "33ba1eb7"
+  },
+  "quality": {
+    "eslint": {
+      "command": "./node_modules/.bin/eslint checks/tool-layout/{fixture.tsx,host.ts,bootstrap.ts,virtual.d.ts,vite.config.mjs,run.mjs} --max-warnings 0 --format json",
+      "exitCode": 0,
+      "files": 6,
+      "errors": 0,
+      "warnings": 0,
+      "disables": false
+    },
+    "typescript": {
+      "command": "./node_modules/.bin/tsc -p checks/tool-layout/tsconfig.browser.json",
+      "exitCode": 2,
+      "fixtureDiagnostics": 0,
+      "importedProductionDiagnostics": 12,
+      "newAgainstTask3Baseline": 0,
+      "baselineDiagnostics": 59,
+      "currentOutputSha256": "6af3e7611ab50855a4895c802102fc798da816315ee4c11bb9721cb9cab283e6",
+      "baselineOutputSha256": "e5056d5253c193aa8756d24f1293566c3c143312bb98668ea4a31ae7b2a0c325",
+      "presentationOnly": [
+        {
+          "file": "src/components/panel/right/Masks.tsx",
+          "line": 308,
+          "column": 44,
+          "code": "TS2345",
+          "unchangedSource": true,
+          "reason": "TypeScript prints a different truncated translation-key union for the smaller fixture import graph."
+        }
+      ],
+      "diagnostics": [
+        {
+          "file": "src/components/panel/PanelSwitcher.tsx",
+          "line": 100,
+          "column": 23,
+          "code": "TS2345",
+          "message": "Argument of type '[string]' is not assignable to parameter of type '[key: string | string[], options: TOptionsBase & $Dictionary & { defaultValue: never; }] | [key: string | string[], defaultValue: never, options?: (TOptionsBase & $Dictionary) | undefined] | [key: ...]'."
+        },
+        {
+          "file": "src/components/panel/SettingsPanel.tsx",
+          "line": 1543,
+          "column": 47,
+          "code": "TS2322",
+          "message": "Type '{ visible: { opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }; exit: { opacity: number; scale: number; transition: { duration: number; }; }; }' is not assignable to type 'Variants'."
+        },
+        {
+          "file": "src/components/panel/SettingsPanel.tsx",
+          "line": 1622,
+          "column": 37,
+          "code": "TS2322",
+          "message": "Type '{ visible: { opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }; exit: { opacity: number; scale: number; transition: { duration: number; }; }; }' is not assignable to type 'Variants'."
+        },
+        {
+          "file": "src/components/panel/editor/Waveform.tsx",
+          "line": 601,
+          "column": 37,
+          "code": "TS2345",
+          "message": "Argument of type '[string]' is not assignable to parameter of type '[key: string | string[], options: TOptionsBase & $Dictionary & { defaultValue: never; }] | [key: string | string[], defaultValue: never, options?: (TOptionsBase & $Dictionary) | undefined] | [key: ...]'."
+        },
+        {
+          "file": "src/components/panel/library/CullingView.tsx",
+          "line": 1274,
+          "column": 13,
+          "code": "TS2322",
+          "message": "Type 'MemoExoticComponent<({ index, style, imageList, multiSelectedPaths, activePath, onContextMenu, onImageDoubleClick, thumbnailAspectRatio, imageRatings, onImageClick, queueThumbnailRequest, hoveredCullingPath, }: any) => Element>' is not assignable to type '(props: any) => ReactElement<unknown, string | JSXElementConstructor<any>> | null'."
+        },
+        {
+          "file": "src/components/panel/library/LibraryGrid.tsx",
+          "line": 744,
+          "column": 13,
+          "code": "TS2322",
+          "message": "Type 'MemoExoticComponent<({ index, style, rows, activePath, multiSelectedSet, onContextMenu, onImageClick, onImageDoubleClick, selectionModeActive, thumbnailAspectRatio, onImageLoad, imageRatings, baseFolderPath, itemWidth, itemHeight, outerPadding, gap, isListView, columnWidths, queueThumbnailRequest, onToggleRecursiveF...' is not assignable to type '(props: any) => ReactElement<unknown, string | JSXElementConstructor<any>> | null'."
+        },
+        {
+          "file": "src/components/panel/right/ControlsPanel.tsx",
+          "line": 207,
+          "column": 29,
+          "code": "TS2345",
+          "message": "Argument of type '[`editor.adjustments.sections.${string}`]' is not assignable to parameter of type '[key: string | string[], options: TOptionsBase & $Dictionary & { defaultValue: never; }] | [key: string | string[], defaultValue: never, options?: (TOptionsBase & $Dictionary) | undefined] | [key: ...]'."
+        },
+        {
+          "file": "src/components/panel/right/ControlsPanel.tsx",
+          "line": 217,
+          "column": 19,
+          "code": "TS2322",
+          "message": "Type 'unknown' is not assignable to type 'string'."
+        },
+        {
+          "file": "src/components/panel/right/Masks.tsx",
+          "line": 308,
+          "column": 44,
+          "code": "TS2345",
+          "message": "Argument of type '[string]' is not assignable to parameter of type '[key: \"masks.types.depth\" | TemplateStringsArray | \"adjustments.details.color\" | \"adjustments.details.luminance\" | \"adjustments.details.aiDenoise\" | ... 1945 more ... | (\"masks.types.depth\" | ... 1948 more ... | \"ui.waveform.tooltips.vectorscope\")[], options?: (TOptionsBase & ... 1 more ... & { ...; }) | undefined] ...'."
+        },
+        {
+          "file": "src/hooks/useEditorActions.ts",
+          "line": 452,
+          "column": 15,
+          "code": "TS2339",
+          "message": "Property 'mode' does not exist on type 'CopyPasteSettings | undefined'."
+        },
+        {
+          "file": "src/hooks/useEditorActions.ts",
+          "line": 452,
+          "column": 21,
+          "code": "TS2339",
+          "message": "Property 'includedAdjustments' does not exist on type 'CopyPasteSettings | undefined'."
+        },
+        {
+          "file": "src/hooks/useLibraryActions.ts",
+          "line": 558,
+          "column": 20,
+          "code": "TS2322",
+          "message": "Type 'unknown' is not assignable to type 'any[] | undefined'."
+        }
+      ],
+      "disclosure": "TypeScript result reused from prior successful typecheck: only runner.mjs/browser.md changed for trace retention. Imported production graph retains existing errors; this is not a green repository TypeScript check."
+    },
+    "prettier": {
+      "exitCode": 0,
+      "outputSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    }
+  },
+  "artifacts": {
+    "checks/tool-layout/bootstrap.ts": {
+      "sha256": "524829f7b7d0cbde80aee9a8071e5cc59cb04db5ef07349bb9854b27b61b2a6c",
+      "bytes": 44
+    },
+    "checks/tool-layout/browser.md": {
+      "sha256": "164e62262761325b651838cb72e38805e85da039e2176e727cc184caf481b77f",
+      "bytes": 13864
+    },
+    "checks/tool-layout/fixture.css": {
+      "sha256": "1d977d52a5dc64b4bb76c28ac79ca26718aaad2c73fd3994518253c566364196",
+      "bytes": 230
+    },
+    "checks/tool-layout/fixture.tsx": {
+      "sha256": "322a52cf49466b865889261fc94e9fab15da1942e94aa865ff4d2256880ca69c",
+      "bytes": 13274
+    },
+    "checks/tool-layout/host.ts": {
+      "sha256": "7011b8903fc70c7aca74af239443ef3e0011e31b1e40c5b78f23a35f05b2464c",
+      "bytes": 2693
+    },
+    "checks/tool-layout/index.html": {
+      "sha256": "42104e49b7b9511b9dfcef891cb370e29edc995c8007a1e73dc5ab1ac825d93f",
+      "bytes": 271
+    },
+    "checks/tool-layout/run.mjs": {
+      "sha256": "a7441cbe6f425bc6d1fb4732ef3e7949a13eb20c4cb7090e589b58fbc375b809",
+      "bytes": 42772
+    },
+    "checks/tool-layout/tsconfig.browser.json": {
+      "sha256": "1fa592a29691591ec1a4b090d0c7c47a824c7fdc2deb5191745a777741ad0a1c",
+      "bytes": 203
+    },
+    "checks/tool-layout/virtual.d.ts": {
+      "sha256": "edb5a6c533379dce30106f8a64a1661386b2c2a7c51d6145b6f2dfbcafdc5b87",
+      "bytes": 1029
+    },
+    "checks/tool-layout/vite.config.mjs": {
+      "sha256": "1c93d74fc273aebe32db8e683702115ad5f91b89ab6a65db861fad4216a10c99",
+      "bytes": 5918
+    },
+    "checks/tool-layout/evidence/browser/chromium.json.gz": {
+      "sha256": "0dbba21aab036f211633bf1e916e0f46be68b6ba98632ba7f9ce8147b46a87d1",
+      "bytes": 548670
+    },
+    "checks/tool-layout/evidence/browser/eslint.json.gz": {
+      "sha256": "5e9d114c164823f1380c74924f1ded3f5124d3687ad75feb3fd6abb8fc83686f",
+      "bytes": 220
+    }
+  },
+  "deliverySha256": "1d3ca21e8d2e99356f02c3c09e21a14f5a49a0466f655564821a55397f00d440",
+  "limitations": [
+    "Linux headless Chromium trusted CDP input; no Windows WebView2 or Android hardware.",
+    "Current real layout components, stores, Controls/Curves, keyboard hook, CSS, DndContext and context provider. Tool/Info/Export contents are explicit placeholders; full App and ImageCanvas are not mounted.",
+    "Tauri host is mocked; no native decode, crop rendering, masks drawing, AI generation, disk mutation or backend validation.",
+    "Canvas proof executes extracted current production selector AST callbacks with real state, not the full canvas or hardware.",
+    "Fixture supplies layout mode through production store.setUI; App viewport detection remains full-application coverage.",
+    "Exact Task 3 store and selector callbacks use current dependencies; focused regression controls, not a historical application build.",
+    "Production tool content usability at narrow widths is delegated to full Windows application tests."
+  ],
+  "independentReview": {
+    "status": "confirmed",
+    "reviewerSessionId": "01a1b8d1-6e1a-755b-be45-6d67a09bd06d",
+    "completedAt": "2026-11-08T02:12:39.647Z",
+    "source": "Reviewer final response retrieved read-only from the session messages API",
+    "scope": "Raw trace retention, runner assertion preservation and production hash stability; manifest regeneration performed separately",
+    "trustedStepsVerified": 64,
+    "formerlyMissingStepsVerified": 4,
+    "onlyChangedRuntimeInput": "checks/tool-layout/run.mjs",
+    "productionFreezeUnchanged": true,
+    "reverseTracePatchReproducesPriorRunnerSha256": "eb960c177841b36267df9ee6ca1d36aa3978e7f27aea131a96775739c92e3d12",
+    "reviewedEvidenceSha256": "0dbba21aab036f211633bf1e916e0f46be68b6ba98632ba7f9ce8147b46a87d1"
+  }
+}

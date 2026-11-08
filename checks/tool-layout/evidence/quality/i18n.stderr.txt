@@ -1,0 +1,2 @@
+npm notice run i18n:runtime-check
+npm notice run node src/i18n/check-runtime.mjs

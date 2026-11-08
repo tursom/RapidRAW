@@ -1,0 +1,29 @@
+{
+  "sourceBase": "33ba1eb7f886a54d51a2922b6848654596da447d",
+  "files": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "f336e30fbc235ccd4b396fd275d2e14443be26dd228ea630b70bbb8e474f8326"
+    },
+    {
+      "path": "src/components/panel/PanelSwitcher.tsx",
+      "sha256": "c98f9dbe664841139a9db730c1e4bdd49b3a1103af2e05276435766da29b0858"
+    },
+    {
+      "path": "src/components/panel/SidePanelArea.tsx",
+      "sha256": "aedccbe50ec41e3757f2e957aff6b7e470862b44c0cfd99eb10596fa8f49fac1"
+    },
+    {
+      "path": "src/components/panel/editor/ImageCanvas.tsx",
+      "sha256": "2e53e45015987c9b62e1a093e7cc6103404fa57a61f1b0e87766702298d27640"
+    },
+    {
+      "path": "src/components/panel/editor/overlays/SpeedEditOverlay.tsx",
+      "sha256": "3975e5e6ed9bc1b7c73795739db9ecd2aa67003f8ee76656b729a811e5efe100"
+    },
+    {
+      "path": "src/store/useUIStore.ts",
+      "sha256": "5018ed9a694418ea4fd5969dd2de6a0852f267e2d2720dfb1bfc877b7912202d"
+    }
+  ]
+}

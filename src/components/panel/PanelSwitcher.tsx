@@ -20,6 +20,7 @@ import { Panel, PanelRegion } from '../ui/AppProperties';
 import { getReopenedPanelWidth, SwitcherPlacement, useUIStore } from '../../store/useUIStore';
 import { useSettingsStore } from '../../store/useSettingsStore';
 import { isHistoryMode } from '../../utils/appMode';
+import { useEditorStore } from '../../store/useEditorStore';
 
 export const PANEL_ICONS: Record<Panel, LucideIcon> = {
   [Panel.Curves]: Spline,
@@ -55,6 +56,12 @@ function PanelTab({ panel, region, side }: { panel: Panel; region: PanelRegion; 
   const leftPanelWidth = useUIStore((s) => s.leftPanelWidth);
   const rightPanelWidth = useUIStore((s) => s.rightPanelWidth);
   const isInstantTransition = useUIStore((s) => s.isInstantTransition);
+  const isFullLayout = useUIStore((s) => s.isFullLayout);
+  const historyMode = isHistoryMode(useSettingsStore((s) => s.osPlatform));
+  const isFixedLayout = historyMode && isFullLayout;
+  const hasImage = useEditorStore((s) => s.selectedImage !== null);
+  const isDisabled =
+    isFixedLayout && !hasImage && (panel === Panel.Crop || panel === Panel.Masks || panel === Panel.Ai);
 
   const isActive = activePanels[region] === panel;
   const Icon = PANEL_ICONS[panel];
@@ -62,6 +69,7 @@ function PanelTab({ panel, region, side }: { panel: Panel; region: PanelRegion; 
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `layout-tab-${panel}`,
     data: { type: 'layout-tab', panel },
+    disabled: isFixedLayout,
   });
 
   const handleClick = () => {
@@ -79,16 +87,18 @@ function PanelTab({ panel, region, side }: { panel: Panel; region: PanelRegion; 
       data-layout-tab
       data-tab-id={`layout-tab-${panel}`}
       ref={setNodeRef}
-      {...listeners}
-      {...attributes}
+      {...(isFixedLayout ? {} : listeners)}
+      {...(isFixedLayout ? {} : attributes)}
+      disabled={isDisabled}
       className={clsx(
-        'relative rounded-md transition-colors duration-200 p-2 shrink-0 cursor-grab active:cursor-grabbing',
+        'relative rounded-md transition-colors duration-200 p-2 shrink-0 disabled:opacity-50 disabled:cursor-not-allowed',
+        !isFixedLayout && 'cursor-grab active:cursor-grabbing',
         isActive ? 'text-text-primary' : 'text-text-secondary hover:bg-surface hover:text-text-primary',
         isDragging && 'opacity-30',
       )}
       onClick={handleClick}
       data-tooltip={t(PANEL_TITLES[panel])}
-      style={{ touchAction: 'none' }}
+      style={{ touchAction: isFixedLayout ? 'auto' : 'none' }}
     >
       {isActive && (
         <motion.div
@@ -114,6 +124,7 @@ export default function PanelSwitcher({
   const panelLayout = useUIStore((s) => s.panelLayout);
   const historyMode = isHistoryMode(useSettingsStore((s) => s.osPlatform));
   const isFullLayout = useUIStore((s) => s.isFullLayout);
+  const isFixedLayout = historyMode && isFullLayout;
   const panels = panelLayout[region].filter(
     (panel) => !historyMode || !isFullLayout || (panel !== Panel.Metadata && panel !== Panel.Export),
   );
@@ -126,6 +137,7 @@ export default function PanelSwitcher({
   const { setNodeRef, isOver } = useDroppable({
     id: `layout-switcher-${region}`,
     data: { type: 'layout-switcher', region },
+    disabled: isFixedLayout,
   });
 
   const setRefs = useCallback(
@@ -140,6 +152,7 @@ export default function PanelSwitcher({
 
   useDndMonitor({
     onDragMove(event) {
+      if (isFixedLayout) return;
       if (event.active.data.current?.type !== 'layout-tab') return;
 
       if (event.over?.id !== `layout-switcher-${region}` || !containerRef.current) {
@@ -198,6 +211,7 @@ export default function PanelSwitcher({
       setHoverIndex(insertIndex);
     },
     onDragEnd(event) {
+      if (isFixedLayout) return;
       if (event.over?.id === `layout-switcher-${region}`) {
         const activePanel = event.active.data.current?.panel;
         if (activePanel && hoverIndex !== null) {
@@ -213,7 +227,7 @@ export default function PanelSwitcher({
     },
   });
 
-  if (panels.length === 0) return null;
+  if (panels.length === 0 || (isFixedLayout && panels.length === 1)) return null;
 
   return (
     <div

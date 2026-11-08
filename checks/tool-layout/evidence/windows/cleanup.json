@@ -1,0 +1,22 @@
+{
+  "finished": "2026-11-08T10:54:02.0293060+08:00",
+  "removedTasks": ["RapidRAW-Tools-Build", "RapidRAW-Tools-Smoke"],
+  "remainingOwnedProcesses": 0,
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "task4ExeSha256": "2ffc180b1f25099bf4d147b92c7cd689e3f55bdda7d1eb87c9841a5b4622abb1",
+  "controllerSha256": "5c2020556d13cd8bffd8623f004a6a0bb955ed35d19595ec65b2cb5eb65823ca",
+  "fixtureSha256": "5922721d13f11795557d97fdeb0a60b900086c402bc82a848ff280d15b99ffd4",
+  "profileRestored": true,
+  "ownedTreeShutdownVerified": true,
+  "rawBytesUnchanged": true,
+  "inputsRestored": true,
+  "releaseExit": 0,
+  "rustfmtExit": 0,
+  "clippyExit": 0,
+  "smokeExit": 0,
+  "cases": 73,
+  "groups": 12,
+  "coverageComplete": true,
+  "visualReview": "verified",
+  "privateBackupNotPublished": true
+}

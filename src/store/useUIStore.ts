@@ -124,6 +124,10 @@ const isModalPanel = (panel: Panel): panel is Panel.Metadata | Panel.Export =>
 const getDockPanels = (panels: Panel[], usePanelModals: boolean) =>
   usePanelModals ? panels.filter((panel) => !isModalPanel(panel)) : panels;
 
+const isToolPanel = (panel: Panel | null) => panel === Panel.Crop || panel === Panel.Masks || panel === Panel.Ai;
+
+const isFixedToolLayout = (state: Pick<UIState, 'isFullLayout'>) => isHistoryMode() && state.isFullLayout;
+
 export function reconcileWorkspace(
   savedWorkspace: WorkspaceState | undefined,
   isTetheringSupported: boolean,
@@ -131,6 +135,7 @@ export function reconcileWorkspace(
   isFullLayout = true,
 ): WorkspaceState {
   const historyMode = isHistoryMode(osPlatform);
+  const fixedToolLayout = historyMode && isFullLayout;
   const allowedPanels = new Set(
     ALL_PANELS.filter(
       (panel) => (panel !== Panel.Curves || historyMode) && (panel !== Panel.Tethering || isTetheringSupported),
@@ -150,13 +155,15 @@ export function reconcileWorkspace(
         Panel.Export,
         ...(isTetheringSupported ? [Panel.Tethering] : []),
       ],
-      leftBottom: [],
-      rightTop: [Panel.Adjustments, Panel.Crop, Panel.Masks, Panel.Ai, Panel.Presets],
+      leftBottom: fixedToolLayout ? [Panel.Crop, Panel.Masks, Panel.Ai, Panel.Presets] : [],
+      rightTop: fixedToolLayout
+        ? [Panel.Adjustments]
+        : [Panel.Adjustments, Panel.Crop, Panel.Masks, Panel.Ai, Panel.Presets],
       rightBottom: [],
     },
     activePanels: {
       leftTop: historyMode ? Panel.Curves : Panel.FolderTree,
-      leftBottom: null,
+      leftBottom: fixedToolLayout ? Panel.Presets : null,
       rightTop: Panel.Adjustments,
       rightBottom: null,
     },
@@ -167,6 +174,16 @@ export function reconcileWorkspace(
       rightBottom: 'right',
     },
   };
+
+  if (fixedToolLayout) {
+    return {
+      ...defaultWorkspace,
+      leftPanelWidth: savedWorkspace?.leftPanelWidth ?? defaultWorkspace.leftPanelWidth,
+      rightPanelWidth: savedWorkspace?.rightPanelWidth ?? defaultWorkspace.rightPanelWidth,
+      leftTopHeight: savedWorkspace?.leftTopHeight ?? defaultWorkspace.leftTopHeight,
+      rightTopHeight: savedWorkspace?.rightTopHeight ?? defaultWorkspace.rightTopHeight,
+    };
+  }
 
   if (!savedWorkspace || !savedWorkspace.panelLayout) {
     return defaultWorkspace;
@@ -246,11 +263,13 @@ export function reconcileWorkspace(
 }
 
 export const isPanelVisible = (state: UIState, panel: Panel) =>
-  (Object.keys(state.activePanels) as PanelRegion[]).some(
-    (region) =>
-      state.activePanels[region] === panel &&
-      state.uiVisibility[region.startsWith('left') ? 'leftPanel' : 'rightPanel'],
-  );
+  isHistoryMode() && !state.isFullLayout
+    ? state.activePanel === panel
+    : (Object.keys(state.activePanels) as PanelRegion[]).some(
+        (region) =>
+          state.activePanels[region] === panel &&
+          state.uiVisibility[region.startsWith('left') ? 'leftPanel' : 'rightPanel'],
+      );
 
 export const isStandaloneCurvesVisible = (state: UIState) =>
   isHistoryMode() &&
@@ -387,9 +406,11 @@ export const useUIStore = create<UIState>((set, get) => ({
     rightBottom: 'right',
   },
   setPanelSwitcherPlacement: (region, placement) =>
-    set((state) => ({
-      panelSwitcherPlacement: { ...state.panelSwitcherPlacement, [region]: placement },
-    })),
+    set((state) =>
+      isFixedToolLayout(state)
+        ? state
+        : { panelSwitcherPlacement: { ...state.panelSwitcherPlacement, [region]: placement } },
+    ),
 
   activePanel: Panel.Adjustments,
   renderedPanel: Panel.Adjustments,
@@ -445,20 +466,37 @@ export const useUIStore = create<UIState>((set, get) => ({
   setUI: (updater) =>
     set((state) => {
       const updates = typeof updater === 'function' ? updater(state) : updater;
-      if (!isHistoryMode() || state.isFullLayout || updates.isFullLayout !== true) return updates;
-      const layout = updates.panelLayout ?? state.panelLayout;
-      const activePanels = { ...(updates.activePanels ?? state.activePanels) };
-      (Object.keys(activePanels) as PanelRegion[]).forEach((region) => {
-        const panel = activePanels[region];
-        if (panel && isModalPanel(panel)) activePanels[region] = getDockPanels(layout[region], true)[0] ?? null;
-      });
-      return { ...updates, activePanels };
+      if (!isHistoryMode()) return updates;
+      const nextIsFullLayout = updates.isFullLayout ?? state.isFullLayout;
+      if (!nextIsFullLayout) {
+        // Compact panels render the global selection, not the full layout's regional selection.
+        return state.isFullLayout ? { ...updates, panelModal: null } : updates;
+      }
+      if (state.isFullLayout && !updates.panelLayout) return updates;
+
+      // Initialization also writes a workspace while already full; normalize its mode as well.
+      const next = { ...state, ...updates };
+      const workspace = reconcileWorkspace(
+        next,
+        Object.values(next.panelLayout).some((panels) => panels.includes(Panel.Tethering)),
+      );
+      const activePanel =
+        isToolPanel(next.activePanel) && useEditorStore.getState().selectedImage ? next.activePanel : Panel.Adjustments;
+      return {
+        ...updates,
+        ...workspace,
+        activePanels: { ...workspace.activePanels, leftBottom: isToolPanel(activePanel) ? activePanel : Panel.Presets },
+        activePanel,
+        renderedPanel: activePanel,
+        activeLayoutDragItem: null,
+      };
     }),
 
-  setLayoutDragItem: (panel) => set({ activeLayoutDragItem: panel }),
+  setLayoutDragItem: (panel) => set((state) => ({ activeLayoutDragItem: isFixedToolLayout(state) ? null : panel })),
 
   movePanel: (panel, toRegion) =>
     set((state) => {
+      if (isFixedToolLayout(state)) return state;
       if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
       const layout = {
         leftTop: [...state.panelLayout.leftTop],
@@ -494,6 +532,7 @@ export const useUIStore = create<UIState>((set, get) => ({
 
   movePanelToIndex: (panel, toRegion, index) =>
     set((state) => {
+      if (isFixedToolLayout(state)) return state;
       if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
       const layout = {
         leftTop: [...state.panelLayout.leftTop],
@@ -533,15 +572,21 @@ export const useUIStore = create<UIState>((set, get) => ({
       const modalUpdate = getPanelModalUpdate(state, panel);
       if (modalUpdate !== null) return modalUpdate;
       if (panel === Panel.Curves && (!isHistoryMode() || !state.isFullLayout)) return state;
+      const fixedToolLayout = isFixedToolLayout(state);
+      if (fixedToolLayout && !state.panelLayout[region].includes(panel)) return state;
+      if (fixedToolLayout && isToolPanel(panel) && !useEditorStore.getState().selectedImage) return state;
+      const globalPanel = fixedToolLayout && panel === Panel.Presets ? Panel.Adjustments : panel;
       const updates: Partial<UIState> = {
         activePanels: { ...state.activePanels, [region]: panel },
-        ...(panel === Panel.Curves ? {} : { activePanel: panel, renderedPanel: panel }),
+        ...(panel === Panel.Curves || (fixedToolLayout && region !== 'leftBottom')
+          ? {}
+          : { activePanel: globalPanel, renderedPanel: globalPanel }),
       };
 
       const isLeft = region === 'leftTop' || region === 'leftBottom';
       const isRight = region === 'rightTop' || region === 'rightBottom';
 
-      if (isLeft && !state.uiVisibility.leftPanel) {
+      if (isLeft && (!state.uiVisibility.leftPanel || (fixedToolLayout && state.leftPanelWidth < 200))) {
         updates.uiVisibility = { ...state.uiVisibility, leftPanel: true };
         if (isHistoryMode()) {
           updates.leftPanelWidth = getReopenedPanelWidth(state.leftPanelWidth, 'left');
@@ -550,7 +595,7 @@ export const useUIStore = create<UIState>((set, get) => ({
         }
       }
 
-      if (isRight && !state.uiVisibility.rightPanel) {
+      if (isRight && (!state.uiVisibility.rightPanel || (fixedToolLayout && state.rightPanelWidth < 200))) {
         updates.uiVisibility = { ...state.uiVisibility, rightPanel: true };
         if (isHistoryMode()) {
           updates.rightPanelWidth = getReopenedPanelWidth(state.rightPanelWidth, 'right');
@@ -569,6 +614,15 @@ export const useUIStore = create<UIState>((set, get) => ({
     if (modalUpdate !== null) {
       set(modalUpdate);
       return;
+    }
+
+    if (isFixedToolLayout(state) && panelId === Panel.Adjustments) {
+      // This explicit command exits a tool; interacting with Adjustments content does not.
+      set({
+        activePanels: { ...state.activePanels, leftBottom: Panel.Presets },
+        activePanel: Panel.Adjustments,
+        renderedPanel: Panel.Adjustments,
+      });
     }
 
     let targetRegion: PanelRegion | null = null;
@@ -651,4 +705,16 @@ useUIStore.subscribe((state, prev) => {
   } else if (prev.activePanel === Panel.Crop) {
     setEditor({ cropSessionSnapshot: null });
   }
+});
+
+useEditorStore.subscribe((state, prev) => {
+  if (state.selectedImage || !prev.selectedImage) return;
+  const ui = useUIStore.getState();
+  if (!isFixedToolLayout(ui)) return;
+  if (!isToolPanel(ui.activePanel) && !isToolPanel(ui.activePanels.leftBottom)) return;
+  ui.setUI({
+    activePanels: { ...ui.activePanels, leftBottom: Panel.Presets },
+    activePanel: Panel.Adjustments,
+    renderedPanel: Panel.Adjustments,
+  });
 });

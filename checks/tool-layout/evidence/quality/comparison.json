@@ -1,0 +1,160 @@
+{
+  "tsc": {
+    "command": ["/root/dev/work/tbt/RapidRAW/node_modules/.bin/tsc", "--noEmit"],
+    "exit": 2,
+    "elapsedSeconds": 18.85034203529358,
+    "stdoutSha256": "2087e419aed267e5dafdb2e5b0cbfb5fc9f1695b3dfba946f7e5feeb7cc7d97c",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "eslint": {
+    "command": ["/root/dev/work/tbt/RapidRAW/node_modules/.bin/eslint", "src", "--format", "json"],
+    "exit": 1,
+    "elapsedSeconds": 6.875336408615112,
+    "stdoutSha256": "61ae98a0f3d8512ffca672decfa3d4a17c6f00ef352a43695281a0aec131a451",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "vite": {
+    "command": ["npm", "run", "build"],
+    "exit": 0,
+    "elapsedSeconds": 2.7210168838500977,
+    "stdoutSha256": "bf6a3366cf52c04a39bab35509eb14d296e04fbb8f914fd7d7fb215d2cfa51cd",
+    "stderrSha256": "e6597ad9e2ee3b2928741624ca684bd99b385ee1016d97594d164e9f69f6184b"
+  },
+  "i18n": {
+    "command": ["npm", "run", "i18n:runtime-check"],
+    "exit": 0,
+    "elapsedSeconds": 0.41704535484313965,
+    "stdoutSha256": "8aec9437625869d9a22f56f747aa52afc6ba7f436b74da35bfdb3ddb3dea79e7",
+    "stderrSha256": "07b66d81d0647eb37338aa2d3c663b9b92d3e7b23220b1832640ca9c317e6073"
+  },
+  "rustfmt": {
+    "command": ["cargo", "fmt", "-p", "RapidRAW", "--", "--check"],
+    "exit": 0,
+    "elapsedSeconds": 1.092423677444458,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "typescript": {
+    "before": 59,
+    "after": 59,
+    "added": [],
+    "removed": []
+  },
+  "eslintComparison": {
+    "before": {
+      "errors": 829,
+      "warnings": 45,
+      "files": 159
+    },
+    "after": {
+      "errors": 829,
+      "warnings": 45,
+      "files": 159
+    },
+    "added": [],
+    "removed": []
+  },
+  "sourceBase": "33ba1eb7f886a54d51a2922b6848654596da447d",
+  "artifacts": [
+    {
+      "path": "typescript-before.txt.gz",
+      "rawBytes": 30232,
+      "rawSha256": "e5056d5253c193aa8756d24f1293566c3c143312bb98668ea4a31ae7b2a0c325",
+      "gzipSha256": "2cb168e4088654a42d325e95f63a0033ca6eeca15b0d138a87ec80b1cd93b82c"
+    },
+    {
+      "path": "typescript-after.txt.gz",
+      "rawBytes": 30233,
+      "rawSha256": "2087e419aed267e5dafdb2e5b0cbfb5fc9f1695b3dfba946f7e5feeb7cc7d97c",
+      "gzipSha256": "809b6fe149d40a527d5ac88aafa6e38d5620a68564214b6ed06d7a160b51567c"
+    },
+    {
+      "path": "eslint-before.json.gz",
+      "rawBytes": 2513142,
+      "rawSha256": "52169c16ce6a6989ad498d8b47bc0cd49612cdfc9867f05318fb747b5c1fe0c1",
+      "gzipSha256": "4e8e7022fc07f54b7c344ff55e192416a97fa7cf87b7c296bc607442fdb281bc"
+    },
+    {
+      "path": "eslint-after.json.gz",
+      "rawBytes": 2515528,
+      "rawSha256": "61ae98a0f3d8512ffca672decfa3d4a17c6f00ef352a43695281a0aec131a451",
+      "gzipSha256": "70d5f8dc6f6f9ba0dbb6c9315dc41725f364cc08a20998e27ea0a0fd9e0f5488"
+    },
+    {
+      "path": "eslint-root-before.json.gz",
+      "rawBytes": 2517822,
+      "rawSha256": "2c9fbf3c18a77825f8a870969624121f13b46bfcfd232fc74d4466a405d71dfb",
+      "gzipSha256": "dcf58f0a7dbc8e77eee0a592cb75843400a500b7f9b7a0d03bdd932499abef98"
+    },
+    {
+      "path": "store-isolated-results.json.gz",
+      "rawBytes": 23313,
+      "rawSha256": "7aab9f8fda33e3ae08cb5890cf818429868efb4e6d5fe84c4dc200e6018e5976",
+      "gzipSha256": "e163f65483389f12579eb0c034afdd14c2b5cb1ca585adeb7e93c5d318487f4d"
+    },
+    {
+      "path": "store-isolated-harness.mjs.gz",
+      "rawBytes": 23848,
+      "rawSha256": "d063b38d3a6070ac424fb51a4408755b80385822bde036cec0da037196ea6a77",
+      "gzipSha256": "38dfee00ba5d452bfa24916cffcfef65317309c17a4392b87e800e6cf56232b4"
+    },
+    {
+      "path": "eslint-root-after.json.gz",
+      "rawBytes": 2520474,
+      "rawSha256": "6b3637a79f898de0776d527566c32dd7601682007d2ecf62ea775fe2cd751745",
+      "gzipSha256": "b331e62fe56627f2f02ee46c47e0548efa1495e2254c5a875ef915725c1d00e2"
+    },
+    {
+      "path": "vite.stdout.txt.gz",
+      "rawBytes": 365,
+      "rawSha256": "bf6a3366cf52c04a39bab35509eb14d296e04fbb8f914fd7d7fb215d2cfa51cd",
+      "gzipSha256": "7de8896b3ca3e4655df89e98aeabbeb97415d803f38532d7dbe10d1f49a0eb71"
+    },
+    {
+      "path": "vite.stderr.txt.gz",
+      "rawBytes": 407,
+      "rawSha256": "e6597ad9e2ee3b2928741624ca684bd99b385ee1016d97594d164e9f69f6184b",
+      "gzipSha256": "8af80563ecacff9f30ffe3d397eda452333f14fbaf203d6954cbd7962b945c68"
+    },
+    {
+      "path": "i18n.stdout.txt.gz",
+      "rawBytes": 80,
+      "rawSha256": "8aec9437625869d9a22f56f747aa52afc6ba7f436b74da35bfdb3ddb3dea79e7",
+      "gzipSha256": "04bc5c5acfb270db89405d35f652097c55542a5cefad05f2e5e15652f3276956"
+    },
+    {
+      "path": "i18n.stderr.txt.gz",
+      "rawBytes": 81,
+      "rawSha256": "07b66d81d0647eb37338aa2d3c663b9b92d3e7b23220b1832640ca9c317e6073",
+      "gzipSha256": "837c68f19ba23fb1701146cd84823b3424b57ee9dcc09c7d4eedfb074af3ff84"
+    },
+    {
+      "path": "rustfmt.stdout.txt.gz",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzipSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    },
+    {
+      "path": "rustfmt.stderr.txt.gz",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzipSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    }
+  ],
+  "eslintRoot": {
+    "before": {
+      "files": 176,
+      "errors": 829,
+      "warnings": 45
+    },
+    "after": {
+      "files": 182,
+      "errors": 829,
+      "warnings": 45
+    },
+    "exit": 1,
+    "added": [],
+    "finalRunnerSha256": "a7441cbe6f425bc6d1fb4732ef3e7949a13eb20c4cb7090e589b58fbc375b809"
+  },
+  "readableBuildLogs": "Readable vite/i18n/rustfmt streams remove ANSI and trailing whitespace; original bytes in matching .txt.gz match command SHA fields."
+}

@@ -27,6 +27,7 @@ import { useTranslation } from 'react-i18next';
 import { useEditorStore } from '../../../store/useEditorStore';
 import { MIXER_SAMPLE_SCREEN_SIZE, useHslMixerPicker } from '../../../hooks/useHslMixerPicker';
 import { isPanelVisible, useUIStore } from '../../../store/useUIStore';
+import { isHistoryMode } from '../../../utils/appMode';
 import type { OverlayMode } from '../right/CropPanel';
 import CompositionOverlays from './overlays/CompositionOverlays';
 import RelightLightShape, { RelightBasis } from './overlays/RelightLightShape';
@@ -1449,11 +1450,15 @@ const ImageCanvas = memo(
     const isCenterMarkerSectionOpen = useUIStore(
       (state) =>
         !!activeCenterMarker &&
+        (!isHistoryMode() || !state.isFullLayout || state.activePanel === Panel.Adjustments) &&
         isPanelVisible(state, Panel.Adjustments) &&
         state.collapsibleSectionsState[CENTER_MARKERS[activeCenterMarker].section],
     );
     const isRelightToolOpen = useUIStore(
-      (state) => isPanelVisible(state, Panel.Adjustments) && state.collapsibleSectionsState.effects,
+      (state) =>
+        (!isHistoryMode() || !state.isFullLayout || state.activePanel === Panel.Adjustments) &&
+        isPanelVisible(state, Panel.Adjustments) &&
+        state.collapsibleSectionsState.effects,
     );
     const setEditor = useEditorStore((state) => state.setEditor);
     const [draftGuideLine, setDraftGuideLine] = useState<{ p1: Coord; p2: Coord } | null>(null);

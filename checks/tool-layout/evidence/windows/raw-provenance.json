@@ -1,0 +1,114 @@
+{
+  "source": "Windows hashes and lengths recorded after successful GUI cleanup, before download; private profile-backup excluded by explicit whitelist.",
+  "normalization": "Raw gzip preserves exact native bytes including BOM/newlines. Readable JSON only reserialized; readable logs remove ANSI and trailing whitespace. PNG unchanged.",
+  "files": [
+    {
+      "file": "build.json",
+      "rawBytes": 8296,
+      "rawSha256": "b5f64297c4c676882bb54532cc7df5e7d68b94a37b26913b981fef585daf733d",
+      "rawArtifact": "raw/build.json.gz",
+      "gzipSha256": "c48b53f568942852e85e1bbca601076381732fc1bbbf82f292dbf0f52848ef50",
+      "readable": "build.json"
+    },
+    {
+      "file": "source-inputs.json",
+      "rawBytes": 63561,
+      "rawSha256": "159fd5510b7da511415fb43255b7b99c2447b93676c6cb9c802492f11e352dd8",
+      "rawArtifact": "raw/source-inputs.json.gz",
+      "gzipSha256": "068b94934d2f2363268c7a3de62413b87f43aa9e6a7c6cd5663e559991690b36",
+      "readable": "source-inputs.json"
+    },
+    {
+      "file": "fixture.json",
+      "rawBytes": 240,
+      "rawSha256": "9a2ea459d8fd348e0ff7c87f42e260e5ad7803a9a543e8570116ed78dd3ac1f3",
+      "rawArtifact": "raw/fixture.json.gz",
+      "gzipSha256": "c7614c36423259cb405ef5d050a9c4de71982742d8745c83c0569e147cfbb929",
+      "readable": "fixture.json"
+    },
+    {
+      "file": "windows-smoke.json",
+      "rawBytes": 2059335,
+      "rawSha256": "08fe35033f6a94bd24d845ec492d6aba70ffa3efebc0133410ffb98f394fe1b4",
+      "rawArtifact": "raw/windows-smoke.json.gz",
+      "gzipSha256": "3bb50c219393ba67de07e84dc318a4da3cc9a49f552543404f4e79f2477931f6",
+      "readable": "windows-smoke.json"
+    },
+    {
+      "file": "run-result.json",
+      "rawBytes": 161,
+      "rawSha256": "04f2d7e818736584e07c9ea8e4513e69ae6af2509739782ce9fb3d78d44ee640",
+      "rawArtifact": "raw/run-result.json.gz",
+      "gzipSha256": "cddc8cd09ca6653c5ab31cf363d9eadc78ac20f1f859594c508c856aacb05855",
+      "readable": "run-result.json"
+    },
+    {
+      "file": "cleanup.json",
+      "rawBytes": 993,
+      "rawSha256": "e8276c413af741c2d0f2aefa89c2703faf82814c7614e333c0a5ca391c490ac4",
+      "rawArtifact": "raw/cleanup.json.gz",
+      "gzipSha256": "269df3a928e47e00aae6317b5955baa5602f6aaa1caad787ea3ed408c2bdb75b",
+      "readable": "cleanup.json"
+    },
+    {
+      "file": "visual-review-request.json",
+      "rawBytes": 1962,
+      "rawSha256": "bee57b05683192db875e6a095f9396d884ac3d761b12a785b726a77cbbb44237",
+      "rawArtifact": "raw/visual-review-request.json.gz",
+      "gzipSha256": "cd6873edec4d8e4dd6f7b960f9de7af412eb64e0366206851cac146270ba9686",
+      "readable": "visual-review-request.json"
+    },
+    {
+      "file": "visual-review.json",
+      "rawBytes": 4148,
+      "rawSha256": "3ed1af9710281468323cc72334f9c0854d021e9ccd3916049303840273eedbd6",
+      "rawArtifact": "raw/visual-review.json.gz",
+      "gzipSha256": "48cd2b532a163834aeda65b15e75605e2253529866e5fa109871e4fa638346ef",
+      "readable": "visual-review.json"
+    },
+    {
+      "file": "narrow-250-masks.png",
+      "rawBytes": 375026,
+      "rawSha256": "a9c4315fe04dff43bb0490d5d380311648e30608f693ac1e4f1524ad2331ea5a",
+      "artifact": "narrow-250-masks.png"
+    },
+    {
+      "file": "narrow-250-ai.png",
+      "rawBytes": 371218,
+      "rawSha256": "d1e85869cc3a78225211f34d693152b81cf688ced441a528f12213cbd8f1f433",
+      "artifact": "narrow-250-ai.png"
+    },
+    {
+      "file": "logs/release.log",
+      "rawBytes": 1376,
+      "rawSha256": "93d4c6bc3a21bcc29405c8731853d44df9691532e24066753680d130feda617f",
+      "rawArtifact": "raw/logs/release.log.gz",
+      "gzipSha256": "2fb00095c0921f4117b7b85c0646c15725edc2432e1029b46a6ea18a3269602f",
+      "readable": "build-records/release.txt"
+    },
+    {
+      "file": "logs/rustfmt.log",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawArtifact": "raw/logs/rustfmt.log.gz",
+      "gzipSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "readable": "build-records/rustfmt.txt"
+    },
+    {
+      "file": "logs/clippy.log",
+      "rawBytes": 317,
+      "rawSha256": "823bbd718e1ec787303504f7f66b5dcca86e320c96cfcad7e1bc8b112bcd8a66",
+      "rawArtifact": "raw/logs/clippy.log.gz",
+      "gzipSha256": "19b8406c5ff9178367527c48af1175b9501d344611f889f21207caddc08582fe",
+      "readable": "build-records/clippy.txt"
+    }
+  ],
+  "acceptedParentReviewInput": {
+    "source": "Exact parent-authored upload; Windows upload hash checked before atomic rename, then controller recorded hash when reading. Native visual-review.json is its reserialized semantic copy.",
+    "rawArtifact": "raw/parent-visual-review.json.gz",
+    "rawBytes": 3277,
+    "rawSha256": "f68db26f9a23b5c47bf0d07511cb9772ce894ecc8293b9d7af62c1ab8c647c10",
+    "gzipSha256": "673278c758b0b333c4a459bb474ab3fdd9d981a31fd4e6a4ca68c2cb8c3e0c49",
+    "semanticMatchesNativeReview": true
+  }
+}

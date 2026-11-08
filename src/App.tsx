@@ -834,6 +834,7 @@ function App() {
   const layoutSensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 5 } }));
   const handleDragStart = (e: any) => {
     if (e.active.data.current?.type === 'layout-tab') {
+      if (isHistoryMode(osPlatform) && layoutMode === 'full') return;
       setLayoutDragItem(e.active.data.current.panel as Panel);
     } else if (e.active.data.current?.type === 'library-image') {
       const path = e.active.data.current.path;
@@ -861,6 +862,8 @@ function App() {
     setLayoutDragItem(null);
     setActiveImageDragItem(null);
     const { active, over } = e;
+
+    if (active.data.current?.type === 'layout-tab' && isHistoryMode(osPlatform) && layoutMode === 'full') return;
 
     if (active.data.current?.type === 'layout-tab' && over?.data.current?.type === 'layout-region') {
       movePanel(active.data.current.panel as Panel, over.data.current.region as PanelRegion);

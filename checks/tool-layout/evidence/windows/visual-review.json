@@ -1,0 +1,62 @@
+{
+  "scriptSha256": "5c2020556d13cd8bffd8623f004a6a0bb955ed35d19595ec65b2cb5eb65823ca",
+  "exeSha256": "2ffc180b1f25099bf4d147b92c7cd689e3f55bdda7d1eb87c9841a5b4622abb1",
+  "screenshots": [
+    {
+      "path": "narrow-250-masks.png",
+      "sha256": "a9c4315fe04dff43bb0490d5d380311648e30608f693ac1e4f1524ad2331ea5a",
+      "bytes": 375026,
+      "capture": {
+        "method": "PIL.ImageGrab/owned-Windows-client",
+        "bbox": [108, 100, 1388, 820],
+        "clientPixels": [1280, 720],
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "dpi": 96,
+        "coordinateMode": "PER_MONITOR_AWARE_V2",
+        "foregroundOwned": true,
+        "clipped": false,
+        "virtualScreen": [-3840, -707, 6400, 2160],
+        "pixelScope": "Visible owned client including native composition; no RAW-pixel or lighting-quality comparison"
+      },
+      "observations": [
+        "代理已读取这张实际 Windows 客户区截图；250px 蒙版标题、波形/重置按钮、Mask 1、Brush 和 Add New Component 文字均在左侧横向范围内。",
+        "四个底部工具图标可见；更长内容通过侧栏的竖向滚动区域访问，不把低于视口的内容称为已全部展示。",
+        "实际 NASA 照片及红色笔刷蒙版叠加可见，右侧仍是调整通栏；未比较 RAW 色彩、蒙版算法或所有展开组合。"
+      ]
+    },
+    {
+      "path": "narrow-250-ai.png",
+      "sha256": "d1e85869cc3a78225211f34d693152b81cf688ced441a528f12213cbd8f1f433",
+      "bytes": 371218,
+      "capture": {
+        "method": "PIL.ImageGrab/owned-Windows-client",
+        "bbox": [108, 100, 1388, 820],
+        "clientPixels": [1280, 720],
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1
+        },
+        "dpi": 96,
+        "coordinateMode": "PER_MONITOR_AWARE_V2",
+        "foregroundOwned": true,
+        "clipped": false,
+        "virtualScreen": [-3840, -707, 6400, 2160],
+        "pixelScope": "Visible owned client including native composition; no RAW-pixel or lighting-quality comparison"
+      },
+      "observations": [
+        "代理已读取这张实际 Windows 客户区截图；Inpainting、Built-in AI Ready、Manual Cleanup、Clone 和 Heal 在 250px 左侧宽度内可读，未见这些代表控件横向截断。",
+        "四个底部工具图标和侧栏竖向滚动条可见；Touch Up 后续内容低于当前视口，需要滚动访问，不据此声称已检查全部 AI 控件。",
+        "实际照片可见，曲线和右侧调整同时保留；未执行生成、模型下载、不同 DPI 或人工手感验收。"
+      ]
+    }
+  ],
+  "passed": true,
+  "reviewer": "parent agent, inspected both native client PNGs with image read tool; not a human approval",
+  "reviewedAt": "2026-11-08T02:52:24.850864+00:00",
+  "scope": "Representative captured controls at 250px; horizontal fit plus recorded automated scrolling, not every expanded control or provider."
+}

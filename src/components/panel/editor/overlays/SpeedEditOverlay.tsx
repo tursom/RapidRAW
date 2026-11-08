@@ -13,6 +13,7 @@ import {
 import { Coord, DEFAULT_SPEED_EDIT_ADJUSTMENTS } from '../../../../utils/adjustments';
 import { Panel, PanelRegion } from '../../../ui/AppProperties';
 import { formatKeyCode, normalizeCombo } from '../../../../utils/keyboardUtils';
+import { isHistoryMode } from '../../../../utils/appMode';
 
 const DRAG_RANGE_PX = 400;
 const HUD_OFFSET = 16;
@@ -92,8 +93,20 @@ const placeHud = (hud: HTMLElement | null, overlay: HTMLElement | null, client: 
   hud.style.transform = `translate(${shift(x > rect.width * 0.75)}, ${shift(y > rect.height * 0.75)})`;
 };
 
-const getActivePanelArea = () =>
-  document.querySelector(`[data-panel="${useUIStore.getState().activePanel}"]`) ?? document;
+const getActivePanelArea = () => {
+  const { activePanel, isFullLayout } = useUIStore.getState();
+  if (isHistoryMode() && isFullLayout) {
+    // The target's owner can differ from the canvas mode when Adjustments stays visible.
+    const target = useEditorStore.getState().speedEditTarget;
+    if (target?.current) {
+      const owner = [...document.querySelectorAll<HTMLElement>('[data-speed-edit-id]')]
+        .find((element) => element.offsetParent !== null && getSpeedEditTarget(element) === target)
+        ?.closest('[data-panel]');
+      if (owner) return owner;
+    }
+  }
+  return document.querySelector(`[data-panel="${activePanel}"]`) ?? document;
+};
 
 const getSpeedEditElements = (scope: ParentNode = document) => {
   const ids = useSettingsStore.getState().appSettings?.speedEditAdjustments ?? DEFAULT_SPEED_EDIT_ADJUSTMENTS;
