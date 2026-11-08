@@ -1,0 +1,27 @@
+{
+  "finished": "2026-11-08T15:53:09.2623638+08:00",
+  "removedTasks": [
+    "RapidRAW-Sessions-Build",
+    "RapidRAW-Sessions-Smoke"
+  ],
+  "remainingOwnedProcesses": 0,
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "task5ExeSha256": "4e2ba2f54f56200c496c86d0cbf909afde169b524d9c40689e1d7cec40840022",
+  "controllerSha256": "f63dce3716862e824cb0a2713e31ab5083dcb9e0c3e2d05d0c711afbd3d29cf1",
+  "nativeReportSha256": "e5293acb1541e783748e4628b4f149a4f858ae495d8e290836d9556b177ec285",
+  "agentReviewSha256": "90186a00c6f229b4f51ca73de08d4e831b66dddbb3ae40360d2bb7ecf4eb87c0",
+  "profileRestored": true,
+  "ownedTreeShutdownVerified": true,
+  "rawBytesUnchanged": true,
+  "inputsRestored": true,
+  "releaseExit": 0,
+  "rustfmtExit": 0,
+  "clippyExit": 0,
+  "smokeExit": 0,
+  "cases": 108,
+  "groups": 12,
+  "coverageComplete": true,
+  "publicationEligible": true,
+  "visualReviewType": "agent",
+  "privateBackupNotDownloaded": true
+}

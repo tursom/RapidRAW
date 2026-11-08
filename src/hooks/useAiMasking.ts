@@ -2,12 +2,92 @@ import { useCallback, useEffect } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import { toast } from 'react-toastify';
 import { useEditorStore } from '../store/useEditorStore';
-import { useProcessStore } from '../store/useProcessStore';
+import { useProcessStore, type AiTask } from '../store/useProcessStore';
 import { useEditorActions } from './useEditorActions';
 import { useCloudStore } from '../store/useCloudStore';
 import { Adjustments, AiPatch, MaskContainer, Coord } from '../utils/adjustments';
 import { SubMask } from '../components/panel/right/Masks';
 import { Invokes } from '../components/ui/AppProperties';
+import { isHistoryMode } from '../utils/appMode';
+import { globalImageCache } from '../utils/ImageLRUCache';
+
+interface AiRequest {
+  id: string;
+  path: string;
+  imageGeneration: number;
+  historyRevision: number;
+  guarded: boolean;
+  task?: AiTask;
+  patchId?: string;
+  subMaskId?: string;
+}
+
+// Shared by the canvas and panel hook instances, including their cancel handlers.
+const pendingRequests = new Map<string, AiRequest>();
+const cancelledRequests = new WeakSet<AiRequest>();
+let imageGeneration = 0;
+useEditorStore.subscribe((state, previous) => {
+  if (state.selectedImage?.path !== previous.selectedImage?.path) imageGeneration++;
+});
+
+const findSubMask = (adjustments: Adjustments, id: string) =>
+  adjustments.masks?.flatMap((mask) => mask.subMasks).find((mask) => mask.id === id) ||
+  adjustments.aiPatches?.flatMap((patch) => patch.subMasks).find((mask) => mask.id === id);
+
+const ownsRequest = (request: AiRequest) =>
+  !request.guarded ||
+  (pendingRequests.get(request.id) === request &&
+    (!request.task || useProcessStore.getState().activeAiTasks[request.id] === request.task));
+
+const isRequestImage = (request: AiRequest) =>
+  !request.guarded ||
+  (request.imageGeneration === imageGeneration &&
+    useEditorStore.getState().selectedImage?.path === request.path &&
+    useEditorStore.getState().historyRevision === request.historyRevision);
+
+const withoutRequestLoading = (request: AiRequest, adjustments: Adjustments): Adjustments => {
+  if (!request.patchId || !adjustments.aiPatches?.some((patch) => patch.id === request.patchId && patch.isLoading)) {
+    return adjustments;
+  }
+  return {
+    ...adjustments,
+    aiPatches: adjustments.aiPatches.map((patch) =>
+      patch.id === request.patchId ? { ...patch, isLoading: false } : patch,
+    ),
+  };
+};
+
+const isCurrentRequest = (request: AiRequest, adjustments = useEditorStore.getState().adjustments) => {
+  if (!request.guarded) return true;
+  if (!ownsRequest(request) || cancelledRequests.has(request) || !isRequestImage(request)) return false;
+  if (request.patchId) {
+    const patch = adjustments.aiPatches?.find((patch) => patch.id === request.patchId);
+    return !!patch && (!request.subMaskId || patch.subMasks.some((mask) => mask.id === request.subMaskId));
+  }
+  return !!request.subMaskId && !!findSubMask(adjustments, request.subMaskId);
+};
+
+const beginRequest = (
+  id: string,
+  path: string,
+  type: string | null,
+  target: Pick<AiRequest, 'patchId' | 'subMaskId'>,
+) => {
+  const request: AiRequest = {
+    id,
+    path,
+    imageGeneration,
+    historyRevision: useEditorStore.getState().historyRevision,
+    guarded: isHistoryMode(),
+    ...target,
+  };
+  if (type) {
+    useProcessStore.getState().registerAiTask(id, type);
+    request.task = useProcessStore.getState().activeAiTasks[id];
+  }
+  if (request.guarded) pendingRequests.set(id, request);
+  return request;
+};
 
 const getTransformAdjustments = (adj: Adjustments) => ({
   transformDistortion: adj.transformDistortion,
@@ -33,8 +113,47 @@ export function useAiMasking() {
   const { setAdjustments } = useEditorActions();
   const setEditor = useEditorStore((state) => state.setEditor);
   const getToken = useCloudStore((s) => s.getToken);
-  const registerAiTask = useProcessStore((state) => state.registerAiTask);
-  const unregisterAiTask = useProcessStore((state) => state.unregisterAiTask);
+  const setRequestAdjustments = useCallback(
+    (request: AiRequest, update: (previous: Adjustments) => Adjustments) =>
+      setAdjustments((previous) => (isCurrentRequest(request, previous) ? update(previous) : previous)),
+    [setAdjustments],
+  );
+
+  const finishRequest = useCallback(
+    (request: AiRequest) => {
+      if (ownsRequest(request) && isRequestImage(request)) {
+        if (request.guarded || !request.task) useEditorStore.getState().patchesSentToBackend.delete(request.id);
+      }
+      // Results need the original image/revision. Loading cleanup only needs ownership
+      // and the same path, including a cached image revisited while this request ran.
+      if (request.patchId && ownsRequest(request)) {
+        if (!request.guarded || useEditorStore.getState().selectedImage?.path === request.path) {
+          setAdjustments((previous) => {
+            if (!ownsRequest(request)) return previous;
+            if (request.guarded && useEditorStore.getState().selectedImage?.path !== request.path) return previous;
+            return withoutRequestLoading(request, previous);
+          });
+        }
+        if (request.guarded && ownsRequest(request)) {
+          const cached = globalImageCache.get(request.path);
+          if (cached) {
+            const adjustments = withoutRequestLoading(request, cached.adjustments);
+            // get() releases blob protection; set() restores it even when no flag changed.
+            globalImageCache.set(
+              request.path,
+              adjustments === cached.adjustments ? cached : { ...cached, adjustments },
+            );
+          }
+        }
+      }
+      // A replaced request must not release a newer task with the same ID.
+      if (request.task && (!request.guarded || useProcessStore.getState().activeAiTasks[request.id] === request.task)) {
+        useProcessStore.getState().unregisterAiTask(request.id);
+      }
+      if (request.guarded && pendingRequests.get(request.id) === request) pendingRequests.delete(request.id);
+    },
+    [setAdjustments],
+  );
 
   const updateSubMask = useCallback(
     (subMaskId: string, updatedData: any) => {
@@ -55,21 +174,75 @@ export function useAiMasking() {
 
   const handleCancelAiTask = useCallback(
     async (taskId: string) => {
+      const guarded = isHistoryMode();
+      const request = pendingRequests.get(taskId);
+      const owned = !!request && ownsRequest(request);
+      if (guarded && owned) cancelledRequests.add(request);
+      const editor = useEditorStore.getState();
+      const orphan =
+        guarded && !owned
+          ? { path: editor.selectedImage?.path, imageGeneration, historyRevision: editor.historyRevision }
+          : null;
+      const relatedIds = new Set([taskId]);
+      if (orphan) {
+        for (const patch of editor.adjustments.aiPatches || []) {
+          if (patch.id === taskId || patch.subMasks.some((mask) => mask.id === taskId)) {
+            relatedIds.add(patch.id);
+            patch.subMasks.forEach((mask) => relatedIds.add(mask.id));
+          }
+        }
+      }
+      const slots = [...relatedIds].map((id) => ({
+        id,
+        request: pendingRequests.get(id),
+        task: useProcessStore.getState().activeAiTasks[id],
+      }));
+      const canRecoverOrphan = () =>
+        orphan?.path != null &&
+        orphan.path === useEditorStore.getState().selectedImage?.path &&
+        orphan.imageGeneration === imageGeneration &&
+        orphan.historyRevision === useEditorStore.getState().historyRevision &&
+        slots.every(
+          (slot) =>
+            pendingRequests.get(slot.id) === slot.request &&
+            useProcessStore.getState().activeAiTasks[slot.id] === slot.task &&
+            (!slot.request || !ownsRequest(slot.request)),
+        );
       try {
         await invoke(Invokes.CancelAiTask, { taskId });
       } catch (e) {
         console.error('Failed to cancel AI task:', e);
       } finally {
-        unregisterAiTask(taskId);
-        setAdjustments((prev: Adjustments) => ({
-          ...prev,
-          aiPatches: (prev.aiPatches || []).map((p: AiPatch) =>
-            p.id === taskId || p.subMasks.some((sm) => sm.id === taskId) ? { ...p, isLoading: false } : p,
-          ),
-        }));
+        if (!guarded) {
+          useProcessStore.getState().unregisterAiTask(taskId);
+          setAdjustments((prev) => ({
+            ...prev,
+            aiPatches: (prev.aiPatches || []).map((patch) =>
+              patch.id === taskId || patch.subMasks.some((mask) => mask.id === taskId)
+                ? { ...patch, isLoading: false }
+                : patch,
+            ),
+          }));
+        } else if (canRecoverOrphan()) {
+          // Legacy metadata can contain loading without a local request. Preserve
+          // the panel's recovery action, but never clear a request started meanwhile.
+          setAdjustments((prev) => {
+            if (!canRecoverOrphan()) return prev;
+            const matches = (patch: AiPatch) =>
+              patch.isLoading && (patch.id === taskId || patch.subMasks.some((mask) => mask.id === taskId));
+            if (!prev.aiPatches?.some(matches)) return prev;
+            return {
+              ...prev,
+              aiPatches: prev.aiPatches.map((patch) => (matches(patch) ? { ...patch, isLoading: false } : patch)),
+            };
+          });
+          const slot = slots.find((slot) => slot.id === taskId);
+          if (slot?.task && canRecoverOrphan()) useProcessStore.getState().unregisterAiTask(taskId);
+        }
       }
+      // Keep busy until the original request settles; its finally owns cleanup.
     },
-    [unregisterAiTask, setAdjustments],
+    [setAdjustments],
   );
 
   const handleDirectPatch = useCallback(
@@ -82,17 +255,21 @@ export function useAiMasking() {
       );
       if (!patchDefinitionForBackend) return;
       const patchId = patchDefinitionForBackend.id;
+      const request = beginRequest(patchId, selectedImage.path, isHistoryMode() ? 'manual-patch' : null, {
+        patchId,
+        subMaskId,
+      });
       const previousParameters = patchDefinitionForBackend.subMasks.find(
         (sm: SubMask) => sm.id === subMaskId,
       )?.parameters;
 
-      patchesSentToBackend.add(patchId);
-      setAdjustments((prev: Partial<Adjustments>) => ({
-        ...prev,
-        aiPatches: prev.aiPatches?.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: true } : p)),
-      }));
-
       try {
+        patchesSentToBackend.add(patchId);
+        setRequestAdjustments(request, (prev) => ({
+          ...prev,
+          aiPatches: prev.aiPatches.map((p) => (p.id === patchId ? { ...p, isLoading: true } : p)),
+        }));
+        if (!isCurrentRequest(request)) return;
         const isLiquify = patchDefinitionForBackend.subMasks.some((sm: SubMask) => sm.type === 'liquify');
         const isRetouch = patchDefinitionForBackend.subMasks.some((sm: SubMask) => sm.type === 'retouch');
         const command = isLiquify
@@ -108,6 +285,7 @@ export function useAiMasking() {
           sourceVariant,
         });
 
+        if (!isCurrentRequest(request)) return;
         const { sourceX, sourceY, ...newPatchData } = JSON.parse(newPatchDataJson);
         patchesSentToBackend.delete(patchId);
 
@@ -117,7 +295,7 @@ export function useAiMasking() {
           sm.parameters?.sourceX === previousParameters?.sourceX &&
           sm.parameters?.sourceY === previousParameters?.sourceY;
 
-        setAdjustments((prev: Partial<Adjustments>) => ({
+        setRequestAdjustments(request, (prev) => ({
           ...prev,
           aiPatches: prev.aiPatches?.map((p: AiPatch) =>
             p.id === patchId
@@ -135,18 +313,14 @@ export function useAiMasking() {
           ),
         }));
       } catch (err: any) {
-        patchesSentToBackend.delete(patchId);
-
-        if (!String(err).includes('cancelled')) {
+        if (isCurrentRequest(request) && !String(err).includes('cancelled')) {
           toast.error(`Patch Generation Failed: ${err.message || String(err)}`);
         }
-        setAdjustments((prev: Partial<Adjustments>) => ({
-          ...prev,
-          aiPatches: prev.aiPatches?.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: false } : p)),
-        }));
+      } finally {
+        finishRequest(request);
       }
     },
-    [setAdjustments],
+    [setRequestAdjustments, finishRequest],
   );
 
   const handleGenerativeReplace = useCallback(
@@ -158,15 +332,17 @@ export function useAiMasking() {
       if (!patch) return;
 
       const patchDefinition = { ...patch, prompt };
-      const token = await getToken();
-
-      registerAiTask(patchId, 'inpaint');
-      setAdjustments((prev: Adjustments) => ({
-        ...prev,
-        aiPatches: prev.aiPatches.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: true, prompt } : p)),
-      }));
+      // Android keeps its original token-before-registration timing.
+      const earlyToken = isHistoryMode() ? undefined : await getToken();
+      const request = beginRequest(patchId, selectedImage.path, 'inpaint', { patchId });
 
       try {
+        setRequestAdjustments(request, (prev) => ({
+          ...prev,
+          aiPatches: prev.aiPatches.map((p) => (p.id === patchId ? { ...p, isLoading: true, prompt } : p)),
+        }));
+        const token = request.guarded ? await getToken() : earlyToken;
+        if (!isCurrentRequest(request)) return;
         const newPatchDataJson: any = await invoke(Invokes.InvokeGenerativeReplaseWithMaskDef, {
           currentAdjustments: adjustments,
           patchDefinition: patchDefinition,
@@ -176,10 +352,11 @@ export function useAiMasking() {
           taskId: patchId,
         });
 
+        if (!isCurrentRequest(request)) return;
         const newPatchData = JSON.parse(newPatchDataJson);
         patchesSentToBackend.delete(patchId);
 
-        setAdjustments((prev: Adjustments) => ({
+        setRequestAdjustments(request, (prev) => ({
           ...prev,
           aiPatches: prev.aiPatches.map((p: AiPatch) =>
             p.id === patchId
@@ -192,43 +369,44 @@ export function useAiMasking() {
               : p,
           ),
         }));
-        setEditor({ activeAiPatchContainerId: null, activeAiSubMaskId: null });
-        if (!useFastInpaint) {
+        if (isCurrentRequest(request)) setEditor({ activeAiPatchContainerId: null, activeAiSubMaskId: null });
+        if (!useFastInpaint && isCurrentRequest(request)) {
           useCloudStore.getState().fetchUsage();
         }
       } catch (err: any) {
-        if (!String(err).includes('cancelled')) {
+        if (isCurrentRequest(request) && !String(err).includes('cancelled')) {
           toast.error(`AI Replace Failed: ${err}`);
         }
-        setAdjustments((prev: Adjustments) => ({
-          ...prev,
-          aiPatches: prev.aiPatches.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: false } : p)),
-        }));
       } finally {
-        unregisterAiTask(patchId);
+        finishRequest(request);
       }
     },
-    [setAdjustments, getToken, registerAiTask, unregisterAiTask, setEditor],
+    [setRequestAdjustments, getToken, finishRequest, setEditor],
   );
 
   const handleQuickErase = useCallback(
     async (subMaskId: string | null, startPoint: Coord, endPoint: Coord) => {
       const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-      if (!selectedImage?.path) return;
-      const token = await getToken();
+      if (!selectedImage?.path || (isHistoryMode() && !subMaskId)) return;
+      const earlyToken = isHistoryMode() ? undefined : await getToken();
 
       const patchId = adjustments.aiPatches?.find((p: AiPatch) =>
         p.subMasks.some((sm: SubMask) => sm.id === subMaskId),
       )?.id;
       if (!patchId) return;
 
-      registerAiTask(patchId, 'inpaint');
-      setAdjustments((prev: Partial<Adjustments>) => ({
-        ...prev,
-        aiPatches: prev.aiPatches?.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: true } : p)),
-      }));
+      const request = beginRequest(patchId, selectedImage.path, 'inpaint', {
+        patchId,
+        subMaskId: subMaskId ?? undefined,
+      });
 
       try {
+        setRequestAdjustments(request, (prev) => ({
+          ...prev,
+          aiPatches: prev.aiPatches.map((p) => (p.id === patchId ? { ...p, isLoading: true } : p)),
+        }));
+        const token = request.guarded ? await getToken() : earlyToken;
+        if (!isCurrentRequest(request)) return;
         const transformAdjustments = getTransformAdjustments(adjustments);
         const newMaskParams: any = await invoke(Invokes.GenerateAiSubjectMask, {
           jsAdjustments: transformAdjustments,
@@ -243,6 +421,7 @@ export function useAiMasking() {
           taskId: patchId,
         });
 
+        if (!isCurrentRequest(request)) return;
         const subMaskToUpdate = adjustments.aiPatches
           ?.find((p: AiPatch) => p.id === patchId)
           ?.subMasks.find((sm: SubMask) => sm.id === subMaskId);
@@ -271,10 +450,11 @@ export function useAiMasking() {
           taskId: patchId,
         });
 
+        if (!isCurrentRequest(request)) return;
         const newPatchData = JSON.parse(newPatchDataJson);
         patchesSentToBackend.delete(patchId);
 
-        setAdjustments((prev: Partial<Adjustments>) => ({
+        setRequestAdjustments(request, (prev) => ({
           ...prev,
           aiPatches: prev.aiPatches?.map((p: AiPatch) =>
             p.id === patchId
@@ -289,20 +469,16 @@ export function useAiMasking() {
               : p,
           ),
         }));
-        setEditor({ activeAiPatchContainerId: null, activeAiSubMaskId: null });
+        if (isCurrentRequest(request)) setEditor({ activeAiPatchContainerId: null, activeAiSubMaskId: null });
       } catch (err: any) {
-        if (!String(err).includes('cancelled')) {
+        if (isCurrentRequest(request) && !String(err).includes('cancelled')) {
           toast.error(`Quick Erase Failed: ${err.message || String(err)}`);
         }
-        setAdjustments((prev: Partial<Adjustments>) => ({
-          ...prev,
-          aiPatches: prev.aiPatches?.map((p: AiPatch) => (p.id === patchId ? { ...p, isLoading: false } : p)),
-        }));
       } finally {
-        unregisterAiTask(patchId);
+        finishRequest(request);
       }
     },
-    [setAdjustments, getToken, registerAiTask, unregisterAiTask, setEditor],
+    [setRequestAdjustments, getToken, finishRequest, setEditor],
   );
 
   const handleDeleteMaskContainer = useCallback(
@@ -345,15 +521,16 @@ export function useAiMasking() {
 
   const handleGenerateAiMask = async (subMaskId: string, startPoint: Coord, endPoint: Coord) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path) return;
-    registerAiTask(subMaskId, 'subject');
+    if (!selectedImage?.path || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'subject', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
       const isInpaintMask = !!adjustments.aiPatches?.some((p: AiPatch) =>
         p.subMasks.some((sm: SubMask) => sm.id === subMaskId),
       );
-      const newParameters = await invoke(Invokes.GenerateAiSubjectMask, {
+      const newParameters = await invoke<Record<string, unknown>>(Invokes.GenerateAiSubjectMask, {
         jsAdjustments: transformAdjustments,
         endPoint: [endPoint.x, endPoint.y],
         flipHorizontal: adjustments.flipHorizontal,
@@ -366,6 +543,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const subMask =
         adjustments.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
         adjustments.aiPatches?.flatMap((p: AiPatch) => p.subMasks).find((sm: SubMask) => sm.id === subMaskId);
@@ -374,22 +552,23 @@ export function useAiMasking() {
       patchesSentToBackend.delete(subMaskId);
       updateSubMask(subMaskId, { parameters: mergedParameters });
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 
   const handleGenerateAiDepthMask = async (subMaskId: string, parameters: any) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path) return;
-    registerAiTask(subMaskId, 'depth');
+    if (!selectedImage?.path || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'depth', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
-      const newParameters = await invoke('generate_ai_depth_mask', {
+      const newParameters = await invoke<Record<string, unknown>>('generate_ai_depth_mask', {
         jsAdjustments: transformAdjustments,
         path: selectedImage.path,
         minDepth: parameters.minDepth ?? 20,
@@ -404,6 +583,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const subMask =
         adjustments.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
         adjustments.aiPatches?.flatMap((p: AiPatch) => p.subMasks).find((sm: SubMask) => sm.id === subMaskId);
@@ -412,20 +592,21 @@ export function useAiMasking() {
       patchesSentToBackend.delete(subMaskId);
       updateSubMask(subMaskId, { parameters: mergedParameters });
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Depth Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 
   const handleGenerateAiForegroundMask = async (subMaskId: string) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path) return;
-    registerAiTask(subMaskId, 'foreground');
+    if (!selectedImage?.path || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'foreground', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
       const { noResult, ...newParameters } = await invoke<Record<string, unknown>>(Invokes.GenerateAiForegroundMask, {
         jsAdjustments: transformAdjustments,
@@ -436,6 +617,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const subMask =
         adjustments.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
         adjustments.aiPatches?.flatMap((p: AiPatch) => p.subMasks).find((sm: SubMask) => sm.id === subMaskId);
@@ -445,20 +627,21 @@ export function useAiMasking() {
       updateSubMask(subMaskId, { parameters: mergedParameters });
       if (noResult) toast.error(`AI Foreground Mask Failed: ${noResult}`);
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Foreground Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 
   const handleGenerateAiSkyMask = async (subMaskId: string) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path) return;
-    registerAiTask(subMaskId, 'sky');
+    if (!selectedImage?.path || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'sky', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
       const { noResult, ...newParameters } = await invoke<Record<string, unknown>>(Invokes.GenerateAiSkyMask, {
         jsAdjustments: transformAdjustments,
@@ -470,6 +653,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const subMask =
         adjustments.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
         adjustments.aiPatches?.flatMap((p: AiPatch) => p.subMasks).find((sm: SubMask) => sm.id === subMaskId);
@@ -479,20 +663,21 @@ export function useAiMasking() {
       updateSubMask(subMaskId, { parameters: mergedParameters });
       if (noResult) toast.error(`AI Sky Mask Failed: ${noResult}`);
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Sky Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 
   const handleGenerateAiTextMask = async (subMaskId: string, prompt: string) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path || !prompt.trim()) return;
-    registerAiTask(subMaskId, 'text');
+    if (!selectedImage?.path || !prompt.trim() || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'text', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
       const { noResult, ...newParameters } = await invoke<Record<string, unknown>>(Invokes.GenerateAiTextMask, {
         jsAdjustments: transformAdjustments,
@@ -505,6 +690,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const subMask =
         adjustments.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
         adjustments.aiPatches?.flatMap((p: AiPatch) => p.subMasks).find((sm: SubMask) => sm.id === subMaskId);
@@ -514,20 +700,21 @@ export function useAiMasking() {
       updateSubMask(subMaskId, { parameters: mergedParameters });
       if (noResult) toast.error(`AI Text Mask Failed: ${noResult}`);
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Text Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 
   const handleGenerateAiFaceMask = async (subMaskId: string, parts: Array<string>) => {
     const { selectedImage, adjustments, patchesSentToBackend } = useEditorStore.getState();
-    if (!selectedImage?.path || parts.length === 0) return;
-    registerAiTask(subMaskId, 'face');
+    if (!selectedImage?.path || parts.length === 0 || (isHistoryMode() && !findSubMask(adjustments, subMaskId))) return;
+    const request = beginRequest(subMaskId, selectedImage.path, 'face', { subMaskId });
 
     try {
+      if (!isCurrentRequest(request)) return;
       const transformAdjustments = getTransformAdjustments(adjustments);
       const { noResult, ...newParameters } = await invoke<Record<string, unknown>>(Invokes.GenerateAiFaceMask, {
         jsAdjustments: transformAdjustments,
@@ -540,6 +727,7 @@ export function useAiMasking() {
         taskId: subMaskId,
       });
 
+      if (!isCurrentRequest(request)) return;
       const latest = useEditorStore.getState().adjustments;
       const subMask =
         latest.masks?.flatMap((m: MaskContainer) => m.subMasks).find((sm: SubMask) => sm.id === subMaskId) ||
@@ -551,11 +739,11 @@ export function useAiMasking() {
       updateSubMask(subMaskId, { parameters: mergedParameters });
       if (noResult) toast.error(`AI Face Mask Failed: ${noResult}`);
     } catch (error) {
-      if (!String(error).includes('cancelled')) {
+      if (isCurrentRequest(request) && !String(error).includes('cancelled')) {
         toast.error(`AI Face Mask Failed: ${error}`);
       }
     } finally {
-      unregisterAiTask(subMaskId);
+      finishRequest(request);
     }
   };
 

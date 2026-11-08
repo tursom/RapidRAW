@@ -1,0 +1,30 @@
+
+> tauri
+> tauri build --no-bundle
+
+        Info Looking up installed tauri packages to check mismatched versions...
+     Running beforeBuildCommand `npm run build`
+
+> build
+> vite build
+
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 2601 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.86 kB │ gzip:     0.46 kB
+dist/assets/index-CGxuMb0r.css    112.46 kB │ gzip:    16.68 kB
+dist/assets/index-BxrfRHBr.js   5,289.29 kB │ gzip: 1,714.05 kB
+
+✓ built in 1.46s
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+warning: RapidRAW@0.0.0: onnxruntime.dll already exists and is valid. Skipping download.
+warning: RapidRAW@0.0.0: DirectML.dll already exists and is valid. Skipping download.
+   Compiling RapidRAW v0.0.0 (E:\projects\tbt\rapidraw-baseline\app\src-tauri)
+    Finished `release` profile [optimized] target(s) in 14m 05s
+       Built application at: E:\projects\tbt\rapidraw-baseline\app\src-tauri\target\release\RapidRAW.exe

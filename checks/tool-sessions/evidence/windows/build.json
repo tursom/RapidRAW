@@ -1,0 +1,225 @@
+{
+  "started": "2026-11-08T15:32:58+0800",
+  "checks": {
+    "release": 0,
+    "rustfmt": 0,
+    "clippy": 0
+  },
+  "originalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "sourceZipSha256": "a53156836646a332e33d4271067e402988b08ae136a3eb983fb0bd4331bd3d4f",
+  "sourceBase": "fbb76a9f53a75d05d181bd66826b5a5a43464239",
+  "appliedInputs": 417,
+  "changedFiles": [
+    {
+      "path": "src-tauri/src/app_settings.rs",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src-tauri\\src\\app_settings.rs",
+      "beforeSha256": "5db121963db2712c7b7851569af761ce2642475b0fb4fc86eb8b8d6c28749267"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src-tauri\\src\\lib.rs",
+      "beforeSha256": "864b832486fb61703df47d8cf3d9daa458deb5eb7d920301f0901676bd32f657"
+    },
+    {
+      "path": "src/App.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\App.tsx",
+      "beforeSha256": "5b9a6db967b5255259025222a2fc4e1c9b6b8f84219b4a5dd48008511def852d"
+    },
+    {
+      "path": "src/components/modals/AppPanelModal.tsx",
+      "existed": false,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\modals\\AppPanelModal.tsx",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/components/modals/CollageModal.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\modals\\CollageModal.tsx",
+      "beforeSha256": "5c2db6d4bc31b699d3cdc5361bcc88e66344c327f49f1438c9a6129c54524e7a"
+    },
+    {
+      "path": "src/components/modals/CullingModal.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\modals\\CullingModal.tsx",
+      "beforeSha256": "be5ffdef9467b882baea96d0180aeb65712e1c48718ec756ecee5ee9af152bce"
+    },
+    {
+      "path": "src/components/panel/Editor.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\Editor.tsx",
+      "beforeSha256": "10a7478b573652b31a03e086d8cc7a6d5c1087f21368c31404b80da6424b0e5e"
+    },
+    {
+      "path": "src/components/panel/PanelSwitcher.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\PanelSwitcher.tsx",
+      "beforeSha256": "37e260cbb8bda71c8f3e960cdde887a5a349510e444220fe19e95c45c5978413"
+    },
+    {
+      "path": "src/components/panel/SettingsPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\SettingsPanel.tsx",
+      "beforeSha256": "31ab99538f0eec0f359c97cb31d4bd37865a36b90ab68021bdcf92eb4a2ab758"
+    },
+    {
+      "path": "src/components/panel/SidePanelArea.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\SidePanelArea.tsx",
+      "beforeSha256": "f505ac75a6ae4f57767ef77130af51ba60e2112e5fb9550ed7d3879aa76de00e"
+    },
+    {
+      "path": "src/components/panel/editor/ImageCanvas.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\editor\\ImageCanvas.tsx",
+      "beforeSha256": "6b61f41f9257b302f2a75c54ff24624646af4fc887c04a5e28f0b529182ab524"
+    },
+    {
+      "path": "src/components/panel/editor/ToolSessionActions.tsx",
+      "existed": false,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\editor\\ToolSessionActions.tsx",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/components/panel/editor/overlays/SpeedEditOverlay.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\editor\\overlays\\SpeedEditOverlay.tsx",
+      "beforeSha256": "ece2e7380fba1471b1c6c91fbdded5f98ebb1c73492ba0435e903b111b5cbb50"
+    },
+    {
+      "path": "src/components/panel/right/AIPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\right\\AIPanel.tsx",
+      "beforeSha256": "be1f865a295a90043619f8fecabfb56050b0c5ab2620219216d25dec64fe6925"
+    },
+    {
+      "path": "src/components/panel/right/ControlsPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\right\\ControlsPanel.tsx",
+      "beforeSha256": "3402cca1cd551e2517dc17e75d158aa67ebea1da0c6e96a533206b0dbe386033"
+    },
+    {
+      "path": "src/components/panel/right/CurvesPanel.tsx",
+      "existed": false,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\right\\CurvesPanel.tsx",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/components/panel/right/ExportPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\right\\ExportPanel.tsx",
+      "beforeSha256": "0b2d2bf8984f88a936498d15f639e45eec9309ebbcf4783376e4c9bb2e4a5efe"
+    },
+    {
+      "path": "src/components/panel/right/PresetsPanel.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\panel\\right\\PresetsPanel.tsx",
+      "beforeSha256": "2e3e45198227d68795e94e19fe86a5a0d012738cd87ec5c12ceeca2f09298385"
+    },
+    {
+      "path": "src/components/ui/AppProperties.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\ui\\AppProperties.tsx",
+      "beforeSha256": "46c7b937751f72c6992bb19de1f9ab16bbd6a90901791905670e875550ddbff6"
+    },
+    {
+      "path": "src/components/ui/Dropdown.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\ui\\Dropdown.tsx",
+      "beforeSha256": "a6c784064f8c7cd4ccf44d4cf5f97683599bb035ef09e0be28a216d611116835"
+    },
+    {
+      "path": "src/components/ui/Slider.tsx",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\components\\ui\\Slider.tsx",
+      "beforeSha256": "17d1394e3ac8b21183a1aec283244ee841ebc2b30c353a583427bec19edc9d4d"
+    },
+    {
+      "path": "src/hooks/useAdjustmentSectionActions.ts",
+      "existed": false,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\hooks\\useAdjustmentSectionActions.ts",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/hooks/useAiMasking.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\hooks\\useAiMasking.ts",
+      "beforeSha256": "3951d67dd14586a0001bd6e9feb318aabddc799cebc3bee7bcc19ad29b066808"
+    },
+    {
+      "path": "src/hooks/useAppInitialization.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\hooks\\useAppInitialization.ts",
+      "beforeSha256": "418afe949997ae248fb4f10a84ab4c52da27e8bad536c5fec95a2f4210f43e41"
+    },
+    {
+      "path": "src/hooks/useEditorActions.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\hooks\\useEditorActions.ts",
+      "beforeSha256": "4fddd58da45f6a41f3c40064598fe7b15b3ca22fee17ef01853378dc773218a6"
+    },
+    {
+      "path": "src/hooks/useKeyboardShortcuts.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\hooks\\useKeyboardShortcuts.ts",
+      "beforeSha256": "961544f29f068fb116982e5557eee7c1808f7036618c2d12e8fc804efc2c63de"
+    },
+    {
+      "path": "src/store/useEditorStore.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\store\\useEditorStore.ts",
+      "beforeSha256": "e976861bf8075424493e71bd2a14d03f765fd538ca754c3e2e0b370856ebeee3"
+    },
+    {
+      "path": "src/store/useUIStore.ts",
+      "existed": true,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\store\\useUIStore.ts",
+      "beforeSha256": "ec6ad13f858ca7c04176dd3c92947175a46027f33aa953f8c52419d14fb5ec52"
+    },
+    {
+      "path": "src/utils/appMode.ts",
+      "existed": false,
+      "backup": "E:\\projects\\tbt\\rapidraw-tool-sessions\\original\\source\\src\\utils\\appMode.ts",
+      "beforeSha256": null
+    }
+  ],
+  "commands": {
+    "release": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "npm.cmd",
+      "run",
+      "tauri",
+      "--",
+      "build",
+      "--no-bundle"
+    ],
+    "rustfmt": [
+      "cargo",
+      "fmt",
+      "--",
+      "--check"
+    ],
+    "clippy": [
+      "cargo",
+      "clippy",
+      "--release",
+      "--all-targets",
+      "--locked",
+      "--features",
+      "tauri/custom-protocol",
+      "--",
+      "-D",
+      "warnings"
+    ]
+  },
+  "inputsUnchangedDuringBuild": true,
+  "exePath": "E:\\projects\\tbt\\rapidraw-baseline\\app\\src-tauri\\target\\release\\RapidRAW-sessions.exe",
+  "exeSha256": "4e2ba2f54f56200c496c86d0cbf909afde169b524d9c40689e1d7cec40840022",
+  "originalInputsRestored": true,
+  "restoredOriginalExeSha256": "26e37ffec105a56210bb6ac8940f742df01c7970224048685b2d811dfe707de6",
+  "finished": "2026-11-08T15:47:26+0800"
+}

@@ -193,7 +193,8 @@ function RegionDroppableContainer({
           data-panel-region={region}
           onPointerDownCapture={handleContentInteraction}
         >
-          <AnimatePresence mode="wait">
+          {/* Tool re-entry must not inherit an unfinished exit from the previous panel. */}
+          <AnimatePresence key={historyFull && region === 'leftBottom' ? activePanel : undefined} mode="wait">
             {activePanel && (
               <motion.div
                 key={activePanel}

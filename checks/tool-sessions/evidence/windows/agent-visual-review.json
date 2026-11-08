@@ -1,0 +1,99 @@
+{
+  "reviewerType": "agent",
+  "reviewedAt": "2026-11-08T07:53:03.871419+00:00",
+  "passed": true,
+  "scriptSha256": "f63dce3716862e824cb0a2713e31ab5083dcb9e0c3e2d05d0c711afbd3d29cf1",
+  "exeSha256": "4e2ba2f54f56200c496c86d0cbf909afde169b524d9c40689e1d7cec40840022",
+  "reportSha256": "e5293acb1541e783748e4628b4f149a4f858ae495d8e290836d9556b177ec285",
+  "reportBytes": 13394568,
+  "scope": "Parent agent read each actual owned Windows client PNG through the image read tool after successful native cleanup. This is agent visual review, not human acceptance, model quality validation or a general WGPU color comparison.",
+  "screenshots": [
+    {
+      "tool": "crop",
+      "file": "geometry-crop-1280x720.png",
+      "sha256": "c19929fdcf3eeef4b7dd1c88c82e1da90181fb4dad716af3f57af216c4f23bc6",
+      "bytes": 317626,
+      "passed": true,
+      "observations": "Crop & Transform heading, NASA photo, crop rectangle and handles are visible. Apply and Cancel are painted with readable labels below the photo; the crop lower edge is clear of the action row, and the row remains above Filmstrip without clipping.",
+      "cancelPixelCheck": {
+        "bounds": [
+          631,
+          456,
+          720,
+          496
+        ],
+        "foregroundRgb": [
+          232,
+          234,
+          237
+        ],
+        "foregroundExactPixels": 123,
+        "backgroundRgb": [
+          28,
+          28,
+          28
+        ],
+        "backgroundExactPixels": 3024,
+        "contrast": 14.13937548125783
+      }
+    },
+    {
+      "tool": "masks",
+      "file": "geometry-masks-1280x720.png",
+      "sha256": "ca88ae08a86809c65aace7668d5cac521ee520b329a03d1aad9502b2a954bb74",
+      "bytes": 311723,
+      "passed": true,
+      "observations": "Masking heading and Brush entry are visible, with the red brush overlay confined to the photo. Apply and Cancel are both painted and readable below the photo, aligned with the canvas and above Filmstrip. No control overlaps the photo.",
+      "cancelPixelCheck": {
+        "bounds": [
+          631,
+          456,
+          720,
+          496
+        ],
+        "foregroundRgb": [
+          232,
+          234,
+          237
+        ],
+        "foregroundExactPixels": 123,
+        "backgroundRgb": [
+          28,
+          28,
+          28
+        ],
+        "backgroundExactPixels": 3024,
+        "contrast": 14.13937548125783
+      }
+    },
+    {
+      "tool": "ai",
+      "file": "geometry-ai-1280x720.png",
+      "sha256": "12c94bf362e5efc34a571fb5e6ce43ad152e99c89bcf316f04cefbd78723539b",
+      "bytes": 304795,
+      "passed": true,
+      "observations": "Inpainting heading and AI Edit entry are visible with the photo. Apply and Cancel are both painted and readable in a separate row below the canvas, without photo or Filmstrip overlap. This does not validate actual model-generated content.",
+      "cancelPixelCheck": {
+        "bounds": [
+          631,
+          456,
+          720,
+          496
+        ],
+        "foregroundRgb": [
+          232,
+          234,
+          237
+        ],
+        "foregroundExactPixels": 123,
+        "backgroundRgb": [
+          28,
+          28,
+          28
+        ],
+        "backgroundExactPixels": 3024,
+        "contrast": 14.13937548125783
+      }
+    }
+  ]
+}

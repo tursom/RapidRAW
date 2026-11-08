@@ -1,0 +1,238 @@
+{
+  "status": "passed",
+  "cases": 71,
+  "steps": 727,
+  "trustedSteps": 467,
+  "retainedTrustedSteps": 467,
+  "inputDigest": "ab9dbdf37455faecdca58a52194e6c81673a0e53025248abca0934ae0fb5d6f9",
+  "parentFreeze": {
+    "sourceBase": "fbb76a9f53a75d05d181bd66826b5a5a43464239",
+    "files": [
+      {
+        "path": "src/components/panel/Editor.tsx",
+        "sha256": "f8a48e0493cd6e0586389a28611e4592d436aacb03f579cb6756892148587832"
+      },
+      {
+        "path": "src/components/panel/SidePanelArea.tsx",
+        "sha256": "ac9a543a95bfe39d5dccdd23de9dece7aaf86bc74e0a8e0c1ba59472c1be1bb3"
+      },
+      {
+        "path": "src/components/panel/editor/ToolSessionActions.tsx",
+        "sha256": "c0bb3f49adbb2c8ecab376e59c22c3195d0161b218ed61b48f7afab357ec5eae"
+      },
+      {
+        "path": "src/hooks/useAiMasking.ts",
+        "sha256": "7927b13915be9f81adb898f7be1d4910f95b8351a19e536ba2d5521a1ee9b407"
+      },
+      {
+        "path": "src/hooks/useEditorActions.ts",
+        "sha256": "b8ef012d8ee7bddf88f61408a3e8d2e33eef38cddc877055439fe34942c84ca5"
+      },
+      {
+        "path": "src/hooks/useKeyboardShortcuts.ts",
+        "sha256": "cab323fea108628f90a0db8303b7857937dc5e6f364495116ba685b4d7352f70"
+      },
+      {
+        "path": "src/store/useEditorStore.ts",
+        "sha256": "a4e2e127c6d5f5093505977392887803433785629bb862206df7401c4f443650"
+      },
+      {
+        "path": "src/store/useUIStore.ts",
+        "sha256": "251e18d772ff5e1c5d35edd0649e683a2a5cb67b5ed204929d8e10242b0a5ce6"
+      }
+    ],
+    "sha256": "2ce2e89a83bc884a3600416083bb38d57138330c4239ed101c0a83f477899062",
+    "matched": true
+  },
+  "artifact": "/root/dev/work/tbt/RapidRAW/checks/tool-sessions/evidence/browser/chromium.json.gz",
+  "compressedSha256": "53e1dc743ea8815338f09c57f6c463e16876c97f9e1f7da36fb7876bbf4579e4",
+  "rawSha256": "a0ca54a435c4d4f0035dc01178778424d6085ca66f01dcd3e002b8b9f589d765",
+  "nativeSupplement": {
+    "path": "/root/dev/work/tbt/RapidRAW/checks/tool-sessions/evidence/browser/native-supplement.json",
+    "sha256": "c97417ffe7c7377a632b633740ac10d2d64e98879482a262230aeff983d96697",
+    "bytes": 7506828
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "prettierExitCode": 0,
+    "fixtureTypeScriptDiagnostics": 0,
+    "importedTypeScriptDiagnostics": 22
+  },
+  "browserDocumentationSha256": "5455cfc3e8202363ba09b4958a31647acec8cf18e1d9b71a153ac109b576f9af",
+  "cleanup": {
+    "fixtureDebouncesCancelled": true,
+    "mockRequestsReleased": true,
+    "browserClosed": true,
+    "viteExited": true,
+    "pidGone": true,
+    "portReleased": true
+  },
+  "artifactBytes": 10232259,
+  "rawBytes": 186104265,
+  "verification": {
+    "verifiedAt": "2026-11-08T07:36:25.589Z",
+    "runtimeFilesBeforeAfterCurrent": 430,
+    "parentBuildInputs": 417,
+    "frozenSources": 8,
+    "ownedRuntimeAndDocumentationFiles": 11,
+    "nativeControllerSha256": "f63dce3716862e824cb0a2713e31ab5083dcb9e0c3e2d05d0c711afbd3d29cf1",
+    "nativeControllerBytes": 98791,
+    "nativeSupplementCases": 14,
+    "nativeSupplementSourceRecords": 63,
+    "untrustedInputRecords": 0,
+    "prior70": {
+      "cases": 70,
+      "steps": 689,
+      "trustedSteps": 455,
+      "assertionCodeReverseHashVerified": true
+    },
+    "appended71": {
+      "cases": 1,
+      "steps": 38,
+      "trustedSteps": 12,
+      "screenshots": 12
+    },
+    "allChecksPassed": true,
+    "noNativeExecutionClaim": true
+  },
+  "supersedes": {
+    "archive": "/tmp/superseded/tool-sessions-71-before-cancel-color-o13exeqe",
+    "files": [
+      {
+        "name": "chromium.json.gz",
+        "bytes": 10222384,
+        "sha256": "1579f3051c339126b1c75db7750563368445e3dbc1effa8f25c82d72d265e99b"
+      },
+      {
+        "name": "browser-manifest.json",
+        "bytes": 6755,
+        "sha256": "a1e36c798cee2100604ea8152fd0458fcc082e60f9ec9913b523c26accb42bb4"
+      },
+      {
+        "name": "native-supplement.json",
+        "bytes": 7506760,
+        "sha256": "b0c27b0f2369594a2d8c81e469eec51cbc2443e5bccc9d363d202769c74aeb5a"
+      }
+    ]
+  },
+  "sidePanelLifecycle": {
+    "trials": 60,
+    "inputMethods": {
+      "trusted CDP pointer": 60
+    },
+    "requestedDelaysMs": [
+      50,
+      100,
+      150,
+      180,
+      250
+    ],
+    "actualClickIntervalMs": {
+      "min": 66.80000019073486,
+      "max": 267.9000005722046
+    },
+    "immediateAssertionsBefore200msObservation": true,
+    "explicitToolContentPlaceholder": true
+  },
+  "editorCSSPaint": {
+    "passed": true,
+    "independentDecoder": "Pillow",
+    "originalPNGsVerified": 12,
+    "buttonBoxesVerified": 24,
+    "staticControlRows": 6,
+    "productionRows": 6,
+    "geometryPairsIdentical": 6,
+    "computedColorCountsMatchNodeForEveryPixel": true,
+    "semanticCancelColorAndContrastVerified": true,
+    "contrastMinimum": 4.5,
+    "readability": [
+      {
+        "mode": "crop",
+        "action": "apply",
+        "theme": "dark",
+        "resolvedSemanticToken": "rgb(232, 234, 237)",
+        "foreground": "rgb(232, 234, 237)",
+        "background": "rgb(28, 28, 28)",
+        "contrastRatio": 14.13937548125783,
+        "actualLabelPixels": 115
+      },
+      {
+        "mode": "crop",
+        "action": "cancel",
+        "theme": "dark",
+        "resolvedSemanticToken": "rgb(232, 234, 237)",
+        "foreground": "rgb(232, 234, 237)",
+        "background": "rgb(28, 28, 28)",
+        "contrastRatio": 14.13937548125783,
+        "actualLabelPixels": 115
+      },
+      {
+        "mode": "masks",
+        "action": "apply",
+        "theme": "dark",
+        "resolvedSemanticToken": "rgb(232, 234, 237)",
+        "foreground": "rgb(232, 234, 237)",
+        "background": "rgb(28, 28, 28)",
+        "contrastRatio": 14.13937548125783,
+        "actualLabelPixels": 115
+      },
+      {
+        "mode": "masks",
+        "action": "cancel",
+        "theme": "light",
+        "resolvedSemanticToken": "rgb(20, 20, 20)",
+        "foreground": "rgb(20, 20, 20)",
+        "background": "rgb(241, 241, 241)",
+        "contrastRatio": 16.31047822681587,
+        "actualLabelPixels": 115
+      },
+      {
+        "mode": "ai",
+        "action": "apply",
+        "theme": "dark",
+        "resolvedSemanticToken": "rgb(232, 234, 237)",
+        "foreground": "rgb(232, 234, 237)",
+        "background": "rgb(28, 28, 28)",
+        "contrastRatio": 14.13937548125783,
+        "actualLabelPixels": 115
+      },
+      {
+        "mode": "ai",
+        "action": "cancel",
+        "theme": "grey",
+        "resolvedSemanticToken": "rgb(240, 240, 240)",
+        "foreground": "rgb(240, 240, 240)",
+        "background": "rgb(108, 108, 108)",
+        "contrastRatio": 4.607761990905611,
+        "actualLabelPixels": 115
+      }
+    ],
+    "minimalCSSNotFullEditorOrWgpu": true,
+    "rawPNGBytesEmbedded": true,
+    "sourceExtractedClasses": {
+      "outerClass": "flex-1 flex flex-col relative overflow-hidden min-h-0 rounded-lg p-2 gap-2 bg-transparent",
+      "toolbarClass": "shrink-0 relative z-10 max-h-25 opacity-100 overflow-hidden",
+      "viewportClass": "flex-1 flex relative overflow-hidden isolate rounded-lg ring-[9999px] ring-bg-secondary bg-bg-secondary",
+      "sourceSha256": "f8a48e0493cd6e0586389a28611e4592d436aacb03f579cb6756892148587832",
+      "environment": {
+        "isInstantTransition": true,
+        "isFullScreen": false,
+        "isWgpuActive": false,
+        "toolbarOverflowVisible": false,
+        "appSettings": {
+          "useWgpuRenderer": true,
+          "editorNeutralGreyBg": false
+        }
+      },
+      "fragments": {
+        "outer": "clsx(\n        'flex-1 flex flex-col relative overflow-hidden min-h-0',\n        !isInstantTransition && 'transition-all duration-300 ease-in-out',\n        isFullScreen\n          ? 'rounded-none p-0 gap-0'\n          : clsx('rounded-lg p-2 gap-2', appSettings?.useWgpuRenderer !== false ? 'bg-transparent' : 'bg-bg-secondary'),\n      )",
+        "toolbar": "clsx(\n          'shrink-0 relative z-10',\n          !isInstantTransition && 'transition-all duration-300 ease-in-out',\n          isFullScreen ? 'max-h-0 opacity-0 m-0' : 'max-h-25 opacity-100',\n          toolbarOverflowVisible ? 'overflow-visible' : 'overflow-hidden',\n        )",
+        "viewport": "clsx(\n          'flex-1 flex relative overflow-hidden isolate',\n          isFullScreen ? 'rounded-none' : 'rounded-lg',\n          appSettings?.useWgpuRenderer !== false && !isFullScreen && 'ring-[9999px] ring-bg-secondary',\n          !isWgpuActive && (appSettings?.editorNeutralGreyBg ? 'bg-[#808080]' : 'bg-bg-secondary'),\n        )"
+      },
+      "fullEditorMounted": false,
+      "wgpuRendererMounted": false
+    },
+    "originalCPUProofWhitelist": "/tmp/tbt-actionbar-ring-repro-tebo2h6v/archive-whitelist.json"
+  }
+}

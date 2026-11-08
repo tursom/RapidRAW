@@ -8,7 +8,7 @@ import {
   CropGeometry,
   pickCropGeometry,
 } from '../utils/adjustments';
-import { SelectedImage, WaveformData, BrushSettings, CompareView } from '../components/ui/AppProperties';
+import { SelectedImage, WaveformData, BrushSettings, CompareView, Panel } from '../components/ui/AppProperties';
 import { ChannelConfig } from '../components/adjustments/Curves';
 import { ImageDimensions } from '../hooks/useImageRenderSize';
 import { ToolType } from '../components/panel/right/Masks';
@@ -16,8 +16,10 @@ import { OverlayMode } from '../components/panel/right/CropPanel';
 import { describeHistoryChange } from '../utils/editHistory';
 import { HslMixerProperty } from '../utils/hslMixer';
 import type { SpeedEditTarget } from '../components/ui/Slider';
+import { isHistoryMode } from '../utils/appMode';
 
 export type CenterMarker = 'vignette' | 'centre';
+export type ToolSessionPanel = Panel.Crop | Panel.Masks | Panel.Ai;
 
 interface InteractivePatch {
   url: string;
@@ -44,6 +46,8 @@ interface EditorState {
   history: Adjustments[];
   historyLabels: string[];
   historyIndex: number;
+  historyPath: string | null;
+  historyRevision: number;
 
   // Previews & Overlays
   finalPreviewUrl: string | null;
@@ -85,6 +89,9 @@ interface EditorState {
   isGuidedPerspectiveActive: boolean;
   liveRotation: number | null;
   cropSessionSnapshot: { path: string | null; geometry: CropGeometry } | null;
+  masksSessionSnapshot: { path: string; masks: Adjustments['masks'] } | null;
+  aiSessionSnapshot: { path: string; aiPatches: Adjustments['aiPatches'] } | null;
+  toolSessionPanel: ToolSessionPanel | null;
   brushSettings: BrushSettings | null;
 
   // Masks & AI
@@ -111,6 +118,7 @@ interface EditorState {
   undo: () => void;
   redo: () => void;
   resetHistory: (initialState: Adjustments) => void;
+  beginToolSession: (panel: ToolSessionPanel | null) => void;
   goToHistoryIndex: (index: number) => void;
 }
 
@@ -127,6 +135,19 @@ export const canvasToolState = (activeTool: Partial<CanvasToolState> = {}): Canv
   ...activeTool,
 });
 
+const toolSessionSnapshots = (panel: ToolSessionPanel | null, path: string | null, adjustments: Adjustments) => ({
+  cropSessionSnapshot: panel === Panel.Crop && path ? { path, geometry: pickCropGeometry(adjustments) } : null,
+  masksSessionSnapshot: panel === Panel.Masks && path ? { path, masks: structuredClone(adjustments.masks) } : null,
+  aiSessionSnapshot:
+    panel === Panel.Ai && path
+      ? {
+          path,
+          // Loading belongs to the live request; restoring a snapshot must not revive it.
+          aiPatches: structuredClone(adjustments.aiPatches)?.map((patch) => ({ ...patch, isLoading: false })),
+        }
+      : null,
+});
+
 export const useEditorStore = create<EditorState>((set) => ({
   selectedImage: null,
   adjustments: INITIAL_ADJUSTMENTS,
@@ -134,6 +155,8 @@ export const useEditorStore = create<EditorState>((set) => ({
   history: [INITIAL_ADJUSTMENTS],
   historyLabels: [''],
   historyIndex: 0,
+  historyPath: null,
+  historyRevision: 0,
 
   finalPreviewUrl: null,
   uncroppedAdjustedPreviewUrl: null,
@@ -175,6 +198,9 @@ export const useEditorStore = create<EditorState>((set) => ({
   isGuidedPerspectiveActive: false,
   liveRotation: null,
   cropSessionSnapshot: null,
+  masksSessionSnapshot: null,
+  aiSessionSnapshot: null,
+  toolSessionPanel: null,
 
   copiedSectionAdjustments: null,
   copiedMask: null,
@@ -189,10 +215,29 @@ export const useEditorStore = create<EditorState>((set) => ({
   hasRenderedFirstFrame: false,
   patchesSentToBackend: new Set<string>(),
 
-  setEditor: (updater) => set((state) => (typeof updater === 'function' ? updater(state) : updater)),
+  setEditor: (updater) =>
+    set((state) => {
+      const updates = typeof updater === 'function' ? updater(state) : updater;
+      if (isHistoryMode() && 'selectedImage' in updates && updates.selectedImage?.path !== state.selectedImage?.path) {
+        // Navigation installs selectedImage before its adjustments (even on a cache hit).
+        return { ...updates, ...toolSessionSnapshots(null, null, state.adjustments), historyPath: null };
+      }
+      return updates;
+    }),
+
+  beginToolSession: (panel) =>
+    set((state) => {
+      if (!isHistoryMode() || panel === state.toolSessionPanel) return state;
+      const path = state.selectedImage?.path ?? null;
+      return {
+        toolSessionPanel: panel,
+        ...toolSessionSnapshots(panel, path === state.historyPath ? path : null, state.adjustments),
+      };
+    }),
 
   pushHistory: (newAdj, label) =>
     set((state) => {
+      if (isHistoryMode() && JSON.stringify(state.history[state.historyIndex]) === JSON.stringify(newAdj)) return state;
       const newHistory = state.history.slice(0, state.historyIndex + 1);
       const newLabels = state.historyLabels.slice(0, state.historyIndex + 1);
       newLabels.push(label || describeHistoryChange(state.history[state.historyIndex], newAdj));
@@ -228,14 +273,20 @@ export const useEditorStore = create<EditorState>((set) => ({
       historyLabels: [''],
       historyIndex: 0,
       adjustments: initialState,
-      ...(state.cropSessionSnapshot
+      ...(isHistoryMode()
         ? {
-            cropSessionSnapshot: {
-              path: state.selectedImage?.path ?? null,
-              geometry: pickCropGeometry(initialState),
-            },
+            historyPath: state.selectedImage?.path ?? null,
+            historyRevision: state.historyRevision + 1,
+            ...toolSessionSnapshots(state.toolSessionPanel, state.selectedImage?.path ?? null, initialState),
           }
-        : {}),
+        : state.cropSessionSnapshot
+          ? {
+              cropSessionSnapshot: {
+                path: state.selectedImage?.path ?? null,
+                geometry: pickCropGeometry(initialState),
+              },
+            }
+          : {}),
     })),
 
   goToHistoryIndex: (index) =>

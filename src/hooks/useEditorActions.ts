@@ -25,10 +25,20 @@ import {
 import { calculateAutoCropForRotation, calculateCenteredCrop } from '../utils/cropUtils';
 import { CompareMode, Invokes, Option, Panel, SelectedImage } from '../components/ui/AppProperties';
 import { globalImageCache } from '../utils/ImageLRUCache';
+import { isHistoryMode } from '../utils/appMode';
 
 export const debouncedSetHistory = debounce((newAdj: Adjustments, label?: string) => {
   useEditorStore.getState().pushHistory(newAdj, label);
 }, 500);
+
+useEditorStore.subscribe((state, prev) => {
+  if (
+    isHistoryMode() &&
+    (state.selectedImage?.path !== prev.selectedImage?.path || state.historyRevision !== prev.historyRevision)
+  ) {
+    debouncedSetHistory.cancel();
+  }
+});
 
 export const debouncedSave = debounce((path: string, adjustmentsToSave: Adjustments) => {
   invoke(Invokes.SaveMetadataAndUpdateThumbnail, { path, adjustments: adjustmentsToSave }).catch((err) => {
@@ -139,12 +149,103 @@ export const reloadAdjustmentsForPaths = async (paths: string[]) => {
   }
 };
 
+type ToolSessionEditor = Pick<
+  ReturnType<typeof useEditorStore.getState>,
+  'adjustments' | 'isGeneratingAi' | 'isGeneratingAiMask'
+>;
+
+export const toolSessionBusy = (
+  editor: ToolSessionEditor,
+  process: Pick<ReturnType<typeof useProcessStore.getState>, 'activeAiTasks'>,
+): boolean => {
+  return (
+    editor.isGeneratingAi ||
+    editor.isGeneratingAiMask ||
+    editor.adjustments.masks.some((container) => (container as { isLoading?: boolean }).isLoading) ||
+    (editor.adjustments.aiPatches ?? []).some((container) => container.isLoading) ||
+    // Task IDs belong to containers/submasks, not paths. Conservatively wait for all tasks.
+    Object.keys(process.activeAiTasks).length > 0
+  );
+};
+
+export const isToolSessionBusy = (): boolean => toolSessionBusy(useEditorStore.getState(), useProcessStore.getState());
+
+const exitToolSession = () => {
+  useEditorStore.getState().setEditor({
+    isStraightenActive: false,
+    liveRotation: null,
+    activeMaskContainerId: null,
+    activeMaskId: null,
+    activeAiPatchContainerId: null,
+    activeAiSubMaskId: null,
+  });
+  useUIStore.getState().setPanel(Panel.Adjustments);
+};
+
+export const applyToolSession = (): void => {
+  if (!isHistoryMode() || isToolSessionBusy()) return;
+  const { toolSessionPanel, selectedImage, historyPath, adjustments, pushHistory } = useEditorStore.getState();
+  if (
+    !toolSessionPanel ||
+    useUIStore.getState().activePanel !== toolSessionPanel ||
+    !selectedImage?.isReady ||
+    selectedImage.path !== historyPath
+  )
+    return;
+  debouncedSetHistory.cancel();
+  pushHistory(adjustments);
+  exitToolSession();
+};
+
+export const cancelToolSession = (): void => {
+  if (!isHistoryMode() || isToolSessionBusy()) return;
+  const state = useEditorStore.getState();
+  const { toolSessionPanel, selectedImage, historyPath, adjustments } = state;
+  if (
+    !toolSessionPanel ||
+    useUIStore.getState().activePanel !== toolSessionPanel ||
+    !selectedImage?.isReady ||
+    selectedImage.path !== historyPath
+  )
+    return;
+  const snapshot =
+    toolSessionPanel === Panel.Crop
+      ? state.cropSessionSnapshot
+      : toolSessionPanel === Panel.Masks
+        ? state.masksSessionSnapshot
+        : state.aiSessionSnapshot;
+  if (!snapshot || snapshot.path !== selectedImage?.path) return;
+  const restored: Partial<Adjustments> =
+    'geometry' in snapshot
+      ? structuredClone(snapshot.geometry)
+      : 'masks' in snapshot
+        ? { masks: structuredClone(snapshot.masks) }
+        : { aiPatches: structuredClone(snapshot.aiPatches) };
+  const changed = Object.keys(restored).some(
+    (key) => JSON.stringify(adjustments[key]) !== JSON.stringify(restored[key]),
+  );
+  if (changed) {
+    // The current content may still be waiting in the 500ms debounce, or come from a direct store write.
+    debouncedSetHistory.cancel();
+    state.pushHistory(structuredClone(adjustments));
+    const newAdjustments = { ...adjustments, ...restored };
+    state.setEditor({
+      adjustments: newAdjustments,
+      ...(state.showOriginal ? { showOriginal: false, previewOverride: null } : {}),
+    });
+    state.pushHistory(newAdjustments);
+  }
+  exitToolSession();
+};
+
 export const applyCrop = () => {
+  if (isHistoryMode()) return applyToolSession();
   useEditorStore.getState().setEditor({ isStraightenActive: false, liveRotation: null });
   useUIStore.getState().setPanel(Panel.Adjustments);
 };
 
 export const cancelCrop = () => {
+  if (isHistoryMode()) return cancelToolSession();
   const { cropSessionSnapshot, selectedImage, adjustments, setEditor } = useEditorStore.getState();
   applyCrop();
   if (cropSessionSnapshot && cropSessionSnapshot.path === (selectedImage?.path ?? null)) {

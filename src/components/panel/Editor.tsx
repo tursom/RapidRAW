@@ -28,6 +28,7 @@ import {
 import EditorToolbar from './editor/EditorToolbar';
 import ImageCanvas, { ImageRegion, MaskOverlayImage } from './editor/ImageCanvas';
 import SpeedEditOverlay from './editor/overlays/SpeedEditOverlay';
+import ToolSessionActions from './editor/ToolSessionActions';
 import { Mask, SubMask } from './right/Masks';
 import { CompareView, Panel, TransformState, Invokes } from '../ui/AppProperties';
 import { useEditorStore } from '../../store/useEditorStore';
@@ -2778,6 +2779,7 @@ export default function Editor({ onBackToLibrary, onContextMenu, onImageSelect, 
         </div>
         <SpeedEditOverlay />
       </div>
+      <ToolSessionActions />
     </div>
   );
 }

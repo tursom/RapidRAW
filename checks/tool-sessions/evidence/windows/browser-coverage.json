@@ -1,0 +1,10 @@
+{
+  "scriptSha256": "f63dce3716862e824cb0a2713e31ab5083dcb9e0c3e2d05d0c711afbd3d29cf1",
+  "exeSha256": "4e2ba2f54f56200c496c86d0cbf909afde169b524d9c40689e1d7cec40840022",
+  "artifact": {
+    "path": "browser-evidence.json.gz",
+    "bytes": 10232259,
+    "sha256": "53e1dc743ea8815338f09c57f6c463e16876c97f9e1f7da36fb7876bbf4579e4",
+    "rawSha256": "a0ca54a435c4d4f0035dc01178778424d6085ca66f01dcd3e002b8b9f589d765"
+  }
+}

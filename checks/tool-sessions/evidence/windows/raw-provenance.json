@@ -1,0 +1,112 @@
+{
+  "source": "Windows hashes and lengths recorded after successful GUI cleanup and agent visual review, before download. Only 14 explicit public outputs; private profile-backup and failed attempts excluded.",
+  "normalization": "Raw gzip preserves exact native bytes, including BOM and newlines. Readable JSON is only reserialized. Readable logs remove ANSI and trailing whitespace. PNG bytes unchanged.",
+  "files": [
+    {
+      "file": "build.json",
+      "rawBytes": 9773,
+      "rawSha256": "3bcb27288a3b831d54c080e09ccc8071785c04ca087dd7d5abffe1acac08faea",
+      "rawArtifact": "raw/build.json.gz",
+      "gzipSha256": "4d1ce249179e1e23189f3a59848961d1c0902b2dacd8713d8bd6835b0ef6346c",
+      "readable": "build.json"
+    },
+    {
+      "file": "source-inputs.json",
+      "rawBytes": 63737,
+      "rawSha256": "ff4e36e39fe83f57a272eeeb3c7ed1f9b6054e19d17dd5a191c036ff82d106d3",
+      "rawArtifact": "raw/source-inputs.json.gz",
+      "gzipSha256": "3d11c9aea6221d049a9a4c43b66d0433d1d962beea0a4ef107eb380a4d22930c",
+      "readable": "source-inputs.json"
+    },
+    {
+      "file": "fixture.json",
+      "rawBytes": 1061,
+      "rawSha256": "b34f9345f62d69319f76b082e7f200b9bfe15981feefda659e7e3744247d4721",
+      "rawArtifact": "raw/fixture.json.gz",
+      "gzipSha256": "8e60deb46cbb7e39d475ce00901d7de7a79a2a2a7582a8388f2567e3f7a40e3f",
+      "readable": "fixture.json"
+    },
+    {
+      "file": "windows-smoke.json",
+      "rawBytes": 13394568,
+      "rawSha256": "e5293acb1541e783748e4628b4f149a4f858ae495d8e290836d9556b177ec285",
+      "rawArtifact": "raw/windows-smoke.json.gz",
+      "gzipSha256": "54d6b7fe5af2449bbe63762654e32d00eb43f807dfb0debe7dba5e27472df29d",
+      "readable": "windows-smoke.json"
+    },
+    {
+      "file": "run-result.json",
+      "rawBytes": 161,
+      "rawSha256": "b20679a76b571b5a853c1289a42ad0df8596f8227dd56ed8892b048cc1123ef1",
+      "rawArtifact": "raw/run-result.json.gz",
+      "gzipSha256": "1cddb956cf25b4440355c3d9fc8097c7ebc207f913ffa41371f16e49ed830f2c",
+      "readable": "run-result.json"
+    },
+    {
+      "file": "cleanup.json",
+      "rawBytes": 1137,
+      "rawSha256": "0fab513006f39d1d85b8f1d38d4bc1f3512f6908e686f6abd58784d4a1f7dfde",
+      "rawArtifact": "raw/cleanup.json.gz",
+      "gzipSha256": "66feaba8f306f872afe36c925797a2f8af56c32f871ffa0b860b039befaa6729",
+      "readable": "cleanup.json"
+    },
+    {
+      "file": "browser-coverage.json",
+      "rawBytes": 422,
+      "rawSha256": "a3ac0165379ebb3d85c14813f9244eb92c34071b6c8b294740e8eb0993600dee",
+      "rawArtifact": "raw/browser-coverage.json.gz",
+      "gzipSha256": "2ca9d96ff2dbd5340b6bafac924aaae60c50d303995fda06c4faeeda157a5c7f",
+      "readable": "browser-coverage.json"
+    },
+    {
+      "file": "agent-visual-review.json",
+      "rawBytes": 3271,
+      "rawSha256": "90186a00c6f229b4f51ca73de08d4e831b66dddbb3ae40360d2bb7ecf4eb87c0",
+      "rawArtifact": "raw/agent-visual-review.json.gz",
+      "gzipSha256": "088da0d3ba66428a6f63388f59246b5a69716eae6bd4e7177e167c10026a0128",
+      "readable": "agent-visual-review.json"
+    },
+    {
+      "file": "geometry-crop-1280x720.png",
+      "rawBytes": 317626,
+      "rawSha256": "c19929fdcf3eeef4b7dd1c88c82e1da90181fb4dad716af3f57af216c4f23bc6",
+      "artifact": "geometry-crop-1280x720.png"
+    },
+    {
+      "file": "geometry-masks-1280x720.png",
+      "rawBytes": 311723,
+      "rawSha256": "ca88ae08a86809c65aace7668d5cac521ee520b329a03d1aad9502b2a954bb74",
+      "artifact": "geometry-masks-1280x720.png"
+    },
+    {
+      "file": "geometry-ai-1280x720.png",
+      "rawBytes": 304795,
+      "rawSha256": "12c94bf362e5efc34a571fb5e6ce43ad152e99c89bcf316f04cefbd78723539b",
+      "artifact": "geometry-ai-1280x720.png"
+    },
+    {
+      "file": "logs/release.log",
+      "rawBytes": 1376,
+      "rawSha256": "a4480afeb7117981a69f02e660668b472d6d0eccb413d279f22d6d1060cd4771",
+      "rawArtifact": "raw/logs/release.log.gz",
+      "gzipSha256": "8111578cafa385b6f5e60c49f8203e618df0c65a0a0bc9829c31d0a6bc022049",
+      "readable": "build-records/release.txt"
+    },
+    {
+      "file": "logs/rustfmt.log",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawArtifact": "raw/logs/rustfmt.log.gz",
+      "gzipSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "readable": "build-records/rustfmt.txt"
+    },
+    {
+      "file": "logs/clippy.log",
+      "rawBytes": 317,
+      "rawSha256": "9b5ae1a4b42bdf71722b634856b000a85faa36098cf5bc4628fd904050c8a744",
+      "rawArtifact": "raw/logs/clippy.log.gz",
+      "gzipSha256": "9c4452f22ce35de425e5330d882535dba371f063e681c6f8f76cedc4ed2b3ad8",
+      "readable": "build-records/clippy.txt"
+    }
+  ]
+}

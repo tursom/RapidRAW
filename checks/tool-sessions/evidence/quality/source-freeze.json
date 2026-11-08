@@ -1,0 +1,37 @@
+{
+  "sourceBase": "fbb76a9f53a75d05d181bd66826b5a5a43464239",
+  "files": [
+    {
+      "path": "src/components/panel/Editor.tsx",
+      "sha256": "f8a48e0493cd6e0586389a28611e4592d436aacb03f579cb6756892148587832"
+    },
+    {
+      "path": "src/components/panel/SidePanelArea.tsx",
+      "sha256": "ac9a543a95bfe39d5dccdd23de9dece7aaf86bc74e0a8e0c1ba59472c1be1bb3"
+    },
+    {
+      "path": "src/components/panel/editor/ToolSessionActions.tsx",
+      "sha256": "c0bb3f49adbb2c8ecab376e59c22c3195d0161b218ed61b48f7afab357ec5eae"
+    },
+    {
+      "path": "src/hooks/useAiMasking.ts",
+      "sha256": "7927b13915be9f81adb898f7be1d4910f95b8351a19e536ba2d5521a1ee9b407"
+    },
+    {
+      "path": "src/hooks/useEditorActions.ts",
+      "sha256": "b8ef012d8ee7bddf88f61408a3e8d2e33eef38cddc877055439fe34942c84ca5"
+    },
+    {
+      "path": "src/hooks/useKeyboardShortcuts.ts",
+      "sha256": "cab323fea108628f90a0db8303b7857937dc5e6f364495116ba685b4d7352f70"
+    },
+    {
+      "path": "src/store/useEditorStore.ts",
+      "sha256": "a4e2e127c6d5f5093505977392887803433785629bb862206df7401c4f443650"
+    },
+    {
+      "path": "src/store/useUIStore.ts",
+      "sha256": "251e18d772ff5e1c5d35edd0649e683a2a5cb67b5ed204929d8e10242b0a5ce6"
+    }
+  ]
+}

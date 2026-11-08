@@ -12,7 +12,7 @@ import {
   WorkspaceState,
   CollapsibleSectionsState,
 } from '../components/ui/AppProperties';
-import { useEditorStore } from './useEditorStore';
+import { useEditorStore, type ToolSessionPanel } from './useEditorStore';
 import { useSettingsStore } from './useSettingsStore';
 import { pickCropGeometry } from '../utils/adjustments';
 import { isHistoryMode } from '../utils/appMode';
@@ -124,7 +124,8 @@ const isModalPanel = (panel: Panel): panel is Panel.Metadata | Panel.Export =>
 const getDockPanels = (panels: Panel[], usePanelModals: boolean) =>
   usePanelModals ? panels.filter((panel) => !isModalPanel(panel)) : panels;
 
-const isToolPanel = (panel: Panel | null) => panel === Panel.Crop || panel === Panel.Masks || panel === Panel.Ai;
+const isToolPanel = (panel: Panel | null): panel is ToolSessionPanel =>
+  panel === Panel.Crop || panel === Panel.Masks || panel === Panel.Ai;
 
 const isFixedToolLayout = (state: Pick<UIState, 'isFullLayout'>) => isHistoryMode() && state.isFullLayout;
 
@@ -697,6 +698,10 @@ export const useUIStore = create<UIState>((set, get) => ({
 
 useUIStore.subscribe((state, prev) => {
   if (state.activePanel === prev.activePanel) return;
+  if (isHistoryMode()) {
+    useEditorStore.getState().beginToolSession(isToolPanel(state.activePanel) ? state.activePanel : null);
+    return;
+  }
   const { selectedImage, adjustments, setEditor } = useEditorStore.getState();
   if (state.activePanel === Panel.Crop) {
     setEditor({

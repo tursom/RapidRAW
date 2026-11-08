@@ -7,7 +7,7 @@ import { useLibraryStore } from '../store/useLibraryStore';
 import { useSettingsStore } from '../store/useSettingsStore';
 import { getReopenedPanelWidth, useUIStore } from '../store/useUIStore';
 import { useProcessStore } from '../store/useProcessStore';
-import { applyCrop, cancelCrop, useEditorActions } from './useEditorActions';
+import { applyCrop, applyToolSession, cancelCrop, cancelToolSession, useEditorActions } from './useEditorActions';
 import { useLibraryActions } from './useLibraryActions';
 
 const SPEED_EDIT_IMAGE_DIRECTIONS: Record<string, number> = { KeyQ: -1, KeyE: 1 };
@@ -659,6 +659,11 @@ export const useKeyboardShortcuts = ({
           else if (s.editor.activeAiPatchContainerId) s.editor.setEditor({ activeAiPatchContainerId: null });
           else if (s.editor.activeMaskId) s.editor.setEditor({ activeMaskId: null });
           else if (s.editor.activeMaskContainerId) s.editor.setEditor({ activeMaskContainerId: null });
+          else if (
+            s.settings.osPlatform !== 'android' &&
+            (s.ui.activePanel === Panel.Crop || s.ui.activePanel === Panel.Masks || s.ui.activePanel === Panel.Ai)
+          )
+            cancelToolSession();
           else if (s.ui.activePanel === Panel.Crop) cancelCrop();
           else if (s.ui.isFullScreen) s.ui.toggleFullScreen();
           else if (s.ui.activeView === 'editor') handleBackToLibrary();
@@ -700,10 +705,14 @@ export const useKeyboardShortcuts = ({
           !e.metaKey &&
           !e.altKey &&
           s.ui.activeView === 'editor' &&
-          s.ui.activePanel === Panel.Crop,
-        execute: (e: KeyboardEvent) => {
+          (s.settings.osPlatform === 'android'
+            ? s.ui.activePanel === Panel.Crop
+            : s.ui.activePanel === Panel.Crop || s.ui.activePanel === Panel.Masks || s.ui.activePanel === Panel.Ai) &&
+          !(e.target instanceof Element && e.target.closest('[data-tool-session-action]')),
+        execute: (e: KeyboardEvent, s: ShortcutState) => {
           e.preventDefault();
-          applyCrop();
+          if (s.settings.osPlatform === 'android') applyCrop();
+          else applyToolSession();
         },
       },
       {
@@ -775,7 +784,12 @@ export const useKeyboardShortcuts = ({
       const isInputTarget =
         target instanceof HTMLTextAreaElement ||
         (target instanceof HTMLInputElement && !NON_TEXT_INPUT_TYPES.has(target.type));
-      if (isInputTarget) return;
+      if (
+        isInputTarget ||
+        (state.settings.osPlatform !== 'android' &&
+          (event.isComposing || (target instanceof HTMLElement && target.isContentEditable)))
+      )
+        return;
 
       for (const builtin of builtinShortcuts) {
         if (builtin.match(event, state)) {
