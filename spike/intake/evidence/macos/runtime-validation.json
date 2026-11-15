@@ -1,0 +1,405 @@
+{
+  "schema": 1,
+  "date": "2026-11-15",
+  "scope": "Agent-operated independent intake probe on one arm64 Mac; partial runtime matrix. Private raw logs and payloads are retained separately.",
+  "phase1Accepted": false,
+  "formalTask10Started": false,
+  "environment": {
+    "os": "macOS 27.2.1 (26B131)",
+    "arch": "arm64",
+    "cpu": "Apple M5",
+    "safari": "27.2",
+    "chrome": "157.0.8103.51"
+  },
+  "source": {
+    "baseCommit": "ab016af8760ceb0477d530135e64f3913889457c",
+    "macosDragSha256": "464dc94db34e3333724215e909b0d97d47e394ada61bda18a5b864aaced86543",
+    "sourceArchiveSha256": "bd99bb541a4c16950ffc1f8185be1698c3de7ee678b3d321045d1afa2ff8f1fa",
+    "inputCount": 34,
+    "inputs": {
+      "spike/intake/.gitignore": "ea3daa3fb82a02f3fded0e58580a091ac7bdaa0d6649a88b97d1712abe7f70ed",
+      "spike/intake/package-lock.json": "62a9b1fb12df578b157ec902eee0d1fb748aac07e42d3b5a4171d1b06eb15154",
+      "spike/intake/package.json": "0e45ca88b518f4aadbb81c919e17f7bc48ba81c5f909e4a6e291c453f7cfd12d",
+      "spike/intake/scripts/package-clients.py": "bad4a9d0ba797db8d7028c24990dcc2c7f260ef8fdd0e161f9d10650e5e7a28c",
+      "spike/intake/scripts/summarize-clipboard-contention.py": "18ff1bef3fed80338bb86d1153b1a3d454db142525d96e6f99101b0558db3935",
+      "spike/intake/scripts/windows-clipboard-contention.py": "ada6b1448d6b1dfc7e772d0c2c8b4f9b8c331befbb8ac287ce80f131d1e50b37",
+      "spike/intake/scripts/windows-clipboard-processes.ps1": "40308125026cfb741b8c233e97e4214b6345a1a83a6ec519d8fd9398b850207a",
+      "spike/intake/scripts/windows-clipboard-release-ui.py": "58d6d395685f63a4185a5c95c2d6e716902451565ca1227b0016e7de7a924466",
+      "spike/intake/scripts/windows-clipboard-release.py": "7d842b6ad345ed03e7627189f03a2863b62637ca20fb0e7d7dcfbc9b6a60e537",
+      "spike/intake/src-tauri/Cargo.lock": "c9323346d195d96afbd25c7bcaea712fffdf6e212ffbb58a71992b006903f722",
+      "spike/intake/src-tauri/Cargo.toml": "176884b3e8c329c17d27bc82021a6d581b1852261962eac6c95c9d2a56d72f86",
+      "spike/intake/src-tauri/build.rs": "d1c0d72a614b4df14846c0b5f53483ede0d357bea6b0c6c444b9170214749c78",
+      "spike/intake/src-tauri/capabilities/default.json": "1b0255cdf9c99c0fe6e1106d86900ea2b9498bd1fb8d928eae5490ebd1b179eb",
+      "spike/intake/src-tauri/examples/clipboard.rs": "ee7ba6476afc99d87911a29264a84aeb06f17f2daa2be2ab5b98134de107d91f",
+      "spike/intake/src-tauri/examples/clipboard_contention.rs": "c0580af2ba508445540d2a2372609ac91bb38793f1b142ea9bca720745ae6d37",
+      "spike/intake/src-tauri/src/additional_objects.rs": "6bc7b0731cb16d4fea5830a6b3eb4a737530c8d4c32e3b3d4d9bd7e5a135069c",
+      "spike/intake/src-tauri/src/clipboard_read.rs": "564d415fbbec272c0876004a89c5b1586083858d5ec177944ff0eef7637d42c5",
+      "spike/intake/src-tauri/src/drop_capture.rs": "95e5f1d75b141b18dabc83f485620300afe74e3b52ba4cecd408cdf855e088b1",
+      "spike/intake/src-tauri/src/lib.rs": "842ec0208ebd9fb059a7aeb0777303ef6755e70be30460ebbed6426840500f1b",
+      "spike/intake/src-tauri/src/macos_drag.rs": "464dc94db34e3333724215e909b0d97d47e394ada61bda18a5b864aaced86543",
+      "spike/intake/src-tauri/src/main.rs": "4218355a77b5ceefbee7fe93c1ad780ebbf6767365fe921332f5def322f19b40",
+      "spike/intake/src-tauri/src/original_image.rs": "872b60f91d2a912cfc87989951e5e3954404fb921456098d3ae23c54c194eff2",
+      "spike/intake/src-tauri/tauri.conf.json": "c66673655f8b122d04391e7dce20155a5783761e3a38cfb598f9ea02ac3f96f8",
+      "spike/intake/src-tauri/tauri.html5.conf.json": "0c7b0cae857c69bfcd22fb004a87bca4ff028bd4b89e62eaff0b9c10817e300e",
+      "spike/intake/src-tauri/tests/clipboard_backend/mod.rs": "51a4770a04bbaf9a7cbcf6ed5d494a6cc6b9a66b00ba32beb62bfedbeba184ee",
+      "spike/intake/src-tauri/tests/clipboard_orphan/mod.rs": "38210510ed38fee5ec5c8271a3d44ddb2ee2948028d3a849b2dc69d47603c64b",
+      "spike/intake/src-tauri/tests/clipboard_process/mod.rs": "e791c3a4393cdece3c5f2bd4a4c67b88baea6367ca6a3deaab5246ace4163112",
+      "spike/intake/src-tauri/tests/fixtures/rgba.png": "6b9f82f008acc79cde4dc63713b8f1dbc7c463acbfd56cef0bb38bd82d7ba084",
+      "spike/intake/tests/browser.mjs": "3048272da83df78209b243660288bb8032104d9bad14142bddc2d17cd37fdd1c",
+      "spike/intake/tests/drop-resolution.test.mjs": "b50f8b6e95dc8b66ee982498f35d9a2d16c8df0ce6fdea0a422e9b010fcaf2e4",
+      "spike/intake/web/drop-resolution.mjs": "80236fd91db1525a4108c0280ac769b4da3909bf1db0777cbc6311b79764b715",
+      "spike/intake/web/index.html": "92d3aea0ad937f07a212e7dfa976a68b49a6acb3daae64d4409964d99ef8541f",
+      "spike/intake/web/probe.js": "6750d06bcfe49e269d9ea8e5d9b6992197fb4cdff3a13be07c5d2460fc402b40",
+      "spike/intake/web/style.css": "544a62f97e2df8bad7fc8e08e53a7529fde2a01b16e4549df674a35e8dd085cd"
+    }
+  },
+  "build": {
+    "candidate": 7,
+    "releaseExitCodes": [0, 0, 0],
+    "controlledDesktopPolicyTestsPassed": 17,
+    "adHocSigned": true,
+    "strictSignatureValidationPassed": true,
+    "notarized": false,
+    "binaries": {
+      "RapidRAW Intake HTML5.app/Contents/MacOS/rapidraw-intake-spike": {
+        "sha256": "d7880bd7ef508cc6b8db46d4f9f51d808da27cf83dd4bd370c6711bc639bcbf5",
+        "bytes": 17697424
+      },
+      "RapidRAW Intake Native.app/Contents/MacOS/rapidraw-intake-spike": {
+        "sha256": "3d7d7abd7364855302dafe89f31457213536a9e827b9508ffcb5b5bd2bc9e4da",
+        "bytes": 17697424
+      },
+      "clipboard": {
+        "sha256": "0ad5084c3d0c533c294c77be0e74a6c9e22400dedd266890973a6edd812e0f42",
+        "bytes": 2542416
+      }
+    },
+    "zipSha256": "0bba6b8be2fb2b47f3b05774ac90b547f66505f3ef798f8807f627b773e41497"
+  },
+  "runtimeMatrix": {
+    "normalClose": {
+      "status": "passed-with-scope",
+      "html5FreshPassed": 3,
+      "nativeFreshPassed": 1,
+      "html5RecoveryThenClosePassed": 1,
+      "allActualApplicationExitCodes": 0,
+      "fallbackSignalsUsed": false,
+      "html5RawPublicLayoutUnchanged": true,
+      "destroyedInstanceRetirementObserved": true,
+      "launchArguments": ["-ApplePersistenceIgnoreState", "YES"],
+      "standardRestoredStartupVerified": false,
+      "limits": [
+        "Recovery case selected the exact owned Don’t Reopen button; Reopen behavior was not tested.",
+        "Fresh-state launch changes only per-process arguments; persistent preferences and saved state were not modified.",
+        "Method-install trace does not prove timely dealloc; normal window destruction retires instance state."
+      ]
+    },
+    "finderFinal14": {
+      "status": "partial-driver-blocked",
+      "plannedCases": 14,
+      "attemptedCases": 13,
+      "passedCases": 12,
+      "nativePassed": 7,
+      "html5DragPassed": 5,
+      "driverErrorBeforeHtml5JpegCopy": 1,
+      "unrunHtml5RawCopy": 1,
+      "full14Passed": false,
+      "localHtml5FileBytesOrDecodeEventsObserved": false,
+      "nativeFinalExportVerified": true,
+      "html5FiveDragFinalExportVerified": false,
+      "limits": [
+        "HTML5 five drag cases have immediate trusted raw receipts and exact roots; full HTML5 export was not reached.",
+        "AXWindow -25202 occurred while validating Finder marker disappearance before Cmd+C; it is not a failed clipboard transfer.",
+        "Genuine RAW path transfer is not RAW decoding."
+      ],
+      "supplementaryHtml5CopySubsets": {
+        "passed": 2,
+        "cases": ["copy-jpeg", "copy-raw"],
+        "guiExportsVerified": 2,
+        "workersReaped": 6,
+        "filesFirstAndImagesTextFormatsSkipped": true,
+        "limit": "Independent fresh subsets; do not turn the interrupted full14 batch into a passing batch."
+      }
+    },
+    "chromeFinal18": {
+      "status": "completed-with-functional-gaps",
+      "plannedCases": 18,
+      "executedCases": 18,
+      "imagePassed": 16,
+      "imageFirstCliCallsPassed": 16,
+      "addressFailedBusy": 2,
+      "guiExportsVerified": 2,
+      "workersReaped": 40,
+      "trustedSourceContextMenus": 18,
+      "rawPngSelectedForAllImageCases": true,
+      "imageEncodedBytesAndPixelsMatchCliGui": true,
+      "imageRgbaMatchesSourceReference": true,
+      "largeJpegCases": 6,
+      "largeJpegWorkerInternalProbesPerFirstCliCall": 5,
+      "all18Passed": false,
+      "limits": [
+        "GUI follows CLI and covers a warm provider.",
+        "Two address cases returned parent-deadline busy, selected=null, without exact URL metadata. They did not count as image success or expected unresolved success.",
+        "These samples do not establish a universal three-second completion guarantee."
+      ]
+    },
+    "webImageFinal3": {
+      "status": "passed-with-scope",
+      "sourceBrowser": "Safari 27.2",
+      "casesPassed": 3,
+      "formats": ["jpeg", "png", "webp"],
+      "functionalChecksPassed": 45,
+      "allCasesFinalExportVerified": true,
+      "exportRecordsMatched": 36,
+      "trustedDomAndUniqueNativeHtmlPairing": true,
+      "nativePathsEmpty": true,
+      "actualFileSignatureHashAndDomDecodeVerified": true,
+      "decodedDimensions": [800, 600],
+      "newUrlResponseBytesMatchFileAndKnownFixture": true,
+      "urlHttpStatus": 200,
+      "redirects": 0,
+      "historicalSafariResponseIdentityVerified": false,
+      "webpToPngConversionObservedInThisBatch": false,
+      "timingExportComparison": {
+        "maxUlps": 1,
+        "auditedMatches": [
+          {
+            "case": "fixed-web-drag-attempt3-html5-small-png",
+            "event": "original-image-response",
+            "at": "2026-11-15T08:59:18.188Z",
+            "jsonPath": "$.data.fetchMs",
+            "AXValue": 1.9684590000000002,
+            "exportValue": 1.968459,
+            "delta": 2.220446049250313e-16,
+            "ULPtolerance": 2.220446049250313e-16
+          },
+          {
+            "case": "fixed-web-drag-attempt3-html5-small-png",
+            "event": "original-image-response",
+            "at": "2026-11-15T08:59:18.188Z",
+            "jsonPath": "$.data.validationMs",
+            "AXValue": 6.7355410000000004,
+            "exportValue": 6.735541,
+            "delta": 8.881784197001252e-16,
+            "ULPtolerance": 8.881784197001252e-16
+          }
+        ],
+        "nonTimingFieldsStrict": true,
+        "rawValuesNormalized": false
+      },
+      "limits": [
+        "Generated loopback HTTP fixtures; no public-site authentication or changing-source identity claim.",
+        "This batch preserved each source format and did not reproduce the older WebP-to-PNG conversion.",
+        "App stdout/stderr unavailable because the frozen helper used DEVNULL.",
+        "Earlier PNG smoke passed its functionality checks but remained failed at the old exact floating-point export guard."
+      ]
+    }
+  },
+  "unchangedComponentControls": {
+    "clipboardCliSha256": "0ad5084c3d0c533c294c77be0e74a6c9e22400dedd266890973a6edd812e0f42",
+    "controlledMacLibraryTests": {
+      "passed": 49,
+      "failed": 0,
+      "ignored": 1,
+      "ignoredReason": "Explicitly spawned fake-worker fixture; no real clipboard reads in this suite"
+    },
+    "appkitClipboard": {
+      "passed": 3,
+      "cases": [
+        "known PNG selects raw PNG",
+        "old marker remains busy at bounded deadline with worker reaped",
+        "explicit empty pasteboard remains busy at bounded deadline with worker reaped"
+      ]
+    },
+    "appkitFilesFirst": {
+      "passed": 2,
+      "cases": ["genuine NEF URL with decoy PNG", "JPEG and directory URLs with decoy PNG"],
+      "imagesTextAndFormatsSkipped": true,
+      "limits": "Explicit AppKit controls; not Finder gestures or RAW decoding."
+    }
+  },
+  "historicalFailures": {
+    "candidate5NormalClose": {
+      "exception": "SIGSEGV 11 during KVO observation deregistration",
+      "sourceSha256": "b5d5f1d2fbb84c934f4a03391cf5d834aa328af28e39909ffc43a040ddf62f89",
+      "closedByCandidate7ScopedNormalCloseEvidence": true
+    },
+    "candidate6ReentrantArmCleanup": {
+      "status": "fixed-in-source7",
+      "independentPureControlsPassed": 17,
+      "runtimeReentrantSequenceMeasured": false
+    },
+    "startupTimeoutsAndRecoveryWrapperPrefixError": {
+      "preserved": true,
+      "countedAsPass": false,
+      "limit": "One actual owned-window diagnostic showed an OS crash-recovery alert before the WebArea. A missing AX JSON log alone does not identify a JS failure."
+    }
+  },
+  "records": [
+    {
+      "id": "candidate7-build",
+      "bytes": 99126,
+      "sha256": "6601f33650feea96ee67d94835e45d2d4a26d828801faaeac170d342b584412e",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-lifecycle-fresh-html5",
+      "bytes": 30147,
+      "sha256": "3531eaa9f3974467ba19b6a3f2e2279900bb8487edfc2ccafe20d43870b5b083",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-lifecycle-fresh-native",
+      "bytes": 12197,
+      "sha256": "c59e8c087948924e60d2356481564c508ec5100dfc7a6c294c262072ec67b5b8",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-recovery-normal-close",
+      "bytes": 12208,
+      "sha256": "f670a7cdde7b7a4382ca1e48172d852edcf3acf2203e22b176619a5c4bb3c410",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "component-appkit-controls",
+      "bytes": 4188,
+      "sha256": "7b9405890aff3bfac38cadd72ded075648fedf4f7cfdcd3ad4375366ab7e9431",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "component-appkit-files-first",
+      "bytes": 5572,
+      "sha256": "a802d250ae6095a276a497efd55653c35a9e9e40423218287dc2a571fedf9e62",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "component-mac-unit-tests",
+      "bytes": 27741,
+      "sha256": "c6aed9089d11fae274b5c71df1e83665e2c1ec3303c375612dc9d54576f05ab8",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "historical-candidate5-close-crash",
+      "bytes": 75055,
+      "sha256": "7bbc4a3f6d3aba6933d3ead76da73ab0917178f2b541c32111e29e122ca9f9e4",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-full-partial",
+      "bytes": 1917669,
+      "sha256": "597a7c8b78d9d468e5fa8452c80d2732cd55d49ea6c218497842c63fc385abde",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-html5-jpeg-subset",
+      "bytes": 301670,
+      "sha256": "3b6c8d1073d05b1a60bd66e73cfcb66ffd026be239c51edfd99b60e8df830461",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-chrome-full18",
+      "bytes": 280221,
+      "sha256": "839216f5d61e569877e9249de5aacef3a18b8461b580c6a9e36215d3ea4ce4b8",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-chrome-native-export",
+      "bytes": 26112,
+      "sha256": "d9633359b0abb0429ee6329494394f3e6c05a2ae1c0c6872e5bb89c02f1f9279",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-chrome-html5-export",
+      "bytes": 26833,
+      "sha256": "3818d56769db71d2a5a3da1bb98394bb3341f7d4a5854a938a86b7f742a87010",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-html5-copy-jpeg",
+      "bytes": 300187,
+      "sha256": "af9f83346356aaa29223aeaf7ad69c28865b850e751ef3bb951762e6b43444fe",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-html5-copy-raw",
+      "bytes": 300530,
+      "sha256": "566f2ae811c42af6ada72cabb49c8b817f1d6496fbd9a0f52e305e85b03ec8e2",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-html5-copy-jpeg-export",
+      "bytes": 5319,
+      "sha256": "cbbaaf333009affead59535be0765c8d981d9fdc5843ca57779bcb14b1f5aaca",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-finder-html5-copy-raw-export",
+      "bytes": 5327,
+      "sha256": "b019a4daaddc826e9554ce75a33af7cb33ba88810d0678ef4bca27c012a4703b",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "fixture-metadata-restored-after-chrome",
+      "bytes": 1473,
+      "sha256": "2d291b2a1f2a6afde767c521f08e0452deccdf7e6d51e38df0b53b1a9e0d4dd2",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-safari-web-full3",
+      "bytes": 58827,
+      "sha256": "e79f62b0f9f562f575babedc5138889fbda6f7de5e94c6ecdbe3195ab41c4e67",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-safari-web-full3-export",
+      "bytes": 35732,
+      "sha256": "6c20105a2044d929d2c80f5f6e5cbb85c126d4db2ac979f27858d73a887bd543",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "candidate7-safari-web-smoke-old-export-guard-failure",
+      "bytes": 25619,
+      "sha256": "d128a5ff9a1e4661d533bcff868308a58c0fe6e0819214d966c6c6beac4fe898",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "final-owned-mac-resource-cleanup",
+      "bytes": 12829,
+      "sha256": "8b4c2fe377f47bf5807fc6f94c32c2a35e15e06e060897c8d7e125048ebbe819",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "final-owned-local-tunnel-cleanup",
+      "bytes": 268,
+      "sha256": "2e3fd28779d0d5c05a48315d4f67d7642bdf8828b7f47bdc5750d11d92c913c2",
+      "availability": "private original retained; not included in repository"
+    }
+  ],
+  "remaining": [
+    "Two Chrome address-copy cases returned busy rather than exact URL metadata/unresolved.",
+    "Finder full14 remains interrupted; HTML5 five-drag final export is missing even though all seven HTML5 entry types later passed across separate batches.",
+    "Ordinary restored startup/Reopen, second-window and reload/rebuild isolation.",
+    "New-source Chrome web drag, broader public websites, transformed browser representations and GUI cold-provider first reads.",
+    "Broader latency samples; 500ms/3s/200ms constants remain provisional.",
+    "Intel Mac, Windows regression and full Editor Retina/DPR2 baseline."
+  ],
+  "cleanup": {
+    "status": "complete",
+    "intakeAppsRemaining": 0,
+    "privateClipboardWorkersRemaining": 0,
+    "ownedFixtureHttpServerStopped": true,
+    "ownedPrivateChromeStopped": true,
+    "temporaryAwakeProcessesStoppedOrExpired": true,
+    "localSshTunnelStopped": true,
+    "identityCheckedBeforeSignals": true,
+    "userSafariFinderOtherChromeUntouched": true,
+    "clipboardUntouchedDuringCleanup": true,
+    "fixtureMetadataRestored": true,
+    "sourceImagesUnchanged": true,
+    "rawPayloadsAndEvidenceRetained": true
+  },
+  "runCompleted": true,
+  "completedAt": "2026-11-15T09:14:58.761092+00:00",
+  "overallStatus": "completed-with-gaps",
+  "candidateIsValidatedRelease": false
+}

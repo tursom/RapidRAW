@@ -3,6 +3,15 @@ use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
 use std::time::Instant;
 
+pub mod clipboard_read;
+pub mod drop_capture;
+#[cfg(feature = "original-images")]
+pub mod original_image;
+pub use clipboard_read::{
+    ClipboardReadGate, PROVISIONAL_FOCUS_GUARD, PROVISIONAL_READ_BUDGET,
+    PROVISIONAL_RETRY_INTERVAL, read_guarded, worker_entry,
+};
+
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ImageReadMode {
     Compare,
@@ -92,8 +101,7 @@ fn measured(operation: impl FnOnce() -> Result<Value, String>) -> Value {
     }
 }
 
-/// Called only after the user requests a read, on a blocking worker.
-/// Each format is attempted independently: an unavailable format is recorded as an error.
+/// Explicit one-shot diagnostics. Use `read_guarded` for a bounded user read.
 pub fn read_clipboard() -> Value {
     read_clipboard_with_mode(ImageReadMode::Compare)
 }
@@ -105,69 +113,143 @@ pub fn read_clipboard_with_mode(mode: ImageReadMode) -> Value {
         Err(error) => {
             return json!({
                 "schema": 2, "build": build_metadata(), "imageMode": mode.as_str(),
-                "contextError": error.to_string(),
+                "contextError": error.to_string(), "kind": "unresolved", "outcome": "retry",
                 "totalMs": started.elapsed().as_secs_f64() * 1000.0,
             });
         }
     };
     let context_ms = started.elapsed().as_secs_f64() * 1000.0;
-    let formats = measured(|| {
-        context
-            .available_formats()
-            .map(|formats| json!(formats))
-            .map_err(|error| error.to_string())
+    let mut snapshot = read_snapshot(&context, mode, true);
+    snapshot["contextMs"] = json!(context_ms);
+    snapshot["totalMs"] = json!(started.elapsed().as_secs_f64() * 1000.0);
+    snapshot
+}
+
+// The test backend never touches the machine clipboard. Native calls stay in
+// the worker for guarded reads, including sequence reads and image validation.
+trait ClipboardBackend {
+    fn sequence(&self) -> Option<i64>;
+    fn files(&self) -> Result<Vec<String>, String>;
+    fn png(&self) -> Result<Vec<u8>, String>;
+    fn image(&self) -> Result<RustImageData, String>;
+    fn text(&self) -> Result<String, String>;
+    fn formats(&self) -> Result<Vec<String>, String>;
+}
+
+impl ClipboardBackend for ClipboardContext {
+    fn sequence(&self) -> Option<i64> {
+        clipboard_read::native_sequence()
+    }
+    fn files(&self) -> Result<Vec<String>, String> {
+        self.get_files().map_err(|e| e.to_string())
+    }
+    fn png(&self) -> Result<Vec<u8>, String> {
+        self.get_buffer(png_format()).map_err(|e| e.to_string())
+    }
+    fn image(&self) -> Result<RustImageData, String> {
+        self.get_image().map_err(|e| e.to_string())
+    }
+    fn text(&self) -> Result<String, String> {
+        self.get_text().map_err(|e| e.to_string())
+    }
+    fn formats(&self) -> Result<Vec<String>, String> {
+        self.available_formats().map_err(|e| e.to_string())
+    }
+}
+
+fn finish_snapshot(
+    mut value: Value,
+    before: Option<i64>,
+    after: Option<i64>,
+    started: Instant,
+) -> Value {
+    value["sequenceBefore"] = json!(before);
+    value["sequenceAfter"] = json!(after);
+    value["sequenceChecked"] = json!(before.is_some() && after.is_some());
+    value["atomicSnapshot"] = json!(false);
+    if before != after {
+        value["kind"] = json!("unresolved");
+        value["outcome"] = json!("invalidated");
+        value["selected"] = Value::Null;
+    }
+    value["totalMs"] = json!(started.elapsed().as_secs_f64() * 1000.0);
+    value
+}
+
+fn read_snapshot(context: &impl ClipboardBackend, mode: ImageReadMode, diagnostic: bool) -> Value {
+    let started = Instant::now();
+    let before = context.sequence();
+    let mut snapshot = json!({
+        "schema": 2, "build": build_metadata(), "imageMode": mode.as_str(),
+        "contextMs": 0.0, "formats": null, "files": null, "image": null,
+        "rawPngFormat": png_format(), "rawPng": null, "selected": null,
+        "sameRgba8": null, "text": null, "kind": "unresolved", "outcome": "retry",
+        "diagnosticOnly": diagnostic,
+        "invalidImageData": false,
+        "note": "Sequential probes, not an atomic clipboard snapshot. Counts detect changes, not producer completion. No image payload is transferred or saved."
     });
-    let files = measured(|| {
-        context
-            .get_files()
-            .map(|files| json!(files))
-            .map_err(|error| error.to_string())
-    });
+    let files = measured(|| context.files().map(|files| json!(files)));
+    let paths = files["value"].as_array().filter(|paths| !paths.is_empty());
+    if let Some(paths) = paths {
+        snapshot["selected"] = json!({ "method": "files", "paths": paths });
+        snapshot["kind"] = json!("files");
+        snapshot["outcome"] = json!("success");
+        snapshot["files"] = files;
+        return finish_snapshot(snapshot, before, context.sequence(), started);
+    }
+    snapshot["files"] = files;
     // Probe the native PNG name directly. Enumeration is diagnostic, never a gate.
+    let mut invalid_image_data = false;
     let raw_png = (mode != ImageReadMode::Reencode).then(|| {
         measured(|| {
             let read_started = Instant::now();
-            let bytes = context
-                .get_buffer(png_format())
-                .map_err(|error| error.to_string())?;
+            let bytes = context.png()?;
             let read_ms = read_started.elapsed().as_secs_f64() * 1000.0;
-            let mut info = inspect_png(&bytes)?;
+            if bytes.is_empty() {
+                return Err("PNG representation has no bytes yet".to_owned());
+            }
+            let mut info = inspect_png(&bytes).inspect_err(|_| invalid_image_data = true)?;
             info["readMs"] = json!(read_ms);
             Ok(info)
         })
     });
     let raw_ok = raw_png.as_ref().is_some_and(|value| value["ok"] == true);
-    let image = (mode != ImageReadMode::PreferPng || !raw_ok).then(|| {
-        measured(|| {
-            let read_started = Instant::now();
-            let image = context.get_image().map_err(|error| error.to_string())?;
-            let read_ms = read_started.elapsed().as_secs_f64() * 1000.0;
-            let (width, height) = image.get_size();
-            let pixel_started = Instant::now();
-            let pixel_hash = rgba8_hash(&image)?;
-            let pixel_hash_ms = pixel_started.elapsed().as_secs_f64() * 1000.0;
-            let encode_started = Instant::now();
-            let encoded = image.to_png();
-            let encode_ms = encode_started.elapsed().as_secs_f64() * 1000.0;
-            let png = match encoded {
-                Ok(png) => {
-                    let hash_started = Instant::now();
-                    let byte_hash = sha256(png.get_bytes());
-                    json!({ "ok": true, "elapsedMs": encode_ms, "value": {
-                        "bytes": png.get_bytes().len(), "sha256": byte_hash,
-                        "byteHashMs": hash_started.elapsed().as_secs_f64() * 1000.0,
-                    }})
-                }
-                Err(error) => {
-                    json!({ "ok": false, "elapsedMs": encode_ms, "error": error.to_string() })
-                }
-            };
-            Ok(
-                json!({ "width": width, "height": height, "readMs": read_ms, "png": png,
+    // Known nonempty malformed PNG must not be masked by a bitmap/TIFF in an
+    // input read. Explicit one-shot diagnostics may still compare both paths.
+    let image = ((diagnostic || !invalid_image_data)
+        && (mode != ImageReadMode::PreferPng || !raw_ok))
+        .then(|| {
+            measured(|| {
+                let read_started = Instant::now();
+                let image = context.image()?;
+                let read_ms = read_started.elapsed().as_secs_f64() * 1000.0;
+                let (width, height) = image.get_size();
+                let pixel_started = Instant::now();
+                let pixel_hash = rgba8_hash(&image)?;
+                let pixel_hash_ms = pixel_started.elapsed().as_secs_f64() * 1000.0;
+                let encode_started = Instant::now();
+                let encoded = image.to_png();
+                let encode_ms = encode_started.elapsed().as_secs_f64() * 1000.0;
+                let png = match encoded {
+                    Ok(png) => {
+                        let hash_started = Instant::now();
+                        let byte_hash = sha256(png.get_bytes());
+                        json!({ "ok": true, "elapsedMs": encode_ms, "value": {
+                            "bytes": png.get_bytes().len(), "sha256": byte_hash,
+                            "byteHashMs": hash_started.elapsed().as_secs_f64() * 1000.0,
+                        }})
+                    }
+                    Err(error) => {
+                        invalid_image_data = true;
+                        json!({ "ok": false, "elapsedMs": encode_ms, "error": error.to_string() })
+                    }
+                };
+                Ok(
+                    json!({ "width": width, "height": height, "readMs": read_ms, "png": png,
             "rgba8Sha256": pixel_hash, "pixelHashMs": pixel_hash_ms }),
-            )
-        })
-    });
+                )
+            })
+        });
     let selected = if raw_ok {
         let value = &raw_png.as_ref().expect("successful PNG probe")["value"];
         json!({ "method": "raw-png", "bytes": value["bytes"], "sha256": value["sha256"] })
@@ -186,27 +268,43 @@ pub fn read_clipboard_with_mode(mode: ImageReadMode) -> Value {
                 .and_then(|image| image["value"]["rgba8Sha256"].as_str()),
         )
         .map(|(raw, encoded)| raw == encoded);
-    let text = measured(|| {
-        let text = context.get_text().map_err(|error| error.to_string())?;
-        Ok(json!({
-            "bytes": text.len(),
-            "preview": text.chars().take(512).collect::<String>(),
-            "adjustmentsMarker": text == "RapidRAW:adjustments",
-        }))
+    let text = (diagnostic || (selected.is_null() && !invalid_image_data)).then(|| {
+        measured(|| {
+            let text = context.text()?;
+            Ok(json!({
+                "bytes": text.len(),
+                "preview": text.chars().take(512).collect::<String>(),
+                "adjustmentsMarker": text == "RapidRAW:adjustments",
+            }))
+        })
     });
-    json!({
-        "schema": 2, "build": build_metadata(), "imageMode": mode.as_str(),
-        "contextMs": context_ms,
-        "formats": formats,
-        "files": files,
-        "image": image,
-        "rawPngFormat": png_format(), "rawPng": raw_png,
-        "selected": selected, "sameRgba8": same_rgba8,
-        "text": text,
-        "totalMs": started.elapsed().as_secs_f64() * 1000.0,
-        "note": "Sequential probes, not an atomic clipboard snapshot. Keep the clipboard unchanged. Compare runs both paths; totalMs is not a PNG-first latency. Hashing/full decode are diagnostic validation; no image payload is transferred through IPC or saved.",
-    })
+    // This optional diagnostic is deliberately after the direct PNG attempt.
+    // Guarded reads never enumerate formats, even for terminal classification.
+    snapshot["formats"] = if diagnostic {
+        measured(|| context.formats().map(|formats| json!(formats)))
+    } else {
+        Value::Null
+    };
+    if !selected.is_null() {
+        snapshot["kind"] = json!("image");
+        snapshot["outcome"] = json!("success");
+    } else if invalid_image_data && !diagnostic {
+        snapshot["kind"] = json!("failed");
+        snapshot["outcome"] = json!("failed");
+        snapshot["reason"] = json!("invalid-image-data");
+    }
+    snapshot["selected"] = selected;
+    snapshot["rawPng"] = json!(raw_png);
+    snapshot["image"] = json!(image);
+    snapshot["sameRgba8"] = json!(same_rgba8);
+    snapshot["text"] = json!(text);
+    snapshot["invalidImageData"] = json!(invalid_image_data);
+    finish_snapshot(snapshot, before, context.sequence(), started)
 }
+
+#[cfg(test)]
+#[path = "../tests/clipboard_backend/mod.rs"]
+mod clipboard_backend_tests;
 
 #[cfg(test)]
 mod tests {

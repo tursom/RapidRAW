@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "scope": "Summary of prior agent-operated Mac hardware tests, not a validation of the new offline fixes. Raw payloads, host identity and process snapshots are excluded.",
+  "clientSourceCommit": "ab016af8760ceb0477d530135e64f3913889457c",
+  "testedOn": "2026-11-08",
+  "environment": {
+    "os": "macOS 26.6.2",
+    "arch": "arm64",
+    "cpu": "Apple M5",
+    "safari": "26.6.2",
+    "chrome": "156.0.8078.80"
+  },
+  "phase1Accepted": false,
+  "newImplementationMacVerified": false,
+  "finder": {
+    "completedCases": 14,
+    "strictPathPasses": 9,
+    "html5DragPathGaps": 5,
+    "guiExports": 2,
+    "driverError": false,
+    "cleanupError": false,
+    "scope": "Native seven cases and HTML5 two clipboard cases have exact file paths. HTML5 five drag cases have metadata but null paths. No RAW decoding, recursive directory ingestion, or transferred-byte hash proof.",
+    "clipboardImageStable": false
+  },
+  "browserCopy": {
+    "chromeValidCases": 18,
+    "chromeContinuousSingleRun": false,
+    "safariValidCases": 18,
+    "safariDirectPngAvailable": false,
+    "safariImageAcquisition": "TIFF decoded/reencoded fallback",
+    "safariJpegMatchesPillowReference": false
+  },
+  "browserDrag": {
+    "chromeCompletedCases": 8,
+    "safariCompletedCases": 6,
+    "nativePathsAvailable": false,
+    "html5FilePathsAvailable": false,
+    "safariWebpReceivedAs": "PNG",
+    "receiverByteIdentityVerified": false
+  },
+  "textAndPasteCases": 6,
+  "screenshotCases": 2,
+  "directPng": {
+    "largeFirstReads": 12,
+    "firstNil": 10,
+    "firstDecoded": 2,
+    "lateReferenceReads": 36,
+    "lateReferencesValid": true,
+    "firstReferenceFromCopyInvocationMsRange": [
+      3421.9,
+      3577.05
+    ],
+    "integratedThreeSecondDeadlineVerified": false,
+    "scope": "Standalone Objective-C first-payload probe. Fixed changeCount does not prove the producer is finished."
+  },
+  "originalRecords": [
+    {
+      "id": "finder-final-summary",
+      "bytes": 2261448,
+      "sha256": "7272d732f17cc1108699b8029acade6c314f8d1d2f9ded1694754a53ee95bc81",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "finder-native-export",
+      "bytes": 98972,
+      "sha256": "6ceeba776bd0ea4bde703f4112e27d9c2faff20a02821be7226f3555a373a57a",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "finder-html5-export",
+      "bytes": 19239,
+      "sha256": "eafeac477b5f7174b2475db4ff41ab1917f635c7622734bb82f31b251a1f9501",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "finder-independent-review",
+      "bytes": 9638,
+      "sha256": "90edca3fdf6a3ec1b82726c19af6513b1ed88746f137f4ab10e6048e713a158b",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "chrome-copy-verified-index",
+      "bytes": 6573,
+      "sha256": "fd019d5e4fa26a4f3c48c4ff1bf08b4df81d2c7dbda3430f70f1e6ef287fc29b",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "safari-copy-summary",
+      "bytes": 174541,
+      "sha256": "3a75f4120d6eeb96c6d82e68207e1d57685584377be22922196ce31b4e2fea26",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "safari-copy-review",
+      "bytes": 51914,
+      "sha256": "69650db48db34be2d2eb97367059d2fa0504d12f5df3d245b62d00f3115f86c4",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "chrome-drag-summary",
+      "bytes": 1526468,
+      "sha256": "51298198b0c8599359c3d1d06224ab6f0cf32ead36fd1c3d51ef0e5ec61d5aa9",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "safari-drag-summary",
+      "bytes": 1426684,
+      "sha256": "f0655d7bed86d62a15ba2e2fc4464a3ac504e1de018e95d31687e5647773edfd",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "plain-text-and-paste-summary",
+      "bytes": 19320,
+      "sha256": "4c31b221c158a3a03736da3430430ba98b6116a331e121998043707df9b34d7e",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "system-screenshot-summary",
+      "bytes": 9622,
+      "sha256": "e75ef650d548cce08f3e71810a6fe3b5e6c6a2600890d8d85d3d54fc370bd958",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "direct-png-summary",
+      "bytes": 173975,
+      "sha256": "32ec994837d7b904ed086e82ca5a11997aa79ef0d8bd3b30e0298184c028f525",
+      "availability": "private original retained; not included in repository"
+    },
+    {
+      "id": "owned-resources-cleanup",
+      "bytes": 4253,
+      "sha256": "ce9e57d8230aecf9fde46d7ff932561d532f18d5bcb3b4b4bdf6ddeee1d2a967",
+      "availability": "private original retained; not included in repository"
+    }
+  ]
+}

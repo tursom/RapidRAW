@@ -1,10 +1,10 @@
 # 阶段 1：拖放和剪贴板验证
 
-**验收结论：阶段 1 暂不通过。** Linux 完整构建及窗口验证、Windows 构建和 Chrome/Edge 部分用例已实测；macOS 及下文列出的 Windows 剩余用例待补。
+**验收结论：阶段 1 暂不通过。** 旧版 intake 的 Linux、Windows 部分用例及 macOS 实测已有记录。修复版已于 2026-11-15 在真实 arm64 Mac 原生构建并完成本轮 GUI 回归：HTML5 五类本地拖入拿到准确路径，JPEG／RAW 复制各自补测通过；旧候选关窗崩溃已修复；Chrome 16 项图片复制及 Safari 三格式网页拖入／显式 URL 读取通过。两项地址复制仍返回 busy，Finder 完整批次仍有驱动／导出覆盖缺口。下文列出的 Windows 与其他平台剩余用例仍待补。
 
 按用户验收意见，任务 10（输入入口）必须等待阶段 1 补完；任务 1–6、7.5、8、9 可继续。本阶段的独立输入实验没有完成任务 1–6。后续任务 1 已另补正式应用的 Windows 性能记录，见 [BASELINE.md](BASELINE.md)；macOS、移动硬盘等缺项仍待补，不能据此宣布跨平台基线或阶段 1 已通过。任务 10 继续禁止开始。
 
-用户已选择 **macOS 留待人工补测**。人工验证步骤和待填表见 [macOS 补测交接](spike/intake/evidence/macos/README.md)；当前 macOS 结果仍为未测，不再等待远程主机信息。
+macOS 的旧版实测、修复版进度及待验矩阵见 [macOS 记录](spike/intake/evidence/macos/README.md)。[旧版摘要与原始记录哈希](spike/intake/evidence/macos/observations.json)明确绑定旧客户端提交；本轮源码、构建与有边界的运行结果另见 [修复版实测索引](spike/intake/evidence/macos/runtime-validation.json)，两者不能混用。主机地址只是临时运行参数，不写入产品配置。
 
 范围对应 `rapidraw-handoff/PLAN.md` 第 7 节阶段 1、`TASKS.md` 任务 7。基于 `92a70324`，最初在 `spike/phase-1-image-intake` 分支实施。用户后续明确要求将提交 rebase 到 `main` 并推送，此交付决定取代最初“验证代码不合入主线”的安排。改动仅包括本报告和 `spike/intake/`，验证工具保持独立；正式编辑器、Android、图片导入及编辑记录均没有改动。
 
@@ -17,14 +17,17 @@
 - `src-tauri/src/main.rs`：环境信息、后台剪贴板命令和 JSON 报告保存。
 - `src-tauri/src/lib.rs`：系统剪贴板格式枚举、文件/图片/文本读取及分段计时。
 - `src-tauri/src/additional_objects.rs`：Windows WebView2 的可选原生路径接收探针；勾选复选框后通过异步命令注册，COM 对象只在 UI 线程使用。
+- `src-tauri/src/macos_drag.rs`、`drop_capture.rs`：Mac HTML5 实例限定的拖放观察和显式单次采集关联；只包装应用自己的精确 Wry 类方法，未追踪实例透传，不改系统类、对象 isa 或 KVO，不按文件名推测路径。
+- `src-tauri/src/clipboard_read.rs`：文件优先、完整重读、单请求许可及可终止的 self-worker；原生阻塞调用的总期限由父进程监督。
+- `src-tauri/src/original_image.rs`：显式来源 URL 请求，检查真实图片格式、大小和像素上限，保留响应原字节摘要，不重新编码。
 - `src-tauri/examples/clipboard.rs`：无需 WebView 的剪贴板命令行探针。
 - 其余配置及锁文件仅用于独立构建；正式应用的配置、依赖和标识符未修改。
 
-原生拖放记录 `enter / over / leave / drop`，包括 Tauri 提供的路径。HTML5 记录 `DataTransfer.types / items / files`、目录标记、非标准 `File.path` 是否存在，以及 URI/HTML/文本摘要。可用的图片 File 会解码并显示尺寸与耗时；仅有 URL 时不会下载。字符串摘要最多保留 4096 个字符。
+原生拖放记录 `enter / over / leave / drop`，包括 Tauri 提供的路径。HTML5 同步保存 `DataTransfer.types / items / files`、目录标记、非标准 `File.path` 是否存在，以及 URI/HTML/文本摘要，异步结果保留同一 `htmlDropId`。Mac 中已取得原生路径时不读取本地 File 字节；无法关联时保留 unresolved。网页 File 按实际签名和字节摘要记录。默认不请求 URL，只有点击“读取原始图片 URL”才请求唯一的 HTTP(S) 来源候选；这是一次新请求，不冒充原始拖放字节。字符串摘要最多保留 4096 个字符。
 
-系统剪贴板只在点击按钮时读取：记录原生格式名、文件列表、图片尺寸、分段耗时，以及文本摘要和调整参数标记是否匹配。新增三种图片诊断模式：`compare` 同时测原始 PNG 和解码重编码；`prefer-png` 优先取原始 PNG，验证失败时调用旧路径；`reencode` 仅测旧路径。原始 PNG 的格式名为 Windows `PNG`、macOS `public.png`、Linux `image/png`，直接调用 `get_buffer`，不以格式枚举结果为条件。签名和完整解码均通过后才算有效 PNG；分别记录读取、解码、像素及字节摘要耗时。对照模式总耗时不能当作 PNG 优先模式耗时。
+系统剪贴板只在点击按钮时读取，GUI 使用受监督的 worker。非空文件列表优先返回，跳过可能只是图标或缩略图的图片表示；图片仍有三种诊断模式：`compare` 测两条路径，`prefer-png` 优先原始 PNG，`reencode` 测解码重编码。原始 PNG 的格式名为 Windows `PNG`、macOS `public.png`、Linux `image/png`，直接调用 `get_buffer`，不以格式枚举结果为条件。签名和完整解码均通过后才算有效 PNG；分别记录读取、解码、像素及字节摘要耗时。对照模式总耗时不能当作 PNG 优先模式耗时。
 
-文本摘要最多保留 512 个字符。后台读取不会阻塞页面，也不会修改系统剪贴板。读取过程中不要复制其他内容：各格式是顺序读取，并非原子快照。库返回的错误会原样记录；Linux X11 实测发现，不支持的文件/文本读取也可能返回成功的空列表/空字符串，须结合实际读出的内容判断，不能仅凭 `ok: true` 判断该格式存在。
+文本摘要最多保留 512 个字符。GUI 按钮和后端许可共同限制并发，父进程可终止并回收阻塞的读取进程。焦点保护和重试阈值仍待 Mac 验证。顺序格式读取不是原子快照，count 在读取期间变化会使该轮失效；稳定 count、空列表或两次相同旧标记也不证明本次复制已经发布。持续无可靠结果保留 busy/unresolved，不据此粘贴调整参数。库错误原样记录；Linux X11 的成功空列表／空字符串同样不能当作该格式存在。
 
 ## 在 Windows/macOS 上运行
 
@@ -80,7 +83,7 @@ CLI 的 `totalMs` 是原生诊断总耗时，不含 WebView 往返、导入写�
 
 ## 目标平台实测矩阵
 
-Windows 已在 `pc.lan` 的实际桌面会话测试，来源页面由该机本地 HTTP 服务提供，图片是生成素材；没有将 Linux、合成 DOM 事件或无效鼠标落点填作目标平台成功。macOS 已按用户选择转交人工补测，原始记录及版本待补。现有原始记录及版本见后文。
+Windows 已在 `pc.lan` 的实际桌面会话测试，来源页面由该机本地 HTTP 服务提供，图片是生成素材；没有将 Linux、合成 DOM 事件或无效鼠标落点填作目标平台成功。以下 Mac 行来自旧客户端 `ab016af8` 的真实桌面验证，原始内容私下保留，摘要与哈希见 macOS 记录；不能移用为本次修复的通过结论。
 
 | 系统    | 来源                                               | 原生模式拖入                    | HTML5 模式拖入                                            | 复制图片/文件后系统读取                                 | 大图耗时/报告                               |
 | ------- | -------------------------------------------------- | ------------------------------- | --------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------- |
@@ -88,16 +91,16 @@ Windows 已在 `pc.lan` 的实际桌面会话测试，来源页面由该机本�
 | Windows | Chrome：网页 JPEG、小图/大图（PNG/WebP 拖放待补）  | 真实源端拖动，目标未收到事件    | 图片 File 字节可用、可解码；无物理路径                    | JPEG、PNG、WebP 复制已测；大图即时读取有占用风险        | debug 历史记录及 release CLI/窗口补测见后文 |
 | Windows | 资源管理器：单图/多图/文件夹/混合                  | 自动化落点/焦点无效，待有效复验 | 自动化落点/焦点无效，待有效复验                           | CF_HDROP 原生格式生成/读取已验证；不是资源管理器 Ctrl+C | 不适用                                      |
 | Windows | Windows Shell 原生 OLE 来源：文件/目录/混合/中日文 | 真实 native-drop 路径全部匹配   | 真实 HTML drop、目录标记及 AdditionalObjects 路径全部匹配 | 不涉及剪贴板                                            | 原始记录已保存                              |
-| macOS   | Safari：网页 JPEG/PNG、小图/大图                   | 未测                            | 未测                                                      | 未测                                                    | 未测                                        |
-| macOS   | Chrome：网页 JPEG/PNG、小图/大图                   | 未测                            | 未测                                                      | 未测                                                    | 未测                                        |
-| macOS   | 访达：单图/多图/文件夹/混合                        | 未测                            | 未测                                                      | 未测                                                    | 未测                                        |
+| macOS   | Safari：网页 JPEG/PNG/WebP                         | 收到事件但路径为空              | File 可解码，无路径；WebP 变为 PNG                        | 18 项及两份导出通过，全部走 TIFF 后备                   | 首次直读时序另见 Mac 记录                   |
+| macOS   | Chrome：网页 JPEG/PNG/WebP，含真实网站 WebP        | 收到事件但路径为空              | File 可解码，无路径                                       | Native/HTML5 各九项及导出通过；不是连续单次 18 项       | 直接 PNG 首读有 nil，三秒总期限未验证       |
+| macOS   | 访达：单图/多图/真实 RAW/目录/混合                 | 五项拖入完整路径通过            | 五项收到 File/目录元数据，但路径全为空                    | 两个模式各两项文件复制路径通过；附带图像表示不稳定      | 14 项完整执行，九项路径通过、五项路径缺口   |
 
-| 系统剪贴板其他来源                                 | Windows                                     | macOS |
-| -------------------------------------------------- | ------------------------------------------- | ----- |
-| 系统截图                                           | 未测                                        | 未测  |
-| 浏览器“复制图像地址”（Edge/Chrome；Safari/Chrome） | 未测                                        | 未测  |
-| 普通文本、空剪贴板、调整参数标记                   | Win32 生成内容，实际 Rust 读取已测          | 未测  |
-| 大图首次及后续读取各 3 次                          | Chrome/Edge 各 3 次已测；不是干净进程冷启动 | 未测  |
+| 系统剪贴板其他来源                                 | Windows                                     | macOS                                                               |
+| -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------- |
+| 系统截图                                           | 未测                                        | 两模式 1080×220，RGBA 一致；两份导出                                |
+| 浏览器“复制图像地址”（Edge/Chrome；Safari/Chrome） | 未测                                        | Safari/Chrome 均已核对                                              |
+| 普通文本、空剪贴板、调整参数标记                   | Win32 生成内容，实际 Rust 读取已测          | 六项及两份导出通过；空内容为 AppKit 清空控制                        |
+| 大图首次及后续读取各 3 次                          | Chrome/Edge 各 3 次已测；不是干净进程冷启动 | 12 次独立首读中十次 nil；36 次迟后参考完整；不是新 Rust worker 验证 |
 
 ## 源码/文档结论与方案选择
 
@@ -105,7 +108,7 @@ Windows 已在 `pc.lan` 的实际桌面会话测试，来源页面由该机本�
 
 曾核对 `arboard 3.7.0`（以及 3.6.1）提供 `Clipboard::get().file_list()`。用户已在更新后的 PLAN.md 第 6.4 节将正式依赖定为 `clipboard-rs = "=0.3.5"`，Windows 再直接依赖同版本 `clipboard-win`，不再将 arboard 列为待选方案。本轮占用实验的 Windows 直接依赖为 `clipboard-win = "=5.4.3"`，与既有传递依赖版本相同。
 
-**Windows 选定 HTML5 图片字节加 AdditionalObjects 本地路径；macOS 方案待实测，正式接入时补齐资源管理器 UI 及完整输入验收。** Windows 实测原生模式收不到 Chrome/Edge 的网页 JPEG 拖入；HTML5 模式两者均成功。Windows Shell 提供的原生文件/目录/混合拖放在 HTML5 模式也已取回正确的物理路径，保住本地输入能力。Tauri 官方文档明确 Windows 上 HTML5 拖放需要 `dragDropEnabled: false`。本次只验证方案，不修改正式应用的拖放配置。
+**Windows 选定 HTML5 图片字节加 AdditionalObjects 本地路径；macOS 的 HTML5 加实例限定观察器候选已完成部分真机验证，整体尚未验收。** Windows 实测原生模式收不到 Chrome/Edge 的网页 JPEG 拖入；HTML5 模式两者均成功。Windows Shell 提供的原生文件/目录/混合拖放在 HTML5 模式也已取回正确的物理路径。Mac 新候选的五类本地拖入已取得正确根路径；桥接采用单次明确准备的双侧关联，不能靠最近一次事件猜路径。网页字节、显式 URL 与剩余生命周期范围分别验收。本次只修独立验证工具，不修改正式应用的拖放配置。
 
 Windows 的 `chrome.webview.postMessageWithAdditionalObjects` 能将 File 送到原生端的 `ICoreWebView2File::Path`；Tauri/Wry 的普通字符串 IPC 不会把 AdditionalObjects 自动转为路径。需要通过 `with_webview` 注册 Windows COM 接收器，并在 WebView2 UI/STA 线程读取属性。macOS 没有这个接口，需要另外验证 WKWebView 的行为。
 
@@ -326,8 +329,8 @@ Windows 本项已在同一真实桌面补测并经用户审计通过：**114 条
 
 ## 剩余验收及未处理问题
 
-- macOS 已交由人工补测，当前没有实测结果：Safari/Chrome、访达、实际构建和剪贴板性能均待补，须额外覆盖真实网站 WebP 和真实 RAW，操作及回填要求见 [补测交接](spike/intake/evidence/macos/README.md)。Windows 尚有资源管理器单图、纯多图、真实 RAW、目录、混合选择的实际拖入及 Ctrl+C、网页 PNG/WebP/真实网站拖入、“复制图片地址”及系统截图用例待补。Shell 的 JPEG 加目录混合选择不能替代纯多图；占位 `.RAW` 不能替代真实 RAW。
-- Windows 已选定并验证 HTML5 加原生路径桥接；macOS 的输入方案仍待实测。不能据此宣布跨平台阶段完成或第一版仅支持网页粘贴。
+- macOS 已有旧版实测及本轮修复版的部分真实构建／GUI 结果，包括真实 RAW 路径；尚未完成阶段验收，当前结果与余项见 [Mac 记录](spike/intake/evidence/macos/README.md)。Windows 尚有资源管理器单图、纯多图、真实 RAW、目录、混合选择的实际拖入及 Ctrl+C、网页 PNG/WebP/真实网站拖入、“复制图片地址”及系统截图用例待补。Shell 的 JPEG 加目录混合选择不能替代纯多图；占位 `.RAW` 不能替代真实 RAW。
+- Windows 已选定并验证 HTML5 加原生路径桥接；macOS 候选已有部分实测，输入方案整体仍未定案。不能据此宣布跨平台阶段完成或第一版仅支持网页粘贴。
 - 独立窗口未挂载编辑器的 @dnd-kit 面板/快捷条，正式输入接入时仍须实测拖放冲突。本次不修改正式功能。
 - 任务 7 的构建/Clippy 通过范围是独立实验应用。后续任务 1 已另做 Windows 正式应用 release 构建、交付特性的 Clippy 及基线，见 BASELINE.md；Windows all-features、已有前端检查错误及其他平台限制在那里单列，没有据此声称全库 CI 通过。
 - 第 5 项已完成 Windows 占用和直读补测；macOS 同项、真实截图后备，以及在途复制尚未发布时的参数应用边界仍待验收或方案明确。`busy/failed` 不回退参数的产品规则没有在正式应用中实施；任务 10 仍禁止开始。

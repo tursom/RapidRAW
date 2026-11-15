@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RapidRAW 输入验证</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="probe.js" defer></script>
+    <script src="probe.js" type="module"></script>
   </head>
   <body>
     <h1>RapidRAW 拖放 / 剪贴板验证</h1>
@@ -22,11 +22,13 @@
         >图片读取模式
         <select id="clipboard-mode">
           <option value="compare">对照：原始 PNG 与解码重编码</option>
-          <option value="prefer-png">优先原始 PNG，失败时回退</option>
+          <option value="prefer-png" selected>优先原始 PNG，失败时回退</option>
           <option value="reencode">仅解码重编码</option>
         </select>
       </label>
       <button id="observation">记录当前用例/观察</button>
+      <button id="mac-capture" hidden disabled>准备一次 Mac 拖入</button>
+      <button id="original-image" disabled>读取原始图片 URL</button>
       <button id="export">导出 JSON</button>
       <button id="clear">清空记录</button>
       <label><input type="checkbox" id="additional" /> Windows：发送 AdditionalObjects 探针</label>
@@ -40,7 +42,14 @@
       从本地或浏览器拖放到这里<br />或聚焦此区域后按 Ctrl/Cmd+V（只记录 HTML paste，系统读取用上方按钮）
     </div>
     <img id="preview" alt="最近一次 HTML5 拖入的图片预览" hidden />
-    <p>HTML5 模式会记录 files / items / URI / HTML / text，图片 File 会尝试解码以确认数据可用。不会请求 URL。</p>
+    <p>
+      HTML5 模式记录 files / items / URI / HTML /
+      text。已取得本地路径时不读取文件字节；网页图片会记录收到的实际格式。默认不请求 URL。
+    </p>
+    <p id="mac-capture-status" hidden>Mac 路径桥接尚未安装；每轮准备后只拖入一次，无法唯一关联时不选择路径。</p>
+    <p id="original-image-status">
+      原始图片 URL 仅在点击按钮后请求；记录网络响应的真实格式和原字节摘要，不把转换后的 File 当作原件。
+    </p>
     <pre id="log" aria-live="polite"></pre>
   </body>
 </html>

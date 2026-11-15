@@ -4,9 +4,12 @@
   "scripts": {
     "native": "tauri dev",
     "html5": "tauri dev --config src-tauri/tauri.html5.conf.json",
-    "check": "node --check web/probe.js"
+    "check": "node --check web/probe.js && node --check web/drop-resolution.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "2.12.1"
+    "@tauri-apps/cli": "2.12.1",
+    "playwright-core": "1.54.2"
   }
 }

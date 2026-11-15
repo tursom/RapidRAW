@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-11-09T02:39:00.263796+00:00",
+  "sourceBase": "ab016af8760ceb0477d530135e64f3913889457c",
+  "branch": "fix/macos-intake-offline",
+  "uncommittedImplementation": true,
+  "platform": "Linux; Chromium mocked Tauri host; Apple target type checking only",
+  "macConnectionMade": false,
+  "macRuntimeRun": false,
+  "checks": [
+    {
+      "id": "js-syntax",
+      "command": [
+        "npm",
+        "--prefix",
+        "spike/intake",
+        "run",
+        "check"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:51.180572+00:00",
+      "elapsedSeconds": 0.112,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "8fe002ef52fb48dfbbbf46f0b9d1561fccf3e1775cc269db25c38e137d8bb4d2"
+    },
+    {
+      "id": "js-rules",
+      "command": [
+        "npm",
+        "--prefix",
+        "spike/intake",
+        "test"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:51.293054+00:00",
+      "elapsedSeconds": 0.158,
+      "stdoutSha256": "7751ca8cfd72f1784b207c30259c8db8b08dd1e257af9794f38c4f4bcbeed29d",
+      "stderrSha256": "c864bdbef249e0ced41e057ef4f1e944ddc7466b9a2ebea1641f7cc0f288061e"
+    },
+    {
+      "id": "renderer-browser",
+      "command": [
+        "npm",
+        "--prefix",
+        "spike/intake",
+        "run",
+        "test:browser"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:51.450650+00:00",
+      "elapsedSeconds": 1.544,
+      "stdoutSha256": "e1913c1954ee381e704c1d626c2eccf971cc655737701425f5060358b68fd64c",
+      "stderrSha256": "049294ab3a4679bccb22d4c08a151a0fc296c0898ef743c1bbbdcf19609bc7bd"
+    },
+    {
+      "id": "rust-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--features",
+        "original-images",
+        "--all-targets",
+        "--manifest-path",
+        "spike/intake/src-tauri/Cargo.toml",
+        "--",
+        "--test-threads=1"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:52.994495+00:00",
+      "elapsedSeconds": 5.331,
+      "stdoutSha256": "fb16a40d64dc5c15849c8831885dc84d49ee636854454ad19d321d78fe3412d6",
+      "stderrSha256": "08a664a509ac2743a3c4f4f03d926cf43bc4f8c54acf0f14cb17160653c85af4"
+    },
+    {
+      "id": "desktop-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--manifest-path",
+        "spike/intake/src-tauri/Cargo.toml",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:58.325671+00:00",
+      "elapsedSeconds": 0.481,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "1411ad390dd68242fa4717643a021d852160889c6efc9d38c0ed2816ff18b41a"
+    },
+    {
+      "id": "core-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--features",
+        "original-images",
+        "--all-targets",
+        "--manifest-path",
+        "spike/intake/src-tauri/Cargo.toml",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:58.806451+00:00",
+      "elapsedSeconds": 0.287,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "cd6fa841507ca7bdb5dd24b2bdedd58336b1dd70e6384fe1dc30e0809ee69755"
+    },
+    {
+      "id": "apple-types",
+      "command": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "spike/intake/src-tauri/Cargo.toml",
+        "--target",
+        "aarch64-apple-darwin",
+        "--no-default-features",
+        "--features",
+        "desktop"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:59.093385+00:00",
+      "elapsedSeconds": 0.376,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "c9560bf3bc8abbc926363aed235bfe163dddd748eed79a8c2a2e343831c38830"
+    },
+    {
+      "id": "eslint",
+      "command": [
+        "node_modules/.bin/eslint",
+        "spike/intake/web/probe.js",
+        "spike/intake/web/drop-resolution.mjs",
+        "spike/intake/tests/browser.mjs",
+        "spike/intake/tests/drop-resolution.test.mjs",
+        "--max-warnings",
+        "0"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:59.469792+00:00",
+      "elapsedSeconds": 0.444,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "rust-format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--check",
+        "--manifest-path",
+        "spike/intake/src-tauri/Cargo.toml"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:38:59.913525+00:00",
+      "elapsedSeconds": 0.088,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "prettier",
+      "command": [
+        "node_modules/.bin/prettier",
+        "--check",
+        "spike/intake/web/probe.js",
+        "spike/intake/web/drop-resolution.mjs",
+        "spike/intake/tests/browser.mjs",
+        "spike/intake/tests/drop-resolution.test.mjs",
+        "spike/intake/evidence/macos/README.md"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:39:00.001219+00:00",
+      "elapsedSeconds": 0.256,
+      "stdoutSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "diff-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-11-09T02:39:00.256855+00:00",
+      "elapsedSeconds": 0.006,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "inputs": {
+    "spike/intake/.gitignore": "ea3daa3fb82a02f3fded0e58580a091ac7bdaa0d6649a88b97d1712abe7f70ed",
+    "spike/intake/package-lock.json": "62a9b1fb12df578b157ec902eee0d1fb748aac07e42d3b5a4171d1b06eb15154",
+    "spike/intake/package.json": "0e45ca88b518f4aadbb81c919e17f7bc48ba81c5f909e4a6e291c453f7cfd12d",
+    "spike/intake/scripts/package-clients.py": "bad4a9d0ba797db8d7028c24990dcc2c7f260ef8fdd0e161f9d10650e5e7a28c",
+    "spike/intake/scripts/summarize-clipboard-contention.py": "18ff1bef3fed80338bb86d1153b1a3d454db142525d96e6f99101b0558db3935",
+    "spike/intake/scripts/windows-clipboard-contention.py": "ada6b1448d6b1dfc7e772d0c2c8b4f9b8c331befbb8ac287ce80f131d1e50b37",
+    "spike/intake/scripts/windows-clipboard-processes.ps1": "40308125026cfb741b8c233e97e4214b6345a1a83a6ec519d8fd9398b850207a",
+    "spike/intake/scripts/windows-clipboard-release-ui.py": "58d6d395685f63a4185a5c95c2d6e716902451565ca1227b0016e7de7a924466",
+    "spike/intake/scripts/windows-clipboard-release.py": "7d842b6ad345ed03e7627189f03a2863b62637ca20fb0e7d7dcfbc9b6a60e537",
+    "spike/intake/src-tauri/Cargo.lock": "c9323346d195d96afbd25c7bcaea712fffdf6e212ffbb58a71992b006903f722",
+    "spike/intake/src-tauri/Cargo.toml": "176884b3e8c329c17d27bc82021a6d581b1852261962eac6c95c9d2a56d72f86",
+    "spike/intake/src-tauri/build.rs": "d1c0d72a614b4df14846c0b5f53483ede0d357bea6b0c6c444b9170214749c78",
+    "spike/intake/src-tauri/capabilities/default.json": "1b0255cdf9c99c0fe6e1106d86900ea2b9498bd1fb8d928eae5490ebd1b179eb",
+    "spike/intake/src-tauri/examples/clipboard.rs": "ee7ba6476afc99d87911a29264a84aeb06f17f2daa2be2ab5b98134de107d91f",
+    "spike/intake/src-tauri/examples/clipboard_contention.rs": "c0580af2ba508445540d2a2372609ac91bb38793f1b142ea9bca720745ae6d37",
+    "spike/intake/src-tauri/src/additional_objects.rs": "6bc7b0731cb16d4fea5830a6b3eb4a737530c8d4c32e3b3d4d9bd7e5a135069c",
+    "spike/intake/src-tauri/src/clipboard_read.rs": "564d415fbbec272c0876004a89c5b1586083858d5ec177944ff0eef7637d42c5",
+    "spike/intake/src-tauri/src/drop_capture.rs": "95e5f1d75b141b18dabc83f485620300afe74e3b52ba4cecd408cdf855e088b1",
+    "spike/intake/src-tauri/src/lib.rs": "842ec0208ebd9fb059a7aeb0777303ef6755e70be30460ebbed6426840500f1b",
+    "spike/intake/src-tauri/src/macos_drag.rs": "2e52f3e9b3eddbdfeed496cf7766fcfe89fa6c313c6ae883d00c24843fd36b74",
+    "spike/intake/src-tauri/src/main.rs": "4218355a77b5ceefbee7fe93c1ad780ebbf6767365fe921332f5def322f19b40",
+    "spike/intake/src-tauri/src/original_image.rs": "872b60f91d2a912cfc87989951e5e3954404fb921456098d3ae23c54c194eff2",
+    "spike/intake/src-tauri/tauri.conf.json": "c66673655f8b122d04391e7dce20155a5783761e3a38cfb598f9ea02ac3f96f8",
+    "spike/intake/src-tauri/tauri.html5.conf.json": "0c7b0cae857c69bfcd22fb004a87bca4ff028bd4b89e62eaff0b9c10817e300e",
+    "spike/intake/src-tauri/tests/clipboard_backend/mod.rs": "51a4770a04bbaf9a7cbcf6ed5d494a6cc6b9a66b00ba32beb62bfedbeba184ee",
+    "spike/intake/src-tauri/tests/clipboard_orphan/mod.rs": "38210510ed38fee5ec5c8271a3d44ddb2ee2948028d3a849b2dc69d47603c64b",
+    "spike/intake/src-tauri/tests/clipboard_process/mod.rs": "e791c3a4393cdece3c5f2bd4a4c67b88baea6367ca6a3deaab5246ace4163112",
+    "spike/intake/src-tauri/tests/fixtures/rgba.png": "6b9f82f008acc79cde4dc63713b8f1dbc7c463acbfd56cef0bb38bd82d7ba084",
+    "spike/intake/tests/browser.mjs": "3048272da83df78209b243660288bb8032104d9bad14142bddc2d17cd37fdd1c",
+    "spike/intake/tests/drop-resolution.test.mjs": "b50f8b6e95dc8b66ee982498f35d9a2d16c8df0ce6fdea0a422e9b010fcaf2e4",
+    "spike/intake/web/drop-resolution.mjs": "80236fd91db1525a4108c0280ac769b4da3909bf1db0777cbc6311b79764b715",
+    "spike/intake/web/index.html": "92d3aea0ad937f07a212e7dfa976a68b49a6acb3daae64d4409964d99ef8541f",
+    "spike/intake/web/probe.js": "6750d06bcfe49e269d9ea8e5d9b6992197fb4cdff3a13be07c5d2460fc402b40",
+    "spike/intake/web/style.css": "544a62f97e2df8bad7fc8e08e53a7529fde2a01b16e4549df674a35e8dd085cd"
+  },
+  "inputsUnchanged": true,
+  "allChecksPassed": true,
+  "verifiedCounts": {
+    "rustPassed": 51,
+    "rustIgnoredProcessFixtures": 4,
+    "rustFailed": 0,
+    "jsRulesPassed": 9,
+    "rendererCasesPassed": 9
+  },
+  "limits": [
+    "Apple check excludes original-images feature: no Mac HTTP/TLS build or linking, packaging, signing or runtime validation.",
+    "Renderer uses production HTML/JS with mocked host on Linux; Rust worker tests use controlled backends and real disposable subprocesses, not the machine clipboard.",
+    "500ms focus guard / 3s read budget / 200ms retry remain provisional pending Mac runtime measurements.",
+    "Formal task10 and stage1 acceptance remain pending."
+  ],
+  "rawLogsLocation": "/tmp/tbt-macos-offline-final-validation-bzgrmpt1",
+  "independentReview": {
+    "result": "PASS within offline scope",
+    "targetedControlsPassed": 9,
+    "closedFindings": [
+      "R1: received web File must not require a fetchable unique URL",
+      "R2: URL comparison must wait for complete per-drop fingerprint processing and use immutable records"
+    ],
+    "reviewedSources": {
+      "spike/intake/web/probe.js": "6750d06bcfe49e269d9ea8e5d9b6992197fb4cdff3a13be07c5d2460fc402b40",
+      "spike/intake/web/drop-resolution.mjs": "80236fd91db1525a4108c0280ac769b4da3909bf1db0777cbc6311b79764b715",
+      "spike/intake/src-tauri/src/main.rs": "4218355a77b5ceefbee7fe93c1ad780ebbf6767365fe921332f5def322f19b40"
+    },
+    "reportSha256": "566796377db0c6a5ae36de19210e9c3f82a170f37fbe197963b11a1a3bcfe191",
+    "controlsSha256": "fc145d308741ad5a197e34abd676e7312288a9c5b678071c5ea20c5858b4e924",
+    "localReport": "/tmp/tbt-intake-offline-independent-review-followup.md",
+    "localControls": "/tmp/tbt-intake-offline-independent-followup-controls.json",
+    "limits": "Independent targeted renderer controls and static review, not Mac runtime or repeated full Rust suite."
+  }
+}
